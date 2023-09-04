@@ -652,7 +652,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-08-29
+                    2023-09-04
                 </div>
                 
 
@@ -792,7 +792,7 @@ ___
 <fake@example.com>
 </code></pre>
 <p><a target="_blank" rel="noopener" href="https://markdown.com.cn/">https://markdown.com.cn</a></p>
-<p><a href="mailto:&#102;&#x61;&#x6b;&#x65;&#x40;&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#101;&#46;&#x63;&#111;&#109;">&#102;&#x61;&#x6b;&#x65;&#x40;&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#101;&#46;&#x63;&#111;&#109;</a></p>
+<p><a href="mailto:&#102;&#97;&#x6b;&#x65;&#x40;&#x65;&#120;&#97;&#109;&#x70;&#x6c;&#x65;&#x2e;&#99;&#111;&#x6d;">&#102;&#97;&#x6b;&#x65;&#x40;&#x65;&#120;&#97;&#109;&#x70;&#x6c;&#x65;&#x2e;&#99;&#111;&#x6d;</a></p>
 <h3 id="带格式化的链接"><a href="#带格式化的链接" class="headerlink" title="带格式化的链接"></a>带格式化的链接</h3><blockquote>
 <p>不同的 Markdown 应用程序处理 URL 中间的空格方式不一样。为了兼容，请尽量使用%20 代替空格</p>
 </blockquote>
@@ -1242,7 +1242,7 @@ This is another regular paragraph.
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4, h5, h6'
         });
 
         // modify the toc link href to support Chinese.
@@ -1254,7 +1254,7 @@ This is another regular paragraph.
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, h5, h6').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
