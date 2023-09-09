@@ -33,12 +33,22 @@
     }
 }
 
+/* body {
+    background-color: #eaeaea;
+    margin: 0;
+    color: #34495e;
+    overflow-x: hidden;
+    overflow-y: auto;
+} */
 body {
     background-color: #eaeaea;
     margin: 0;
     color: #34495e;
     overflow-x: hidden;
     overflow-y: auto;
+    background: linear-gradient(60deg, rgba(224, 255, 125, 0.5) 5%, rgba(0, 228, 255, 0.35));
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 h1 {
