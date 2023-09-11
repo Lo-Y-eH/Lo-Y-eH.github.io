@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="个人, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
+    <meta name="keywords" content="person, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
     <meta name="description" content="井水不犯河水的井,人生不如意十有八九的九">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>个人 | loyeh の Blog</title>
+    <title>person | loyeh の Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -360,7 +360,7 @@
     
     <a href="/galleries" class="waves-effect waves-light">
       
-      <i class="fas fa-image" style="zoom: 0.6;"></i>
+      <i class="fa fa-photo" style="zoom: 0.6;"></i>
       
       <span>相册</span>
     </a>
@@ -560,7 +560,7 @@
 	  
 		<a href="/galleries" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-image"></i>
+			    <i class="fa-fw fa fa-photo"></i>
 			
 			相册
 		</a>
@@ -732,149 +732,90 @@
 
 </header>
 
-    <!-- 引入样式 -->
-<link rel="stylesheet" href="/css/gallery.css">
+    <!DOCTYPE html>
+<html lang="en">
 
-<link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        .gallery-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
 
-<link rel="stylesheet" href="/libs/justifiedGallery/justifiedGallery.min.css">
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
 
+        #gallery a {
+            flex: 0 1 calc(33.33% - 10px);
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
 
-<!-- 循环图片数据 -->
-
-
+<body>
+    <!-- 获取当前页面的路径 -->
     
-        <div class="gallery-name">
-            scene
-        </div>
 
-        <div class="photo-wrapper">
-            
-                
-                    <a href="/medias/galleries/scene/0.jpg" class="photo-item" rel="gallery">
-                        <img src="/medias/galleries/scene/0.jpg" alt="0.jpg">
-                    </a>
-                    
-                
-                    <a href="/medias/galleries/scene/1.jpg" class="photo-item" rel="gallery">
-                        <img src="/medias/galleries/scene/1.jpg" alt="1.jpg">
-                    </a>
-                    
-                
-                    <a href="/medias/galleries/scene/2.jpg" class="photo-item" rel="gallery">
-                        <img src="/medias/galleries/scene/2.jpg" alt="2.jpg">
-                    </a>
-                    
-                
-                    <a href="/medias/galleries/scene/3.jpg" class="photo-item" rel="gallery">
-                        <img src="/medias/galleries/scene/3.jpg" alt="3.jpg">
-                    </a>
-                    
-                
-                    <a href="/medias/galleries/scene/4.jpg" class="photo-item" rel="gallery">
-                        <img src="/medias/galleries/scene/4.jpg" alt="4.jpg">
-                    </a>
-                    
-        </div>
+        <!-- 获取图片数据 -->
         
-        <div class="gallery-name">
-            comics
-        </div>
-
-        <div class="photo-wrapper">
             
-                
-                    <a href="/medias/galleries/comics/0.jpg" class="photo-item" rel="gallery">
-                        <img src="/medias/galleries/comics/0.jpg" alt="0.jpg">
-                    </a>
-                    
-                
-                    <a href="/medias/galleries/comics/1.jpg" class="photo-item" rel="gallery">
-                        <img src="/medias/galleries/comics/1.jpg" alt="1.jpg">
-                    </a>
-                    
-                
-                    <a href="/medias/galleries/comics/2.jpg" class="photo-item" rel="gallery">
-                        <img src="/medias/galleries/comics/2.jpg" alt="2.jpg">
-                    </a>
-                    
-                
-                    <a href="/medias/galleries/comics/3.jpg" class="photo-item" rel="gallery">
-                        <img src="/medias/galleries/comics/3.jpg" alt="3.jpg">
-                    </a>
-                    
-                
-                    <a href="/medias/galleries/comics/4.jpg" class="photo-item" rel="gallery">
-                        <img src="/medias/galleries/comics/4.jpg" alt="4.jpg">
-                    </a>
-                    
-        </div>
-        
-        <div class="gallery-name">
-            sightseeing
-        </div>
 
-        <div class="photo-wrapper">
-            
                 
-                    <a href="/medias/galleries/sightseeing/0.jpg" class="photo-item" rel="gallery">
-                        <img src="/medias/galleries/sightseeing/0.jpg" alt="0.jpg">
-                    </a>
+
+                    <!-- 输出图片 -->
                     
-                
-                    <a href="/medias/galleries/sightseeing/1.jpg" class="photo-item" rel="gallery">
-                        <img src="/medias/galleries/sightseeing/1.jpg" alt="1.jpg">
-                    </a>
-                    
-                
-                    <a href="/medias/galleries/sightseeing/2.jpg" class="photo-item" rel="gallery">
-                        <img src="/medias/galleries/sightseeing/2.jpg" alt="2.jpg">
-                    </a>
-                    
-        </div>
-        
-        <div class="gallery-name">
-            person
-        </div>
+                        <div class="photo-container">
+                            <div id="gallery">
+                                
+                                    
+                                        <a href="/medias/galleries/person/0.jpg">
+                                            <img src="/medias/galleries/person/0.jpg" alt="/medias/galleries/person/0.jpg" class="gallery-image">
+                                        </a>
+                                        
+                                    
+                                        <a href="/medias/galleries/person/1.jpg">
+                                            <img src="/medias/galleries/person/1.jpg" alt="/medias/galleries/person/1.jpg" class="gallery-image">
+                                        </a>
+                                        
+                                    
+                                        <a href="/medias/galleries/person/2.jpg">
+                                            <img src="/medias/galleries/person/2.jpg" alt="/medias/galleries/person/2.jpg" class="gallery-image">
+                                        </a>
+                                        
+                            </div>
+                        </div>
 
-        <div class="photo-wrapper">
-            
-                
-                    <a href="/medias/galleries/person/0.jpg" class="photo-item" rel="gallery">
-                        <img src="/medias/galleries/person/0.jpg" alt="0.jpg">
-                    </a>
-                    
-                
-                    <a href="/medias/galleries/person/1.jpg" class="photo-item" rel="gallery">
-                        <img src="/medias/galleries/person/1.jpg" alt="1.jpg">
-                    </a>
-                    
-                
-                    <a href="/medias/galleries/person/2.jpg" class="photo-item" rel="gallery">
-                        <img src="/medias/galleries/person/2.jpg" alt="2.jpg">
-                    </a>
-                    
-        </div>
-        
+                        <!-- 加载js -->
+                        <script src="/libs/justifiedGallery/justifiedGallery.min.js"></script>
+                        <script src="/libs/fancybox/jquery.fancybox.min.js"></script>
 
+                        <script>
+                            $("#gallery").justifiedGallery({
+                                rowHeight: 200,
+                                margins: 10
+                            });
 
-<!-- 引入脚本 -->
-<script src="/libs/fancybox/fancybox.js"></script>
+                            $(".photo-item").fancybox({
+                                helpers: {
+                                    thumbs: {
+                                        width: 50,
+                                        height: 50
+                                    }
+                                }
+                            });
+                        </script>
+                        
+</body>
 
-<script src="/libs/justifiedGallery/justifiedGallery.min.js"></script>
-
-<script>
-    // 初始化图片库
-    // 一般图片布局
-    $(".photo-item").fancybox();
-
-    // 瀑布流布局
-    // $(".photo-wrapper").justifiedGallery({
-    //     margins: 5,
-    //     rowHeight: 150
-    // });  
-
-</script>
+</html>
 
     <footer class="page-footer bg-color">
     
