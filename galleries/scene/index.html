@@ -732,100 +732,45 @@
 
 </header>
 
-    <!DOCTYPE html>
-<html lang="en">
+    <link rel="stylesheet" href="/css/gallery.css">
+<link type="text/css" href="/libs/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link type="text/css" href="/libs/justifiedGallery/justifiedGallery.min.css" rel="stylesheet">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-    <style>
-        .gallery-image {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
 
-        #gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
 
-        #gallery a {
-            flex: 0 1 calc(33.33% - 10px);
-            margin-bottom: 10px;
-        }
-    </style>
-</head>
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">scene</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<body>
-    <!-- 获取当前页面的路径 -->
-    
 
-        <!-- 获取图片数据 -->
-        
-            
 
-                
+<div class="container">
+    <div class="photo-wrapper">
+        <div class="waterfall" id="mygallery">
+            <a href="/medias/galleries/scene/0.jpg "     class=" photo-item" rel="example_group"     data-fancybox=" images"> <img src="/medias/galleries/scene/0.jpg" alt="0.jpg">
+ </a><a href="/medias/galleries/scene/1.jpg "     class=" photo-item" rel="example_group"     data-fancybox=" images"> <img src="/medias/galleries/scene/1.jpg" alt="1.jpg">
+ </a><a href="/medias/galleries/scene/2.jpg "     class=" photo-item" rel="example_group"     data-fancybox=" images"> <img src="/medias/galleries/scene/2.jpg" alt="2.jpg">
+ </a><a href="/medias/galleries/scene/3.jpg "     class=" photo-item" rel="example_group"     data-fancybox=" images"> <img src="/medias/galleries/scene/3.jpg" alt="3.jpg">
+ </a><a href="/medias/galleries/scene/4.jpg "     class=" photo-item" rel="example_group"     data-fancybox=" images"> <img src="/medias/galleries/scene/4.jpg" alt="4.jpg">
+ </a>
+        </div>
+    </div>
+</div>
 
-                    <!-- 输出图片 -->
-                    
-                        <div class="photo-container">
-                            <div id="gallery">
-                                
-                                    
-                                        <a href="/medias/galleries/scene/0.jpg">
-                                            <img src="/medias/galleries/scene/0.jpg" alt="/medias/galleries/scene/0.jpg" class="gallery-image">
-                                        </a>
-                                        
-                                    
-                                        <a href="/medias/galleries/scene/1.jpg">
-                                            <img src="/medias/galleries/scene/1.jpg" alt="/medias/galleries/scene/1.jpg" class="gallery-image">
-                                        </a>
-                                        
-                                    
-                                        <a href="/medias/galleries/scene/2.jpg">
-                                            <img src="/medias/galleries/scene/2.jpg" alt="/medias/galleries/scene/2.jpg" class="gallery-image">
-                                        </a>
-                                        
-                                    
-                                        <a href="/medias/galleries/scene/3.jpg">
-                                            <img src="/medias/galleries/scene/3.jpg" alt="/medias/galleries/scene/3.jpg" class="gallery-image">
-                                        </a>
-                                        
-                                    
-                                        <a href="/medias/galleries/scene/4.jpg">
-                                            <img src="/medias/galleries/scene/4.jpg" alt="/medias/galleries/scene/4.jpg" class="gallery-image">
-                                        </a>
-                                        
-                            </div>
-                        </div>
-
-                        <!-- 加载js -->
-                        <script src="/libs/justifiedGallery/justifiedGallery.min.js"></script>
-                        <script src="/libs/fancybox/jquery.fancybox.min.js"></script>
-
-                        <script>
-                            $("#gallery").justifiedGallery({
-                                rowHeight: 200,
-                                margins: 10
-                            });
-
-                            $(".photo-item").fancybox({
-                                helpers: {
-                                    thumbs: {
-                                        width: 50,
-                                        height: 50
-                                    }
-                                }
-                            });
-                        </script>
-                        
-</body>
-
-</html>
+<script src="/libs/fancybox/fancybox.js"></script>
+<script src="/libs/justifiedGallery/justifiedGallery.min.js"></script>
+<script>
+    $("a[rel=example_group]").fancybox();
+    $("#mygallery").justifiedGallery({ margins: 5, rowHeight: 150 });
+</script>
 
     <footer class="page-footer bg-color">
     
