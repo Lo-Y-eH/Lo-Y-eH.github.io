@@ -866,16 +866,21 @@
         list-style-type: circle;
     }
 
-    #vcomments table, th, td {
+    #vcomments table,
+    th,
+    td {
         padding: 12px 13px;
         border: 1px solid #dfe2e5;
     }
 
-    #vcomments table, th, td {
+    #vcomments table,
+    th,
+    td {
         border: 0;
     }
 
-    table tr:nth-child(2n), thead {
+    table tr:nth-child(2n),
+    thead {
         background-color: #fafafa;
     }
 
@@ -978,7 +983,8 @@
         color: #e8eaf6;
     }
 
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    #vcomments [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
         position: inherit;
         margin-left: -1.3rem;
         margin-right: 0.4rem;
@@ -1010,12 +1016,15 @@
         padding: .2em;
     }
 
-    #vcomments table, th, td {
+    #vcomments table,
+    th,
+    td {
         padding: 12px 13px;
         border: 1px solid #dfe2e5;
     }
 
-    table tr:nth-child(2n), thead {
+    table tr:nth-child(2n),
+    thead {
         background-color: #fafafa;
     }
 
@@ -1028,7 +1037,8 @@
         min-width: 80px;
     }
 
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    #vcomments [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
         position: inherit;
         margin-left: -1.3rem;
         margin-right: 0.4rem;
@@ -1040,7 +1050,8 @@
 </style>
 
 <div class="card valine-card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+    <div class="comment_headling"
+        style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
         <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
         <span>评论</span>
     </div>
@@ -1063,6 +1074,7 @@
         lang: 'zh-cn',
         placeholder: '留下你的足迹o(*￣▽￣*)ブ Just go go ^_^',
         enableQQ: true,
+        serverURLs: 'https://8vjn0qbp.api.lncldglobal.com',  // 增加这一行！！！
         emojiCDN: '//i0.hdslb.com/bfs/emote/',
         // 表情title和图片映射
         requiredFields: ['nick', 'mail'], //设置必填项
@@ -1120,7 +1132,6 @@
         },
     });
 </script>
-
             
 			
 			

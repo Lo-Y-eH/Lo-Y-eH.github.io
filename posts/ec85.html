@@ -1036,7 +1036,7 @@ ___<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
 &lt;fake@example.com><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><a target="_blank" rel="noopener" href="https://markdown.com.cn/">https://markdown.com.cn</a></p>
-<p><a href="mailto:&#x66;&#97;&#107;&#101;&#x40;&#101;&#x78;&#97;&#x6d;&#112;&#x6c;&#101;&#x2e;&#99;&#111;&#109;">&#x66;&#97;&#107;&#101;&#x40;&#101;&#x78;&#97;&#x6d;&#112;&#x6c;&#101;&#x2e;&#99;&#111;&#109;</a></p>
+<p><a href="mailto:&#102;&#x61;&#x6b;&#101;&#x40;&#x65;&#120;&#97;&#109;&#x70;&#108;&#x65;&#46;&#99;&#111;&#x6d;">&#102;&#x61;&#x6b;&#101;&#x40;&#x65;&#120;&#97;&#109;&#x70;&#108;&#x65;&#46;&#99;&#111;&#x6d;</a></p>
 <h3 id="带格式化的链接"><a href="#带格式化的链接" class="headerlink" title="带格式化的链接"></a>带格式化的链接</h3><blockquote>
 <p>不同的 Markdown 应用程序处理 URL 中间的空格方式不一样。为了兼容，请尽量使用%20 代替空格</p>
 </blockquote>
@@ -1401,16 +1401,21 @@ This is another regular paragraph.<span aria-hidden="true" class="line-numbers-r
         list-style-type: circle;
     }
 
-    #vcomments table, th, td {
+    #vcomments table,
+    th,
+    td {
         padding: 12px 13px;
         border: 1px solid #dfe2e5;
     }
 
-    #vcomments table, th, td {
+    #vcomments table,
+    th,
+    td {
         border: 0;
     }
 
-    table tr:nth-child(2n), thead {
+    table tr:nth-child(2n),
+    thead {
         background-color: #fafafa;
     }
 
@@ -1513,7 +1518,8 @@ This is another regular paragraph.<span aria-hidden="true" class="line-numbers-r
         color: #e8eaf6;
     }
 
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    #vcomments [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
         position: inherit;
         margin-left: -1.3rem;
         margin-right: 0.4rem;
@@ -1545,12 +1551,15 @@ This is another regular paragraph.<span aria-hidden="true" class="line-numbers-r
         padding: .2em;
     }
 
-    #vcomments table, th, td {
+    #vcomments table,
+    th,
+    td {
         padding: 12px 13px;
         border: 1px solid #dfe2e5;
     }
 
-    table tr:nth-child(2n), thead {
+    table tr:nth-child(2n),
+    thead {
         background-color: #fafafa;
     }
 
@@ -1563,7 +1572,8 @@ This is another regular paragraph.<span aria-hidden="true" class="line-numbers-r
         min-width: 80px;
     }
 
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    #vcomments [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
         position: inherit;
         margin-left: -1.3rem;
         margin-right: 0.4rem;
@@ -1575,7 +1585,8 @@ This is another regular paragraph.<span aria-hidden="true" class="line-numbers-r
 </style>
 
 <div class="card valine-card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+    <div class="comment_headling"
+        style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
         <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
         <span>评论</span>
     </div>
@@ -1598,6 +1609,7 @@ This is another regular paragraph.<span aria-hidden="true" class="line-numbers-r
         lang: 'zh-cn',
         placeholder: '留下你的足迹o(*￣▽￣*)ブ Just go go ^_^',
         enableQQ: true,
+        serverURLs: 'https://8vjn0qbp.api.lncldglobal.com',  // 增加这一行！！！
         emojiCDN: '//i0.hdslb.com/bfs/emote/',
         // 表情title和图片映射
         requiredFields: ['nick', 'mail'], //设置必填项
@@ -1655,7 +1667,6 @@ This is another regular paragraph.<span aria-hidden="true" class="line-numbers-r
         },
     });
 </script>
-
     
 
     
