@@ -1061,10 +1061,11 @@
         avatar: 'mm',
         pageSize: '10',
         lang: 'zh-cn',
-        placeholder: '想说点啥？Just go go ^_^',
+        placeholder: '留下你的足迹o(*￣▽￣*)ブ Just go go ^_^',
         enableQQ: true,
         emojiCDN: '//i0.hdslb.com/bfs/emote/',
         // 表情title和图片映射
+        requiredFields: ['nick', 'mail'], //设置必填项
         emojiMaps: {
             "tv_doge": "6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
             "tv_亲亲": "a8111ad55953ef5e3be3327ef94eb4a39d535d06.png",
@@ -1117,13 +1118,58 @@
             "tv_黑人问号": "45821a01f51bc867da9edbaa2e070410819a95b2.png",
             "tv_鼓掌": "1d21793f96ef4e6f48b23e53e3b9e42da833a0f6.png"
         },
-        requiredFields: ['nick', 'mail'], //设置必填项
     });
 </script>
 
             
 			
 			
+            <style>
+    .mvaline-card {
+        margin: 1.5rem auto;
+    }
+
+    .mvaline-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+</style>
+
+<div class="card mvaline-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="mvcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/minivaline/MiniValine.js"></script>
+<script>
+    new MiniValine({
+        el: '#mvcomments',
+        appId: '8vJn0QBplqLADcXEGwf82jV4-MdYXbMMI',
+        appKey: 'PO85hRys16bV881Pq4fjnmbK',
+        mode: 'DesertsP',
+        placeholder: 'Write a Comment',
+        pathname: window.location.pathname,
+        lang: '',
+        adminEmailMd5: 'de8a7aa53d07e6b6bceb45c64027763d',
+        tagMeta: ["管理员", "小伙伴", "访客"],
+        master: ["de8a7aa53d07e6b6bceb45c64027763d"],
+        friends: ["b5bd5d836c7a0091aa8473e79ed4c25e", "adb7d1cd192658a55c0ad22a3309cecf", "3ce1e6c77b4910f1871106cb30dc62b0", "cfce8dc43725cc14ffcd9fb4892d5bfc"],
+        math: true,
+        md: true,
+        enableQQ: false,
+        NoRecordIP: false,
+        visitor: true,
+        maxNest: 6,
+        pageSize: 10,
+        serverURLs: '',
+        emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest", "https://cdn.jsdelivr.net/gh/MiniValine/qq@latest", "https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest", "https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest", "https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest", "https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest"],
+    });
+</script>
+
+            
 
             
 

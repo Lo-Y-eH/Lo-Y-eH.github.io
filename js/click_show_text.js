@@ -1,7 +1,7 @@
 var a_idx = 0;
 jQuery(document).ready(function ($) {
     $("body").click(function (e) {
-        var a = new Array("不羁", "放纵", "爱自由", "曲则全", "枉则直", "洼则盈", "敝则新", "少则得", "多则惑", "无为", "无我", "无欲");
+        var a = new Array("不羁", "放纵", "自由", "曲则全", "枉则直", "洼则盈", "敝则新", "少则得", "多则惑", "无为", "无我", "无欲");
         var $i = $("<span/>").text(a[a_idx]);
         a_idx = (a_idx + 1) % a.length;
         var x = e.pageX,

@@ -1340,10 +1340,11 @@
         avatar: 'mm',
         pageSize: '10',
         lang: 'zh-cn',
-        placeholder: '想说点啥？Just go go ^_^',
+        placeholder: '留下你的足迹o(*￣▽￣*)ブ Just go go ^_^',
         enableQQ: true,
         emojiCDN: '//i0.hdslb.com/bfs/emote/',
         // 表情title和图片映射
+        requiredFields: ['nick', 'mail'], //设置必填项
         emojiMaps: {
             "tv_doge": "6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
             "tv_亲亲": "a8111ad55953ef5e3be3327ef94eb4a39d535d06.png",
@@ -1396,7 +1397,6 @@
             "tv_黑人问号": "45821a01f51bc867da9edbaa2e070410819a95b2.png",
             "tv_鼓掌": "1d21793f96ef4e6f48b23e53e3b9e42da833a0f6.png"
         },
-        requiredFields: ['nick', 'mail'], //设置必填项
     });
 </script>
 
