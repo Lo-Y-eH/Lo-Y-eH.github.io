@@ -84,9 +84,26 @@
 }
 
 /*适配移动端布局*/
-@media only screen and (max-width: 601px) {
+/* @media only screen and (max-width: 601px) {
     .waterfall {
         column-count: 2;
         column-gap: 1em;
+    }
+} */
+
+/* 移动端 */
+@media (max-width: 600px) {
+    .waterfall {
+        column-count: 2;
+    }
+    .gallery-box {
+        width: 100%;
+    }
+}
+
+/* 平板等中等屏幕 */
+@media (min-width: 600px) {
+    .gallery-box {
+        width: 50%;
     }
 }
