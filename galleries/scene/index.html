@@ -765,11 +765,17 @@
 <script src="/libs/justifiedGallery/justifiedGallery.min.js"></script>
 
 <script>
-  $("a[rel=example_group]").fancybox();
-  $("#mygallery").justifiedGallery({
-    margins: 5, 
-    rowHeight: 150
-  });
+    // 初始化 fancybox
+    $("[rel=example_group]").fancybox();
+    // 配置循环播放
+    $("[rel=example_group]").fancybox({
+        loop: true
+    });
+
+    $("#mygallery").justifiedGallery({
+        margins: 5,
+        rowHeight: 150
+    });
 </script>
 
     <footer class="page-footer bg-color">
