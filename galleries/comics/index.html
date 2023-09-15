@@ -752,24 +752,24 @@
 
 
 
+
 <div class="container">
-    <div class="photo-wrapper">
-        <div class="waterfall" id="mygallery">
-            <a href="/medias/galleries/comics/0.jpg "     class=" photo-item" rel="example_group"     data-fancybox=" images"> <img src="/medias/galleries/comics/0.jpg" alt="0.jpg">
- </a><a href="/medias/galleries/comics/1.jpg "     class=" photo-item" rel="example_group"     data-fancybox=" images"> <img src="/medias/galleries/comics/1.jpg" alt="1.jpg">
- </a><a href="/medias/galleries/comics/2.jpg "     class=" photo-item" rel="example_group"     data-fancybox=" images"> <img src="/medias/galleries/comics/2.jpg" alt="2.jpg">
- </a><a href="/medias/galleries/comics/3.jpg "     class=" photo-item" rel="example_group"     data-fancybox=" images"> <img src="/medias/galleries/comics/3.jpg" alt="3.jpg">
- </a><a href="/medias/galleries/comics/4.jpg "     class=" photo-item" rel="example_group"     data-fancybox=" images"> <img src="/medias/galleries/comics/4.jpg" alt="4.jpg">
- </a>
-        </div>
+  <div class="photo-wrapper">
+    <div class="waterfall" id="mygallery">
+      <a href="/medias/galleries/comics/0.jpg" class="photo-item" rel="example_group" data-fancybox="images"><img src="/medias/galleries/comics/0.jpg" alt="0.jpg"></a><a href="/medias/galleries/comics/1.jpg" class="photo-item" rel="example_group" data-fancybox="images"><img src="/medias/galleries/comics/1.jpg" alt="1.jpg"></a><a href="/medias/galleries/comics/2.jpg" class="photo-item" rel="example_group" data-fancybox="images"><img src="/medias/galleries/comics/2.jpg" alt="2.jpg"></a><a href="/medias/galleries/comics/3.jpg" class="photo-item" rel="example_group" data-fancybox="images"><img src="/medias/galleries/comics/3.jpg" alt="3.jpg"></a><a href="/medias/galleries/comics/4.jpg" class="photo-item" rel="example_group" data-fancybox="images"><img src="/medias/galleries/comics/4.jpg" alt="4.jpg"></a><a href="/medias/galleries/comics/5.jpg" class="photo-item" rel="example_group" data-fancybox="images"><img src="/medias/galleries/comics/5.jpg" alt="5.jpg"></a><a href="/medias/galleries/comics/6.jpg" class="photo-item" rel="example_group" data-fancybox="images"><img src="/medias/galleries/comics/6.jpg" alt="6.jpg"></a><a href="/medias/galleries/comics/7.jpg" class="photo-item" rel="example_group" data-fancybox="images"><img src="/medias/galleries/comics/7.jpg" alt="7.jpg"></a><a href="/medias/galleries/comics/8.jpg" class="photo-item" rel="example_group" data-fancybox="images"><img src="/medias/galleries/comics/8.jpg" alt="8.jpg"></a>
     </div>
+  </div>
 </div>
 
-<script src="/libs/fancybox/fancybox.js"></script>
+<script src="/libs/fancybox/fancybox.js"></script> 
 <script src="/libs/justifiedGallery/justifiedGallery.min.js"></script>
+
 <script>
-    $("a[rel=example_group]").fancybox();
-    $("#mygallery").justifiedGallery({ margins: 5, rowHeight: 150 });
+  $("a[rel=example_group]").fancybox();
+  $("#mygallery").justifiedGallery({
+    margins: 5, 
+    rowHeight: 150
+  });
 </script>
 
     <footer class="page-footer bg-color">
