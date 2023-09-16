@@ -204,6 +204,7 @@
 
     .loading-text {
         margin-bottom: 20vh;
+        /* 修改间距*/
         text-align: center;
         color: #2c3e50;
         font-size: 2rem;
@@ -215,6 +216,8 @@
     @media only screen and (max-width: 500px) {
         .loading-text {
             font-size: 1.5rem;
+            /* margin-bottom: 2vh; */
+            /* 手机端修改间距 */
         }
     }
 
@@ -227,8 +230,8 @@
     @-webkit-keyframes fadeInDown {
         0% {
             opacity: 0;
-            -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0)
+            -webkit-transform: translate3d(0, -80%, 0);    /* 修改这里，100改为80 */
+            transform: translate3d(0, -80%, 0)  /* 修改这里，100改为80 */
         }
 
         100% {
@@ -241,7 +244,7 @@
     @keyframes fadeInDown {
         0% {
             opacity: 0;
-            -webkit-transform: translate3d(0, -100%, 0);
+            -webkit-transform: translate3d(0, -80%, 0);    /* 修改这里，100改为80 */
         }
     }
 </style>
@@ -358,11 +361,9 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/galleries" class="waves-effect waves-light">
+    <a href="/essay" class="waves-effect waves-light">
       
-      <i class="fa fa-photo" style="zoom: 0.6;"></i>
-      
-      <span>相册</span>
+      <span>essay</span>
     </a>
     
   </li>
@@ -558,11 +559,11 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/galleries" class="waves-effect waves-light">
+		<a href="/essay" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fa fa-photo"></i>
+				<i class="fas fa-fw fa-link"></i>
 			
-			相册
+			essay
 		</a>
           
         </li>
@@ -1036,7 +1037,7 @@ ___<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
 &lt;fake@example.com><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><a target="_blank" rel="noopener" href="https://markdown.com.cn/">https://markdown.com.cn</a></p>
-<p><a href="mailto:&#102;&#97;&#x6b;&#101;&#64;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#109;">&#102;&#97;&#x6b;&#101;&#64;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#109;</a></p>
+<p><a href="mailto:&#x66;&#x61;&#x6b;&#101;&#x40;&#101;&#120;&#97;&#109;&#112;&#x6c;&#101;&#x2e;&#99;&#x6f;&#x6d;">&#x66;&#x61;&#x6b;&#101;&#x40;&#101;&#120;&#97;&#109;&#112;&#x6c;&#101;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 <h3 id="带格式化的链接"><a href="#带格式化的链接" class="headerlink" title="带格式化的链接"></a>带格式化的链接</h3><blockquote>
 <p>不同的 Markdown 应用程序处理 URL 中间的空格方式不一样。为了兼容，请尽量使用%20 代替空格</p>
 </blockquote>
@@ -1838,6 +1839,134 @@ This is another regular paragraph.<span aria-hidden="true" class="line-numbers-r
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
+<!-- 对页面进行仿信纸样式修饰 -->
+<style>
+    .ititle {
+        margin: 15px 0;
+        text-align: center;
+        font-family: 'Architects Daughter', cursive;
+    }
+
+    .ipage {
+        line-height: 30px;
+        margin: 0 auto;
+        padding: 15px 32px 29px;
+        background-color: #f9f9f9;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+        -moz-border-radius-bottomleft: 20px 500px;
+        -moz-border-radius-bottomright: 500px 30px;
+        -moz-border-radius-topright: 5px 100px;
+        -webkit-border-bottom-left-radius: 20px 500px;
+        -webkit-border-bottom-right-radius: 64px 10px;
+        -webkit-border-top-right-radius: 5px 100px;
+        border-bottom-left-radius: 20px 500px;
+        border-bottom-right-radius: 64px 10px;
+        border-top-right-radius: 5px 100px;
+        -webkit-background-size: 100% 30px;
+        -moz-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+        text-shadow: 0 1px 0 #F6EF97;
+        position: relative;
+    }
+
+    .izhengwen {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        height: auto;
+        background: repeating-linear-gradient(to bottom, #f9f9f9, #f9f9f9 31px, #6BA2D8 1px, #f9f9f9);
+        background-size: 100% 32px;
+    }
+
+    #articleContent p {
+        margin: 0
+    }
+
+    .ititle {
+        font-family: 'Architects Daughter', cursive;
+        font-size: 1.45rem !important;
+        padding: 10px auto;
+    }
+
+    .izhengwen p {
+        position: relative;
+        line-height: 2.2rem !important;
+        text-indent: 2em;
+        font-family: 'Architects Daughter', cursive !important;
+        font-size: 1.45rem !important;
+    }
+
+    .ipage::before {
+        content: " ";
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+        bottom: 0;
+        right: 52px;
+        z-index: 4;
+        width: 4px;
+        height: 100%;
+        border-left: 1px solid #fca1a1;
+    }
+
+    .izhengwen p:nth-child(odd):before {
+        content: " ";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: -16px;
+        z-index: 3;
+        width: 24px;
+        height: 24px;
+        background-color: #fff;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+    }
+
+    .ipage:after {
+        content: " ";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 52px;
+        z-index: 3;
+        width: 4px;
+        height: 100%;
+        border-left: 4px double #fca1a1;
+    }
+
+    .ipage p {
+        padding: 0 2em;
+        color: #333 !important;
+    }
+
+    body.dark .ipage {
+        opacity: 0.85;
+    }
+
+    /*小屏幕下(手机类)的样式*/
+    @media only screen and (max-width: 600px) {
+        .ipage {
+            padding: 15px 23px 29px;
+        }
+
+        .ipage:after {
+            left: 36px;
+        }
+
+        .ipage::before {
+            right: 36px;
+        }
+
+        .ipage p {
+            padding: 0 0.9em;
+        }
+    }
+</style>
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget card" style="background-color: white;">
