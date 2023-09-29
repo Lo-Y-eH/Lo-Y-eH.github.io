@@ -800,9 +800,16 @@
         top: 64px;
     }
 
+    /* .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    } */
     .toc-widget {
         width: 345px;
         padding-left: 20px;
+        background-color: rgb(255, 255, 255,0.7);
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
     }
 
     .toc-widget .toc-title {
@@ -852,7 +859,7 @@
     #floating-toc-btn {
         position: fixed;
         right: 15px;
-        bottom: 76px;
+        bottom: 95px; /*按钮位置*/
         padding-top: 15px;
         margin-bottom: 0;
         z-index: 998;
@@ -915,21 +922,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-09-08
+                    2023-09-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    11 分
                 </div>
                 
 
@@ -1026,7 +1033,12 @@
 </li>
 </ol>
 <ul>
-<li>五等分的花嫁 3. 三玖 4. 四叶 5. 五月</li>
+<li>五等分的花嫁 <ol start="3">
+<li>三玖 </li>
+<li>四叶</li>
+<li>五月</li>
+</ol>
+</li>
 </ul>
 <h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><h3 id="单行"><a href="#单行" class="headerlink" title="单行"></a>单行</h3><p>将单行代码放入两个反引号&#96;&#96;中</p>
 <pre class="line-numbers language-none"><code class="language-none">&#96;print(&quot;Hello World!&quot;)&#96;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -1035,6 +1047,37 @@
 <h3 id="多行"><a href="#多行" class="headerlink" title="多行"></a>多行</h3><p>代码块之前和之后的行上使用三个反引号**&#96;&#96;&#96;**或三个波浪号~ ~ ~,然后在后面跟上代码语言</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello World!"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<h2 id="math公式"><a href="#math公式" class="headerlink" title="math公式"></a>math公式</h2><h3 id="行内公式"><a href="#行内公式" class="headerlink" title="行内公式"></a>行内公式</h3><p>在<code>$ $</code>之中填写公式</p>
+<pre class="line-numbers language-none"><code class="language-none">$...$
+$e^&#123;x^2&#125;\neq&#123;e^x&#125;^2$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>$e^{x^2}\neq{e^x}^2$</p>
+<h3 id="块公式"><a href="#块公式" class="headerlink" title="块公式"></a>块公式</h3><p>在<code>$$ $$</code>中填写公式</p>
+<pre class="line-numbers language-none"><code class="language-none">$$...$$
+
+$$e^&#123;x^2&#125;\neq&#123;e^x&#125;^2$$
+$$H(D_2) &#x3D; -(\frac&#123;2&#125;&#123;4&#125;\ log_2 \frac&#123;2&#125;&#123;4&#125; + \frac&#123;2&#125;&#123;4&#125;\ log_2 \frac&#123;2&#125;&#123;4&#125;) &#x3D; 1$$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>$$e^{x^2}\neq{e^x}^2$$<br>$$H(D_2) &#x3D; -(\frac{2}{4}\ log_2 \frac{2}{4} + \frac{2}{4}\ log_2 \frac{2}{4}) &#x3D; 1$$</p>
+<h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><pre class="line-numbers language-none"><code class="language-none">$$
+\begin&#123;pmatrix&#125;
+        1 &amp; a_1 &amp; a_1^2 &amp; \cdots &amp; a_1^n \\
+        1 &amp; a_2 &amp; a_2^2 &amp; \cdots &amp; a_2^n \\
+        \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+        1 &amp; a_m &amp; a_m^2 &amp; \cdots &amp; a_m^n \\
+        \end&#123;pmatrix&#125;
+$$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>$$<br>\begin{pmatrix}<br>    1 &amp; a_1 &amp; a_1^2 &amp; \cdots &amp; a_1^n \<br>    1 &amp; a_2 &amp; a_2^2 &amp; \cdots &amp; a_2^n \<br>    \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \<br>    1 &amp; a_m &amp; a_m^2 &amp; \cdots &amp; a_m^n \<br>    \end{pmatrix}<br>$$</p>
+<h3 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h3><pre class="line-numbers language-none"><code class="language-none">$$
+\mathbf&#123;V&#125;_1 \times \mathbf&#123;V&#125;_2 &#x3D;  \begin&#123;vmatrix&#125;
+\mathbf&#123;i&#125; &amp; \mathbf&#123;j&#125; &amp; \mathbf&#123;k&#125; \\
+\frac&#123;\partial X&#125;&#123;\partial u&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial u&#125; &amp; 0 \\
+\frac&#123;\partial X&#125;&#123;\partial v&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial v&#125; &amp; 0 \\
+\end&#123;vmatrix&#125;
+$$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>$$<br>\mathbf{V}_1 \times \mathbf{V}_2 &#x3D; \begin{vmatrix}<br>\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \<br>\frac{\partial X}{\partial u} &amp; \frac{\partial Y}{\partial u} &amp; 0 \<br>\frac{\partial X}{\partial v} &amp; \frac{\partial Y}{\partial v} &amp; 0 \<br>\end{vmatrix}<br>$$</p>
 <h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>在单独一行上使用三个或多个星号 (<code>***</code>)、破折号 (<code>---</code>) 或下划线 (<code>___</code>) ，然后回车</p>
 <p>为了兼容性，请在分隔线的前后均添加空白行</p>
 <pre class="line-numbers language-none"><code class="language-none">***
@@ -1058,7 +1101,7 @@ ___<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
 &lt;fake@example.com><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><a target="_blank" rel="noopener" href="https://markdown.com.cn/">https://markdown.com.cn</a></p>
-<p><a href="mailto:&#102;&#97;&#107;&#x65;&#x40;&#101;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#x2e;&#99;&#x6f;&#x6d;">&#102;&#97;&#107;&#x65;&#x40;&#101;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+<p><a href="mailto:&#x66;&#97;&#107;&#101;&#x40;&#x65;&#120;&#97;&#109;&#112;&#108;&#x65;&#46;&#99;&#x6f;&#x6d;">&#x66;&#97;&#107;&#101;&#x40;&#x65;&#120;&#97;&#109;&#112;&#108;&#x65;&#46;&#99;&#x6f;&#x6d;</a></p>
 <h3 id="带格式化的链接"><a href="#带格式化的链接" class="headerlink" title="带格式化的链接"></a>带格式化的链接</h3><blockquote>
 <p>不同的 Markdown 应用程序处理 URL 中间的空格方式不一样。为了兼容，请尽量使用%20 代替空格</p>
 </blockquote>
@@ -1131,7 +1174,7 @@ This is another regular paragraph.<span aria-hidden="true" class="line-numbers-r
 <h3 id="HTML-用法最佳实践"><a href="#HTML-用法最佳实践" class="headerlink" title="HTML 用法最佳实践"></a>HTML 用法最佳实践</h3><p>出于安全原因，并非所有 Markdown 应用程序都支持在 Markdown 文档中添加 HTML。如有疑问，请查看相应 Markdown 应用程序的手册。某些应用程序只支持 HTML 标签的子集。</p>
 <p>对于 HTML 的块级元素 <code>&lt;div&gt;</code>、<code>&lt;table&gt;</code>、<code>&lt;pre&gt;</code> 和 <code>&lt;p&gt;</code>，请在其前后使用空行（blank lines）与其它内容进行分隔。尽量不要使用制表符（tabs）或空格（spaces）对 HTML 标签做缩进，否则将影响格式。</p>
 <p>在 HTML 块级标签内不能使用 Markdown 语法。例如 <code>&lt;p&gt;italic and **bold**&lt;/p&gt;</code> 将不起作用。</p>
-<h1 id="扩展语法"><a href="#扩展语法" class="headerlink" title="扩展语法"></a>扩展语法</h1>
+<h1 id="扩展语法"><a href="#扩展语法" class="headerlink" title="扩展语法"></a>扩展语法</h1><h2 id="Diagrams"><a href="#Diagrams" class="headerlink" title="Diagrams"></a>Diagrams</h2>
                 
             </div>
             <hr/>
@@ -1357,6 +1400,28 @@ This is another regular paragraph.<span aria-hidden="true" class="line-numbers-r
 
     
 
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC81ODg5OS8zNTM2MQ">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
     
 
     
@@ -1689,6 +1754,14 @@ This is another regular paragraph.<span aria-hidden="true" class="line-numbers-r
         },
     });
 </script>
+<!-- 直达评论 -->
+<!-- 直达评论 -->
+<!-- 我这里是valine，直接填写valine的id——href="#vcomments",如果是其他评论，对应修改即可 -->
+<div id="to_comment" class="comment-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论">
+        <i class="fas fa-comments"></i>
+    </a>
+</div>
     
 
     
@@ -2095,16 +2168,12 @@ This is another regular paragraph.<span aria-hidden="true" class="line-numbers-r
 <style>
     .aplayer .aplayer-lrc p {
         
-        display: none;
-        
         font-size: 12px;
         font-weight: 700;
         line-height: 16px !important;
     }
 
     .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
         
         font-size: 15px;
         color: #42b983;
@@ -2158,7 +2227,7 @@ This is another regular paragraph.<span aria-hidden="true" class="line-numbers-r
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.6k</span>&nbsp;字
+                class="white-color">3.1k</span>&nbsp;字
             
             
             
@@ -2420,8 +2489,38 @@ $(function () {
             </div>
         </div>
     
-
     
+    
+        <script src="//code.tidio.co/sdqtecquvqa9gaqrpapr6v2mlrku6ayf.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio = $("#tidio-chat iframe");
+                    if (tidio.css("display") == "block" && $(window).width() > 977) {
+                        document.getElementById("tidio-chat-iframe").style.bottom = "275px";
+                        document.getElementById("tidio-chat-iframe").style.right = "-15px";
+                        document.getElementById("tidio-chat-iframe").style.height = parseInt(tidio.css("height")) >= 520 ? "520px" : tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+                    }
+                    else if (tidio.css("display") == "block" && $(window).width() > 601 && $(window).width() < 992) {
+                        document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") == "none" && $(window).width() > 601 && $(window).width() < 992) ? "-40px" : "20px";
+                        document.getElementById("tidio-chat-iframe").style.right = "-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+                    }
+                    else if (tidio.css("display") == "block" && $(window).width() < 601 && parseInt(tidio.css("height")) < 230) {
+                        document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") == "none" && $(window).width() < 601) ? "-10px" : "45px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+                    }
+                    if (tidio.css("display") == "block" && $(window).width() < 601 && parseInt(tidio.css("height")) >= 230) {
+                        document.getElementById("tidio-chat-iframe").style.zIndex = "998";
+                    }
+                }
+            });
+        </script>
+        
+
+    <!-- 
         <script src="//code.tidio.co/sdqtecquvqa9gaqrpapr6v2mlrku6ayf.js"></script>
         <script>
             $(document).ready(function () {
@@ -2449,7 +2548,7 @@ $(function () {
                 }
             });
         </script>
-    
+     -->
 
     
 
@@ -2547,12 +2646,17 @@ $(function () {
             $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#changeMode-top').removeClass('fa-sun').addClass('fa-moon'), $('#modeicon').attr('xlink:href', '#icon-moon')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun'))
         }
     </script>
+
     <!-- 给深色模式加上了一个好看的黑色动态背景 -->
-    <div class="stars-con">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="stars.js"></script>
+    </head>
+    <body class="DarkMode">
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
-    </div>
+    </body>
 
 
         <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>

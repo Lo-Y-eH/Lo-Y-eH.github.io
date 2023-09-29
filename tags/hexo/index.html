@@ -759,13 +759,13 @@
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
-            <div class="title center-align diy-font">
+            <div class="title center-align diyFont">
                 
                 北冥有鱼
                 
             </div>
 
-            <div class="description center-align diy-font">
+            <div class="description center-align diyFont">
                 
                 <span id="subtitle"></span>
                 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
@@ -823,19 +823,10 @@
                 </a>
                 
                 
-                <a href="/tags/%E9%9A%8F%E7%AC%94/" title="随笔: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="随笔" style="background-color: #F5EEF8;">随笔
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/markdown/" title="markdown: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="markdown" style="background-color: #D5F5E3;">markdown
+                            data-tagname="markdown" style="background-color: #F5EEF8;">markdown
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -844,7 +835,16 @@
                 <a href="/tags/typora/" title="typora: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="typora" style="background-color: #E8F8F5;">typora
+                            data-tagname="typora" style="background-color: #D5F5E3;">typora
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E9%9A%8F%E7%AC%94/" title="随笔: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="随笔" style="background-color: #E8F8F5;">随笔
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -904,16 +904,12 @@
 <style>
     .aplayer .aplayer-lrc p {
         
-        display: none;
-        
         font-size: 12px;
         font-weight: 700;
         line-height: 16px !important;
     }
 
     .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
         
         font-size: 15px;
         color: #42b983;
@@ -967,7 +963,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.6k</span>&nbsp;字
+                class="white-color">3.1k</span>&nbsp;字
             
             
             
@@ -1229,8 +1225,38 @@ $(function () {
             </div>
         </div>
     
-
     
+    
+        <script src="//code.tidio.co/sdqtecquvqa9gaqrpapr6v2mlrku6ayf.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio = $("#tidio-chat iframe");
+                    if (tidio.css("display") == "block" && $(window).width() > 977) {
+                        document.getElementById("tidio-chat-iframe").style.bottom = "275px";
+                        document.getElementById("tidio-chat-iframe").style.right = "-15px";
+                        document.getElementById("tidio-chat-iframe").style.height = parseInt(tidio.css("height")) >= 520 ? "520px" : tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+                    }
+                    else if (tidio.css("display") == "block" && $(window).width() > 601 && $(window).width() < 992) {
+                        document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") == "none" && $(window).width() > 601 && $(window).width() < 992) ? "-40px" : "20px";
+                        document.getElementById("tidio-chat-iframe").style.right = "-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+                    }
+                    else if (tidio.css("display") == "block" && $(window).width() < 601 && parseInt(tidio.css("height")) < 230) {
+                        document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") == "none" && $(window).width() < 601) ? "-10px" : "45px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+                    }
+                    if (tidio.css("display") == "block" && $(window).width() < 601 && parseInt(tidio.css("height")) >= 230) {
+                        document.getElementById("tidio-chat-iframe").style.zIndex = "998";
+                    }
+                }
+            });
+        </script>
+        
+
+    <!-- 
         <script src="//code.tidio.co/sdqtecquvqa9gaqrpapr6v2mlrku6ayf.js"></script>
         <script>
             $(document).ready(function () {
@@ -1258,7 +1284,7 @@ $(function () {
                 }
             });
         </script>
-    
+     -->
 
     
 
@@ -1356,12 +1382,17 @@ $(function () {
             $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#changeMode-top').removeClass('fa-sun').addClass('fa-moon'), $('#modeicon').attr('xlink:href', '#icon-moon')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun'))
         }
     </script>
+
     <!-- 给深色模式加上了一个好看的黑色动态背景 -->
-    <div class="stars-con">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="stars.js"></script>
+    </head>
+    <body class="DarkMode">
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
-    </div>
+    </body>
 
 
         <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>

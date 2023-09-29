@@ -800,9 +800,16 @@
         top: 64px;
     }
 
+    /* .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    } */
     .toc-widget {
         width: 345px;
         padding-left: 20px;
+        background-color: rgb(255, 255, 255,0.7);
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
     }
 
     .toc-widget .toc-title {
@@ -852,7 +859,7 @@
     #floating-toc-btn {
         position: fixed;
         right: 15px;
-        bottom: 76px;
+        bottom: 95px; /*按钮位置*/
         padding-top: 15px;
         margin-bottom: 0;
         z-index: 998;
@@ -1166,6 +1173,28 @@
 
     
 
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC81ODg5OS8zNTM2MQ">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
     
 
     
@@ -1498,6 +1527,14 @@
         },
     });
 </script>
+<!-- 直达评论 -->
+<!-- 直达评论 -->
+<!-- 我这里是valine，直接填写valine的id——href="#vcomments",如果是其他评论，对应修改即可 -->
+<div id="to_comment" class="comment-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论">
+        <i class="fas fa-comments"></i>
+    </a>
+</div>
     
 
     
@@ -1915,16 +1952,12 @@
 <style>
     .aplayer .aplayer-lrc p {
         
-        display: none;
-        
         font-size: 12px;
         font-weight: 700;
         line-height: 16px !important;
     }
 
     .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
         
         font-size: 15px;
         color: #42b983;
@@ -1978,7 +2011,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.6k</span>&nbsp;字
+                class="white-color">3.1k</span>&nbsp;字
             
             
             
@@ -2240,8 +2273,38 @@ $(function () {
             </div>
         </div>
     
-
     
+    
+        <script src="//code.tidio.co/sdqtecquvqa9gaqrpapr6v2mlrku6ayf.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio = $("#tidio-chat iframe");
+                    if (tidio.css("display") == "block" && $(window).width() > 977) {
+                        document.getElementById("tidio-chat-iframe").style.bottom = "275px";
+                        document.getElementById("tidio-chat-iframe").style.right = "-15px";
+                        document.getElementById("tidio-chat-iframe").style.height = parseInt(tidio.css("height")) >= 520 ? "520px" : tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+                    }
+                    else if (tidio.css("display") == "block" && $(window).width() > 601 && $(window).width() < 992) {
+                        document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") == "none" && $(window).width() > 601 && $(window).width() < 992) ? "-40px" : "20px";
+                        document.getElementById("tidio-chat-iframe").style.right = "-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+                    }
+                    else if (tidio.css("display") == "block" && $(window).width() < 601 && parseInt(tidio.css("height")) < 230) {
+                        document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") == "none" && $(window).width() < 601) ? "-10px" : "45px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+                    }
+                    if (tidio.css("display") == "block" && $(window).width() < 601 && parseInt(tidio.css("height")) >= 230) {
+                        document.getElementById("tidio-chat-iframe").style.zIndex = "998";
+                    }
+                }
+            });
+        </script>
+        
+
+    <!-- 
         <script src="//code.tidio.co/sdqtecquvqa9gaqrpapr6v2mlrku6ayf.js"></script>
         <script>
             $(document).ready(function () {
@@ -2269,7 +2332,7 @@ $(function () {
                 }
             });
         </script>
-    
+     -->
 
     
 
@@ -2367,12 +2430,17 @@ $(function () {
             $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#changeMode-top').removeClass('fa-sun').addClass('fa-moon'), $('#modeicon').attr('xlink:href', '#icon-moon')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun'))
         }
     </script>
+
     <!-- 给深色模式加上了一个好看的黑色动态背景 -->
-    <div class="stars-con">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="stars.js"></script>
+    </head>
+    <body class="DarkMode">
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
-    </div>
+    </body>
 
 
         <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
