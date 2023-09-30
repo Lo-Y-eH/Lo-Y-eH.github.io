@@ -716,6 +716,7 @@ header .go-back i {
 .dream .title,
 .music-player .title,
 .video-player .title {
+    font-family: QingNiaoHuaGuangJianXingKai-2;
     margin-bottom: 20px;
     font-size: 2rem;
     font-weight: 700;
@@ -723,7 +724,9 @@ header .go-back i {
 
 .dream .text {
     opacity: .6;
-    font-size: 1.1rem;
+    font-size: 2rem;
+    font-weight: 100;
+    font-family: QingNiaoHuaGuangJianXingKai-2;
 }
 
 .music-player,
@@ -876,6 +879,7 @@ header .go-back i {
 }
 
 /*文章列表卡片各样式*/
+
 #articles {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -905,7 +909,7 @@ article .card {
 
 article .card-image {
     background-color: #222;
-    border-radius: 8px;
+    border-radius: 8px 0 0 0;
 }
 
 article .card-image img {
@@ -1025,6 +1029,31 @@ article .article-tags .chip {
         table-layout: fixed;
     }
 }
+/* 修改小屏幕下logo文字样式. */
+@media only screen and (max-width: 600px) {
+    .poem-wrap p:nth-of-type(1) {
+        font-size: 19px !important;
+    }
+    .poem-wrap p:nth-of-type(2) {
+        font-size: 16px !important;
+    }
+    .poem-wrap h1 {
+        font-size: 22px;
+    }
+    header .brand-logo .logo-span {
+        display: none;
+    }
+    .bg-cover .post-title {
+        font-size: 1.6rem;
+    }
+    .chip .notebook-skin {
+        padding: 10px 32px 64px 5px !important;
+    }
+    .chip-container .tag-chips .wenzhs {
+        margin-bottom: 26px !important;
+    }
+}
+
 
 @media only screen and (min-width: 1418px) {
     #artDetail {
@@ -1310,9 +1339,13 @@ thead {
     color: #34495e;
 }
 
-.chip-container .chip-active {
+/* .chip-container .chip-active {
     color: #FFF !important;
     background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%) !important;
+    box-shadow: 2px 5px 10px #aaa !important;
+} */
+.chip-container .chip-active {
+    color: #2ea451 !important;
     box-shadow: 2px 5px 10px #aaa !important;
 }
 
@@ -1329,9 +1362,13 @@ thead {
     z-index: 0;
 }
 
-.chip-container .chip:hover {
+/* .chip-container .chip:hover {
     color: #fff;
     background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%) !important;
+} */
+.chip-container .chip:hover {
+    color: #2ea451;
+    opacity: .8;
 }
 
 .chip .tag-length {
@@ -1340,13 +1377,19 @@ thead {
     font-size: 0.5rem;
 }
 
-.chip-default .tag-length {
+/* .chip-default .tag-length {
     color: #e91e63;
     margin-top: 1px;
 }
-
 .chip-active .tag-length {
     color: #fff;
+} */
+.chip-default .tag-length {
+    color: rgba(66, 92, 118, .8);
+    margin-top: 1px;
+}
+.chip-active .tag-length {
+    color: #64c45b;
 }
 
 /* archive page. */
@@ -1865,14 +1908,36 @@ footer .copy-right {
     font-size: 1.2rem;
 }
 
+@media screen and (min-width: 1202px) {
+    #searchModal {
+        top: 13% !important;
+        width: 56% !important;
+    }
+}
+
 #searchModal {
-    min-height: 500px;
+    min-height: 100px;
     width: 80%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+body.dark #searchModal {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 #searchModal .search-header .title {
-    font-size: 1.6rem;
-    color: #333;
+    font-size: 1.2rem;
+    color: #42b983;
+}
+
+/* 将搜索框输入文字颜色修改为白色 */
+#searchInput {
+    color: white;
+}
+
+.search-result {
+    color: #fff;
 }
 
 #searchResult {
@@ -1886,12 +1951,12 @@ footer .copy-right {
 }
 
 .search-result-list .search-result-title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #42b983;
 }
 
 .search-result-list li {
-    border-bottom: 1px solid #e5e5e5;
+    /* border-bottom: 1px solid #e5e5e5; */
     padding: 15px 0 5px 0;
 }
 
@@ -2188,7 +2253,7 @@ footer .copy-right {
 }
 
 .Cuteen_DarkSky {
-    background: linear-gradient(#feb8b0, #fef9db);
+    background: linear-gradient(#a3b9e7, #fef9db);
 }
 
 .Cuteen_DarkSky:before {
@@ -2497,3 +2562,11 @@ body.DarkMode {
     width: 8px;
     height: 15px;
 }
+
+/* 卡片透明化 */
+/* .card{
+    background: url(https://7.dusays.com/2021/01/15/468a1f5ef9a69.png) top!important;
+}
+body.dark .card{
+    background: url(https://7.dusays.com/2021/01/15/1313017cd1a15.png) top!important;
+}  */

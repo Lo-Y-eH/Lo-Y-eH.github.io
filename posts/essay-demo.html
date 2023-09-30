@@ -52,7 +52,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: #FFF;
+        background: #C8E8A8;
         text-align: center;
         /* loader页面消失采用渐隐的方式*/
         -webkit-transition: opacity 1s ease;
@@ -805,11 +805,11 @@
         padding-left: 20px;
     } */
     .toc-widget {
-        width: 345px;
-        padding-left: 20px;
-        background-color: rgb(255, 255, 255,0.7);
-        border-radius: 10px;
-        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    width: 345px;
+    padding-left: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
     }
 
     .toc-widget .toc-title {
@@ -2281,36 +2281,6 @@ $(function () {
             $(document).ready(function () {
                 setInterval(change_Tidio, 50);
                 function change_Tidio() {
-                    var tidio = $("#tidio-chat iframe");
-                    if (tidio.css("display") == "block" && $(window).width() > 977) {
-                        document.getElementById("tidio-chat-iframe").style.bottom = "275px";
-                        document.getElementById("tidio-chat-iframe").style.right = "-15px";
-                        document.getElementById("tidio-chat-iframe").style.height = parseInt(tidio.css("height")) >= 520 ? "520px" : tidio.css("height");
-                        document.getElementById("tidio-chat-iframe").style.zIndex = "997";
-                    }
-                    else if (tidio.css("display") == "block" && $(window).width() > 601 && $(window).width() < 992) {
-                        document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") == "none" && $(window).width() > 601 && $(window).width() < 992) ? "-40px" : "20px";
-                        document.getElementById("tidio-chat-iframe").style.right = "-15px";
-                        document.getElementById("tidio-chat-iframe").style.zIndex = "997";
-                    }
-                    else if (tidio.css("display") == "block" && $(window).width() < 601 && parseInt(tidio.css("height")) < 230) {
-                        document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") == "none" && $(window).width() < 601) ? "-10px" : "45px";
-                        document.getElementById("tidio-chat-iframe").style.zIndex = "997";
-                    }
-                    if (tidio.css("display") == "block" && $(window).width() < 601 && parseInt(tidio.css("height")) >= 230) {
-                        document.getElementById("tidio-chat-iframe").style.zIndex = "998";
-                    }
-                }
-            });
-        </script>
-        
-
-    <!-- 
-        <script src="//code.tidio.co/sdqtecquvqa9gaqrpapr6v2mlrku6ayf.js"></script>
-        <script>
-            $(document).ready(function () {
-                setInterval(change_Tidio, 50);
-                function change_Tidio() {
                     var tidio=$("#tidio-chat iframe");
                     if(tidio.css("display")=="block"&& $(window).width()>977 ){
                         document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
@@ -2333,7 +2303,7 @@ $(function () {
                 }
             });
         </script>
-     -->
+     
 
     
 

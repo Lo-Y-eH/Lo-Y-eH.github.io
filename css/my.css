@@ -1,19 +1,19 @@
 /* 这是你的自定义 CSS 样式。 */
 
-/* 自定义字体定义 */
 @font-face {
-    font-family: 'green bird';
-    src: url('../../../../source/font/green bird.ttf');
+    font-family: 'QingNiaoHuaGuangJianXingKai-2';
+    src: url('../font/QingNiaoHuaGuangJianXingKai-2.ttf');
 }
-/* 全局字体 */
-body {
-    font-family: 'green bird';
+/* 使用自定义字体的 CSS 类*/
+.diyFont {
+    font-family: 'QingNiaoHuaGuangJianXingKai-2';
 }
 
-/* 使用自定义字体的 CSS 类 */
-/* .diyFont {
-    font-family: 'green bird';
+/* body {
+    font-family: 'QingNiaoHuaGuangJianXingKai-2';
 } */
+
+
 
 /* 修改首页轮播的标题大小 */
 @media only screen and (max-width: 601px) {
