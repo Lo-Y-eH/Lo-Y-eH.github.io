@@ -235,9 +235,22 @@ mark {
     padding: .2em;
 }
 
+/* 卡片透明化 */
+/* .card{
+    background: url(https://7.dusays.com/2021/01/15/468a1f5ef9a69.png) top!important;
+}
+body.dark .card{
+    background: url(https://7.dusays.com/2021/01/15/1313017cd1a15.png) top!important;
+}  */
 .card {
+    /* background: url('https://cdn.jsdelivr.net/gh/Lo-Y-eH/image@main/image/202310012159507.webp') top!important;
+    background-size: cover; */
     border-radius: 10px;
     box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+}
+body.dark .card {
+    background: url('https://cdn.jsdelivr.net/gh/Lo-Y-eH/image@main/image/202310022212505.jpg') top !important;
+    background-size: cover; /* 添加此行以填充整个卡片背景 */
 }
 
 .card .card-image img {
@@ -251,8 +264,10 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
-     opacity: 0.66; /*透明效果, 范围 0~1, 看情况自己修改 */
+    /* 整体背景颜色，包括导航、移动端的导航、页尾、标签页等的背景颜色. */
+    /* background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%); */
+    background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+    opacity: 0.88; /*透明效果, 范围 0~1, 看情况自己修改 */
 }
 
 .text-color {
@@ -719,14 +734,15 @@ header .go-back i {
     font-family: QingNiaoHuaGuangJianXingKai-2;
     margin-bottom: 20px;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 666;
 }
 
 .dream .text {
-    opacity: .6;
-    font-size: 2rem;
-    font-weight: 100;
+    opacity: .7;
+    font-size: 3rem;
+    font-weight: bold;
     font-family: QingNiaoHuaGuangJianXingKai-2;
+    color: rgb(11, 11, 11);
 }
 
 .music-player,
@@ -2240,44 +2256,7 @@ body.dark #searchModal {
 }
 
 
-/* 深色模式动画 */
-.Cuteen_DarkSky,
-.Cuteen_DarkSky:before {
-    content: '';
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 88888888;
-}
-
-.Cuteen_DarkSky {
-    background: linear-gradient(#a3b9e7, #fef9db);
-}
-
-.Cuteen_DarkSky:before {
-    transition: 2s ease all;
-    opacity: 0;
-    background: linear-gradient(#4c3f6d, #6c62bb, #93b1ed);
-}
-
-.DarkMode .Cuteen_DarkSky:before {
-    opacity: 1;
-}
-
-.Cuteen_DarkPlanet {
-    z-index: 99999999;
-    position: fixed;
-    left: -50%;
-    top: -50%;
-    width: 200%;
-    height: 200%;
-    -webkit-animation: CuteenPlanetMove 2s cubic-bezier(0.7, 0, 0, 1);
-    animation: CuteenPlanetMove 2s cubic-bezier(0.7, 0, 0, 1);
-    transform-origin: center bottom;
-}
-
+/* 黑夜模式动画 */
 @-webkit-keyframes CuteenPlanetMove {
     0% {
         transform: rotate(0);
@@ -2298,6 +2277,43 @@ body.dark #searchModal {
     }
 }
 
+.Cuteen_DarkSky,
+.Cuteen_DarkSky:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 8888;
+}
+
+.Cuteen_DarkSky {
+    background: linear-gradient(#feb8b0, #fef9db);
+}
+
+.Cuteen_DarkSky:before {
+    transition: 2s ease all;
+    opacity: 0;
+    background: linear-gradient(#4c3f6d, #6c62bb, #93b1ed);
+}
+
+#dark-mode .Cuteen_DarkSky:before {
+    opacity: 1;
+}
+
+.Cuteen_DarkPlanet {
+    z-index: 9999;
+    position: fixed;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    -webkit-animation: CuteenPlanetMove 2s cubic-bezier(0.7, 0, 0, 1);
+    animation: CuteenPlanetMove 2s cubic-bezier(0.7, 0, 0, 1);
+    transform-origin: center bottom;
+}
+
 .Cuteen_DarkPlanet:after {
     position: absolute;
     left: 35%;
@@ -2305,232 +2321,136 @@ body.dark #searchModal {
     width: 9.375rem;
     height: 9.375rem;
     border-radius: 50%;
-    content: '';
+    content: "";
     background: linear-gradient(#fefefe, #fffbe8);
 }
 
-/*深色模式按钮*/
-.icon-V {
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/*黑夜模式按钮*/
+.sum-moon-box {
     width: 48px;
     height: 48px;
+    text-align: center;
     border-radius: 50%;
     position: fixed;
-    bottom: 155px;
     right: 15px;
-    transition: background 0.3s ease;
-    z-index: 9999;
+    bottom: 155px;
+    margin-bottom: 0;
+    z-index: 900;
 }
 
-.icon-V svg {
-    width: 70%;
-    height: 70%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.icon-V:hover {
-    /* background: #f5f5f5; */
-    background: #4cb4d7
-}
-
-/* .icon-V {
-    background: #fff;
-    box-shadow: 0 0 4px 1px rgb(0 0 0 / 12%) !important;
-    border-radius: 6px !important;
+.sum-moon-box .btn-floating {
     width: 48px;
     height: 48px;
-    padding: 22px;
-    border-radius: 6px;
-    overflow: hidden;
-    position: fixed;
-    bottom: 125px; 用于调整按钮位置 
-    right: 15px;
-    transition: 1.3s cubic-bezier(0.53, 0, 0.15, 1.3);
-    z-index: 9999;
 }
 
-.icon-V svg {
-    position: absolute;
-    bottom: 0px;
-    margin: auto;
-    right: 1px;
-} */
+.sum-moon-box i {
+    font-size: 1.8rem;
+    line-height: 48px !important;
+}
 
-/*深色模式字体颜色变灰白色*/
-body.DarkMode .fas,
-body.DarkMode .title,
-body.DarkMode .row .text,
-body.DarkMode article .article-content .summary,
-body.DarkMode .card .card-image .card-title,
-body.DarkMode .fa-moon-o:before,
-body.DarkMode .fa-lightbulb-o:before,
-body.DarkMode article .article-tags .chip,
-body.DarkMode .chip-container .tag-title,
-body.DarkMode div.jqcloud a,
-body.DarkMode .friends-container .tag-title,
-body.DarkMode .frind-ship .title h1,
-body.DarkMode .card .card-content p,
-body.DarkMode .card .card-content .dss,
-body.DarkMode .v[data-class='v'] .vcount,
-body.DarkMode .v[data-class='v'] .vcount .vnum,
-body.DarkMode pre code,
-body.DarkMode h1,
-body.DarkMode h2,
-body.DarkMode h3,
-body.DarkMode h4,
-body.DarkMode h5,
-body.DarkMode h6,
-body.DarkMode li,
-body.DarkMode p,
-body.DarkMode header .side-nav .mobile-head .logo-name,
-body.DarkMode header .side-nav .mobile-head .logo-desc,
-body.DarkMode header .side-nav .menu-list a,
-body.DarkMode .bg-cover .post-title,
-body.DarkMode.read .bg-cover .description {
+/* 字体颜色变灰白色 */
+#dark-mode .fas,
+#dark-mode .title,
+#dark-mode .row .text,
+#dark-mode article .article-content .summary,
+#dark-mode .card .card-image .card-title,
+#dark-mode .fa-moon-o:before,
+#dark-mode .fa-lightbulb-o:before,
+#dark-mode article .article-tags .chip,
+#dark-mode .chip-container .tag-title,
+#dark-mode div.jqcloud a,
+#dark-mode .friends-container .tag-title,
+#dark-mode .frind-ship .title h1,
+#dark-mode .card .card-content p,
+#dark-mode .card .card-content .dss,
+#dark-mode .v[data-class="v"] .vcount,
+#dark-mode .v[data-class="v"] .vcount .vnum,
+#dark-mode pre code,
+#dark-mode h1,
+#dark-mode h2,
+#dark-mode h3,
+#dark-mode h4,
+#dark-mode h5,
+#dark-mode h6,
+#dark-mode li,
+#dark-mode p,
+#dark-mode header .side-nav .mobile-head .logo-name,
+#dark-mode header .side-nav .mobile-head .logo-desc,
+#dark-mode header .side-nav .menu-list a,
+#dark-mode .bg-cover .post-title,
+#dark-mode .search-input,
+#dark-mode.read .bg-cover .description {
     color: rgba(255, 255, 255, 0.6);
 }
 
 /* 背景颜色变灰色 */
-body.DarkMode .card,
-body.DarkMode .block-with-text:after {
+#dark-mode .card,
+#dark-mode .block-with-text:after {
     background-color: #282c34;
 }
 
 /* 背景颜色变黑色 */
-body.DarkMode,
-body.DarkMode .v[data-class='v'] .vcount,
-body.DarkMode #rewardModal .modal-content,
-body.DarkMode .modal,
-body.DarkMode header .side-nav,
-body.DarkMode header .side-nav .menu-list .m-nav-show {
+#dark-mode,
+#dark-mode .v[data-class="v"] .vcount,
+#dark-mode #rewardModal .modal-content,
+#dark-mode .modal,
+#dark-mode header .side-nav,
+#dark-mode header .side-nav .menu-list .m-nav-show {
     background-color: #12121c;
 }
 
 /* 改变透明度 */
-body.DarkMode .aplayer {
+#dark-mode .aplayer {
     background: #2f3742 !important;
 }
 
-body.DarkMode img,
-body.DarkMode strong {
+#dark-mode img,
+#dark-mode strong {
     filter: brightness(0.7);
 }
 
 /* 统计图滤镜 */
-body.DarkMode #post-calendar,
-body.DarkMode #category-radar,
-body.DarkMode #tags-chart,
-body.DarkMode #categories-chart,
-body.DarkMode #posts-chart {
+#dark-mode #post-calendar,
+#dark-mode #category-radar,
+#dark-mode #tags-chart,
+#dark-mode #categories-chart,
+#dark-mode #posts-chart {
     filter: invert(1);
 }
 
 /*toc目录滤镜*/
-body.DarkMode .toc-widget {
+#dark-mode .toc-widget {
     filter: invert(0.8);
 }
 
-body.DarkMode .toc-widget .toc-list-item {
-    color: #000
-}
-
-/* Skill bar text color */
-body.DarkMode .skillbar .skill-bar-percent {
+#dark-mode .toc-widget .toc-list-item {
     color: #000;
 }
 
-/*深色模式星空背景*/
-body.DarkMode {
-    height: 100vh;
-    background-color: black;
+/* Skill bar text color */
+#dark-mode .skillbar .skill-bar-percent {
+    color: #000;
 }
 
-#stars,
-#stars2,
-#stars3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: rotate(-45deg);
+#dark-mode table,
+#dark-mode table tr,
+#dark-mode table th,
+#dark-mode table td {
+    border: none;
 }
 
-/*@import '../js/stars.js';
-
-#stars {
-    box-shadow: generateStars();
+#dark-mode table th {
+    background: #282c34;
 }
 
-#stars2 {
-    box-shadow: generateStars();
+#dark-mode table tr {
+    background: #606266;
+    color: rgb(243, 244, 246);
 }
 
-#stars3 {
-    box-shadow: generateStars();
+#dark-mode table tbody tr:nth-child(odd) td {
+    background: #282c34;
 }
-
-@keyframes animateStars {
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(-1000px);
-    }
-}
-
-#stars {
-    animation: animateStars 6s linear infinite;
-}
-
-#stars2 {
-    animation: animateStars 9s linear infinite;
-}
-
-#stars3 {
-    animation: animateStars 15s linear infinite;
-} */
-@import '../js/stars.js';
-
-@keyframes animateMeteor {
-    0% {
-        transform: translateX(100vw);
-    }
-
-    100% {
-        transform: translateX(-100vw);
-    }
-}
-
-#stars {
-    box-shadow: 0 0 1px 5px #fff,
-        0 0 20px 10px rgba(255, 255, 255, 0.5),
-        generateStars();
-
-    animation: animateMeteor 10s linear infinite;
-}
-
-#stars2 {
-    box-shadow: 0 0 1px 5px #fff,
-        0 0 20px 10px rgba(255, 255, 255, 0.5),
-        generateStars();
-
-    animation: animateMeteor 15s linear infinite;
-}
-
-#stars3 {
-    box-shadow: 0 0 1px 5px #fff,
-        0 0 20px 10px rgba(255, 255, 255, 0.5),
-        generateStars();
-
-    animation: animateMeteor 20s linear infinite;
-}
-
 
 /* 解决主题代码块没有行号的问题 */
 .line-numbers-rows {
@@ -2563,10 +2483,26 @@ body.DarkMode {
     height: 15px;
 }
 
-/* 卡片透明化 */
-/* .card{
-    background: url(https://7.dusays.com/2021/01/15/468a1f5ef9a69.png) top!important;
+/*星空动态背景*/
+#DynamicBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
-body.dark .card{
-    background: url(https://7.dusays.com/2021/01/15/1313017cd1a15.png) top!important;
-}  */
+
+#DynamicBackground canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* 解决浏览量和访问人数不显示的问题 */
+#busuanzi_container_site_pv,
+#busuanzi_value_site_pv,
+#busuanzi_container_site_uv {
+    display: inline !important;
+}

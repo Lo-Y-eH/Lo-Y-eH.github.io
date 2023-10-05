@@ -33,6 +33,7 @@
 </head>
 
 
+<!--设置背景图-->
 
 
 <!-- 添加Tidio聊天部件到您的网站 -->
@@ -40,7 +41,20 @@
 
 <!-- 添加loading page -->
 
-    <style type="text/css" lang="css">
+    
+    <div id="loading-container">
+        <p class="loading-text">嘘~ 正在从服务器偷取页面 . . . </p>
+        <div class="loading-image">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+<style type="text/css" lang="css">
     #loading-container {
         position: fixed;
         top: 0;
@@ -248,6 +262,7 @@
         }
     }
 </style>
+
 <script>
     (function () {
         const loaded = function () {
@@ -266,6 +281,7 @@
 
 
 <body>
+    <!--添加头部导航栏部分-->
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -300,7 +316,7 @@
       
       <i class="fas fa-paper-plane" style="zoom: 0.6;"></i>
       
-      <span>article</span>
+      <span>文章</span>
       <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
     <ul class="sub-nav menus_item_child ">
@@ -310,7 +326,7 @@
           
           <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>Tags</span>
+          <span>标签</span>
         </a>
       </li>
       
@@ -319,7 +335,7 @@
           
           <i class="fas fa-pen-nib" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>essay</span>
+          <span>随笔</span>
         </a>
       </li>
       
@@ -328,7 +344,7 @@
           
           <i class="fas fa-archive" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>Archives</span>
+          <span>归档</span>
         </a>
       </li>
       
@@ -337,7 +353,7 @@
           
           <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>Categories</span>
+          <span>分类</span>
         </a>
       </li>
       
@@ -373,7 +389,7 @@
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
       
-      <span>友情链接</span>
+      <span>友人帐</span>
     </a>
     
   </li>
@@ -385,7 +401,7 @@
       
       <i class="fas fa-address-card" style="zoom: 0.6;"></i>
       
-      <span>AboutMe</span>
+      <span>清单</span>
       <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
     <ul class="sub-nav menus_item_child ">
@@ -395,16 +411,16 @@
           
           <i class="fas fa-user-circle" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>关于我</span>
+          <span>关于</span>
         </a>
       </li>
       
       <li>
-        <a href="/aboutme">
+        <a href="/navigate">
           
-          <i class="fa fa-user-secret" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-location-arrow" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>Another</span>
+          <span>导航</span>
         </a>
       </li>
       
@@ -419,7 +435,7 @@
       
       <i class="fas fa-list" style="zoom: 0.6;"></i>
       
-      <span>Medias</span>
+      <span>媒体</span>
       <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
     <ul class="sub-nav menus_item_child ">
@@ -429,7 +445,7 @@
           
           <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>Books</span>
+          <span>书籍</span>
         </a>
       </li>
       
@@ -438,7 +454,7 @@
           
           <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>Musics</span>
+          <span>音乐</span>
         </a>
       </li>
       
@@ -447,7 +463,7 @@
           
           <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>Movies</span>
+          <span>影视</span>
         </a>
       </li>
       
@@ -456,7 +472,7 @@
           
           <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>Galleries</span>
+          <span>相册</span>
         </a>
       </li>
       
@@ -472,8 +488,13 @@
 </ul>
 
 
-<div id="mobile-nav" class="side-nav sidenav">
 
+<!--动态背景-->
+<div id="DynamicBackground"><canvas></canvas><canvas></canvas><canvas></canvas></div>
+<script src="/js/canvas_moving.js"></script>
+
+<!-- 移动导航菜单 -->
+<div id="mobile-nav" class="side-nav sidenav">
     <div class="mobile-head bg-color">
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
@@ -486,197 +507,185 @@
         </div>
     </div>
 
-    
-
     <ul class="menu-list mobile-menu-list">
         
         <li class="m-nav-item">
-	  
-		<a href="/" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-home"></i>
-			
-			首页
-		</a>
-          
+            
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa-fw fas fa-home"></i>
+                
+                首页
+            </a>
+            
         </li>
         
         <li class="m-nav-item">
-	  
-		<a href="javascript:;">
-			
-				<i class="fa-fw fas fa-paper-plane"></i>
-			
-			article
-			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
-		</a>
-            <ul  style="background:  ;" >
-              
+            
+            <a href="javascript:;">
+                
+                <i class="fa-fw fas fa-paper-plane"></i>
+                
+                文章
+                <span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+            </a>
+            <ul  style="background:  ;">
+                
                 <li>
-
-                  <a href="/tags " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-tags" style="position: absolute;left:50px" ></i>
-			      
-		          <span>Tags</span>
-                  </a>
+                    <a href="/tags " style="margin-left:75px">
+                        
+                        <i class="fa fas fa-tags" style="position: absolute;left:50px"></i>
+                        
+                        <span>标签</span>
+                    </a>
                 </li>
-              
+                
                 <li>
-
-                  <a href="/essay " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-pen-nib" style="position: absolute;left:50px" ></i>
-			      
-		          <span>essay</span>
-                  </a>
+                    <a href="/essay " style="margin-left:75px">
+                        
+                        <i class="fa fas fa-pen-nib" style="position: absolute;left:50px"></i>
+                        
+                        <span>随笔</span>
+                    </a>
                 </li>
-              
+                
                 <li>
-
-                  <a href="/archives " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-archive" style="position: absolute;left:50px" ></i>
-			      
-		          <span>Archives</span>
-                  </a>
+                    <a href="/archives " style="margin-left:75px">
+                        
+                        <i class="fa fas fa-archive" style="position: absolute;left:50px"></i>
+                        
+                        <span>归档</span>
+                    </a>
                 </li>
-              
+                
                 <li>
-
-                  <a href="/categories " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
-			      
-		          <span>Categories</span>
-                  </a>
+                    <a href="/categories " style="margin-left:75px">
+                        
+                        <i class="fa fas fa-bookmark" style="position: absolute;left:50px"></i>
+                        
+                        <span>分类</span>
+                    </a>
                 </li>
-              
+                
             </ul>
-          
+            
         </li>
         
         <li class="m-nav-item">
-	  
-		<a href="/about" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-user-circle"></i>
-			
-			关于
-		</a>
-          
+            
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa-fw fas fa-user-circle"></i>
+                
+                关于
+            </a>
+            
         </li>
         
         <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
-		</a>
-          
+            
+            <a href="/contact" class="waves-effect waves-light">
+                
+                <i class="fa-fw fas fa-comments"></i>
+                
+                留言板
+            </a>
+            
         </li>
         
         <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			友情链接
-		</a>
-          
+            
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa-fw fas fa-address-book"></i>
+                
+                友人帐
+            </a>
+            
         </li>
         
         <li class="m-nav-item">
-	  
-		<a href="javascript:;">
-			
-				<i class="fa-fw fas fa-address-card"></i>
-			
-			AboutMe
-			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
-		</a>
-            <ul  style="background:  ;" >
-              
+            
+            <a href="javascript:;">
+                
+                <i class="fa-fw fas fa-address-card"></i>
+                
+                清单
+                <span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+            </a>
+            <ul  style="background:  ;">
+                
                 <li>
-
-                  <a href="/about " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-user-circle" style="position: absolute;left:50px" ></i>
-			      
-		          <span>关于我</span>
-                  </a>
+                    <a href="/about " style="margin-left:75px">
+                        
+                        <i class="fa fas fa-user-circle" style="position: absolute;left:50px"></i>
+                        
+                        <span>关于</span>
+                    </a>
                 </li>
-              
+                
                 <li>
-
-                  <a href="/aboutme " style="margin-left:75px">
-				  
-				   <i class="fa fa fa-user-secret" style="position: absolute;left:50px" ></i>
-			      
-		          <span>Another</span>
-                  </a>
+                    <a href="/navigate " style="margin-left:75px">
+                        
+                        <i class="fa fas fa-location-arrow" style="position: absolute;left:50px"></i>
+                        
+                        <span>导航</span>
+                    </a>
                 </li>
-              
+                
             </ul>
-          
+            
         </li>
         
         <li class="m-nav-item">
-	  
-		<a href="javascript:;">
-			
-				<i class="fa-fw fas fa-list"></i>
-			
-			Medias
-			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
-		</a>
-            <ul  style="background:  ;" >
-              
+            
+            <a href="javascript:;">
+                
+                <i class="fa-fw fas fa-list"></i>
+                
+                媒体
+                <span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+            </a>
+            <ul  style="background:  ;">
+                
                 <li>
-
-                  <a href="/books " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
-			      
-		          <span>Books</span>
-                  </a>
+                    <a href="/books " style="margin-left:75px">
+                        
+                        <i class="fa fas fa-book" style="position: absolute;left:50px"></i>
+                        
+                        <span>书籍</span>
+                    </a>
                 </li>
-              
+                
                 <li>
-
-                  <a href="/musics " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
-			      
-		          <span>Musics</span>
-                  </a>
+                    <a href="/musics " style="margin-left:75px">
+                        
+                        <i class="fa fas fa-music" style="position: absolute;left:50px"></i>
+                        
+                        <span>音乐</span>
+                    </a>
                 </li>
-              
+                
                 <li>
-
-                  <a href="/movies " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
-			      
-		          <span>Movies</span>
-                  </a>
+                    <a href="/movies " style="margin-left:75px">
+                        
+                        <i class="fa fas fa-film" style="position: absolute;left:50px"></i>
+                        
+                        <span>影视</span>
+                    </a>
                 </li>
-              
+                
                 <li>
-
-                  <a href="/galleries " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
-			      
-		          <span>Galleries</span>
-                  </a>
+                    <a href="/galleries " style="margin-left:75px">
+                        
+                        <i class="fa fas fa-image" style="position: absolute;left:50px"></i>
+                        
+                        <span>相册</span>
+                    </a>
                 </li>
-              
+                
             </ul>
-          
+            
         </li>
         
         
@@ -863,58 +872,51 @@
                     
         </div>
     </main>
-
+    <!--添加尾部-->
     <footer class="page-footer bg-color">
     
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>
     .aplayer .aplayer-lrc p {
-        
         font-size: 12px;
         font-weight: 700;
         line-height: 16px !important;
     }
 
     .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
         font-size: 15px;
         color: #42b983;
     }
 
-    
     .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
+            left: -66px !important;
+        }
 
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
+        .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+            left: 0px !important;
+        }
 
-    
+        
 </style>
 <div class="">
     
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
+            <div class="row">
+                <meting-js class="col l8 offset-l2 m10 offset-m1 s12" server="netease"
+                    type="playlist" id="503838841" fixed=' true'
+                    autoplay='false'
+                        theme='#42b983'
+                            loop='all'
+                                order='random'
+                                    preload='auto'
+                                        volume='0.7'
+                                            list-folded='true'
+                                                >
+                </meting-js>
+            </div>
 </div>
 
 <script src="/libs/aplayer/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
     
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
@@ -929,7 +931,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.1k</span>&nbsp;字
+                class="white-color">3.2k</span>&nbsp;字
             
             
             
@@ -1033,8 +1035,7 @@
 </footer>
 
 <div class="progress-bar"></div>
-
-
+    <!--添加搜索框-->
     <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1139,6 +1140,7 @@ $(function () {
 });
 </script>
 
+    <!--添加回到顶部按钮-->
     <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
@@ -1146,7 +1148,78 @@ $(function () {
     </a>
 </div>
 
+    <!-- 切换夜间模式 -->
+    <!-- 白天和黑夜主题 -->
+<div class="sum-moon-box">
+    <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="切换主题">
+        <i id="sum-moon-icon" class="fas fa-sun" style="width:48px; height:48px; font-size: 28px;"></i>
+    </a>
+</div>
 
+<script>
+    function switchNightMode() {
+        sessionStorage.setItem('changeTheme', true)
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+            setTimeout(function () {
+                $('#dark-mode').length > 0
+                    ? (document.body.removeAttribute('id'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon'))
+                    : (document.body.setAttribute('id', 'dark-mode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+
+                    setTimeout(function () {
+                        $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                            $(this).remove()
+                        })
+                    }, 2e3)
+            })
+    }
+</script>
+
+<!-- 暗色模式持久化和同步 -->
+<script>
+    // 检查本地存储中的主题模式
+    var isDarkMode = localStorage.getItem('isDark');
+
+    // 如果本地存储中没有设置主题模式，默认为白天模式
+    if (isDarkMode === null) {
+        isDarkMode = '0'; // 白天模式
+    }
+
+    // 根据主题模式应用相应的样式
+    if (isDarkMode === '1') {
+        document.body.setAttribute('id', 'dark-mode');
+        $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon');
+    } else {
+        document.body.removeAttribute('id');
+        $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon');
+    }
+
+    // 检查是否需要自动切换主题
+    if (!sessionStorage.getItem("changeTheme")) {
+        if (
+            (new Date().getHours() >= 20 || new Date().getHours() < 7) &&
+            !$("#dark-mode").length > 0
+        ) {
+            document.body.setAttribute("id", "dark-mode");
+            $("#sum-moon-icon").addClass("fa-sun").removeClass("fa-moon");
+        }
+    }
+
+    // 黑夜模式持久化
+    if (localStorage.getItem('isDark') === '1') {
+        document.body.classList.add('DarkMode');
+        $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+    } else {
+        document.body.classList.remove('DarkMode');
+        $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')
+    }
+</script>
+
+<!-- <div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+</div> -->
+    
     <script src="/libs/materialize/materialize.min.js"></script>
     <script src="/libs/masonry/masonry.pkgd.min.js"></script>
     <script src="/libs/aos/aos.js"></script>
@@ -1177,19 +1250,6 @@ $(function () {
     
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
-    
-    
-        <div id="loading-container">
-            <p class="loading-text">嘘~ 正在从服务器偷取页面 . . . </p>
-            <div class="loading-image">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
     
     
     
@@ -1224,13 +1284,15 @@ $(function () {
 
     
 
+    <!--腾讯兔小巢-->
 	
+    <!--背景canvas-nest-->
     
-
+    <!--背景静止彩带-->
     
-
+    <!--背景动态彩带-->
     
-
+    <!--网页预加载-->
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
@@ -1239,7 +1301,7 @@ $(function () {
     <script type="text/javascript">
         var OriginTitile = document.title, st;
         document.addEventListener("visibilitychange", function () {
-            document.hidden ? (document.title = "ヽ(●-`Д´-)ノ你要玩捉迷藏嘛", clearTimeout(st)) : (document.title = "(Ő∀Ő3)ノ好哦！", st = setTimeout(function () { document.title = OriginTitile }, 3e3))
+            document.hidden ? (document.title = "ヽ(●-`Д´-)ノ你要玩捉迷藏嘛", clearTimeout(st)) : (document.title = "(Ő∀Ő3)ノ好哦", st = setTimeout(function () { document.title = OriginTitile }, 3e3))
         })
     </script>
 
@@ -1257,78 +1319,37 @@ $(function () {
     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
     <script type="text/javascript" src="/js/fireworks.js"></script>
 
-    <!-- 添加樱花飘落效果 -->
-    <script type="text/javascript">
+    <!-- 樱花特效 -->
+    
+        <script src="/js/sakura.js"></script>
+    
+    <!-- <script type="text/javascript">
         //只在桌面版网页启用特效
         var windowWidth = $(window).width();
         if (windowWidth > 768) {
             document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
         }
-    </script>
+    </script> -->
 
     <!-- 添加雪花飘落效果 -->
-    <script src="/js/snow.js"></script>
+    
+        <script src="/js/snow.js"></script>
+    
+
+    <!-- 添加轮播图冒泡效果 -->
+    
+    <script type="text/javascript" src="/libs/others/bubble.js"></script>
+    
 
     <!-- 添加鼠标彩虹星星掉落跟随效果 -->
     <script src="/js/cursor.js"></script>
 
-    <!-- 添加暗色模式 -->
-    <svg aria-hidden="true" style="position: absolute; overflow: hidden; width: 0; height: 0">
-        <symbol id="icon-sun" viewBox="0 0 1024 1024">
-            <path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z"
-                fill="#FFD878" p-id="8420"></path>
-            <path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path>
-            <path
-                d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z"
-                fill="#4D5152" p-id="8422"></path>
-            <path
-                d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z"
-                fill="#4D5152" p-id="8423"></path>
-        </symbol>
-        <symbol id="icon-moon" viewBox="0 0 1024 1024">
-            <path
-                d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z"
-                fill="#FFB531" p-id="11345"></path>
-            <path
-                d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z"
-                fill="#030835" p-id="11346"></path>
-        </symbol>
-    </svg>
-    <a onclick="switchNightMode()" class="icon-V hidden" title="切换主题">
-        <svg width="48" height="48" viewBox="0 0 1024 1024">
-            <use id="modeicon" xlink:href="#icon-moon"></use>
-        </svg>
-    </a>
-    <script>
-        function checkNightMode() {
-            '1' === localStorage.getItem('isDark') ? ($('body').addClass('DarkMode'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')) : '0' === localStorage.getItem('isDark') ? $('#modeicon').attr('xlink:href', '#icon-moon') : new Date().getHours() >= 20 || new Date().getHours() < 7 ? ($('body').addClass('DarkMode'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')) : matchMedia('(prefers-color-scheme: dark)').matches ? ($('body').addClass('DarkMode'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')) : $('#modeicon').attr('xlink:href', '#icon-moon')
-        }
-        function switchNightMode() {
-            $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
-                setTimeout(function () {
-                    $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#changeMode-top').removeClass('fa-sun').addClass('fa-moon'), $('#modeicon').attr('xlink:href', '#icon-moon')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')),
-                        setTimeout(function () {
-                            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
-                                $(this).remove()
-                            })
-                        }, 2e3)
-                })
-        }
-        function switchNightModeTop() {
-            $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#changeMode-top').removeClass('fa-sun').addClass('fa-moon'), $('#modeicon').attr('xlink:href', '#icon-moon')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun'))
-        }
-    </script>
+    <!--单击显示文字-->
+    <script type="text/javascript" src="/js/click_show_text.js"></script>
 
-    <!-- 给深色模式加上了一个好看的黑色动态背景 -->
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <script src="stars.js"></script>
-    </head>
-    <body class="DarkMode">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-    </body>
+    <!--星空动态背景-->
+    <!-- <div id="DynamicBackground"><canvas></canvas><canvas></canvas><canvas></canvas></div>
+    <script src="/js/canvas_moving.js"></script> -->
 
 
         <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
@@ -1351,6 +1372,6 @@ $(function () {
             }
           }
         });
-        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"width":150,"height":300,"position":"left"},"mobile":{"show":true},"log":false});</script></body>
 
 </html>
