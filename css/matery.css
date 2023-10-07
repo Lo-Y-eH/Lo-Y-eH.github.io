@@ -239,9 +239,7 @@ mark {
 /* .card{
     background: url(https://7.dusays.com/2021/01/15/468a1f5ef9a69.png) top!important;
 }
-body.dark .card{
-    background: url(https://7.dusays.com/2021/01/15/1313017cd1a15.png) top!important;
-}  */
+ */
 .card {
     /* background: url('https://cdn.jsdelivr.net/gh/Lo-Y-eH/image@main/image/202310012159507.webp') top!important;
     background-size: cover; */
@@ -249,7 +247,7 @@ body.dark .card{
     box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
 }
 body.dark .card {
-    background: url('https://cdn.jsdelivr.net/gh/Lo-Y-eH/image@main/image/202310022212505.jpg') top !important;
+    /* background: url('https://cdn.jsdelivr.net/gh/Lo-Y-eH/image@main/image/202310022212505.jpg') top !important; */
     background-size: cover; /* 添加此行以填充整个卡片背景 */
 }
 

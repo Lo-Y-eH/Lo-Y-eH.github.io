@@ -1,143 +1,124 @@
-/*!
- * Fairy Dust Cursor.js
- * - 90's cursors collection
- * -- https://github.com/tholman/90s-cursor-effects
- * -- http://codepen.io/tholman/full/jWmZxZ/
- */
-
-//鼠标点击雪花特效
+// 鼠标点击雪花特效
 (function fairyDustCursor() {
-  
-  var possibleColors = ["#D61C59", "#E7D84B", "#1B8798"]
-  var width = window.innerWidth;
-  var height = window.innerHeight;
-  var cursor = {x: width/2, y: width/2};
-  var particles = [];
-  
+  const possibleColors = ["#D61C59", "#E7D84B", "#1B8798"];
+  let width = window.innerWidth;
+  let height = window.innerHeight;
+  const cursor = { x: width / 2, y: width / 2 };
+  const particles = [];
+
   function init() {
     bindEvents();
     loop();
   }
-  
-  // Bind events that are needed
+
+  // 绑定所需的事件
   function bindEvents() {
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('touchmove', onTouchMove);
     document.addEventListener('touchstart', onTouchMove);
-    
+
     window.addEventListener('resize', onWindowResize);
   }
-  
-  function onWindowResize(e) {
+
+  function onWindowResize() {
     width = window.innerWidth;
     height = window.innerHeight;
   }
-  
+
   function onTouchMove(e) {
-    if( e.touches.length > 0 ) {
-      for( var i = 0; i < e.touches.length; i++ ) {
-        addParticle( e.touches[i].clientX, e.touches[i].clientY, possibleColors[Math.floor(Math.random()*possibleColors.length)]);
+    if (e.touches.length > 0) {
+      for (const touch of e.touches) {
+        addParticle(touch.clientX, touch.clientY, getRandomColor());
       }
     }
   }
-  
-  function onMouseMove(e) {    
+
+  function onMouseMove(e) {
     cursor.x = e.clientX;
     cursor.y = e.clientY;
-    
-    addParticle( cursor.x, cursor.y, possibleColors[Math.floor(Math.random()*possibleColors.length)]);
+
+    addParticle(cursor.x, cursor.y, getRandomColor());
   }
-  
+
   function addParticle(x, y, color) {
-    var particle = new Particle();
+    const particle = new Particle();
     particle.init(x, y, color);
     particles.push(particle);
   }
-  
+
   function updateParticles() {
-    
-    // Updated
-    for( var i = 0; i < particles.length; i++ ) {
-      particles[i].update();
+    for (const particle of particles) {
+      particle.update();
     }
-    
-    // Remove dead particles
-    for( var i = particles.length -1; i >= 0; i-- ) {
-      if( particles[i].lifeSpan < 0 ) {
-        particles[i].die();
-        particles.splice(i, 1);
+
+    particles.forEach((particle, index) => {
+      if (particle.lifeSpan < 0) {
+        particle.die();
+        particles.splice(index, 1);
       }
-    }
-    
+    });
   }
-  
+
   function loop() {
     requestAnimationFrame(loop);
     updateParticles();
   }
-  
-  /**
-   * Particles
-   */
-  
-  function Particle() {
 
-    this.character = "*";
-    this.lifeSpan = 120; //ms
-    this.initialStyles ={
-      "position": "fixed",
-      "top": "0", //必须加
-      "display": "block",
-      "pointerEvents": "none",
-      "z-index": "10000000",
-      "fontSize": "20px",
-      "will-change": "transform"
-    };
-
-    // Init, and set properties
-    this.init = function(x, y, color) {
-
-      this.velocity = {
-        x:  (Math.random() < 0.5 ? -1 : 1) * (Math.random() / 2),
-        y: 1
+  class Particle {
+    constructor() {
+      this.character = "*";
+      this.lifeSpan = 120; // ms
+      this.initialStyles = {
+        position: "fixed",
+        top: "0",
+        display: "block",
+        pointerEvents: "none",
+        "z-index": "100000000",
+        fontSize: "20px",
+        "will-change": "transform",
       };
-      
-      this.position = {x: x - 10, y: y - 20};
+    }
+
+    init(x, y, color) {
+      this.velocity = {
+        x: (Math.random() < 0.5 ? -1 : 1) * (Math.random() / 2),
+        y: 1,
+      };
+      this.position = { x: x - 10, y: y - 20 };
       this.initialStyles.color = color;
-      console.log(color);
 
       this.element = document.createElement('span');
       this.element.innerHTML = this.character;
       applyProperties(this.element, this.initialStyles);
       this.update();
-      
+
       document.body.appendChild(this.element);
-    };
-    
-    this.update = function() {
+    }
+
+    update() {
       this.position.x += this.velocity.x;
       this.position.y += this.velocity.y;
       this.lifeSpan--;
-      
-      this.element.style.transform = "translate3d(" + this.position.x + "px," + this.position.y + "px,0) scale(" + (this.lifeSpan / 120) + ")";
+
+      this.element.style.transform = `translate3d(${this.position.x}px, ${this.position.y}px, 0) scale(${this.lifeSpan / 120})`;
     }
-    
-    this.die = function() {
+
+    die() {
       this.element.parentNode.removeChild(this.element);
     }
-    
   }
-  
-  /**
-   * Utils
-   */
-  
-  // Applies css `properties` to an element.
-  function applyProperties( target, properties ) {
-    for( var key in properties ) {
-      target.style[ key ] = properties[ key ];
+
+  function applyProperties(target, properties) {
+    for (const key in properties) {
+      if (Object.hasOwnProperty.call(properties, key)) {
+        target.style[key] = properties[key];
+      }
     }
   }
-  
+
+  function getRandomColor() {
+    return possibleColors[Math.floor(Math.random() * possibleColors.length)];
+  }
+
   init();
 })();

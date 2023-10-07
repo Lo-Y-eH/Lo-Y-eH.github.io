@@ -1,3 +1,4 @@
+/*
 // 获取 canvas 元素
 var canvas = document.querySelector('#DynamicBackground canvas');
 var ctx = canvas.getContext('2d');
@@ -51,3 +52,4 @@ function drawStars() {
 
 // 初始化星星
 drawStars();
+*/
