@@ -1,18 +1,20 @@
-/* 这是你的自定义 CSS 样式。 */
+/* 这是你的自定义 CSS 样式 */
 
+/* 
+    // 设置全局字体
 @font-face {
     font-family: 'QingNiaoHuaGuangJianXingKai-2';
     src: url('../font/QingNiaoHuaGuangJianXingKai-2.ttf');
-}
-/* 使用自定义字体的 CSS 类*/
+} */
+
+/*
+    // 使用自定义字体的 CSS类
 .diyFont {
     font-family: 'QingNiaoHuaGuangJianXingKai-2';
 }
-
-/* body {
+ body {
     font-family: 'QingNiaoHuaGuangJianXingKai-2';
 } */
-
 
 
 /* 修改首页轮播的标题大小 */
