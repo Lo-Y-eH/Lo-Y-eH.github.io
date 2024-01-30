@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="person, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
+    <meta name="keywords" content="person, HTML,CSS,JavaScript,JQuery,React,Vue.js">
     <meta name="description" content="人生注定是一条没有归途的旅行">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -29,6 +29,17 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+    <!--看板娘-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="/live2d-widget/autoload.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+
+    <!-- 加载动画 -->
+    <!--自定义添加的 Loading Page CSS 样式-->
+    
+        <link rel="stylesheet" type="text/css" href="/css/loading.css">
+    
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="loyeh の Blog" type="application/atom+xml">
 </head>
 
@@ -42,242 +53,36 @@
 <!-- 添加loading page -->
 
     
-    <div id="loading-container">
-        <p class="loading-text">嘘~ 正在从服务器偷取页面 . . . </p>
-        <div class="loading-image">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+    <div id="loader-box">
+        /* 你的 HTML 代码将放在这里 */
+        <div class="loader-wrapper">
+            <div class="loader">
+                <!-- <img src="/images/1.png" alt="">头像位置 -->
+            </div>
+            <div class="loader-text">
+                <!-- 10个div -->
+                <div>L</div>
+                <div>O</div>
+                <div>A</div>
+                <div>D</div>
+                <div>I</div>
+                <div>N</div>
+                <div>G</div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
+
+        <script>
+            var endLoading = function () {
+                document.body.style.overflow = 'auto';
+                document.getElementById('loader-box').remove();
+            }
+            window.addEventListener('load', endLoading);
+        </script>
     </div>
-
-
-<style type="text/css" lang="css">
-    #loading-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-height: 100vh;
-        width: 100vw;
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #C8E8A8;
-        text-align: center;
-        /* loader页面消失采用渐隐的方式*/
-        -webkit-transition: opacity 1s ease;
-        -moz-transition: opacity 1s ease;
-        -o-transition: opacity 1s ease;
-        transition: opacity 1s ease;
-    }
-
-    .loading-image {
-        width: 120px;
-        height: 50px;
-        transform: translate(-50%);
-    }
-
-    .loading-image div:nth-child(2) {
-        -webkit-animation: pacman-balls 1s linear 0s infinite;
-        animation: pacman-balls 1s linear 0s infinite
-    }
-
-    .loading-image div:nth-child(3) {
-        -webkit-animation: pacman-balls 1s linear .33s infinite;
-        animation: pacman-balls 1s linear .33s infinite
-    }
-
-    .loading-image div:nth-child(4) {
-        -webkit-animation: pacman-balls 1s linear .66s infinite;
-        animation: pacman-balls 1s linear .66s infinite
-    }
-
-    .loading-image div:nth-child(5) {
-        -webkit-animation: pacman-balls 1s linear .99s infinite;
-        animation: pacman-balls 1s linear .99s infinite
-    }
-
-    .loading-image div:first-of-type {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
-        animation: rotate_pacman_half_up .5s 0s infinite;
-    }
-
-    .loading-image div:nth-child(2) {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
-        animation: rotate_pacman_half_down .5s 0s infinite;
-        margin-top: -50px;
-    }
-
-    @-webkit-keyframes rotate_pacman_half_up {
-        0% {
-            transform: rotate(270deg)
-        }
-
-        50% {
-            transform: rotate(1turn)
-        }
-
-        to {
-            transform: rotate(270deg)
-        }
-    }
-
-    @keyframes rotate_pacman_half_up {
-        0% {
-            transform: rotate(270deg)
-        }
-
-        50% {
-            transform: rotate(1turn)
-        }
-
-        to {
-            transform: rotate(270deg)
-        }
-    }
-
-    @-webkit-keyframes rotate_pacman_half_down {
-        0% {
-            transform: rotate(90deg)
-        }
-
-        50% {
-            transform: rotate(0deg)
-        }
-
-        to {
-            transform: rotate(90deg)
-        }
-    }
-
-    @keyframes rotate_pacman_half_down {
-        0% {
-            transform: rotate(90deg)
-        }
-
-        50% {
-            transform: rotate(0deg)
-        }
-
-        to {
-            transform: rotate(90deg)
-        }
-    }
-
-    @-webkit-keyframes pacman-balls {
-        75% {
-            opacity: .7
-        }
-
-        to {
-            transform: translate(-100px, -6.25px)
-        }
-    }
-
-    @keyframes pacman-balls {
-        75% {
-            opacity: .7
-        }
-
-        to {
-            transform: translate(-100px, -6.25px)
-        }
-    }
-
-
-    .loading-image div:nth-child(3),
-    .loading-image div:nth-child(4),
-    .loading-image div:nth-child(5),
-    .loading-image div:nth-child(6) {
-        background-color: #49b1f5;
-        width: 15px;
-        height: 15px;
-        border-radius: 100%;
-        margin: 2px;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        transform: translateY(-6.25px);
-        top: 25px;
-        left: 100px;
-    }
-
-    .loading-text {
-        margin-bottom: 20vh;
-        /* 修改间距*/
-        text-align: center;
-        color: #2c3e50;
-        font-size: 2rem;
-        box-sizing: border-box;
-        padding: 0 10px;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    @media only screen and (max-width: 500px) {
-        .loading-text {
-            font-size: 1.5rem;
-            /* margin-bottom: 2vh; */
-            /* 手机端修改间距 */
-        }
-    }
-
-    .fadeout {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-
-    /* logo出现动画 */
-    @-webkit-keyframes fadeInDown {
-        0% {
-            opacity: 0;
-            -webkit-transform: translate3d(0, -80%, 0);    /* 修改这里，100改为80 */
-            transform: translate3d(0, -80%, 0)  /* 修改这里，100改为80 */
-        }
-
-        100% {
-            opacity: 1;
-            -webkit-transform: none;
-            transform: none
-        }
-    }
-
-    @keyframes fadeInDown {
-        0% {
-            opacity: 0;
-            -webkit-transform: translate3d(0, -80%, 0);    /* 修改这里，100改为80 */
-        }
-    }
-</style>
-
-<script>
-    (function () {
-        const loaded = function () {
-            setTimeout(function () {
-                const loader = document.getElementById("loading-container");
-                loader.className = "fadeout";//使用渐隐的方法淡出loading page
-                // document.getElementById("body-wrap").style.display="flex";
-                setTimeout(function () {
-                    loader.style.display = "none";
-                }, 2500);
-            }, 666);//强制显示loading page 666ms  
-        };
-        loaded();
-    })()
-</script>
+    
 
 
 <body>
@@ -812,6 +617,20 @@
 <script src="/libs/fancybox/fancybox.js"></script> 
 <script src="/libs/justifiedGallery/justifiedGallery.min.js"></script>
 
+<style>
+  .photo-item img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    filter: grayscale(100%) opacity(0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .photo-item:hover img {
+    transform: scale(1.08);
+    filter: grayscale(0%) opacity(1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+</style>
+
 <script>
     // 初始化 fancybox
     $("[rel=example_group]").fancybox();
@@ -825,6 +644,7 @@
         rowHeight: 150
     });
 </script>
+
     <footer class="page-footer bg-color">
     
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
@@ -879,7 +699,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2023</span>
+                <span id="year">2023-2024</span>
             
             <span id="year">2023</span>
             <a href="/about" target="_blank">Lo-Y-eH</a>
@@ -888,7 +708,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.2k</span>&nbsp;字
+                class="white-color">17.4k</span>&nbsp;字
             
             
             
@@ -1234,11 +1054,14 @@ $(function () {
     </script>
 
     <!--动态线条背景-->
-    <!-- 
-    color: 颜色，三个数字分别为(R,G,B)，默认:（0,0,0）   opacity: 透明度（0~1），默认：0.5
+    <!-- color: (R,G,B)，默认:（0,0,0）opacity: 透明度（0~1），默认：0.5
     count: 线条总数，默认：150    zIndex：表示图层所在的位置，默认：-1 -->
-    <script type="text/javascript" color="122 103 238" opacity='0.7' zIndex="-1" count="200"src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script>
+    <!-- <script type="text/javascript" color="122 103 238" opacity='0.7' zIndex="-1" count="100"src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script> -->
+    
+        <script color="144 173 255" opacity="0.7" zIndex="-1" count="100"
+            src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+    
 
     <!-- 添加鼠标点击烟花爆炸效果 -->
     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
@@ -1268,15 +1091,26 @@ $(function () {
     
 
     <!-- 添加鼠标彩虹星星掉落跟随效果 -->
-    <script src="/js/cursor.js"></script>
+    <!-- <script src="/js/cursor.js"></script> -->
+    
+        <script src="/js/cursor.js"></script>
+    
+
 
     <!--单击显示文字-->
-    <script type="text/javascript" src="/js/click_show_text.js"></script>
+    <!-- <script type="text/javascript" src="/js/click_show_text.js"></script> -->
+    
+        <script src="/js/click_show_text.js"></script>
+    
 
-    <!--星空动态背景-->
-    <!-- <div id="DynamicBackground"><canvas></canvas><canvas></canvas><canvas></canvas></div>
-    <script src="/js/canvas_moving.js"></script> -->
-
+    <!-- 添加打字爆炸特效 -->
+    <script src="/js/activate-power-mode.js"></script>
+    <script>
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+    </script>
+    
 
         <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
         <script>
@@ -1298,6 +1132,6 @@ $(function () {
             }
           }
         });
-        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"width":150,"height":300,"position":"left"},"mobile":{"show":true},"log":false});</script></body>
+        </script></body>
 
 </html>
