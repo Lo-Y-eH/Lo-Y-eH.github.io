@@ -739,7 +739,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    234
+                    245
                 </div>
                 
 
@@ -780,43 +780,39 @@
         body {
             margin: 0;
             font-size: 20px;
-            background: linear-gradient(to right, #4e54c8, #8f94fb);
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
         }
 
         .container {
-            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
+            background: white;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
         }
 
         .content {
-            position: relative;
-            width: 600px;
-            max-width: 100%;
+            width: 80%;
+            max-width: 600px;
             margin: 20px;
-            background: rgba(255, 255, 255, 0.9);
+            background: white;
             padding: 60px 40px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             opacity: 0;
             animation: apparition 0.8s 1.2s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
         }
 
         .content p {
             font-size: 1.3rem;
-            margin-top: 0;
-            margin-bottom: 0.6rem;
+            margin: 0.6rem 0;
             letter-spacing: 0.1rem;
             color: #595959;
-        }
-
-        .content p:last-child {
-            margin-bottom: 0;
         }
 
         .content button {
@@ -832,6 +828,12 @@
             font-weight: bold;
         }
 
+        .particle {
+            position: absolute;
+            display: block;
+            pointer-events: none;
+        }
+
         @keyframes apparition {
             from {
                 opacity: 0;
@@ -843,23 +845,51 @@
                 transform: translateY(0);
             }
         }
+
+        .particle:nth-child(1) {
+            left: 30%;
+            animation: floating 4s infinite ease-in-out;
+        }
+
+        .particle:nth-child(2) {
+            left: 50%;
+            animation: floating 3s infinite ease-in-out;
+        }
+
+        .particle:nth-child(3) {
+            left: 70%;
+            animation: floating 4s infinite ease-in-out;
+        }
+
+        /* 其他粒子样式 */
+
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
     </style>
 </head>
 
 <body>
     <main class='container'>
+        <!-- 粒子样式 -->
+        <span class='particle'>4</span>
+        <span class='particle'>4</span>
+        <span class='particle'>4</span>
         <article class='content'>
             <p>不找了找不到的</p>
-            <p>你还在想些什么</p>
-            <p>这世界已经疯了</p>
-            <p>你就别再自找折磨</p>
-            <p>别找了找不到的</p>
-            <p>上帝已如此忙碌</p>
-            <p>该来她总会来的</p>
-            <br /><br />
-            <p>歌曲《不找了》——郭旭</p>
+            <p>页面好像飞到了404的星球上</p>
             <p>You got lost in the <strong>404</strong> galaxy.</p>
-            <button>Go back to earth.</button>
+            <p>
+                <button>Go back to earth.</button>
+            </p>
         </article>
     </main>
 </body>
