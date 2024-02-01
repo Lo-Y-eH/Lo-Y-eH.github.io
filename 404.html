@@ -739,7 +739,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    15
+                    234
                 </div>
                 
 
@@ -770,42 +770,98 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parallax 404 page</title>
-    <link rel="stylesheet" href="../themes/matery/source/css/404.css" />
-    <script type="text/javascript" src="../themes/matery/source/js/404.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <style>
+        body {
+            margin: 0;
+            font-size: 20px;
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .content {
+            position: relative;
+            width: 600px;
+            max-width: 100%;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 60px 40px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: apparition 0.8s 1.2s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
+        }
+
+        .content p {
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 0.6rem;
+            letter-spacing: 0.1rem;
+            color: #595959;
+        }
+
+        .content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .content button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.5rem 1rem;
+            border: 3px solid #595959;
+            background: transparent;
+            font-size: 1rem;
+            color: #595959;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        @keyframes apparition {
+            from {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div id="not-found" class="not-found parallax">
-        <div class="sky-bg"></div>
-        <div class="wave-7"></div>
-        <div class="wave-6"></div>
-        <a href="#" class="wave-island">
-            <img src="../themes/matery/source/404/island.svg" alt="Island" />
-        </a>
-        <div class="wave-5"></div>
-        <div class="wave-lost wrp">
-            <span>4</span>
-            <span>0</span>
-            <span>4</span>
-        </div>
-        <div class="wave-4"></div>
-        <div class="wave-boat">
-            <img class="boat" src="../themes/matery/source/404/boat.svg" alt="Boat" />
-        </div>
-        <div class="wave-3"></div>
-        <div class="wave-2"></div>
-        <div class="wave-1"></div>
-        <div class="wave-message">
-            <p>You seem lost</p>
-            <p>Click on the island to return</p>
-        </div>
-    </div>
+    <main class='container'>
+        <article class='content'>
+            <p>不找了找不到的</p>
+            <p>你还在想些什么</p>
+            <p>这世界已经疯了</p>
+            <p>你就别再自找折磨</p>
+            <p>别找了找不到的</p>
+            <p>上帝已如此忙碌</p>
+            <p>该来她总会来的</p>
+            <br /><br />
+            <p>歌曲《不找了》——郭旭</p>
+            <p>You got lost in the <strong>404</strong> galaxy.</p>
+            <button>Go back to earth.</button>
+        </article>
+    </main>
 </body>
 
 </html>
@@ -1807,7 +1863,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">61.7k</span>&nbsp;字
+                class="white-color">63.1k</span>&nbsp;字
             
             
             
