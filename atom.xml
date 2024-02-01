@@ -6,7 +6,7 @@
   <link href="http://lo-y-eh.github.io/atom.xml" rel="self"/>
   
   <link href="http://lo-y-eh.github.io/"/>
-  <updated>2024-01-31T13:38:54.155Z</updated>
+  <updated>2024-02-01T03:46:10.333Z</updated>
   <id>http://lo-y-eh.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>404页面</title>
+    <link href="http://lo-y-eh.github.io/posts/e7a5.html"/>
+    <id>http://lo-y-eh.github.io/posts/e7a5.html</id>
+    <published>2024-02-01T03:06:39.000Z</published>
+    <updated>2024-02-01T03:46:10.333Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;404&quot;&gt;&lt;a href=&quot;#404&quot; class=&quot;headerlink&quot; title=&quot;404&quot;&gt;&lt;/a&gt;404&lt;/h1&gt;&lt;h2 id=&quot;源码&quot;&gt;&lt;a href=&quot;#源码&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
+    
+    
+    <category term="404" scheme="http://lo-y-eh.github.io/tags/404/"/>
+    
+  </entry>
+  
+  <entry>
     <title>OpenMP</title>
     <link href="http://lo-y-eh.github.io/posts/8905.html"/>
     <id>http://lo-y-eh.github.io/posts/8905.html</id>
     <published>2024-01-31T13:28:12.000Z</published>
-    <updated>2024-01-31T13:38:54.155Z</updated>
+    <updated>2024-01-31T14:01:30.178Z</updated>
     
     
       
@@ -46,7 +71,7 @@
     <link href="http://lo-y-eh.github.io/posts/ef25.html"/>
     <id>http://lo-y-eh.github.io/posts/ef25.html</id>
     <published>2024-01-31T13:24:16.000Z</published>
-    <updated>2024-01-31T13:26:50.669Z</updated>
+    <updated>2024-01-31T14:01:30.183Z</updated>
     
     
       
@@ -71,7 +96,7 @@
     <link href="http://lo-y-eh.github.io/posts/e16d.html"/>
     <id>http://lo-y-eh.github.io/posts/e16d.html</id>
     <published>2024-01-31T11:27:06.000Z</published>
-    <updated>2024-01-31T13:13:10.343Z</updated>
+    <updated>2024-01-31T14:01:30.180Z</updated>
     
     
       
