@@ -40,26 +40,34 @@
     overflow-x: hidden;
     overflow-y: auto;
 } */
+/* 设置整体页面样式 */
 body {
-    background-color: #eaeaea;
-    margin: 0;
-    color: #34495e;
+    background-color: #eaeaea;/* 背景颜色 */
+    margin: 0;/* 边距 */
+    color: #34495e;/* 文字颜色 */
     overflow-x: hidden;
     overflow-y: auto;
     /* background: linear-gradient(60deg, #3ab5b0 0%, #3d99be 31%, #56317a 100%); */
     background: linear-gradient(123deg, #eec7ee 0%, #90e2ea 50%, #c1f7b3 100%);
+    /* 渐变背景色 */
     background-attachment: fixed;
     background-size: cover;
 }
 
+/* 标题1样式 */
 h1 {
-    margin: 48px 0 22px -5px;
-    font-size: 2.0rem;
-    font-weight: bold;
-    line-height: 2.0rem;
-    color: #42b983 !important;
+    margin: 48px 0 22px -5px;       /* 上、下、左边距 */
+    /*font-size: 2.0rem;*/              /* 字体大小 */
+    font-size: 2.2rem;
+    font-weight: bold;              /* 字体粗细 */
+    /*line-height: 2.0rem;*/            /* 行高 */
+    line-height: 2.2rem;
+    /* color: #42b983 !important; */
+    color: #7fbaf1 !important;
+    text-align: center;             /* 新增居中样式 */
 }
 
+/* 标题2样式 */
 h2 {
     margin: 42px 0 18px -5px;
     font-size: 1.8rem;
@@ -68,63 +76,93 @@ h2 {
     color: #42b983 !important;
 }
 
+/* 标题3样式 */
 h3 {
     margin: 38px 0 15px -4px;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    line-height: 1.7rem;
-    color: #42b983 !important;
+    line-height: 1.5rem;
+    /* color: #42b983 !important; */
+    color: #9b59b6 !important;
 }
 
+/* 标题4样式 */
 h4 {
     margin: 32px 0 12px -4px;
-    font-size: 1.45rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    line-height: 1.45rem;
-    color: #42b983 !important;
+    line-height: 1.4rem;
+    /* color: #42b983 !important; */
+    color: #ff5733 !important;
 }
 
+/* 标题5样式 */
 h5 {
     margin: 28px 0 8px -4px;
     font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.2rem;
-    color: #42b983 !important;
-
+    /* color: #42b983 !important; */
+    color: #9b59b6 !important;
 }
 
+/* 标题6样式 */
 h6 {
     margin: 22px 0 4px -4px;
     font-size: 1.1rem;
     line-height: 1.1rem;
     font-weight: 500;
-    color: #42b983 !important;
+    /* color: #b94252 !important; */
+    color: #e74c3c !important;
 }
 
+/* 给标题添加分割线 */
+/* h1::after,
+h2::after,
+h3::after,
+h4::after,
+h5::after,
+h6::after */
+h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc; /* 分割线的颜色 */
+    margin-top: 8px;    /* 调整分割线与标题之间的垂直间距 */
+}
+
+/* 段落样式 */
 p {
     font-size: 1rem;
     line-height: 1.5rem;
 }
 
+/* 分割线样式 */
 hr {
     margin: 20px 0;
     border: 0;
     border-top: 1px solid #ccc;
 }
 
+/* 引用块样式 */
 blockquote {
     border-left: 5px solid #42b983;
     padding: 1rem 0.8rem 0.2rem 0.8rem;
     color: #666;
     background-color: rgba(66, 185, 131, .1);
+    border-radius: 5px 10px 10px 5px;   /*添加圆角*/
 }
 
+/* 代码块样式优化 */
 pre {
     padding: 2rem 1rem 1rem 1rem !important;
     border-radius: 0.35rem;
     tab-size: 4;
+    position: relative;     /* 移除伪类的绝对定位 */
 }
 
+/* 代码块的伪类样式优化 */
 .code-area::after {
     content: " ";
     position: absolute;
@@ -135,20 +173,25 @@ pre {
     top: 0;
     left: 12px;
     margin-top: 12px;
-    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    /* 添加阴影效果 */
     box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
 }
 
+/* 行内代码样式优化 */
 code {
     padding: 1px 5px;
     top: 13px !important;
     font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
-    font-size: 0.91rem;
-    color: #e96900;
-    background-color: #f8f8f8;
-    border-radius: 2px;
+    word-break: break-word;
+    line-height: 2.1rem;
+    padding: .2rem .6rem;
+    color: #E66161;
+    background-color: #FF6A6A22;    /* F12 查看css确实好用 */
+    border-radius: 4px
 }
 
+/* 代码复制按钮样式优化 */
 .code_copy {
     position: absolute;
     top: 0.7rem;
@@ -156,8 +199,11 @@ code {
     z-index: 1;
     filter: invert(50%);
     cursor: pointer;
+    /* 应用图像滤镜效果: 将元素的亮度和颜色反转一半，使得原本的颜色变得更浅或更深*/
+    -webkit-filter: invert(50%);
 }
 
+/* 代码复制提示样式优化 */
 .codecopy_notice {
     position: absolute;
     top: 0.7rem;
@@ -165,8 +211,11 @@ code {
     z-index: 1;
     filter: invert(50%);
     opacity: 0;
+    transition: opacity 0.3s;   /* 添加渐变过渡效果 */
+    -webkit-filter: invert(50%);/* 应用图像滤镜效果 */
 }
 
+/* 代码语言提示样式优化 */
 .code_lang {
     position: absolute;
     top: 1.2rem;
@@ -177,29 +226,66 @@ code {
     z-index: 1;
     filter: invert(50%);
     cursor: pointer;
+    -webkit-filter: invert(50%);
+    /* 禁止用户选择样式 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+
 }
 
+/* 代码展开/折叠按钮样式优化 */
 .code-expand {
     position: absolute;
     top: 4px;
     right: 0;
+    -webkit-filter: invert(50%);
     filter: invert(50%);
     padding: 7px;
     z-index: 999 !important;
     cursor: pointer;
     transition: all .3s;
+    -webkit-transition: all .3s;
+    -webkit-transform: rotate(0);
     transform: rotate(0deg);
 }
 
+/* 代码折叠状态下的展开按钮样式 */
 .code-closed .code-expand {
     transform: rotate(-180deg) !important;
-    transition: all .3s;
 }
 
+/* 代码折叠状态 */
+.code-shrink {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    -webkit-filter: invert(50%);
+    filter: invert(50%);
+    padding: 7px;
+    z-index: 999 !important;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.code-closed .code-shrink {
+    -webkit-transform: rotate(-180deg) !important;
+    transform: rotate(-180deg) !important;
+    -webkit-transition: all .3s;
+    transition: all .3s
+}
+
+/* 代码折叠状态下的样式优化 */
 .code-closed pre::before {
     height: 0;
+    transition: height 0.3s;    /* 添加渐变过渡效果 */
 }
 
+/* 代码块内部代码样式优化 */
 pre code {
     padding: 0;
     color: #e8eaf6;
