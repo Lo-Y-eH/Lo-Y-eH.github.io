@@ -752,14 +752,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    9 分
                 </div>
                 
 
@@ -782,7 +782,235 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="hexo优化"><a href="#hexo优化" class="headerlink" title="hexo优化"></a>hexo优化</h1>
+                <h1 id="hexo优化"><a href="#hexo优化" class="headerlink" title="hexo优化"></a>hexo优化</h1><h2 id="cnpm"><a href="#cnpm" class="headerlink" title="cnpm"></a>cnpm</h2><blockquote>
+<p><strong>本节参考自　<a target="_blank" rel="noopener" href="http://npm.taobao.org/">淘宝 NPM 镜像</a></strong></p>
+</blockquote>
+<p>这是一个完整 <strong>npmjs.org</strong> 镜像，你可以用此代替官方版本（只读），同步频率目前为 10 分钟 一次以保证尽量与官方服务器同步。在 <strong>npm</strong> 无法同步时提供帮助。</p>
+<p><strong>打开命令行窗口安装</strong>：<code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
+<h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><h4 id="安装模块"><a href="#安装模块" class="headerlink" title="安装模块"></a>安装模块</h4><p>从 <a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">registry.npm.taobao.org</a> 安装所有模块。当安装的时候发现安装的模块还没有同步过来，淘宝 NPM 会自动在后台进行同步，并且会让你从官方 NPM <a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">registry.npm.taobao.org</a> 进行安装。下次你再安装这个模块的时候，就会直接从 淘宝 NPM 安装了。</p>
+<pre class="line-numbers language-none"><code class="language-none">$ cnpm install [name]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="同步模块"><a href="#同步模块" class="headerlink" title="同步模块"></a>同步模块</h4><p>直接通过 <code>sync</code> 命令马上同步一个模块, 只有 <code>cnpm</code> 命令行才有此功能:</p>
+<pre class="line-numbers language-none"><code class="language-none">$ cnpm sync connect<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>当然, 你可以直接通过 web 方式来同步: <a target="_blank" rel="noopener" href="https://npm.taobao.org/sync/connect">&#x2F;sync&#x2F;connect</a></p>
+<pre class="line-numbers language-none"><code class="language-none">$ open https:&#x2F;&#x2F;npm.taobao.org&#x2F;sync&#x2F;connect<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="其它命令"><a href="#其它命令" class="headerlink" title="其它命令"></a>其它命令</h4><p>支持 <code>npm</code> 除了 <code>publish</code> 之外的所有命令, 如:</p>
+<pre class="line-numbers language-none"><code class="language-none">$ cnpm info connect<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="InstantClick"><a href="#InstantClick" class="headerlink" title="InstantClick"></a>InstantClick</h2><p><strong>本节参考自　<a target="_blank" rel="noopener" href="https://www.liuxinggang.com/2016-12-06-hexo%E5%8D%9A%E5%AE%A2%E8%BF%9B%E9%98%B6%EF%BC%8D%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">刘兴刚博客</a></strong></p>
+<p><strong>Next 主题 现已集成 quicklink</strong></p>
+<p>通常，我们为了减少 <strong>DNS</strong> 的查询时间，使用 <strong>dns prefetch</strong> 为该页面中的链接做解析，提升页面的加载速度。类似的，我们可以在鼠标滑到链接上到点击的时间间隙去加载这个页面，通常这个间隙有几百毫秒，利用 <strong>InstantClick</strong>，我们可以充分利用这几百毫秒，让网站能够瞬间显示新页面，几乎没有延迟。</p>
+<p>但是 <strong>InstantClick</strong> 并不能滥用，许多 <strong>js</strong> 无法与它兼容，如<strong>谷歌分析</strong>、<strong>百度统计</strong>以及 <strong>fancybox</strong>。</p>
+<p>初始化并解决部分 <strong>js</strong> 无法加载的问题：</p>
+<p><strong>打开</strong>　<code>\hexo-theme-next\layout\_partials\head.njk</code></p>
+<p><strong>添加</strong></p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"\js\custom\instantclick.min.js"</span> data<span class="token operator">-</span>no<span class="token operator">-</span>instant<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+   <span class="token operator">&lt;</span>script data<span class="token operator">-</span>no<span class="token operator">-</span>instant<span class="token operator">></span>
+   InstantClick<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'change'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">isInitialLoad</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+   <span class="token keyword">if</span> <span class="token punctuation">(</span>isInitialLoad <span class="token operator">===</span> <span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> MathJax <span class="token operator">!==</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span> <span class="token comment">// support MathJax</span>
+     MathJax<span class="token punctuation">.</span>Hub<span class="token punctuation">.</span><span class="token function">Queue</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"Typeset"</span><span class="token punctuation">,</span>MathJax<span class="token punctuation">.</span>Hub<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> prettyPrint <span class="token operator">!==</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span> <span class="token comment">// support google code prettify</span>
+     <span class="token function">prettyPrint</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> _hmt <span class="token operator">!==</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span>  <span class="token comment">// support 百度统计</span>
+     _hmt<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'_trackPageview'</span><span class="token punctuation">,</span> location<span class="token punctuation">.</span>pathname <span class="token operator">+</span> location<span class="token punctuation">.</span>search<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> ga <span class="token operator">!==</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span>  <span class="token comment">// support google analytics</span>
+       <span class="token function">ga</span><span class="token punctuation">(</span><span class="token string">'send'</span><span class="token punctuation">,</span> <span class="token string">'pageview'</span><span class="token punctuation">,</span> location<span class="token punctuation">.</span>pathname <span class="token operator">+</span> location<span class="token punctuation">.</span>search<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">&#125;</span>
+   <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   InstantClick<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>下载</strong>　 <a target="_blank" rel="noopener" href="http://instantclick.io/v3.1.0/instantclick.min.js">instantclick.min.js</a></p>
+<p><strong>打开</strong>　<code>\hexo-theme-next\source\js\custom\</code></p>
+<p><strong>放置</strong>　<code>instantclick.min.js</code></p>
+<p>这时候对于所有链接都开启<strong>预加载模式</strong>，但可以把部分链接加入黑名单：<br><code>&lt;a href=&quot;\blog\&quot; data-no-instant&gt;Blog&lt;/a&gt;</code></p>
+<h2 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h2><h3 id="5-1-Gulp"><a href="#5-1-Gulp" class="headerlink" title="5.1. Gulp"></a>5.1. Gulp</h3><p><strong>本节参考自　<a target="_blank" rel="noopener" href="https://chanshiyu.com/">蝉時雨</a></strong></p>
+<p><strong>gulp.js</strong> 是基于流的自动化构建工具，我们可以使用 <strong>Gulp</strong> 为 Hexo 压缩文件</p>
+<p><strong>在 \blog\ 打开命令行窗口</strong></p>
+<p><strong>安装</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">npm install gulp --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>再根据需要安装以下模块</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">npm install gulp-minify-css --save
+npm install gulp-uglify --save
+npm install gulp-htmlmin --save
+npm install gulp-htmlclean --save
+npm install gulp-imagemin --save<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>打开</strong>　<code>\blog\</code></p>
+<p><strong>新建</strong>　<code>gulpfile.js</code></p>
+<p><strong>添加</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">var gulp &#x3D; require(&#39;gulp&#39;);
+var minifycss &#x3D; require(&#39;gulp-minify-css&#39;);
+var uglify &#x3D; require(&#39;gulp-uglify&#39;);
+var htmlmin &#x3D; require(&#39;gulp-htmlmin&#39;);
+var htmlclean &#x3D; require(&#39;gulp-htmlclean&#39;);
+var imagemin &#x3D; require(&#39;gulp-imagemin&#39;);
+
+&#x2F;&#x2F; 压缩html文件
+gulp.task(&#39;minify-html&#39;, function() &#123;
+  return gulp.src(&#39;.&#x2F;public&#x2F;**&#x2F;*.html&#39;)
+  .pipe(htmlclean())
+  .pipe(htmlmin(&#123;
+  removeComments: true,
+  minifyJS: true,
+  minifyCSS: true,
+  minifyURLs: true,
+  &#125;))
+  .pipe(gulp.dest(&#39;.&#x2F;public&#39;))
+&#125;);
+&#x2F;&#x2F; 压缩css文件
+gulp.task(&#39;minify-css&#39;, function() &#123;
+  return gulp.src(&#39;.&#x2F;public&#x2F;**&#x2F;*.css&#39;)
+  .pipe(minifycss())
+  .pipe(gulp.dest(&#39;.&#x2F;public&#39;));
+&#125;);
+&#x2F;&#x2F; 压缩js文件
+gulp.task(&#39;minify-js&#39;, function() &#123;
+  return gulp.src([&#39;.&#x2F;public&#x2F;**&#x2F;.js&#39;,&#39;!.&#x2F;public&#x2F;js&#x2F;**&#x2F;*min.js&#39;])
+  .pipe(uglify())
+  .pipe(gulp.dest(&#39;.&#x2F;public&#39;));
+&#125;);
+&#x2F;&#x2F; 压缩 public&#x2F;images 目录内图片
+gulp.task(&#39;minify-images&#39;, function() &#123;
+  gulp.src(&#39;.&#x2F;public&#x2F;images&#x2F;**&#x2F;*.*&#39;)
+  .pipe(imagemin(&#123;
+     optimizationLevel: 5, &#x2F;&#x2F;类型：Number  默认：3  取值范围：0-7（优化等级）
+     progressive: true, &#x2F;&#x2F;类型：Boolean 默认：false 无损压缩jpg图片
+     interlaced: false, &#x2F;&#x2F;类型：Boolean 默认：false 隔行扫描gif进行渲染
+     multipass: false, &#x2F;&#x2F;类型：Boolean 默认：false 多次优化svg直到完全优化
+  &#125;))
+  .pipe(gulp.dest(&#39;.&#x2F;public&#x2F;uploads&#39;));
+&#125;);
+&#x2F;&#x2F; 默认任务 gulp 4.0 适用的方式
+gulp.task(&#39;default&#39;, gulp.parallel(&#39;minify-html&#39;, &#39;minify-css&#39;, &#39;minify-js&#39;, &#39;minify-images&#39;
+ &#x2F;&#x2F;build the website
+));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>依照格式，删除未安装模块的代码部分</strong></p>
+<p><strong>在命令行内输入 <code>$ gulp</code> 即可运行</strong></p>
+<p><strong>一键同步代码参照　<a target="_blank" rel="noopener" href="https://qianling.pw/hexo-optimization/#7">7. 批处理脚本自动创建文章及一键部署</a></strong></p>
+<p><strong>把因删除空格缩小的间距调整回来：</strong></p>
+<p><strong>打开</strong>　<code>\blog\source\_data\styles.styl</code></p>
+<p><strong>添加</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; gulp 间距调整
+span.leancloud-visitors-count, span.post-comments-count.valine-comment-count &#123;
+  padding-left: 2px;
+&#125;
+i.fa.fa-ravelry &#123;
+  padding-left: 5px;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5-2-hexo-neat"><a href="#5-2-hexo-neat" class="headerlink" title="5.2. hexo-neat"></a>5.2. hexo-neat</h3><p><strong>本节参考自　<a target="_blank" rel="noopener" href="https://blog.csdn.net/lewky_liu/article/details/82432003">Hexo瞎折腾系列(5) - 使用hexo-neat插件压缩页面静态资源</a></strong></p>
+<p><strong>已知 BUG：</strong></p>
+<ul>
+<li><strong>压缩 md 文件会使 markdown 语法的代码块消失</strong></li>
+<li><strong>会删除全角空格</strong></li>
+</ul>
+<p><strong>安装</strong>　<code>npm install hexo-neat --save</code></p>
+<p><strong>打开</strong>　<code>\blog\_config.yml</code></p>
+<p><strong>添加</strong></p>
+<pre class="line-numbers language-none"><code class="language-none"># hexo-neat
+# 开关
+neat_enable: true
+# 压缩 html
+neat_html:
+  enable: true
+  exclude:
+    - &#39;**&#x2F;*.md&#39;
+# 压缩 css
+neat_css:
+  enable: true
+  exclude:
+  - &#39;**&#x2F;*.min.css&#39;
+# 压缩 js
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+  - &#39;**&#x2F;*.min.js&#39;
+  - &#39;**&#x2F;jquery.fancybox.pack.js&#39;
+  - &#39;**&#x2F;index.js&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Service-Worker"><a href="#Service-Worker" class="headerlink" title="Service Worker"></a>Service Worker</h2><p><strong>教程　<a target="_blank" rel="noopener" href="https://qianling.pw/service-worker/">Hexo 部署 Service Worker</a></strong></p>
+<p>Service workers 本质上充当 Web 应用程序与浏览器之间的代理服务器，为了适应越来越多的网页应用而产生。</p>
+<p>它可以通过拦截并修改访问和资源请求，缓存特定的网页资源，并可以将网页做到离线可用；</p>
+<p>同时 Service Workers 也能做到定期后台同步与信息推送。</p>
+<p>部署成功后，您可以节省用户流量、提升页面二次加载速度等。</p>
+<h2 id="批处理脚本自动创建文章及一键部署"><a href="#批处理脚本自动创建文章及一键部署" class="headerlink" title="批处理脚本自动创建文章及一键部署"></a>批处理脚本自动创建文章及一键部署</h2><p><strong>打开</strong>　<code>\blog\</code></p>
+<p><strong>新建</strong>　<code>新建文章.bat</code></p>
+<p><strong>添加</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">set &quot;a&#x3D;%date:~,4%&quot;
+set &quot;b&#x3D;%date:~5,2%&quot;
+set &quot;c&#x3D;%date:~8,2%&quot;
+hexo new &quot;%a%-%b%-%c%&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>命名格式为　<code>年-月-日.md</code></strong></p>
+<p><strong>部署可写为</strong>　<code>hexo clean &amp; hexo g -d</code></p>
+<p><strong>若使用 gulp 则写为</strong>　<code>hexo clean &amp; hexo g &amp;&amp; gulp &amp; hexo deploy</code></p>
+<h2 id="添加标题底部横线"><a href="#添加标题底部横线" class="headerlink" title="添加标题底部横线"></a>添加标题底部横线</h2><p><strong>本节参考自　<a target="_blank" rel="noopener" href="http://yuchen-lea.github.io/">跬步</a></strong></p>
+<p><strong>打开</strong>　<code>\blog\source\_data\styles.styl</code></p>
+<p><strong>添加</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">h1, h2, h3, h4, h5, h6 &#123;
+  border-bottom: 2px solid #8c8c8c;
+  padding: 0 5% 2px 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="阅读进度条"><a href="#阅读进度条" class="headerlink" title="阅读进度条"></a>阅读进度条</h2><p><strong>本节参考自　<a target="_blank" rel="noopener" href="https://isudox.com/2016/07/14/customize-hexo-theme/">I sudo X</a></strong></p>
+<p><strong>比自带的更好看。</strong></p>
+<p><strong>打开</strong>　<code>\blog\source\_data\header.njk</code></p>
+<p><strong>添加</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;div class&#x3D;&quot;top-scroll-bar&quot;&gt;&lt;&#x2F;div&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>打开</strong>　<code>\blog\source\_data\styles.styl</code></p>
+<p><strong>添加</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;顶部阅读进度条
+.top-scroll-bar &#123;
+  position: fixed;
+  height: 3px;
+  top: 0;
+  left: 0;
+  transition-duration: 0.7s,0.7s;
+  transiton-property: width,background;
+  z-index: 99999;
+  display: none;
+  background: #37C6C0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>打开</strong>　<code>\hexo-theme-next\source\js\custom\custom.js</code></p>
+<p><strong>添加</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;阅读进度条
+$(document).ready(function () &#123;
+  $(window).scroll(function()&#123;
+  $(&quot;.top-scroll-bar&quot;).attr(&quot;style&quot;, &quot;width: &quot; + ($(this).scrollTop() &#x2F; ($(document).height() - $(this).height()) * 100) + &quot;%; display: block;&quot;);
+  var s&#x3D;$(window).scrollTop();
+  var a&#x3D;$(document).height();
+  var b&#x3D;$(window).height();
+  var result&#x3D;parseInt(s&#x2F;(a-b)*100);
+  $(&quot;.top-scroll-bar&quot;).css(&quot;width&quot;,result+&quot;%&quot;);
+  if(result&gt;&#x3D;0&amp;&amp;result&lt;&#x3D;19)
+  $(&quot;.top-scroll-bar&quot;).css(&quot;background&quot;,&quot;#cccccc&quot;);
+  if(result&gt;&#x3D;20&amp;&amp;result&lt;&#x3D;39)
+  $(&quot;.top-scroll-bar&quot;).css(&quot;background&quot;,&quot;#50bcb6&quot;);
+  if(result&gt;&#x3D;40&amp;&amp;result&lt;&#x3D;59)
+  $(&quot;.top-scroll-bar&quot;).css(&quot;background&quot;,&quot;#85c440&quot;);
+  if(result&gt;&#x3D;60&amp;&amp;result&lt;&#x3D;79)
+  $(&quot;.top-scroll-bar&quot;).css(&quot;background&quot;,&quot;#f2b63c&quot;);
+  if(result&gt;&#x3D;80&amp;&amp;result&lt;&#x3D;99)
+  $(&quot;.top-scroll-bar&quot;).css(&quot;background&quot;,&quot;#FF0000&quot;);
+  if(result&#x3D;&#x3D;100)
+  $(&quot;.top-scroll-bar&quot;).css(&quot;background&quot;,&quot;#f58ca1&quot;);
+  &#125;);
+&#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="图片懒加载"><a href="#图片懒加载" class="headerlink" title="图片懒加载"></a>图片懒加载</h2><h2 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h2><h2 id="文末结束标记"><a href="#文末结束标记" class="headerlink" title="文末结束标记"></a>文末结束标记</h2><p><strong>本节参考自　<a target="_blank" rel="noopener" href="http://www.wuxubj.cn/2016/08/Hexo-nexT-build-personal-blog/#5-3-%E6%96%87%E7%AB%A0%E6%9C%AB%E5%B0%BE%E6%B7%BB%E5%8A%A0%E2%80%9C%E6%9C%AC%E6%96%87%E7%BB%93%E6%9D%9F%E2%80%9D%E6%A0%87%E8%AE%B0/">务虚笔记</a></strong></p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a target="_blank" rel="noopener" href="https://qianling.pw/hexo-optimization/">Hexo 优化汇总 | 千灵 (qianling.pw)</a></p>
+
                 
             </div>
             <hr/>
@@ -1007,52 +1235,346 @@
     
 
     
-
-    
         <style>
-    .mvaline-card {
+    .valine-card {
         margin: 1.5rem auto;
     }
 
-    .mvaline-card .card-content {
+    .valine-card .card-content {
         padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        /* valine评论背景图 */
+        /* background: url("https://cdn.jsdelivr.net/gh/Lo-Y-eH/image@main/image/202310020019240.gif") 100% 100% no-repeat; */
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.25rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table,
+    th,
+    td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table,
+    th,
+    td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table,
+    th,
+    td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
     }
 </style>
 
-<div class="card mvaline-card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling"
+        style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
         <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
         <span>评论</span>
     </div>
-    <div id="mvcomments" class="card-content" style="display: grid">
+    <div id="vcomments" class="card-content" style="display: grid">
     </div>
 </div>
 
-<script src="/libs/minivaline/MiniValine.js"></script>
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
 <script>
-    new MiniValine({
-        el: '#mvcomments',
+    new Valine({
+        el: '#vcomments',
         appId: '8vJn0QBplqLADcXEGwf82jV4-MdYXbMMI',
         appKey: 'PO85hRys16bV881Pq4fjnmbK',
-        mode: 'DesertsP',
-        placeholder: 'Write a Comment',
-        pathname: window.location.pathname,
-        lang: '',
-        adminEmailMd5: 'de8a7aa53d07e6b6bceb45c64027763d',
-        tagMeta: ["管理员", "小伙伴", "访客"],
-        master: ["de8a7aa53d07e6b6bceb45c64027763d"],
-        friends: ["b5bd5d836c7a0091aa8473e79ed4c25e", "adb7d1cd192658a55c0ad22a3309cecf", "3ce1e6c77b4910f1871106cb30dc62b0", "cfce8dc43725cc14ffcd9fb4892d5bfc"],
-        math: true,
-        md: true,
-        enableQQ: false,
-        NoRecordIP: false,
-        visitor: true,
-        maxNest: 6,
-        pageSize: 10,
-        serverURLs: '',
-        emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest", "https://cdn.jsdelivr.net/gh/MiniValine/qq@latest", "https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest", "https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest", "https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest", "https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest"],
+        notify: 'true' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '留下你的足迹o(*￣▽￣*)ブ Just go go ^_^',
+        enableQQ: true,
+        serverURLs: 'https://8vjn0qbp.api.lncldglobal.com',  // 增加这一行！！！
+        emojiCDN: '//i0.hdslb.com/bfs/emote/',
+        // 表情title和图片映射
+        requiredFields: ['nick', 'mail'], //设置必填项
+        emojiMaps: {
+            "tv_doge": "6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
+            "tv_亲亲": "a8111ad55953ef5e3be3327ef94eb4a39d535d06.png",
+            "tv_偷笑": "bb690d4107620f1c15cff29509db529a73aee261.png",
+            "tv_再见": "180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png",
+            "tv_冷漠": "b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png",
+            "tv_发怒": "34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png",
+            "tv_发财": "34db290afd2963723c6eb3c4560667db7253a21a.png",
+            "tv_可爱": "9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png",
+            "tv_吐血": "09dd16a7aa59b77baa1155d47484409624470c77.png",
+            "tv_呆": "fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png",
+            "tv_呕吐": "9f996894a39e282ccf5e66856af49483f81870f3.png",
+            "tv_困": "241ee304e44c0af029adceb294399391e4737ef2.png",
+            "tv_坏笑": "1f0b87f731a671079842116e0991c91c2c88645a.png",
+            "tv_大佬": "093c1e2c490161aca397afc45573c877cdead616.png",
+            "tv_大哭": "23269aeb35f99daee28dda129676f6e9ea87934f.png",
+            "tv_委屈": "d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png",
+            "tv_害羞": "a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png",
+            "tv_尴尬": "7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png",
+            "tv_微笑": "70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png",
+            "tv_思考": "90cf159733e558137ed20aa04d09964436f618a1.png",
+            "tv_惊吓": "0d15c7e2ee58e935adc6a7193ee042388adc22af.png",
+            "tv_打脸": "56ab10b624063e966bfcb76ea5dc4794d87dfd47.png",
+            "tv_抓狂": "fe31c08edad661d63762b04e17b8d5ae3c71a757.png",
+            "tv_抠鼻": "c666f55e88d471e51bbd9fab9bb308110824a6eb.png",
+            "tv_斜眼笑": "911f987aa8bc1bee12d52aafe62bc41ef4474e6c.png",
+            "tv_无奈": "ea8ed89ee9878f2fece2dda0ea8a5dbfe21b5751.png",
+            "tv_晕": "5443c22b4d07fb1907ccc610c8e6db254f2461b7.png",
+            "tv_流汗": "cead1c351ab8d79e9f369605beb90148db0fbed3.png",
+            "tv_流泪": "7e71cde7858f0cd50d74b0264aa26db612a8a167.png",
+            "tv_流鼻血": "c32d39db2737f89b904ca32700d140a9241b0767.png",
+            "tv_点赞": "f85c354995bd99e28fc76c869bfe42ba6438eff4.png",
+            "tv_生气": "26702dcafdab5e8225b43ffd23c94ac1ff932654.png",
+            "tv_生病": "8b0ec90e6b86771092a498c54f09fc94621c1900.png",
+            "tv_疑问": "0793d949b18d7be716078349c202c15ff166f314.png",
+            "tv_白眼": "c1d59f439e379ee50eef488bcb5e5378e5044ea4.png",
+            "tv_皱眉": "72ccad6679fea0d14cce648b4d818e09b8ffea2d.png",
+            "tv_目瞪口呆": "0b8cb81a68de5d5365212c99375e7ace3e7891b7.png",
+            "tv_睡着": "8b196675b53af58264f383c50ad0945048290b33.png",
+            "tv_笑哭": "1abc628f6d4f4caf9d0e7800878f4697abbc8273.png",
+            "tv_腼腆": "89712c0d4af73e67f89e35cbc518420380a7f6f4.png",
+            "tv_色": "61822c7e9aae5da76475e7892534545336b23a6f.png",
+            "tv_调侃": "4bc022533ef31544ca0d72c12c808cf4a1cce3e3.png",
+            "tv_调皮": "b9c41de8e82dd7a8515ae5e3cb63e898bf245186.png",
+            "tv_鄙视": "6e72339f346a692a495b123174b49e4e8e781303.png",
+            "tv_闭嘴": "c9e990da7f6e93975e25fd8b70e2e290aa4086ef.png",
+            "tv_难过": "87f46748d3f142ebc6586ff58860d0e2fc8263ba.png",
+            "tv_馋": "fc7e829b845c43c623c8b490ee3602b7f0e76a31.png",
+            "tv_鬼脸": "0ffbbddf8a94d124ca2f54b360bbc04feb6bbfea.png",
+            "tv_黑人问号": "45821a01f51bc867da9edbaa2e070410819a95b2.png",
+            "tv_鼓掌": "1d21793f96ef4e6f48b23e53e3b9e42da833a0f6.png"
+        },
     });
 </script>
+<!-- 直达评论 -->
+<!-- 直达评论 -->
+<!-- 我这里是valine，直接填写valine的id——href="#vcomments",如果是其他评论，对应修改即可 -->
+<div id="to_comment" class="comment-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论">
+        <i class="fas fa-comments"></i>
+    </a>
+</div>
+    
 
     
 
@@ -1063,18 +1585,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/8410.html">
+                <a href="/posts/3356.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="hexo优化">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="修改字体">
                         
-                        <span class="card-title">hexo优化</span>
+                        <span class="card-title">修改字体</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1084,9 +1605,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-04
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-02-04
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1099,12 +1620,11 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/%E5%AD%97%E4%BD%93/">
+                        <span class="chip bg-color">字体</span>
                     </a>
                     
                 </div>
@@ -1514,7 +2034,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">65k</span>&nbsp;字
+                class="white-color">66.9k</span>&nbsp;字
             
             
             
