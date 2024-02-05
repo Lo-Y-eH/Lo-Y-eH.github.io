@@ -54,6 +54,15 @@ body {
     background-size: cover;
 }
 
+/* 修改选中 */
+::selection {
+    /* 设置选中文本的背景色 */
+    background-color: #97e262;  
+    /* 设置选中文本的文本颜色 */
+    /* color: #0DB8E3; */
+    color: #ffffff;
+}
+
 /* 标题1样式 */
 h1 {
     margin: 48px 0 22px -5px;       /* 上、下、左边距 */
