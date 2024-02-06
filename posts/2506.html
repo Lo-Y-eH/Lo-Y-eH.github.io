@@ -759,7 +759,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    21 分
+                    20 分
                 </div>
                 
 
@@ -1497,7 +1497,7 @@ snow<span class="token punctuation">.</span><span class="token function">start</
 
 <p>然后在<code>themes\matery\layout\layout.ejs</code>中添加</p>
 <pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token comment">&lt;!-- 添加打字爆炸特效 --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>../source/js/activate-power-mode.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/js/activate-power-mode.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
     <span class="token constant">POWERMODE</span><span class="token punctuation">.</span>colorful <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment">// make power mode colorful</span>
     <span class="token constant">POWERMODE</span><span class="token punctuation">.</span>shake <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment">// turn off shake</span>
@@ -2919,12 +2919,21 @@ $(function () {
     
 
     <!-- 添加打字爆炸特效 -->
-    <script src="../source/js/activate-power-mode.js"></script>
+    <!-- <script src="/js/activate-power-mode.js"></script>
     <script>
         POWERMODE.colorful = true; // make power mode colorful
         POWERMODE.shake = false; // turn off shake
         document.body.addEventListener('input', POWERMODE);
-    </script>
+    </script> -->
+    
+        <!-- 添加打字爆炸特效 -->
+        <script src="/js/activate-power-mode.js"></script>
+        <script>
+            POWERMODE.colorful = true; // make power mode colorful
+            POWERMODE.shake = false; // turn off shake
+            document.body.addEventListener('input', POWERMODE);
+        </script>
+    
     
 
         <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
