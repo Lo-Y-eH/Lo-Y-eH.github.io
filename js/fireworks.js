@@ -100,7 +100,7 @@ if (canvasEl) {
         });
     
     // 将 .fireworks 元素的 z-index 设置为 1
-    canvasEl.style.zIndex = -1;
+    canvasEl.style.zIndex = 1;
 
     document.addEventListener(tap, function (e) {
         "sidebar" !== e.target.id && "toggle-sidebar" !== e.target.id && "A" !== e.target.nodeName && "IMG" !==
