@@ -745,21 +745,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-02-04
+                    2024-02-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    669
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -782,7 +782,75 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="字体修改"><a href="#字体修改" class="headerlink" title="字体修改"></a>字体修改</h1><h2 id="常见字体"><a href="#常见字体" class="headerlink" title="常见字体"></a>常见字体</h2><p>字体文件格式在Web开发中扮演着重要的角色，以下是几种常见的web字体格式：</p>
+<ol>
+<li><p><strong>TrueType (.ttf)</strong></p>
+<ul>
+<li>TrueType 是一种广泛应用于Windows和Mac操作系统的字体格式。它通过数学模式定义轮廓技术，使得字体在缩放或旋转时保持清晰无锯齿的显示效果。</li>
+</ul>
+</li>
+<li><p><strong>Embedded Open Type (.eot)</strong></p>
+<ul>
+<li>EOT（嵌入式OpenType）是微软专为网页设计的一种字体格式，允许将OpenType字体嵌入到网页并由浏览器下载渲染。这种格式确保字体只在用户浏览当前页面时临时安装在系统中。</li>
+</ul>
+</li>
+<li><p><strong>OpenType (.otf)</strong></p>
+<ul>
+<li>OpenType是一种高级的字型格式，结合了TrueType和PostScript的优点，支持多种复杂特性如连字、多语言支持等。由微软与Adobe联合开发，其文件扩展名为.otf。</li>
+</ul>
+</li>
+<li><p><strong>Web Open Font Format (.woff)</strong></p>
+<ul>
+<li>WOFF（Web Open Font Format）是专门为网络应用优化的字体格式，是对TrueType和OpenType格式的封装和压缩版本。WOFF文件包含了字体数据和元数据，并针对网络传输进行了高效压缩，无加密或DRM保护措施，被各大主流字体供应商广泛支持。</li>
+</ul>
+</li>
+<li><p><strong>SVG Fonts (.svg, .svgz)</strong></p>
+<ul>
+<li>SVG Fonts 使用SVG（Scalable Vector Graphics）技术来呈现字体，这意味着它们本质上是矢量图形，可以任意缩放而不失真。SVG字体可以通过简单的文本命令实现丰富的图形图像效果，包括色彩渐变、路径、自定义字体以及透明和滤镜效果等。其中.svgz是gzip压缩过的SVG字体格式，更利于网络传输。</li>
+</ul>
+</li>
+</ol>
+<p>CSS支持字体样式，通过@font-face属性在网页中嵌入自定义字体，主流的浏览器都支持这种方式，同时CSS字体属性还可以定义字体，加粗，大小，文字样式等。</p>
+<p>默认支持:</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">body</span><span class="token punctuation">&#123;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"serif"</span><span class="token punctuation">,</span><span class="token string">"sans-serif"</span><span class="token punctuation">,</span><span class="token string">"cursive"</span><span class="token punctuation">,</span><span class="token string">"fantasy"</span><span class="token punctuation">,</span><span class="token string">"monospace"</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">body</span><span class="token punctuation">&#123;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"sans-serif,monospace,微软雅黑,黑体,宋体"</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+&lt;body><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>我喜欢的写法：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.myfont</span><span class="token punctuation">&#123;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span><span class="token string">"微软雅黑"</span><span class="token punctuation">,</span><span class="token string">"黑体"</span><span class="token punctuation">,</span><span class="token string">"宋体"</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myfont<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> Hello World! 这个网站很酷 zhangxiaocai.cn <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<h3 id="自定义引入"><a href="#自定义引入" class="headerlink" title="自定义引入"></a>自定义引入</h3><p>如果想使用自定义的字体，首先引入</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">&#123;</span>    
+   <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'myfont'</span><span class="token punctuation">;</span>    
+   <span class="token property">src</span><span class="token punctuation">:</span><span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'字体文件1.woff'</span><span class="token punctuation">)</span></span><span class="token punctuation">,</span>  
+   <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'字体文件2.ttf'</span><span class="token punctuation">)</span></span><span class="token punctuation">,</span>    
+   <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'字体文件3.eot'</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">body</span><span class="token punctuation">&#123;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'myfont'</span> <span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a target="_blank" rel="noopener" href="https://zhangxiaocai.cn/posts/8f5c11d2.html">静态博客-字体更换 | 斯莫笔记 (zhangxiaocai.cn)</a></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u013044713/article/details/120251025">hexo博客搭建及主题优化(二)_5ezuy.top-CSDN博客</a></p>
+<ul>
+<li>电影卡片</li>
+<li>归档时间轴和时间列表</li>
+<li>快捷导航</li>
+<li>站点统计不显示</li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -1794,7 +1862,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">74k</span>&nbsp;字
+                class="white-color">75k</span>&nbsp;字
             
             
             

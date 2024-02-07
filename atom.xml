@@ -6,7 +6,7 @@
   <link href="http://lo-y-eh.github.io/atom.xml" rel="self"/>
   
   <link href="http://lo-y-eh.github.io/"/>
-  <updated>2024-02-05T14:39:15.160Z</updated>
+  <updated>2024-02-07T11:20:38.304Z</updated>
   <id>http://lo-y-eh.github.io/</id>
   
   <author>
@@ -17,18 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>计算机科学速成课</title>
+    <link href="http://lo-y-eh.github.io/posts/5d3a.html"/>
+    <id>http://lo-y-eh.github.io/posts/5d3a.html</id>
+    <published>2024-02-06T13:57:22.000Z</published>
+    <updated>2024-02-07T11:20:38.304Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>md格式优化</title>
     <link href="http://lo-y-eh.github.io/posts/2eb3.html"/>
     <id>http://lo-y-eh.github.io/posts/2eb3.html</id>
     <published>2024-02-05T10:00:55.000Z</published>
-    <updated>2024-02-05T14:39:15.160Z</updated>
+    <updated>2024-02-06T09:45:55.690Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;md样式修改&quot;&gt;&lt;a href=&quot;#md样式修改&quot; class=&quot;headerlink&quot; title=&quot;md样式修改&quot;&gt;&lt;/a&gt;md样式修改&lt;/h1&gt;&lt;pre class=&quot;line-numbers language-css&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;md样式修改&quot;&gt;&lt;a href=&quot;#md样式修改&quot; class=&quot;headerlink&quot; title=&quot;md样式修改&quot;&gt;&lt;/a&gt;md样式修改&lt;/h1&gt;&lt;h2 id=&quot;背景修改&quot;&gt;&lt;a href=&quot;#背景修改&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -109,8 +122,16 @@
     <link href="http://lo-y-eh.github.io/posts/3356.html"/>
     <id>http://lo-y-eh.github.io/posts/3356.html</id>
     <published>2024-02-04T13:48:42.000Z</published>
-    <updated>2024-02-04T14:40:42.550Z</updated>
+    <updated>2024-02-06T14:11:22.796Z</updated>
     
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;字体修改&quot;&gt;&lt;a href=&quot;#字体修改&quot; class=&quot;headerlink&quot; title=&quot;字体修改&quot;&gt;&lt;/a&gt;字体修改&lt;/h1&gt;&lt;h2 id=&quot;常见字体&quot;&gt;&lt;a href=&quot;#常见字体&quot; class=&quot;headerlink&quot;</summary>
+        
+      
     
     
     
@@ -126,7 +147,7 @@
     <link href="http://lo-y-eh.github.io/posts/8410.html"/>
     <id>http://lo-y-eh.github.io/posts/8410.html</id>
     <published>2024-02-04T08:44:45.000Z</published>
-    <updated>2024-02-05T09:57:54.576Z</updated>
+    <updated>2024-02-06T14:16:42.044Z</updated>
     
     
       
@@ -176,7 +197,7 @@
     <link href="http://lo-y-eh.github.io/posts/fb80.html"/>
     <id>http://lo-y-eh.github.io/posts/fb80.html</id>
     <published>2024-02-02T09:28:40.000Z</published>
-    <updated>2024-02-02T13:18:43.329Z</updated>
+    <updated>2024-02-07T14:15:07.948Z</updated>
     
     
       
@@ -462,31 +483,6 @@
     
     
     <category term="汇编" scheme="http://lo-y-eh.github.io/tags/%E6%B1%87%E7%BC%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我曾七次鄙视自己的灵魂</title>
-    <link href="http://lo-y-eh.github.io/posts/essay-demo.html"/>
-    <id>http://lo-y-eh.github.io/posts/essay-demo.html</id>
-    <published>2023-09-14T16:00:00.000Z</published>
-    <updated>2024-02-01T09:22:43.102Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;随笔板块，后续会更新文章，目前弄好了模板格式&quot;&gt;&lt;a href=&quot;#随笔板块，后续会更新文章，目前弄好了模板格式&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="随笔" scheme="http://lo-y-eh.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="随笔" scheme="http://lo-y-eh.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
