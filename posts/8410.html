@@ -517,7 +517,6 @@
     </ul>
 </div>
 
-
         </div>
 
         
@@ -745,21 +744,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-02-06
+                    2024-02-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    2.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    13 分
                 </div>
                 
 
@@ -843,52 +842,52 @@ npm install gulp-imagemin --save<span aria-hidden="true" class="line-numbers-row
 <p><strong>打开</strong>　<code>\blog\</code></p>
 <p><strong>新建</strong>　<code>gulpfile.js</code></p>
 <p><strong>添加</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">var gulp &#x3D; require(&#39;gulp&#39;);
-var minifycss &#x3D; require(&#39;gulp-minify-css&#39;);
-var uglify &#x3D; require(&#39;gulp-uglify&#39;);
-var htmlmin &#x3D; require(&#39;gulp-htmlmin&#39;);
-var htmlclean &#x3D; require(&#39;gulp-htmlclean&#39;);
-var imagemin &#x3D; require(&#39;gulp-imagemin&#39;);
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> gulp <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> minifycss <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-minify-css'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> uglify <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-uglify'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> htmlmin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-htmlmin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> htmlclean <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-htmlclean'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> imagemin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-imagemin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-&#x2F;&#x2F; 压缩html文件
-gulp.task(&#39;minify-html&#39;, function() &#123;
-  return gulp.src(&#39;.&#x2F;public&#x2F;**&#x2F;*.html&#39;)
-  .pipe(htmlclean())
-  .pipe(htmlmin(&#123;
-  removeComments: true,
-  minifyJS: true,
-  minifyCSS: true,
-  minifyURLs: true,
-  &#125;))
-  .pipe(gulp.dest(&#39;.&#x2F;public&#39;))
-&#125;);
-&#x2F;&#x2F; 压缩css文件
-gulp.task(&#39;minify-css&#39;, function() &#123;
-  return gulp.src(&#39;.&#x2F;public&#x2F;**&#x2F;*.css&#39;)
-  .pipe(minifycss())
-  .pipe(gulp.dest(&#39;.&#x2F;public&#39;));
-&#125;);
-&#x2F;&#x2F; 压缩js文件
-gulp.task(&#39;minify-js&#39;, function() &#123;
-  return gulp.src([&#39;.&#x2F;public&#x2F;**&#x2F;.js&#39;,&#39;!.&#x2F;public&#x2F;js&#x2F;**&#x2F;*min.js&#39;])
-  .pipe(uglify())
-  .pipe(gulp.dest(&#39;.&#x2F;public&#39;));
-&#125;);
-&#x2F;&#x2F; 压缩 public&#x2F;images 目录内图片
-gulp.task(&#39;minify-images&#39;, function() &#123;
-  gulp.src(&#39;.&#x2F;public&#x2F;images&#x2F;**&#x2F;*.*&#39;)
-  .pipe(imagemin(&#123;
-     optimizationLevel: 5, &#x2F;&#x2F;类型：Number  默认：3  取值范围：0-7（优化等级）
-     progressive: true, &#x2F;&#x2F;类型：Boolean 默认：false 无损压缩jpg图片
-     interlaced: false, &#x2F;&#x2F;类型：Boolean 默认：false 隔行扫描gif进行渲染
-     multipass: false, &#x2F;&#x2F;类型：Boolean 默认：false 多次优化svg直到完全优化
-  &#125;))
-  .pipe(gulp.dest(&#39;.&#x2F;public&#x2F;uploads&#39;));
-&#125;);
-&#x2F;&#x2F; 默认任务 gulp 4.0 适用的方式
-gulp.task(&#39;default&#39;, gulp.parallel(&#39;minify-html&#39;, &#39;minify-css&#39;, &#39;minify-js&#39;, &#39;minify-images&#39;
- &#x2F;&#x2F;build the website
-));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">// 压缩html文件</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'minify-html'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token string">'./public/**/*.html'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">htmlclean</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">htmlmin</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">removeComments</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">minifyJS</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">minifyCSS</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">minifyURLs</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./public'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 压缩css文件</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'minify-css'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token string">'./public/**/*.css'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">minifycss</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./public'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 压缩js文件</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'minify-js'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'./public/**/.js'</span><span class="token punctuation">,</span><span class="token string">'!./public/js/**/*min.js'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">uglify</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./public'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 压缩 public/images 目录内图片</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'minify-images'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token string">'./public/images/**/*.*'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">imagemin</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+     <span class="token literal-property property">optimizationLevel</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token comment">//类型：Number  默认：3  取值范围：0-7（优化等级）</span>
+     <span class="token literal-property property">progressive</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">//类型：Boolean 默认：false 无损压缩jpg图片</span>
+     <span class="token literal-property property">interlaced</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">//类型：Boolean 默认：false 隔行扫描gif进行渲染</span>
+     <span class="token literal-property property">multipass</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">//类型：Boolean 默认：false 多次优化svg直到完全优化</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./public/uploads'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 默认任务 gulp 4.0 适用的方式</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'default'</span><span class="token punctuation">,</span> gulp<span class="token punctuation">.</span><span class="token function">parallel</span><span class="token punctuation">(</span><span class="token string">'minify-html'</span><span class="token punctuation">,</span> <span class="token string">'minify-css'</span><span class="token punctuation">,</span> <span class="token string">'minify-js'</span><span class="token punctuation">,</span> <span class="token string">'minify-images'</span>
+ <span class="token comment">//build the website</span>
+<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>依照格式，删除未安装模块的代码部分</strong></p>
 <p><strong>在命令行内输入 <code>$ gulp</code> 即可运行</strong></p>
@@ -913,29 +912,29 @@ i.fa.fa-ravelry &#123;
 <p><strong>安装</strong>　<code>npm install hexo-neat --save</code></p>
 <p><strong>打开</strong>　<code>\blog\_config.yml</code></p>
 <p><strong>添加</strong></p>
-<pre class="line-numbers language-none"><code class="language-none"># hexo-neat
-# 开关
-neat_enable: true
-# 压缩 html
-neat_html:
-  enable: true
-  exclude:
-    - &#39;**&#x2F;*.md&#39;
-# 压缩 css
-neat_css:
-  enable: true
-  exclude:
-  - &#39;**&#x2F;*.min.css&#39;
-# 压缩 js
-neat_js:
-  enable: true
-  mangle: true
-  output:
-  compress:
-  exclude:
-  - &#39;**&#x2F;*.min.js&#39;
-  - &#39;**&#x2F;jquery.fancybox.pack.js&#39;
-  - &#39;**&#x2F;index.js&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># hexo-neat</span>
+<span class="token comment"># 开关</span>
+<span class="token key atrule">neat_enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token comment"># 压缩 html</span>
+<span class="token key atrule">neat_html</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">exclude</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token string">'**/*.md'</span>
+<span class="token comment"># 压缩 css</span>
+<span class="token key atrule">neat_css</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">exclude</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token string">'**/*.min.css'</span>
+<span class="token comment"># 压缩 js</span>
+<span class="token key atrule">neat_js</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">mangle</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">output</span><span class="token punctuation">:</span>
+  <span class="token key atrule">compress</span><span class="token punctuation">:</span>
+  <span class="token key atrule">exclude</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token string">'**/*.min.js'</span>
+  <span class="token punctuation">-</span> <span class="token string">'**/jquery.fancybox.pack.js'</span>
+  <span class="token punctuation">-</span> <span class="token string">'**/index.js'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="Service-Worker"><a href="#Service-Worker" class="headerlink" title="Service Worker"></a>Service Worker</h2><p><strong>教程　<a target="_blank" rel="noopener" href="https://qianling.pw/service-worker/">Hexo 部署 Service Worker</a></strong></p>
 <p>Service workers 本质上充当 Web 应用程序与浏览器之间的代理服务器，为了适应越来越多的网页应用而产生。</p>
@@ -1008,10 +1007,161 @@ $(document).ready(function () &#123;
   &#125;);
 &#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="图片懒加载"><a href="#图片懒加载" class="headerlink" title="图片懒加载"></a>图片懒加载</h2><h2 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h2><h2 id="文末结束标记"><a href="#文末结束标记" class="headerlink" title="文末结束标记"></a>文末结束标记</h2><p><strong>本节参考自　<a target="_blank" rel="noopener" href="http://www.wuxubj.cn/2016/08/Hexo-nexT-build-personal-blog/#5-3-%E6%96%87%E7%AB%A0%E6%9C%AB%E5%B0%BE%E6%B7%BB%E5%8A%A0%E2%80%9C%E6%9C%AC%E6%96%87%E7%BB%93%E6%9D%9F%E2%80%9D%E6%A0%87%E8%AE%B0/">务虚笔记</a></strong></p>
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a target="_blank" rel="noopener" href="https://qianling.pw/hexo-optimization/">Hexo 优化汇总 | 千灵 (qianling.pw)</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44846853/article/details/104563887">Hexo博客主题安装和优化（二）_hexo matery设置雪花飘落-CSDN博客</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.sky03.cn/posts/42790.html">Hexo进阶之各种优化 | Sky03我的薰衣草</a></p>
+<h2 id="在线阅读pdf"><a href="#在线阅读pdf" class="headerlink" title="在线阅读pdf"></a>在线阅读pdf</h2><p>参考：<a target="_blank" rel="noopener" href="https://breezs.gitee.io/posts/202203081740.html">如何在hexo博客中在线阅读pdf | 冰山一树Sankey (gitee.io)</a></p>
+<h2 id="图片懒加载"><a href="#图片懒加载" class="headerlink" title="图片懒加载"></a>图片懒加载</h2><h2 id="添加二级菜单功能"><a href="#添加二级菜单功能" class="headerlink" title="添加二级菜单功能#"></a>添加二级菜单功能<a target="_blank" rel="noopener" href="https://www.cnblogs.com/chendeqiang/p/12861726.html#727338988">#</a></h2><p><a target="_blank" rel="noopener" href="https://sunhwee.com/posts/65d7181d.html">https://sunhwee.com/posts/65d7181d.html</a></p>
+<h2 id="添加块折叠功能"><a href="#添加块折叠功能" class="headerlink" title="添加块折叠功能#"></a>添加块折叠功能<a target="_blank" rel="noopener" href="https://www.cnblogs.com/chendeqiang/p/12861726.html#540873996">#</a></h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chendeqiang/p/12861726.html">博客-hexo-matery主题改造笔记 - 多弗朗强哥 - 博客园 (cnblogs.com)</a></p>
+<p>安装插件</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css">npm install hexo-sliding-spoiler --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>用法：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+
+
+<h2 id="生成电影卡"><a href="#生成电影卡" class="headerlink" title="生成电影卡#"></a>生成电影卡<a target="_blank" rel="noopener" href="https://www.cnblogs.com/chendeqiang/p/12861726.html#880159318">#</a></h2><p>安装插件</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css">npm install hexo-tag-mtime --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>用法：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% mtime <span class="token number">218707</span> %<span class="token punctuation">&#125;</span>
+id可以在时光网 https://www.mtime.com 相应的电影网址获取<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="双部署分流操作"><a href="#双部署分流操作" class="headerlink" title="双部署分流操作#"></a>双部署分流操作<a target="_blank" rel="noopener" href="https://www.cnblogs.com/chendeqiang/p/12861726.html#3338530695">#</a></h2><p><a target="_blank" rel="noopener" href="http://www.purethought.cn/74d17cc3.html">www.purethought.cn/74d17cc3.html</a></p>
+<h2 id="远程部署"><a href="#远程部署" class="headerlink" title="远程部署#"></a>远程部署<a target="_blank" rel="noopener" href="https://www.cnblogs.com/chendeqiang/p/12861726.html#3568245540">#</a></h2><p>应用腾讯CloudStudio进行远程部署hexo。这样的好处是获得了集成化开发环境和全网化开发化境，只要有电脑有网络的地方都可以部署博客了。</p>
+<h3 id="私有仓库"><a href="#私有仓库" class="headerlink" title="私有仓库#"></a>私有仓库<a target="_blank" rel="noopener" href="https://www.cnblogs.com/chendeqiang/p/12861726.html#3620572302">#</a></h3><p>默认情况下github的仓库是公有的，仓库的内容会被所有人看见，因此先建立个私有化仓库存储源码。<br>在github上新建一个<code>Private</code>仓库，如：Blog</p>
+<h3 id="上传源码"><a href="#上传源码" class="headerlink" title="上传源码#"></a>上传源码<a target="_blank" rel="noopener" href="https://www.cnblogs.com/chendeqiang/p/12861726.html#194976405">#</a></h3><p>删除第三方主题下的.git文件夹；<br>配置.gitignore文件：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Copy.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>上传源码到私有仓库</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Copygit init  //初始化本地仓库
+<span class="token function">git</span> remote <span class="token function">add</span> origin 私有仓库的git地址  //添加远程仓库
+<span class="token function">git</span> pull origin master
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span> //添加本地所有文件到仓库        
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"blog源文件"</span> //添加commit
+<span class="token function">git</span> push <span class="token parameter variable">-u</span> origin master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="CloudStudio"><a href="#CloudStudio" class="headerlink" title="CloudStudio#"></a>CloudStudio<a target="_blank" rel="noopener" href="https://www.cnblogs.com/chendeqiang/p/12861726.html#2131830712">#</a></h3><p>申请CloudStudio账号，并<code>新建工作空间</code><br>先选择运行环境，hexo<br>然后来源选其他git仓库，填写私有仓库的git地址 ，并将PUblishKey添加到github里<br>等个三五分钟，就会看到CloudStudio工作站了<br>这样就可以使用CloudStudio部署博客了，例如使用<code>hexo g</code>测试一下先。</p>
+<h2 id="流程图"><a href="#流程图" class="headerlink" title="流程图#"></a>流程图<a target="_blank" rel="noopener" href="https://www.cnblogs.com/chendeqiang/p/12861726.html#2934767672">#</a></h2><p>安装</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">--save</span> hexo-filter-flowchart<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>用法</p>
+<pre class="line-numbers language-out" data-language="out"><code class="language-out">&#96; &#96; &#96;flow
+st&#x3D;&gt;start: Start|past:&gt;https:&#x2F;&#x2F;www.baidu.com[blank]
+e&#x3D;&gt;end: End:&gt;https:&#x2F;&#x2F;www.baidu.com
+op1&#x3D;&gt;operation: My Operation|past
+op2&#x3D;&gt;operation: Stuff|current
+sub1&#x3D;&gt;subroutine: My Subroutine|invalid
+cond&#x3D;&gt;condition: Yes
+or No?|approved:&gt;https:&#x2F;&#x2F;www.baidu.com
+c2&#x3D;&gt;condition: Good idea|rejected
+io&#x3D;&gt;inputoutput: catch something...|request
+
+st-&gt;op1(right)-&gt;cond
+cond(yes, right)-&gt;c2
+cond(no)-&gt;sub1(left)-&gt;op1
+c2(yes)-&gt;io-&gt;e
+c2(no)-&gt;op2-&gt;e
+&#96; &#96; &#96;
+st&#x3D;&gt;start: Start|past:&gt;https:&#x2F;&#x2F;www.baidu.com[blank]
+e&#x3D;&gt;end: End:&gt;https:&#x2F;&#x2F;www.baidu.com
+op1&#x3D;&gt;operation: My Operation|past
+op2&#x3D;&gt;operation: Stuff|current
+sub1&#x3D;&gt;subroutine: My Subroutine|invalid
+cond&#x3D;&gt;condition: Yes
+or No?|approved:&gt;https:&#x2F;&#x2F;www.baidu.com
+c2&#x3D;&gt;condition: Good idea|rejected
+io&#x3D;&gt;inputoutput: catch something...|request
+
+st-&gt;op1(right)-&gt;cond
+cond(yes, right)-&gt;c2
+cond(no)-&gt;sub1(left)-&gt;op1
+c2(yes)-&gt;io-&gt;e
+c2(no)-&gt;op2-&gt;e<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h2><p>- </p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.tianyichuxin.com/2022/05/42878.html#toc-heading-1">基于Hexo的matery主题搭建博客并深度优化 | 天弈初心 (tianyichuxin.com)</a></li>
+</ul>
+<h2 id="amp优化"><a href="#amp优化" class="headerlink" title="amp优化"></a>amp优化</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chendeqiang/p/12861726.html">博客-hexo-matery主题改造笔记 - 多弗朗强哥 - 博客园 (cnblogs.com)</a></p>
+<p><code>hexo-generator-amp</code></p>
+<h2 id="静态资源加速，jsdelivr的替代品"><a href="#静态资源加速，jsdelivr的替代品" class="headerlink" title="静态资源加速，jsdelivr的替代品"></a>静态资源加速，jsdelivr的替代品</h2><p><a target="_blank" rel="noopener" href="https://blog.luzy.top/posts/2757854163/#more">静态资源加速，寻找jsdelivr的替代品 - 江风引雨の小po站 (luzy.top)</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.luzy.top/posts/2757854163/#more">静态资源加速，寻找jsdelivr的替代品 - 江风引雨の小po站 (luzy.top)</a></p>
+<h2 id="文末结束标记"><a href="#文末结束标记" class="headerlink" title="文末结束标记"></a>文末结束标记</h2><p><strong>本节参考自　<a target="_blank" rel="noopener" href="http://www.wuxubj.cn/2016/08/Hexo-nexT-build-personal-blog/#5-3-%E6%96%87%E7%AB%A0%E6%9C%AB%E5%B0%BE%E6%B7%BB%E5%8A%A0%E2%80%9C%E6%9C%AC%E6%96%87%E7%BB%93%E6%9D%9F%E2%80%9D%E6%A0%87%E8%AE%B0/">务虚笔记</a></strong></p>
+<h2 id="自定义内置标签"><a href="#自定义内置标签" class="headerlink" title="自定义内置标签"></a>自定义内置标签</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chendeqiang/p/12861726.html">博客-hexo-matery主题改造笔记 - 多弗朗强哥 - 博客园 (cnblogs.com)</a></p>
+<p>在themes&#x2F;主题 下新建scripts文件夹，hexo会自动执行此文件夹的内容。<br>在scripts文件夾下新建block.js</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">Copyhexo<span class="token punctuation">.</span>extend<span class="token punctuation">.</span>tag<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'r'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">args<span class="token punctuation">,</span> content</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">var</span> className <span class="token operator">=</span>  args<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token string">'&lt;div class="uk-alert uk-alert-danger">&lt;i class="fa fa-warning">&lt;/i> '</span> <span class="token operator">+</span> content <span class="token operator">+</span> <span class="token string">'&lt;/div>'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">ends</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+hexo<span class="token punctuation">.</span>extend<span class="token punctuation">.</span>tag<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'g'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">args<span class="token punctuation">,</span> content</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">var</span> className <span class="token operator">=</span>  args<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token string">'&lt;div class="uk-alert uk-alert-success">&lt;i class="fa fa-check-circle">&lt;/i> '</span> <span class="token operator">+</span> content <span class="token operator">+</span> <span class="token string">'&lt;/div>'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">ends</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+hexo<span class="token punctuation">.</span>extend<span class="token punctuation">.</span>tag<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'y'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">args<span class="token punctuation">,</span> content</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">var</span> className <span class="token operator">=</span>  args<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token string">'&lt;div class="uk-alert uk-alert-warning">&lt;i class="fa fa-exclamation-circle">&lt;/i> '</span> <span class="token operator">+</span> content <span class="token operator">+</span> <span class="token string">'&lt;/div>'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">ends</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在themes&#x2F;主题&#x2F;source&#x2F;css&#x2F;my.css內添加</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">Copy
+.uk-alert</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #ebf7fd<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #2d7091<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid <span class="token function">rgba</span><span class="token punctuation">(</span>45<span class="token punctuation">,</span> 112<span class="token punctuation">,</span> 145<span class="token punctuation">,</span> 0.3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 4px<span class="token punctuation">;</span>
+  <span class="token property">text-shadow</span><span class="token punctuation">:</span> 0 1px 0 #ffffff<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">/* Modifier: `uk-alert-success`
+ ========================================================================== */</span>
+<span class="token selector">.uk-alert-success</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #f2fae3<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #659f13<span class="token punctuation">;</span>
+  <span class="token property">border-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>101<span class="token punctuation">,</span> 159<span class="token punctuation">,</span> 19<span class="token punctuation">,</span> 0.3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">/* Modifier: `uk-alert-warning`
+ ========================================================================== */</span>
+<span class="token selector">.uk-alert-warning</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #fffceb<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #e28327<span class="token punctuation">;</span>
+  <span class="token property">border-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>226<span class="token punctuation">,</span> 131<span class="token punctuation">,</span> 39<span class="token punctuation">,</span> 0.3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">/* Modifier: `uk-alert-danger`
+ ========================================================================== */</span>
+<span class="token selector">.uk-alert-danger</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #fff1f0<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #d85030<span class="token punctuation">;</span>
+  <span class="token property">border-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>216<span class="token punctuation">,</span> 80<span class="token punctuation">,</span> 48<span class="token punctuation">,</span> 0.3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>然後就可以使用了。<br>用法：</p>
+<pre class="line-numbers language-w" data-language="w"><code class="language-w"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+
+
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://qianling.pw/hexo-optimization/">Hexo 优化汇总 | 千灵 (qianling.pw)</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44846853/article/details/104563887">Hexo博客主题安装和优化（二）_hexo matery设置雪花飘落-CSDN博客</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.sky03.cn/posts/42790.html">Hexo进阶之各种优化 | Sky03我的薰衣草</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chendeqiang/p/12861726.html">博客-hexo-matery主题改造笔记 - 多弗朗强哥 - 博客园 (cnblogs.com)</a></p>
+</li>
+</ul>
 
                 
             </div>
@@ -1973,6 +2123,7 @@ $(document).ready(function () &#123;
 
 
 
+
     <footer class="page-footer bg-color">
     
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
@@ -2023,82 +2174,98 @@ $(document).ready(function () &#123;
 <script src="/libs/aplayer/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
     
+
+    <!-- 添加页脚波浪代码 -->
+    <link rel="stylesheet" type="text/css" href="/css/footer_wave.css">
+    <style>
+        footer .fot-wave {
+            background: url(/medias/wave.png) repeat-x;
+            background-size: 1000px 100px;
+            /* 添加 */
+            background-repeat: repeat-x; /* 设置波浪在水平方向重复 */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%; /* 波浪宽度 */
+            height: 100px; /* 波浪高度 */
+            z-index: 1; /* 确保波浪在内容上方显示 */
+        }
+    </style>
+    <div class="fot-wave-box">
+        <div class="fot-wave" id="fot-wave_0"></div>
+        <div class="fot-wave" id="fot-wave_1"></div>
+        <div class="fot-wave" id="fot-wave_2"></div>
+        <div class="fot-wave" id="fot-wave_3"></div>
+    </div>
+
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
                 <span id="year">2023-2024</span>
             
-            <span id="year">2023</span>
             <a href="/about" target="_blank">Lo-Y-eH</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">75k</span>&nbsp;字
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">103.1k</span>&nbsp;字
             
             
             
+                
             
             
-            
-            <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
-                    class="white-color"></span>&nbsp;次
-            </span>
+                <span id="busuanzi_container_site_pv">
+                    |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv" class="white-color"></span>&nbsp;次
+                </span>
             
             
-            <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
-            </span>
+                <span id="busuanzi_container_site_uv">
+                    |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv" class="white-color"></span>&nbsp;人
+                </span>
             
             <br>
             
-            <span id="sitetime">载入运行时间...</span>
-            <script>
-                function siteTime() {
-                    var seconds = 1000;
-                    var minutes = seconds * 60;
-                    var hours = minutes * 60;
-                    var days = hours * 24;
-                    var years = days * 365;
-                    var today = new Date();
-                    var startYear = "2023";
-                    var startMonth = "8";
-                    var startDate = "18";
-                    var startHour = "12";
-                    var startMinute = "6";
-                    var startSecond = "16";
-                    var todayYear = today.getFullYear();
-                    var todayMonth = today.getMonth() + 1;
-                    var todayDate = today.getDate();
-                    var todayHour = today.getHours();
-                    var todayMinute = today.getMinutes();
-                    var todaySecond = today.getSeconds();
-                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
-                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-                    var diff = t2 - t1;
-                    var diffYears = Math.floor(diff / years);
-                    var diffDays = Math.floor((diff / days) - diffYears * 365);
-                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-                        minutes);
-                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
-                        diffMinutes * minutes) / seconds);
-                    if (startYear == todayYear) {
-                        document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
-                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    } else {
-                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
-                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                <span id="sitetime">载入运行时间...</span>
+                <script>
+                    function siteTime() {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2023";
+                        var startMonth = "8";
+                        var startDate = "18";
+                        var startHour = "12";
+                        var startMinute = "6";
+                        var startSecond = "16";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+                        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+                        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+                        if (startYear == todayYear) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                        }
                     }
-                }
-                setInterval(siteTime, 1000);
-            </script>
+                    setInterval(siteTime, 1000);
+                </script>
             
             <br>
             
@@ -2137,9 +2304,11 @@ $(document).ready(function () &#123;
 
 </div>
     </div>
+
 </footer>
 
 <div class="progress-bar"></div>
+
     <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2369,6 +2538,8 @@ $(function () {
 
     <!--背景动态彩带-->
     
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
 
     <!--网页预加载-->
     
@@ -2389,9 +2560,6 @@ $(function () {
     <!-- <script type="text/javascript" color="122 103 238" opacity='0.7' zIndex="-1" count="100"src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
     </script> -->
     
-        <script color="144 173 255" opacity="0.7" zIndex="-1" count="100"
-            src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-    
 
     <!-- 添加鼠标点击烟花爆炸效果 -->
     <!-- <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
@@ -2404,8 +2572,6 @@ $(function () {
     
 
     <!-- 樱花特效 -->
-    
-        <script src="/js/sakura.js"></script>
     
 
     <!-- 樱花效果 -->
@@ -2428,14 +2594,9 @@ $(function () {
     <!-- 添加鼠标彩虹星星掉落跟随效果 -->
     <!-- <script src="/js/cursor.js"></script> -->
     
-        <script src="/js/cursor.js"></script>
-    
-
 
     <!--单击显示文字-->
     <!-- <script type="text/javascript" src="/js/click_show_text.js"></script> -->
-    
-        <script src="/js/click_show_text.js"></script>
     
 
     <!-- 添加打字爆炸特效 -->
@@ -2455,6 +2616,15 @@ $(function () {
         </script>
     
     
+    <!-- 星空背景 -->
+    <!-- <div id="Dreamland">
+        <canvas></canvas>
+        <canvas></canvas>
+        <canvas></canvas>
+    </div>
+    <script src="/js/canvas_moving.js"></script> -->
+    
+
 
         <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
         <script>

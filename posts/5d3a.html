@@ -517,7 +517,6 @@
     </ul>
 </div>
 
-
         </div>
 
         
@@ -711,12 +710,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">计算机基础</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/" class="post-category">
+                                视频笔记
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -732,7 +744,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-02-07
+                    2024-02-11
                 </div>
                 
 
@@ -832,7 +844,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">计算机基础</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1340,18 +1356,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/5d3a.html">
+                <a href="/posts/ede0.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="计算机科学速成课">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="梦幻背景">
                         
-                        <span class="card-title">计算机科学速成课</span>
+                        <span class="card-title">梦幻背景</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1361,18 +1376,29 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-02-12
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Lo-Y-eH
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%83%8C%E6%99%AF/">
+                        <span class="chip bg-color">背景</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1716,6 +1742,7 @@
 
 
 
+
     <footer class="page-footer bg-color">
     
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
@@ -1766,82 +1793,98 @@
 <script src="/libs/aplayer/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
     
+
+    <!-- 添加页脚波浪代码 -->
+    <link rel="stylesheet" type="text/css" href="/css/footer_wave.css">
+    <style>
+        footer .fot-wave {
+            background: url(/medias/wave.png) repeat-x;
+            background-size: 1000px 100px;
+            /* 添加 */
+            background-repeat: repeat-x; /* 设置波浪在水平方向重复 */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%; /* 波浪宽度 */
+            height: 100px; /* 波浪高度 */
+            z-index: 1; /* 确保波浪在内容上方显示 */
+        }
+    </style>
+    <div class="fot-wave-box">
+        <div class="fot-wave" id="fot-wave_0"></div>
+        <div class="fot-wave" id="fot-wave_1"></div>
+        <div class="fot-wave" id="fot-wave_2"></div>
+        <div class="fot-wave" id="fot-wave_3"></div>
+    </div>
+
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
                 <span id="year">2023-2024</span>
             
-            <span id="year">2023</span>
             <a href="/about" target="_blank">Lo-Y-eH</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">75k</span>&nbsp;字
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">103.1k</span>&nbsp;字
             
             
             
+                
             
             
-            
-            <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
-                    class="white-color"></span>&nbsp;次
-            </span>
+                <span id="busuanzi_container_site_pv">
+                    |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv" class="white-color"></span>&nbsp;次
+                </span>
             
             
-            <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
-            </span>
+                <span id="busuanzi_container_site_uv">
+                    |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv" class="white-color"></span>&nbsp;人
+                </span>
             
             <br>
             
-            <span id="sitetime">载入运行时间...</span>
-            <script>
-                function siteTime() {
-                    var seconds = 1000;
-                    var minutes = seconds * 60;
-                    var hours = minutes * 60;
-                    var days = hours * 24;
-                    var years = days * 365;
-                    var today = new Date();
-                    var startYear = "2023";
-                    var startMonth = "8";
-                    var startDate = "18";
-                    var startHour = "12";
-                    var startMinute = "6";
-                    var startSecond = "16";
-                    var todayYear = today.getFullYear();
-                    var todayMonth = today.getMonth() + 1;
-                    var todayDate = today.getDate();
-                    var todayHour = today.getHours();
-                    var todayMinute = today.getMinutes();
-                    var todaySecond = today.getSeconds();
-                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
-                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-                    var diff = t2 - t1;
-                    var diffYears = Math.floor(diff / years);
-                    var diffDays = Math.floor((diff / days) - diffYears * 365);
-                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-                        minutes);
-                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
-                        diffMinutes * minutes) / seconds);
-                    if (startYear == todayYear) {
-                        document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
-                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    } else {
-                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
-                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                <span id="sitetime">载入运行时间...</span>
+                <script>
+                    function siteTime() {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2023";
+                        var startMonth = "8";
+                        var startDate = "18";
+                        var startHour = "12";
+                        var startMinute = "6";
+                        var startSecond = "16";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+                        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+                        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+                        if (startYear == todayYear) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                        }
                     }
-                }
-                setInterval(siteTime, 1000);
-            </script>
+                    setInterval(siteTime, 1000);
+                </script>
             
             <br>
             
@@ -1880,9 +1923,11 @@
 
 </div>
     </div>
+
 </footer>
 
 <div class="progress-bar"></div>
+
     <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2112,6 +2157,8 @@ $(function () {
 
     <!--背景动态彩带-->
     
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
 
     <!--网页预加载-->
     
@@ -2132,9 +2179,6 @@ $(function () {
     <!-- <script type="text/javascript" color="122 103 238" opacity='0.7' zIndex="-1" count="100"src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
     </script> -->
     
-        <script color="144 173 255" opacity="0.7" zIndex="-1" count="100"
-            src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-    
 
     <!-- 添加鼠标点击烟花爆炸效果 -->
     <!-- <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
@@ -2147,8 +2191,6 @@ $(function () {
     
 
     <!-- 樱花特效 -->
-    
-        <script src="/js/sakura.js"></script>
     
 
     <!-- 樱花效果 -->
@@ -2171,14 +2213,9 @@ $(function () {
     <!-- 添加鼠标彩虹星星掉落跟随效果 -->
     <!-- <script src="/js/cursor.js"></script> -->
     
-        <script src="/js/cursor.js"></script>
-    
-
 
     <!--单击显示文字-->
     <!-- <script type="text/javascript" src="/js/click_show_text.js"></script> -->
-    
-        <script src="/js/click_show_text.js"></script>
     
 
     <!-- 添加打字爆炸特效 -->
@@ -2198,6 +2235,15 @@ $(function () {
         </script>
     
     
+    <!-- 星空背景 -->
+    <!-- <div id="Dreamland">
+        <canvas></canvas>
+        <canvas></canvas>
+        <canvas></canvas>
+    </div>
+    <script src="/js/canvas_moving.js"></script> -->
+    
+
 
         <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
         <script>

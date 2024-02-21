@@ -6,7 +6,7 @@
   <link href="http://lo-y-eh.github.io/atom.xml" rel="self"/>
   
   <link href="http://lo-y-eh.github.io/"/>
-  <updated>2024-02-07T11:20:38.304Z</updated>
+  <updated>2024-02-18T14:24:35.847Z</updated>
   <id>http://lo-y-eh.github.io/</id>
   
   <author>
@@ -17,15 +17,194 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>页脚波浪效果</title>
+    <link href="http://lo-y-eh.github.io/posts/f421.html"/>
+    <id>http://lo-y-eh.github.io/posts/f421.html</id>
+    <published>2024-02-16T06:36:30.000Z</published>
+    <updated>2024-02-18T14:24:35.847Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;页脚波浪效果&quot;&gt;&lt;a href=&quot;#页脚波浪效果&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
+    
+    
+    <category term="页脚" scheme="http://lo-y-eh.github.io/tags/%E9%A1%B5%E8%84%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>归档页面优化</title>
+    <link href="http://lo-y-eh.github.io/posts/bd93.html"/>
+    <id>http://lo-y-eh.github.io/posts/bd93.html</id>
+    <published>2024-02-16T03:25:14.000Z</published>
+    <updated>2024-02-18T12:48:49.582Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;归档页面优化&quot;&gt;&lt;a href=&quot;#归档页面优化&quot; class=&quot;headerlink&quot; title=&quot;归档页面优化&quot;&gt;&lt;/a&gt;归档页面优化&lt;/h1&gt;&lt;h2 id=&quot;优化一&quot;&gt;&lt;a href=&quot;#优化一&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
+    
+    
+    <category term="归档" scheme="http://lo-y-eh.github.io/tags/%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>友链卡片增加悬停旋转效果</title>
+    <link href="http://lo-y-eh.github.io/posts/775.html"/>
+    <id>http://lo-y-eh.github.io/posts/775.html</id>
+    <published>2024-02-15T06:12:21.000Z</published>
+    <updated>2024-02-15T12:49:08.540Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;友链卡片增加旋转效果&quot;&gt;&lt;a href=&quot;#友链卡片增加旋转效果&quot; class=&quot;headerlink&quot; title=&quot;友链卡片增加旋转效果&quot;&gt;&lt;/a&gt;友链卡片增加旋转效果&lt;/h1&gt;&lt;h2 id=&quot;效果预览&quot;&gt;&lt;a href=&quot;#效果预览&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
+    
+    
+    <category term="友链" scheme="http://lo-y-eh.github.io/tags/%E5%8F%8B%E9%93%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>新建文章主动打开typora</title>
+    <link href="http://lo-y-eh.github.io/posts/24ab.html"/>
+    <id>http://lo-y-eh.github.io/posts/24ab.html</id>
+    <published>2024-02-14T07:52:21.000Z</published>
+    <updated>2024-02-14T08:26:46.871Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;新建文章自动打开typora&quot;&gt;&lt;a href=&quot;#新建文章自动打开typora&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
+    
+    
+    <category term="自动化" scheme="http://lo-y-eh.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客从github迁移到gitee</title>
+    <link href="http://lo-y-eh.github.io/posts/5c6b.html"/>
+    <id>http://lo-y-eh.github.io/posts/5c6b.html</id>
+    <published>2024-02-14T07:18:22.000Z</published>
+    <updated>2024-02-14T08:26:46.869Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;HEXO博客从GITHUB迁移到GITEE&quot;&gt;&lt;a href=&quot;#HEXO博客从GITHUB迁移到GITEE&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
+    
+    
+    <category term="博客迁移" scheme="http://lo-y-eh.github.io/tags/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自定义鼠标样式</title>
+    <link href="http://lo-y-eh.github.io/posts/dafc.html"/>
+    <id>http://lo-y-eh.github.io/posts/dafc.html</id>
+    <published>2024-02-14T06:30:46.000Z</published>
+    <updated>2024-02-14T13:29:21.644Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;自定义鼠标样式&quot;&gt;&lt;a href=&quot;#自定义鼠标样式&quot; class=&quot;headerlink&quot; title=&quot;自定义鼠标样式&quot;&gt;&lt;/a&gt;自定义鼠标样式&lt;/h1&gt;&lt;p&gt;在</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
+    
+    
+    <category term="鼠标样式" scheme="http://lo-y-eh.github.io/tags/%E9%BC%A0%E6%A0%87%E6%A0%B7%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>梦幻背景</title>
+    <link href="http://lo-y-eh.github.io/posts/ede0.html"/>
+    <id>http://lo-y-eh.github.io/posts/ede0.html</id>
+    <published>2024-02-12T10:22:42.000Z</published>
+    <updated>2024-02-13T14:00:27.524Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;预览效果&quot;&gt;&lt;a href=&quot;#预览效果&quot; class=&quot;headerlink&quot; title=&quot;预览效果&quot;&gt;&lt;/a&gt;预览效果&lt;/h2&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
+    
+    
+    <category term="背景" scheme="http://lo-y-eh.github.io/tags/%E8%83%8C%E6%99%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>计算机科学速成课</title>
     <link href="http://lo-y-eh.github.io/posts/5d3a.html"/>
     <id>http://lo-y-eh.github.io/posts/5d3a.html</id>
     <published>2024-02-06T13:57:22.000Z</published>
-    <updated>2024-02-07T11:20:38.304Z</updated>
+    <updated>2024-02-11T07:53:34.180Z</updated>
     
     
     
     
+    <category term="视频笔记" scheme="http://lo-y-eh.github.io/categories/%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="计算机基础" scheme="http://lo-y-eh.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -59,7 +238,7 @@
     <link href="http://lo-y-eh.github.io/posts/92dc.html"/>
     <id>http://lo-y-eh.github.io/posts/92dc.html</id>
     <published>2024-02-04T14:32:32.000Z</published>
-    <updated>2024-02-04T14:40:42.554Z</updated>
+    <updated>2024-02-16T08:39:55.338Z</updated>
     
     
       
@@ -84,7 +263,7 @@
     <link href="http://lo-y-eh.github.io/posts/2506.html"/>
     <id>http://lo-y-eh.github.io/posts/2506.html</id>
     <published>2024-02-04T14:28:09.000Z</published>
-    <updated>2024-02-06T09:26:59.283Z</updated>
+    <updated>2024-02-16T11:55:15.196Z</updated>
     
     
       
@@ -122,7 +301,7 @@
     <link href="http://lo-y-eh.github.io/posts/3356.html"/>
     <id>http://lo-y-eh.github.io/posts/3356.html</id>
     <published>2024-02-04T13:48:42.000Z</published>
-    <updated>2024-02-06T14:11:22.796Z</updated>
+    <updated>2024-02-11T11:11:39.914Z</updated>
     
     
       
@@ -147,7 +326,7 @@
     <link href="http://lo-y-eh.github.io/posts/8410.html"/>
     <id>http://lo-y-eh.github.io/posts/8410.html</id>
     <published>2024-02-04T08:44:45.000Z</published>
-    <updated>2024-02-06T14:16:42.044Z</updated>
+    <updated>2024-02-14T13:34:44.301Z</updated>
     
     
       
@@ -197,7 +376,7 @@
     <link href="http://lo-y-eh.github.io/posts/fb80.html"/>
     <id>http://lo-y-eh.github.io/posts/fb80.html</id>
     <published>2024-02-02T09:28:40.000Z</published>
-    <updated>2024-02-07T14:15:07.948Z</updated>
+    <updated>2024-02-16T11:32:13.118Z</updated>
     
     
       
@@ -315,174 +494,6 @@
     
     
     <category term="分布式" scheme="http://lo-y-eh.github.io/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>live2D看板娘设置</title>
-    <link href="http://lo-y-eh.github.io/posts/f571.html"/>
-    <id>http://lo-y-eh.github.io/posts/f571.html</id>
-    <published>2024-01-26T13:04:57.000Z</published>
-    <updated>2024-02-02T12:46:15.664Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;基础设置&quot;&gt;&lt;a href=&quot;#基础设置&quot; class=&quot;headerlink&quot; title=&quot;基础设置&quot;&gt;&lt;/a&gt;基础设置&lt;/h1&gt;&lt;h2 id=&quot;1-模型插件&quot;&gt;&lt;a href=&quot;#1-模型插件&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
-    
-    
-    <category term="live2D" scheme="http://lo-y-eh.github.io/tags/live2D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo博客(一) ——基础搭建</title>
-    <link href="http://lo-y-eh.github.io/posts/15bb.html"/>
-    <id>http://lo-y-eh.github.io/posts/15bb.html</id>
-    <published>2024-01-25T09:32:33.000Z</published>
-    <updated>2024-02-01T05:51:27.212Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;环境准备&quot;&gt;&lt;a href=&quot;#环境准备&quot; class=&quot;headerlink&quot; title=&quot;环境准备&quot;&gt;&lt;/a&gt;环境准备&lt;/h2&gt;&lt;h3 id=&quot;下载git&quot;&gt;&lt;a href=&quot;#下载git&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
-    
-    
-    <category term="hexo" scheme="http://lo-y-eh.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>cuda 入门</title>
-    <link href="http://lo-y-eh.github.io/posts/c7d8.html"/>
-    <id>http://lo-y-eh.github.io/posts/c7d8.html</id>
-    <published>2024-01-23T12:01:55.000Z</published>
-    <updated>2024-02-01T09:20:49.007Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;CUDA入门&quot;&gt;&lt;a href=&quot;#CUDA入门&quot; class=&quot;headerlink&quot; title=&quot;CUDA入门&quot;&gt;&lt;/a&gt;CUDA入门&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="cuda" scheme="http://lo-y-eh.github.io/categories/cuda/"/>
-    
-    
-    <category term="cuda" scheme="http://lo-y-eh.github.io/tags/cuda/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>今日诗句-祝福前程</title>
-    <link href="http://lo-y-eh.github.io/posts/f97.html"/>
-    <id>http://lo-y-eh.github.io/posts/f97.html</id>
-    <published>2024-01-19T09:02:15.000Z</published>
-    <updated>2024-02-01T07:09:09.228Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;祝福前程&quot;&gt;&lt;a href=&quot;#祝福前程&quot; class=&quot;headerlink&quot; title=&quot;祝福前程&quot;&gt;&lt;/a&gt;祝福前程&lt;/h2&gt;&lt;div class=&quot;ipage&quot;&gt; 
-  &lt;div class=&quot;ititle&quot;&gt;祝福前程&lt;/div&gt; 
-   &lt;div</summary>
-        
-      
-    
-    
-    
-    <category term="诗词" scheme="http://lo-y-eh.github.io/categories/%E8%AF%97%E8%AF%8D/"/>
-    
-    
-    <category term="诗词" scheme="http://lo-y-eh.github.io/tags/%E8%AF%97%E8%AF%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gmail分身</title>
-    <link href="http://lo-y-eh.github.io/posts/ae7f.html"/>
-    <id>http://lo-y-eh.github.io/posts/ae7f.html</id>
-    <published>2023-11-21T11:34:25.000Z</published>
-    <updated>2024-02-01T05:49:14.347Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今天要分享的一个方法，前面的邮箱跟原邮箱唯一的区别就是后面多了个&lt;code&gt;+c1&lt;/code&gt;。我们只需要在原邮箱后面使用一个 &lt;code&gt;+&lt;/code&gt; 号连接一个字符串</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Gmail" scheme="http://lo-y-eh.github.io/tags/Gmail/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>123云盘资源</title>
-    <link href="http://lo-y-eh.github.io/posts/5d4b.html"/>
-    <id>http://lo-y-eh.github.io/posts/5d4b.html</id>
-    <published>2023-11-01T13:52:57.000Z</published>
-    <updated>2024-02-01T07:10:32.877Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Adobe全家桶：&lt;a href=&quot;https://www.123pan.com/s/yS8UVv-NkFed.html&quot;&gt;https://www.123pan.com/s/yS8UVv-NkFed.html&lt;/a&gt; 提取码:6666&lt;/p&gt;
-&lt;p&gt;AutoCAD：&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="资源" scheme="http://lo-y-eh.github.io/categories/%E8%B5%84%E6%BA%90/"/>
-    
-    
-    <category term="资源" scheme="http://lo-y-eh.github.io/tags/%E8%B5%84%E6%BA%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>汇编语言</title>
-    <link href="http://lo-y-eh.github.io/posts/ec85.html"/>
-    <id>http://lo-y-eh.github.io/posts/ec85.html</id>
-    <published>2023-09-17T02:55:36.607Z</published>
-    <updated>2024-02-01T07:09:55.668Z</updated>
-    
-    
-    
-    
-    <category term="汇编" scheme="http://lo-y-eh.github.io/categories/%E6%B1%87%E7%BC%96/"/>
-    
-    
-    <category term="汇编" scheme="http://lo-y-eh.github.io/tags/%E6%B1%87%E7%BC%96/"/>
     
   </entry>
   

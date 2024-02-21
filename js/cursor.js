@@ -76,6 +76,8 @@
         "z-index": "100000000",
         fontSize: "20px",
         "will-change": "transform",
+        // 添加光标样式
+        cursor: "url('data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 8 8\' width=\'8px\' height=\'8px\'><circle cx=\'4\' cy=\'4\' r=\'4\' opacity=\'1.0\' fill=\'" + map.get(localStorage.getItem("themeColor")) + "\'/></svg>') 4 4, auto"
       };
     }
 
