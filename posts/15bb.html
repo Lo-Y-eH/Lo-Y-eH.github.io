@@ -57,7 +57,7 @@
         /* 你的 HTML 代码将放在这里 */
         <div class="loader-wrapper">
             <div class="loader">
-                <!-- <img src="/images/1.png" alt="">头像位置 -->
+                <!-- <img src="../../source/medias/avatar.jpg" alt=""> -->
             </div>
             <div class="loader-text">
                 <!-- 10个div -->
@@ -2647,7 +2647,7 @@ document<span class="token punctuation">.</span><span class="token function">add
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
-                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">103.1k</span>&nbsp;字
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">106.5k</span>&nbsp;字
             
             
             
@@ -3061,6 +3061,194 @@ $(function () {
         <canvas></canvas>
     </div>
     <script src="/js/canvas_moving.js"></script> -->
+    
+
+    <!-- 右键菜单样式 -->
+    <style>
+        /* 右键菜单容器样式 */
+        #rightMenu {
+            display: none;
+            position: fixed;
+            padding: 0 .25rem;
+            width: 10rem;
+            height: fit-content;
+            top: 10%;
+            left: 10%;
+            background-color: rgba(255, 255, 255, .85);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border-radius: 12px;
+            z-index: 99994;
+            border: 1px solid #e3e8f7;
+            user-select: none;
+            box-shadow: 0 0 12px 4px rgba(0, 0, 0, .05);
+        }
+
+        /* 右键菜单悬停样式 */
+        #rightMenu:hover {
+            border: 1px solid #177cb0;
+            box-shadow: 0 8px 12px -3px #4259ef23;
+        }
+
+        /* 右键菜单组样式 */
+        #rightMenu .rightMenu-group {
+            padding: .35rem .3rem;
+            transition: .3s;
+        }
+
+        /* 右键菜单分割线样式 */
+        #rightMenu .rightMenu-line {
+            border-top: 1px dashed #4259ef23;
+        }
+
+        /* 右键菜单小组件样式 */
+        #rightMenu .rightMenu-group.rightMenu-small {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* 右键菜单项样式 */
+        #rightMenu .rightMenu-group .rightMenu-item {
+            border-radius: 8px;
+            transition: .3s;
+            cursor: pointer;
+            color: #525f7f;
+        }
+
+        /* 右键菜单行内项样式 */
+        #rightMenu .rightMenu-line .rightMenu-item {
+            margin: .25rem 0;
+            padding: .25rem 0;
+        }
+
+        /* 右键菜单行内组样式 */
+        #rightMenu .rightMenu-group.rightMenu-line .rightMenu-item {
+            display: flex;
+        }
+
+        /* 右键菜单项悬停样式 */
+        #rightMenu .rightMenu-group .rightMenu-item:hover {
+            background-color: #177cb0;
+            color: #fff;
+            box-shadow: 0 8px 12px -3px #4259ef23;
+        }
+
+        /* 右键菜单项按下样式 */
+        #rightMenu .rightMenu-group .rightMenu-item:active {
+            transform: scale(.97);
+        }
+
+        /* 右键菜单图标样式 */
+        #rightMenu .rightMenu-group .rightMenu-item i {
+            display: inline-block;
+            text-align: center;
+            line-height: 1.5rem;
+            width: 2rem;
+            padding: 0 .25rem;
+        }
+
+        /* 右键菜单行内图标样式 */
+        #rightMenu .rightMenu-line .rightMenu-item i {
+            margin: 0 .25rem;
+        }
+
+        /* 右键菜单文字样式 */
+        #rightMenu .rightMenu-group .rightMenu-item span {
+            line-height: 1.5rem;
+        }
+
+        /* 右键菜单小型项样式 */
+        .rightMenu-small .rightMenu-item {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        /* 右键菜单遮罩层样式 */
+        #rightmenu-mask {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background: 0 0;
+            top: 0;
+            left: 0;
+            display: none;
+            z-index: 101;
+            margin: 0 !important;
+            z-index: 99993;
+        }
+    </style>
+
+    <!-- 添加右键菜单 -->
+    
+        <div id="rightMenu" style="top: 0px; left: 0px; display: none;">
+            <div class="rightMenu-group rightMenu-small">
+                <div class="rightMenu-item" id="menu-backward" title="返回"><i class="fas fa-arrow-left"></i></div>
+                <div class="rightMenu-item" id="menu-forward" title="前进"><i class="fas fa-arrow-right"></i></div>
+                <div class="rightMenu-item" id="menu-refresh" title="刷新"><i class="fas fa-bolt"></i></div>
+                <div class="rightMenu-item" id="menu-top" title="返回顶部"><i class="fas fa-arrow-up"></i></div>
+            </div>
+            <div class="rightMenu-group rightMenu-line rightMenuPlugin" style="display:none">
+                <div class="rightMenu-item" id="menu-copytext" style="display:none"><i
+                        class="fas fa-copy"></i><span>复制选中</span></div>
+                <div class="rightMenu-item" id="menu-copylink" style="display:none"><i class="fas fa-link"></i>
+                    <span>复制链接</span>
+                </div>
+                <div class="rightMenu-item" id="menu-pastetext" style="display:none"><i class="fas fa-paste"></i>
+                    <span>粘贴文本</span>
+                </div><a class="rightMenu-item" id="menu-commenttext" style="display:none"><i
+                        class="fas fa-comment-medical"></i> <span>引用到评论</span></a>
+                <div class="rightMenu-item" id="menu-newwindow" style="display:none"><i class="fas fa-window-restore"></i>
+                    <span>新窗口打开</span>
+                </div>
+                <div class="rightMenu-item" id="menu-copyimg" style="display:none"><i class="fas fa-images"></i>
+                    <span>复制此图片</span>
+                </div>
+                <div class="rightMenu-item" id="menu-downloadimg" style="display:none"><i class="fas fa-download"></i>
+                    <span>下载此图片</span>
+                </div>
+                <div class="rightMenu-item" id="menu-search" style="display:none"><i class="fas fa-magnifying-glass"></i>
+                    <span>站内搜索</span></div>
+                <div class="rightMenu-item" id="menu-searchBing" style="display:none"><i
+                        class="fas fa-magnifying-glass"></i> <span>必应搜索</span></div>
+                <div class="rightMenu-item" id="menu-music-toggle" style="display:none"><i class="fas fa-play"></i>
+                    <span>播放音乐</span>
+                </div>
+                <div class="rightMenu-item" id="menu-music-back" style="display:none"><i class="fas fa-backward"></i>
+                    <span>切换到上一首</span>
+                </div>
+                <div class="rightMenu-item" id="menu-music-forward" style="display:none"><i class="fas fa-forward"></i>
+                    <span>切换到下一首</span>
+                </div>
+                <div class="rightMenu-item" id="menu-music-playlist"
+                    onclick="window.open(&quot;https://music.163.com/#/playlist?app_version=8.8.36&amp;id=5197802668&quot;,&quot;_blank&quot;)"
+                    style="display:none"><i class="fas fa-radio"></i> <span>查看所有歌曲</span></div>
+                <div class="rightMenu-item" id="menu-music-copyMusicName" style="display:none"><i class="fas fa-copy"></i>
+                    <span>复制歌名</span>
+                </div>
+            </div>
+            <div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link"
+                    id="menu-randomWebsite" target="_blank" rel="noopener" href="https://travel.moe/go.html"><i
+                        class="fas fa-paper-plane"></i> <span>次元跃迁</span> </a><a class="rightMenu-item menu-link"
+                    id="menu-randomPost"><i class="fas fa-shoe-prints"></i> <span>随便逛逛</span> </a><a
+                    class="rightMenu-item menu-link" href="/categories/"><i class="fas fa-cube"></i> <span>博客分类</span>
+                </a><a class="rightMenu-item menu-link" href="/tags/"><i class="fas fa-tags"></i> <span>文章标签</span></a>
+            </div>
+            <div class="rightMenu-group rightMenu-line"><a class="rightMenu-item menu-link" href="/privacy/"><i
+                        class="fas fa-hands"></i> <span>隐私协议</span> </a><a class="rightMenu-item menu-link" href="/cc/"><i
+                        class="fas fa-closed-captioning"></i> <span>版权协议</span> </a><a class="rightMenu-item menu-link"
+                    href="/SEAEPOCH-WRITING-STANDARDS/"><i class="fas fa-feather"></i>
+                    <span>行文规范</span></a></div>
+            <div class="rightMenu-group rightMenu-line rightMenuOther">
+                <div class="rightMenu-item" id="menu-copy"><i class="fas fa-copy"></i> <span>复制地址</span></div>
+                <div class="rightMenu-item" id="menu-darkmode"><i class="fas fa-moon"></i> <span
+                        class="menu-darkmode-text">深色模式</span></div>
+            </div>
+        </div>
+        <div id="rightmenu-mask" style="display: none"></div>
+        
+        <script src="/js/rightMenu.js"></script>
+        <script>addRightMenuClickEvent()</script>
     
 
 
