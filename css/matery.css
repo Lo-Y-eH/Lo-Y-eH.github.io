@@ -782,18 +782,79 @@ header .go-back i {
     z-index: 2;
 }
 
+/* 原效果 */
+/* .bg-cover .title {
+    font-size: 4rem;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+    position: relative;
+    修改标题颜色
+    color: #a8dff3;
+    opacity: 0.7;
+} */
+/* 优化后 */
+/* 基本样式 */
 .bg-cover .title {
     font-size: 4rem;
     line-height: 1.2em;
     margin-bottom: 20px;
     position: relative;
+    color: #a8dff3;
+    opacity: 0.7;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);/* 添加文字阴影 */
+    transition: all 0.3s ease-in-out;/* 添加过渡效果 */
 }
+
+/* 鼠标悬停效果 */
+.bg-cover .title:hover {
+    transform: scale(1.05);/* 鼠标悬停时放大标题 */
+    opacity: 1;/* 鼠标悬停时取消透明度 */
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6);/* 鼠标悬停时增加文字阴影 */
+}
+
+/* 添加动画效果 */
+@keyframes neonGlow {
+    0% {
+        text-shadow: 0 0 10px #a8dff3,
+            0 0 20px #a8dff3,
+            0 0 30px #a8dff3,
+            0 0 40px #00b3ff,
+            0 0 70px #00b3ff,
+            0 0 80px #00b3ff,
+            0 0 100px #00b3ff,
+            0 0 150px #00b3ff;
+    }
+
+    50% {
+        text-shadow: none;
+    }
+
+    100% {
+        text-shadow: 0 0 10px #a8dff3,
+            0 0 20px #a8dff3,
+            0 0 30px #a8dff3,
+            0 0 40px #00b3ff,
+            0 0 70px #00b3ff,
+            0 0 80px #00b3ff,
+            0 0 100px #00b3ff,
+            0 0 150px #00b3ff;
+    }
+}
+
+/* 应用动画效果 */
+.bg-cover .title.neon {
+    animation: neonGlow 1.5s infinite alternate;
+}
+
 
 .bg-cover .description {
     font-weight: 300;
     font-size: 1.25rem;
     line-height: 1.4em;
-    color: #eee;
+    /* 动态打字效果颜色 */
+    /* color: #eee; */
+    color: #a8dff3;
+    /* color: #7ced9a; */
 }
 
 .bg-cover .post-title {
@@ -1938,7 +1999,9 @@ tr {
         margin-left: -20px;
         /* Force Hardware Acceleration in WebKit */
         -webkit-transform: translateZ(0);
+        transform: translateZ(0);
         -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
 
     .cssanimations .cd-timeline-img.is-hidden {
@@ -2571,7 +2634,7 @@ body.dark #searchModal {
     color: #000;
 }
 
-.nav-show i[aria-hidden=true] {
+/* .nav-show i[aria-hidden=true] {
     -webkit-transform: rotate(180deg) !important;
     -moz-transform: rotate(180deg) !important;
     -o-transform: rotate(180deg) !important;
@@ -2581,10 +2644,12 @@ body.dark #searchModal {
     -moz-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s;
-}
+} */
 
 .menus_item_child {
     background-color: rgba(255, 255, 255, .8);
+    /* color: #d0d0d0; */
+    /* background-color: #66696c; */
     width: fit-content;
     border-radius: 10px;
     -webkit-box-shadow: 0 5px 20px -4px rgba(0, 0, 0, .5);
@@ -2599,7 +2664,15 @@ body.dark #searchModal {
     animation: sub_menus .3s .1s ease both;
 }
 
+/* 添加夜法之书 */
+.menus_item_child:focus,
+.menus_item_child:hover {
+    color: #30a9de
+}
+
+
 .menus_item_child:before {
+    color: #1f3144; /* 添加 */
     content: "";
     position: absolute;
     top: -20px;
@@ -2608,6 +2681,7 @@ body.dark #searchModal {
     border-width: 10px;
     border-style: solid;
     border-color: transparent transparent rgba(255, 255, 255, .8)
+    /* border-color: transparent transparent #1f3144 夜法之书 */
 }
 
 .m-nav-item {
@@ -2637,15 +2711,19 @@ body.dark #searchModal {
     transition: all .3s;
 }
 
+/* 修改
 .m-nav-show,
 .m-nav-item > a:hover {
     color: #FFF;
     background: rgba(255, 255, 255, .8);
 }
-
 .m-nav-show > a:before,
 .m-nav-item > a:hover:before {
     opacity: 1;
+} */
+.m-nav-item>a:hover:before,
+.m-nav-show>a:before {
+    opacity: 1
 }
 
 .m-nav-item .m-icon {
@@ -2654,6 +2732,24 @@ body.dark #searchModal {
     height: 50px;
     padding: 0;
     margin: 0;
+}
+
+/* 添加 */
+#navContainer .nav-menu .nav-item .nav-link {
+    color: #d0d0d0;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
+    font-size: larger;
+    text-shadow: none
+}
+
+[data-user-color-scheme=dark] #navContainer .nav-menu .nav-item .nav-link:hover,
+[data-user-color-scheme=dark] #navContainer .nav-menu .nav-item i:hover {
+    color: #30a9de
+}
+
+#navContainer .nav-menu .nav-item .menus_item_child .nav-link:hover,
+#navContainer .nav-menu .nav-item .menus_item_child i:hover {
+    color: #30a9de
 }
 
 
@@ -2954,7 +3050,7 @@ body.DarkMode ::-ms-input-placeholder {     /* Microsoft Edge */
 .btn-floating {
     /* border-radius: 15%; 圆角方形按钮 */
     -webkit-transition: .3s ease-out; /* 设置过渡效果，持续时间为0.3秒 */
-    transition: .3s ease-out; /* 设置过渡效果，持续时间为0.3秒 */
+     transition: .3s ease-out; /* 设置过渡效果，持续时间为0.3秒 */
 }
 /* 按钮悬停时的样式 */
 .btn-floating:hover {
@@ -2964,6 +3060,8 @@ body.DarkMode ::-ms-input-placeholder {     /* Microsoft Edge */
     /* 设置按钮悬停时的阴影效果，向右下方偏移，阴影颜色为 #0083b0 */
     -webkit-box-shadow: 2px 5px 10px #0083b0 !important;
     box-shadow: 2px 5px 10px #0083b0 !important;
+    /* 贝塞尔曲线 让运动曲线有无限可能 可以到官网自行探索 https: //cubic-bezier.com/ */
+    transition: all 0.4s cubic-bezier(0.31, -0.1, 0.43, 1.59);
 }
 /* 定义按钮在获得焦点（focus）状态时的样式 */
 .btn-floating:focus,
@@ -3394,4 +3492,88 @@ a.toc-link {
     cursor: pointer;
     filter: blur(1px);
     transition: .3s;
+}
+
+/* 添加分页器样式 */
+.paging {
+    margin-bottom: 15px
+}
+
+.paging .row {
+    margin-left: 0;
+    margin-right: 0
+}
+
+.paging .page-info {
+    font-family: Georgia, 'Noto Serif SC', serif !important;
+    font-weight: 800;
+    font-size: 2rem;
+    color: #2f2f2f;
+    padding-top: 1rem
+}
+
+.paging i {
+    font-size: 2.5rem
+}
+
+.paging .disabled {
+    background-color: #ccc !important
+}
+
+.paging .disabled i {
+    color: #999 !important
+}
+
+#pagination .pagination {
+    height: 56px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
+    gap: 0 1rem
+}
+
+#pagination ul.pagination .ellipsis-item,
+#pagination ul.pagination .pagination-item {
+    font-weight: 700
+}
+
+#pagination ul.pagination .ellipsis-item {
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    margin-left: -1.2rem;
+    margin-right: -1.2rem
+}
+
+#pagination ul.pagination .pagination-item {
+    font-weight: 700;
+    border-radius: 15%;
+    background-color: #f4f4f4
+}
+
+#pagination ul.pagination .pagination-item.active {
+    background-color: #009df7
+}
+
+#pagination ul.pagination .pagination-item.btn-floating:hover {
+    background-color: -webkit-gradient(linear, left top, right bottom, color-stop(0, #0bb), to(#009df7));
+    background-color: linear-gradient(to bottom right, #0bb 0, #009df7 100%);
+    -webkit-box-shadow: 2px 5px 10px #0083b0 !important;
+    box-shadow: 2px 5px 10px #0083b0 !important
+}
+
+#pagination ul.pagination .pagination-item a {
+    width: 100%;
+    height: inherit;
+    line-height: 56px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
 }

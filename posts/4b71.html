@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="计算机科学速成课, HTML,CSS,JavaScript,JQuery,React,Vue.js">
+    <meta name="keywords" content="页面加载动画, HTML,CSS,JavaScript,JQuery,React,Vue.js">
     <meta name="description" content="人生注定是一条没有归途的旅行">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>计算机科学速成课 | loyeh の Blog</title>
+    <title>页面加载动画 | loyeh の Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -584,12 +584,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">计算机科学速成课</h1>
+                    <h1 class="description center-align post-title">页面加载动画</h1>
                 </div>
             </div>
         </div>
@@ -712,8 +712,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">
-                                <span class="chip bg-color">计算机基础</span>
+                            <a href="/tags/%E9%A1%B5%E9%9D%A2%E5%8A%A8%E7%94%BB/">
+                                <span class="chip bg-color">页面动画</span>
                             </a>
                         
                     </div>
@@ -724,8 +724,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/" class="post-category">
-                                视频笔记
+                            <a href="/categories/hexo/" class="post-category">
+                                hexo
                             </a>
                         
                     </div>
@@ -737,28 +737,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-02-06
+                    2024-01-24
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-02-11
+                    2024-02-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
 
@@ -781,7 +781,355 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="页面加载动画"><a href="#页面加载动画" class="headerlink" title="页面加载动画"></a>页面加载动画</h1><p>今天的主题是为博客添加页面加载动画。</p>
+<p>下面是页面加载动画的详细作用：</p>
+<ol>
+<li><p><strong>视觉吸引力</strong>: 页面加载动画可以增加页面的吸引力，使用户在等待页面加载时感到更加愉悦和有趣。精美的加载动画可以提升用户体验，增加用户对网站的好感度。</p>
+</li>
+<li><p><strong>指示器</strong>: 加载动画可以作为页面加载的指示器，告诉用户页面正在加载中，以及加载进度如何。这可以帮助用户了解页面加载的状态，减少用户的不耐烦和不确定性。</p>
+</li>
+<li><p><strong>心理安慰</strong>: 在加载较慢的情况下，页面加载动画可以给用户一种心理上的安慰，让他们知道页面正在工作，而不是出现了问题。这有助于降低用户的焦虑和流失率。</p>
+</li>
+<li><p><strong>品牌展示</strong>: 页面加载动画也可以成为品牌的一部分，通过设计独特的加载动画来展示品牌的风格和特点，增强品牌形象。</p>
+</li>
+</ol>
+<p>综上所述，页面加载动画在提升用户体验方面都发挥着重要作用，是网页设计中常用的元素之一。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><ol>
+<li><p>在<code>matery\source\css</code>下新建<code>loading.css</code>，添加以下代码</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">:root</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">--primary-color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+    <span class="token comment">/* 使用变量定义主要颜色 */</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">*</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">body</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100vh<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader-wrapper</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>45deg<span class="token punctuation">,</span> <span class="token function">rgb</span><span class="token punctuation">(</span>90<span class="token punctuation">,</span> 54<span class="token punctuation">,</span> 148<span class="token punctuation">)</span> 0%<span class="token punctuation">,</span> <span class="token function">rgb</span><span class="token punctuation">(</span>19<span class="token punctuation">,</span> 189<span class="token punctuation">,</span> 206<span class="token punctuation">)</span> 33%<span class="token punctuation">,</span> <span class="token function">rgb</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 148<span class="token punctuation">,</span> 217<span class="token punctuation">)</span> 66%<span class="token punctuation">,</span> <span class="token function">rgb</span><span class="token punctuation">(</span>111<span class="token punctuation">,</span> 199<span class="token punctuation">,</span> 181<span class="token punctuation">)</span> 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">background-size</span><span class="token punctuation">:</span> 400%<span class="token punctuation">;</span>
+    <span class="token property">background-position</span><span class="token punctuation">:</span> 0% 100%<span class="token punctuation">;</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> gradient 7.5s ease-in-out infinite<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader,
+.loader::before,
+.loader::after,
+.loader img</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 3px solid transparent<span class="token punctuation">;</span>
+    <span class="token property">border-top-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--primary-color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">margin-left</span><span class="token punctuation">:</span> -75px<span class="token punctuation">;</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> -75px<span class="token punctuation">;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> 2<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> spin 1.7s linear infinite<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader::before</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    <span class="token property">bottom</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    <span class="token property">right</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> spin 0.6s linear infinite reverse<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader::after</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    <span class="token property">bottom</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    <span class="token property">right</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> spin 1s linear infinite<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader img</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">object-fit</span><span class="token punctuation">:</span> cover<span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> spin 1.7s linear infinite reverse<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader-text</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 36px<span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> 72%<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>-50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> 3<span class="token punctuation">;</span>
+    <span class="token property">user-select</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader-text div</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 36px<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--primary-color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 32px<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0 20px<span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>180deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> move 2s linear infinite<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader-text div:nth-child(8)::before,
+.loader-text div:nth-child(9)::before,
+.loader-text div:nth-child(10)::before</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--primary-color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader-text div::after,
+.loader-text div:nth-child(8)::after,
+.loader-text div:nth-child(9)::after,
+.loader-text div:nth-child(10)::after</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 0.15<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">bottom</span><span class="token punctuation">:</span> -40px<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">margin-left</span><span class="token punctuation">:</span> -5px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader-text div:nth-child(8)::after,
+.loader-text div:nth-child(9)::after,
+.loader-text div:nth-child(10)::after</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">margin-left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader-text div:nth-child(2)</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">animation-delay</span><span class="token punctuation">:</span> 0.2s<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader-text div:nth-child(3)</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">animation-delay</span><span class="token punctuation">:</span> 0.4s<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader-text div:nth-child(4)</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">animation-delay</span><span class="token punctuation">:</span> 0.6s<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader-text div:nth-child(5)</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">animation-delay</span><span class="token punctuation">:</span> 0.8s<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader-text div:nth-child(6)</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">animation-delay</span><span class="token punctuation">:</span> 1s<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader-text div:nth-child(7)</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">animation-delay</span><span class="token punctuation">:</span> 1.2s<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader-text div:nth-child(8)</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">animation-delay</span><span class="token punctuation">:</span> 1.4s<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader-text div:nth-child(9)</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">animation-delay</span><span class="token punctuation">:</span> 1.6s<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.loader-text div:nth-child(10)</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">animation-delay</span><span class="token punctuation">:</span> 1.8s<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token atrule"><span class="token rule">@keyframes</span> gradient</span> <span class="token punctuation">&#123;</span>
+    <span class="token selector">50%</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">background-position</span><span class="token punctuation">:</span> 100% 0%<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token atrule"><span class="token rule">@keyframes</span> spin</span> <span class="token punctuation">&#123;</span>
+    <span class="token selector">0%</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token selector">100%</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>360deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token atrule"><span class="token rule">@keyframes</span> move</span> <span class="token punctuation">&#123;</span>
+    <span class="token selector">0%</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token selector">35%</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">right</span><span class="token punctuation">:</span> 41%<span class="token punctuation">;</span>
+        <span class="token property">opacity</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token selector">65%</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">right</span><span class="token punctuation">:</span> 59%<span class="token punctuation">;</span>
+        <span class="token property">opacity</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token selector">100%</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">right</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-180deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">/* 小屏幕下(手机类)的样式 */</span>
+<span class="token atrule"><span class="token rule">@media</span> <span class="token keyword">only</span> screen <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 601px<span class="token punctuation">)</span></span> <span class="token punctuation">&#123;</span>
+    <span class="token selector">.loader</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+        <span class="token property">margin-left</span><span class="token punctuation">:</span> -50px<span class="token punctuation">;</span>
+        <span class="token property">margin-top</span><span class="token punctuation">:</span> -50px<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token selector">.loader img</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 45%<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 45%<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token selector">.loader-text</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 70%<span class="token punctuation">;</span>
+        <span class="token property">font-size</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token selector">.loader-text div</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 24px<span class="token punctuation">;</span>
+        <span class="token property">font-size</span><span class="token punctuation">:</span> 18px<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">/* 中等屏幕下(平板类)的样式 */</span>
+<span class="token atrule"><span class="token rule">@media</span> <span class="token keyword">only</span> screen <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 600px<span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 992px<span class="token punctuation">)</span></span> <span class="token punctuation">&#123;</span>
+    <span class="token selector">.loader</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+        <span class="token property">margin-left</span><span class="token punctuation">:</span> -60px<span class="token punctuation">;</span>
+        <span class="token property">margin-top</span><span class="token punctuation">:</span> -60px<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token selector">.loader img</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token selector">.loader-text</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 60%<span class="token punctuation">;</span>
+        <span class="token property">font-size</span><span class="token punctuation">:</span> 28px<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token selector">.loader-text div</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 25px<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+        <span class="token property">font-size</span><span class="token punctuation">:</span> 24px<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">/* 大屏幕下(桌面类)的样式 */</span>
+<span class="token atrule"><span class="token rule">@media</span> <span class="token keyword">only</span> screen <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 993px<span class="token punctuation">)</span></span> <span class="token punctuation">&#123;</span>
+    <span class="token selector">.loader</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 180px<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 180px<span class="token punctuation">;</span>
+        <span class="token property">margin-left</span><span class="token punctuation">:</span> -90px<span class="token punctuation">;</span>
+        <span class="token property">margin-top</span><span class="token punctuation">:</span> -90px<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token selector">.loader img</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 60%<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 60%<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token selector">.loader-text</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+        <span class="token property">font-size</span><span class="token punctuation">:</span> 36px<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token selector">.loader-text div</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 36px<span class="token punctuation">;</span>
+        <span class="token property">font-size</span><span class="token punctuation">:</span> 32px<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>在<code>matery\layout\_partial</code>新建<code>loading.ejs</code></p>
+<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>loadingPages<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> </span><span class="token delimiter punctuation">%></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>loader-box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        /* 你的 HTML 代码将放在这里 */
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>loader-wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>loader<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                <span class="token comment">&lt;!-- &lt;img src="/images/1.png" alt="">头像位置 --></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>loader-text<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                <span class="token comment">&lt;!-- 10个div --></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>L<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>O<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>A<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>D<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>I<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>N<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>G<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+            <span class="token keyword">var</span> <span class="token function-variable function">endLoading</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>style<span class="token punctuation">.</span>overflow <span class="token operator">=</span> <span class="token string">'auto'</span><span class="token punctuation">;</span>
+                document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'loader-box'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+            window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'load'</span><span class="token punctuation">,</span> endLoading<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token punctuation">&#125;</span> </span><span class="token delimiter punctuation">%></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>部署到本地，查看并调试效果</p>
+</li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://seayj.cn/">SeaYJ’s Blog</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1aZ4y1G7jp/">https://www.bilibili.com/video/BV1aZ4y1G7jp/</a></li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -807,7 +1155,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Lo-Y-eH.github.io/posts/5d3a.html">http://Lo-Y-eH.github.io/posts/5d3a.html</a>
+                    <a href="http://Lo-Y-eH.github.io/posts/4b71.html">http://Lo-Y-eH.github.io/posts/4b71.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -845,8 +1193,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">
-                                    <span class="chip bg-color">计算机基础</span>
+                                <a href="/tags/%E9%A1%B5%E9%9D%A2%E5%8A%A8%E7%94%BB/">
+                                    <span class="chip bg-color">页面动画</span>
                                 </a>
                             
                         </div>
@@ -1360,13 +1708,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/ede0.html">
+                <a href="/posts/15bb.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="梦幻背景">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Hexo博客(一) ——基础搭建">
                         
-                        <span class="card-title">梦幻背景</span>
+                        <span class="card-title">Hexo博客(一) ——基础搭建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1377,7 +1725,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-02-12
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-01-25
                         </span>
                         <span class="publish-author">
                             
@@ -1394,8 +1742,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%83%8C%E6%99%AF/">
-                        <span class="chip bg-color">背景</span>
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
                     </a>
                     
                 </div>
@@ -1409,13 +1757,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/2eb3.html">
+                <a href="/posts/c7d8.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="md格式优化">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="cuda 入门">
                         
-                        <span class="card-title">md格式优化</span>
+                        <span class="card-title">cuda 入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1426,14 +1774,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
+                            <a href="/categories/cuda/" class="post-category">
+                                    cuda
                                 </a>
                             
                             
@@ -1443,8 +1791,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/markdown/">
-                        <span class="chip bg-color">markdown</span>
+                    <a href="/tags/cuda/">
+                        <span class="chip bg-color">cuda</span>
                     </a>
                     
                 </div>

@@ -57,10 +57,11 @@
         /* 你的 HTML 代码将放在这里 */
         <div class="loader-wrapper">
             <div class="loader">
-                <!-- <img src="../../source/medias/avatar.jpg" alt=""> -->
+                <!-- <img src="/medias/avatar.jpg" alt=""> -->
             </div>
             <div class="loader-text">
                 <!-- 10个div -->
+                <div></div>
                 <div>L</div>
                 <div>O</div>
                 <div>A</div>
@@ -68,7 +69,6 @@
                 <div>I</div>
                 <div>N</div>
                 <div>G</div>
-                <div></div>
                 <div></div>
                 <div></div>
             </div>
@@ -626,112 +626,146 @@
 
     </div>
 </div>
-<main class="content">
-    <style>
-        .gallery-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
+    <main class="content">
+        <style>
+            .gallery-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
 
-        .gallery-box {
-            display: inline-block;
-            position: relative;
-            margin: 10px;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
+            .gallery-box {
+                display: inline-block;
+                position: relative;
+                margin: 10px;
+                overflow: hidden;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            }
 
-        .gallery-box:hover {
-            transform: scale(1.05) rotate(-5deg);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
+            .gallery-box:hover {
+                transform: scale(1.05) rotate(-5deg);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
 
-        .gallery-item {
-            display: block;
-            text-decoration: none;
-            color: #333;
-        }
+            .gallery-item {
+                display: block;
+                text-decoration: none;
+                color: #333;
+            }
 
-        .gallery-cover-box {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
+            .gallery-cover-box {
+                height: 200px;
+                background-size: cover;
+                background-position: center;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
 
-        .gallery-info {
-            padding: 15px;
-            text-align: center;
-        }
+            .gallery-info {
+                padding: 15px;
+                text-align: center;
+            }
 
-        .gallery-name {
-            margin-top: 10px;
-            font-weight: bold;
-            font-size: 18px;
-        }
-    </style>
+            .gallery-name {
+                margin-top: 10px;
+                font-weight: bold;
+                font-size: 18px;
+            }
 
-    <div class="container">
-        
-            
-                <div class="gallery-wrapper row">
-                    
-                        
-                            
-                                <div class="col s12 m6 l4 xl3 gallery-box">
-                                    <a href="./scene" class="gallery-item">
-                                        <div class="gallery-cover-box"
-                                            style="background-image: url(/medias/galleries/scene/0.jpg);"></div>
-                                        <div class="gallery-info">
-                                            <p class="gallery-name">scene</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                
-                        
-                            
-                                <div class="col s12 m6 l4 xl3 gallery-box">
-                                    <a href="./comics" class="gallery-item">
-                                        <div class="gallery-cover-box"
-                                            style="background-image: url(/medias/galleries/comics/0.jpg);"></div>
-                                        <div class="gallery-info">
-                                            <p class="gallery-name">comics</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                
-                        
-                            
-                                <div class="col s12 m6 l4 xl3 gallery-box">
-                                    <a href="./sightseeing" class="gallery-item">
-                                        <div class="gallery-cover-box"
-                                            style="background-image: url(/medias/galleries/sightseeing/0.jpg);"></div>
-                                        <div class="gallery-info">
-                                            <p class="gallery-name">sightseeing</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                
-                        
-                            
-                                <div class="col s12 m6 l4 xl3 gallery-box">
-                                    <a href="./person" class="gallery-item">
-                                        <div class="gallery-cover-box"
-                                            style="background-image: url(/medias/galleries/person/0.jpg);"></div>
-                                        <div class="gallery-info">
-                                            <p class="gallery-name">person</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                
+            /* 添加描述 */
+            .description {
+                padding: 20px;
+                border: 1px dashed #30a9de;
+                color: #3c4858;
+                position: relative;
+                display: inline-block;
+                width: 95%;
+                /* background-color: #eef3fc; */
+                background-color: rgba(238, 243, 252, 0.66);
+                /* 背景颜色 */
+                border-radius: 10px;
+                font-size: 16px;
+                margin: 12px auto
+            }
+
+            /* 添加卡片 */
+            .card .card-content {
+                padding: 24px 24px 24px 24px
+            }
+        </style>
+
+        <div class="container chip-container">
+            <div class="card">
+                <div class="card-content">
+                    <div class="tag-title center-align">
+                        <div class="description">
+                            <div class="title center-align">“ 光影流年 ”</div>“ 这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸。”
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="container">
+            
                 
-    </div>
-</main>
+
+                    <div class="gallery-wrapper row">
+                        
+                            
+                                
+                                    <div class="col s12 m6 l4 xl3 gallery-box">
+                                        <a href="./scene" class="gallery-item">
+                                            <div class="gallery-cover-box"
+                                                style="background-image: url(/medias/galleries/scene/0.jpg);"></div>
+                                            <div class="gallery-info">
+                                                <p class="gallery-name">scene</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    
+                            
+                                
+                                    <div class="col s12 m6 l4 xl3 gallery-box">
+                                        <a href="./comics" class="gallery-item">
+                                            <div class="gallery-cover-box"
+                                                style="background-image: url(/medias/galleries/comics/0.jpg);"></div>
+                                            <div class="gallery-info">
+                                                <p class="gallery-name">comics</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    
+                            
+                                
+                                    <div class="col s12 m6 l4 xl3 gallery-box">
+                                        <a href="./sightseeing" class="gallery-item">
+                                            <div class="gallery-cover-box"
+                                                style="background-image: url(/medias/galleries/sightseeing/0.jpg);"></div>
+                                            <div class="gallery-info">
+                                                <p class="gallery-name">sightseeing</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    
+                            
+                                
+                                    <div class="col s12 m6 l4 xl3 gallery-box">
+                                        <a href="./person" class="gallery-item">
+                                            <div class="gallery-cover-box"
+                                                style="background-image: url(/medias/galleries/person/0.jpg);"></div>
+                                            <div class="gallery-info">
+                                                <p class="gallery-name">person</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    
+                    </div>
+                    
+        </div>
+    </main>
     <footer class="page-footer bg-color">
     
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
@@ -817,7 +851,7 @@
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
-                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">106.5k</span>&nbsp;字
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">107.7k</span>&nbsp;字
             
             
             
