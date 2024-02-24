@@ -54,14 +54,13 @@
 
     
     <div id="loader-box">
-        /* 你的 HTML 代码将放在这里 */
+        <!-- 你的 HTML 代码将放在这里  -->
         <div class="loader-wrapper">
             <div class="loader">
                 <img src="/medias/avatar.jpg" alt="">
             </div>
             <div class="loader-text">
                 <!-- 10个div -->
-                <div></div>
                 <div>L</div>
                 <div>O</div>
                 <div>A</div>
@@ -69,6 +68,7 @@
                 <div>I</div>
                 <div>N</div>
                 <div>G</div>
+                <div></div>
                 <div></div>
                 <div></div>
             </div>
@@ -587,29 +587,29 @@
         <div class="brand">
             <div class="title center-align diyFont">
                 
-                北冥有鱼
+                    北冥有鱼
                 
             </div>
 
             <div class="description center-align diyFont">
                 
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['春风若有怜花意，可否许我再少年',
-                                  'If the spring breeze shows mercy to the flowers, could it grant me my youth once more?',
-                                  '本是青灯不归客，却因浊酒恋红尘',
-                                  '桃李春风一杯酒，江湖夜雨十年灯',
-                                  '曾经沧海难为水，除却巫山不是云',
-                                  '宠辱不惊，看庭前花开花落；去留无意，望天上云卷云舒'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
+                    <span id="subtitle"></span>
+                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                    <script>
+                        var typed = new Typed("#subtitle", {
+                            strings: ['春风若有怜花意，可否许我再少年',
+                                      'If the spring breeze shows mercy to the flowers, could it grant me my youth once more?',
+                                      '本是青灯不归客，却因浊酒恋红尘',
+                                      '桃李春风一杯酒，江湖夜雨十年灯',
+                                      '曾经沧海难为水，除却巫山不是云',
+                                      '宠辱不惊，看庭前花开花落；去留无意，望天上云卷云舒'],
+                            startDelay: 300,
+                            typeSpeed: 100,
+                            loop: true,
+                            backSpeed: 50,
+                            showCursor: true
+                        });
+                    </script>
                 
             </div>
         </div>
@@ -617,11 +617,11 @@
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getMinutes() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
+    <script>
+        // 每天切换 banner 图.  Switch banner image every day.
+        var bannerUrl = "/medias/banner/" + new Date().getMinutes() + '.jpg';
+        $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    </script>
 
 
     </div>
@@ -640,28 +640,19 @@
             <div class="tag-chips">
                 
                 
-                <a href="/tags/%E8%B5%84%E6%BA%90/" title="资源: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="资源" style="background-color: #F9EBEA;">资源
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Gmail/" title="Gmail: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Gmail" style="background-color: #F5EEF8;">Gmail
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/Docker/" title="Docker: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Docker" style="background-color: #D5F5E3;">Docker
+                            data-tagname="Docker" style="background-color: #F9EBEA;">Docker
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E8%B5%84%E6%BA%90/" title="资源: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="资源" style="background-color: #F5EEF8;">资源
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -670,7 +661,16 @@
                 <a href="/tags/404/" title="404: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="404" style="background-color: #E8F8F5;">404
+                            data-tagname="404" style="background-color: #D5F5E3;">404
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Gmail/" title="Gmail: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Gmail" style="background-color: #E8F8F5;">Gmail
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -694,28 +694,10 @@
                 </a>
                 
                 
-                <a href="/tags/markdown/" title="markdown: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="markdown" style="background-color: #82E0AA;">markdown
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/cuda/" title="cuda: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="cuda" style="background-color: #D7BDE2;">cuda
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/typora/" title="typora: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="typora" style="background-color: #A3E4D7;">typora
+                            data-tagname="cuda" style="background-color: #82E0AA;">cuda
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -724,7 +706,25 @@
                 <a href="/tags/live2D/" title="live2D: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="live2D" style="background-color: #85C1E9;">live2D
+                            data-tagname="live2D" style="background-color: #D7BDE2;">live2D
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/markdown/" title="markdown: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="markdown" style="background-color: #A3E4D7;">markdown
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/typora/" title="typora: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="typora" style="background-color: #85C1E9;">typora
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -775,15 +775,6 @@
                 </a>
                 
                 
-                <a href="/tags/%E8%83%8C%E6%99%AF/" title="背景: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="背景" style="background-color: #85C1E9;">背景
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" title="自动化: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
@@ -811,6 +802,15 @@
                 </a>
                 
                 
+                <a href="/tags/%E8%83%8C%E6%99%AF/" title="背景: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="背景" style="background-color: #85C1E9;">背景
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/tags/%E6%B1%87%E7%BC%96/" title="汇编: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
@@ -829,19 +829,19 @@
                 </a>
                 
                 
-                <a href="/tags/%E9%9A%8F%E7%AC%94/" title="随笔: 1">
+                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="计算机基础: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="随笔" style="background-color: #FFF;">随笔
+                            data-tagname="计算机基础" style="background-color: #E8F8F5;">计算机基础
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="计算机基础: 1">
+                <a href="/tags/%E9%9A%8F%E7%AC%94/" title="随笔: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="计算机基础" style="background-color: #E8F8F5;">计算机基础
+                            data-tagname="随笔" style="background-color: #FFF;">随笔
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -906,7 +906,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"资源","weight":1,"link":"/tags/资源/"},{"text":"Gmail","weight":1,"link":"/tags/Gmail/"},{"text":"Docker","weight":1,"link":"/tags/Docker/"},{"text":"404","weight":1,"link":"/tags/404/"},{"text":"hexo","weight":4,"link":"/tags/hexo/"},{"text":"分布式","weight":3,"link":"/tags/分布式/"},{"text":"markdown","weight":2,"link":"/tags/markdown/"},{"text":"cuda","weight":1,"link":"/tags/cuda/"},{"text":"typora","weight":1,"link":"/tags/typora/"},{"text":"live2D","weight":1,"link":"/tags/live2D/"},{"text":"诗词","weight":1,"link":"/tags/诗词/"},{"text":"字体","weight":1,"link":"/tags/字体/"},{"text":"友链","weight":1,"link":"/tags/友链/"},{"text":"右键菜单","weight":1,"link":"/tags/右键菜单/"},{"text":"博客迁移","weight":1,"link":"/tags/博客迁移/"},{"text":"背景","weight":1,"link":"/tags/背景/"},{"text":"自动化","weight":1,"link":"/tags/自动化/"},{"text":"归档","weight":1,"link":"/tags/归档/"},{"text":"弹幕","weight":1,"link":"/tags/弹幕/"},{"text":"汇编","weight":1,"link":"/tags/汇编/"},{"text":"鼠标样式","weight":1,"link":"/tags/鼠标样式/"},{"text":"随笔","weight":1,"link":"/tags/随笔/"},{"text":"计算机基础","weight":1,"link":"/tags/计算机基础/"},{"text":"页脚","weight":1,"link":"/tags/页脚/"},{"text":"页面动画","weight":1,"link":"/tags/页面动画/"},{"text":"相册","weight":1,"link":"/tags/相册/"},{"text":"特效","weight":1,"link":"/tags/特效/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"Docker","weight":1,"link":"/tags/Docker/"},{"text":"资源","weight":1,"link":"/tags/资源/"},{"text":"404","weight":1,"link":"/tags/404/"},{"text":"Gmail","weight":1,"link":"/tags/Gmail/"},{"text":"hexo","weight":4,"link":"/tags/hexo/"},{"text":"分布式","weight":3,"link":"/tags/分布式/"},{"text":"cuda","weight":1,"link":"/tags/cuda/"},{"text":"live2D","weight":1,"link":"/tags/live2D/"},{"text":"markdown","weight":2,"link":"/tags/markdown/"},{"text":"typora","weight":1,"link":"/tags/typora/"},{"text":"诗词","weight":1,"link":"/tags/诗词/"},{"text":"字体","weight":1,"link":"/tags/字体/"},{"text":"友链","weight":1,"link":"/tags/友链/"},{"text":"右键菜单","weight":1,"link":"/tags/右键菜单/"},{"text":"博客迁移","weight":1,"link":"/tags/博客迁移/"},{"text":"自动化","weight":1,"link":"/tags/自动化/"},{"text":"归档","weight":1,"link":"/tags/归档/"},{"text":"弹幕","weight":1,"link":"/tags/弹幕/"},{"text":"背景","weight":1,"link":"/tags/背景/"},{"text":"汇编","weight":1,"link":"/tags/汇编/"},{"text":"鼠标样式","weight":1,"link":"/tags/鼠标样式/"},{"text":"计算机基础","weight":1,"link":"/tags/计算机基础/"},{"text":"随笔","weight":1,"link":"/tags/随笔/"},{"text":"页脚","weight":1,"link":"/tags/页脚/"},{"text":"页面动画","weight":1,"link":"/tags/页面动画/"},{"text":"相册","weight":1,"link":"/tags/相册/"},{"text":"特效","weight":1,"link":"/tags/特效/"}], {
         autoResize: true
     });
 </script>

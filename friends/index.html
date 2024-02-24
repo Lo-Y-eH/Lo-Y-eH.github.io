@@ -54,14 +54,13 @@
 
     
     <div id="loader-box">
-        /* 你的 HTML 代码将放在这里 */
+        <!-- 你的 HTML 代码将放在这里  -->
         <div class="loader-wrapper">
             <div class="loader">
                 <img src="/medias/avatar.jpg" alt="">
             </div>
             <div class="loader-text">
                 <!-- 10个div -->
-                <div></div>
                 <div>L</div>
                 <div>O</div>
                 <div>A</div>
@@ -69,6 +68,7 @@
                 <div>I</div>
                 <div>N</div>
                 <div>G</div>
+                <div></div>
                 <div></div>
                 <div></div>
             </div>
@@ -587,29 +587,29 @@
         <div class="brand">
             <div class="title center-align diyFont">
                 
-                北冥有鱼
+                    北冥有鱼
                 
             </div>
 
             <div class="description center-align diyFont">
                 
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['春风若有怜花意，可否许我再少年',
-                                  'If the spring breeze shows mercy to the flowers, could it grant me my youth once more?',
-                                  '本是青灯不归客，却因浊酒恋红尘',
-                                  '桃李春风一杯酒，江湖夜雨十年灯',
-                                  '曾经沧海难为水，除却巫山不是云',
-                                  '宠辱不惊，看庭前花开花落；去留无意，望天上云卷云舒'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
+                    <span id="subtitle"></span>
+                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                    <script>
+                        var typed = new Typed("#subtitle", {
+                            strings: ['春风若有怜花意，可否许我再少年',
+                                      'If the spring breeze shows mercy to the flowers, could it grant me my youth once more?',
+                                      '本是青灯不归客，却因浊酒恋红尘',
+                                      '桃李春风一杯酒，江湖夜雨十年灯',
+                                      '曾经沧海难为水，除却巫山不是云',
+                                      '宠辱不惊，看庭前花开花落；去留无意，望天上云卷云舒'],
+                            startDelay: 300,
+                            typeSpeed: 100,
+                            loop: true,
+                            backSpeed: 50,
+                            showCursor: true
+                        });
+                    </script>
                 
             </div>
         </div>
@@ -617,11 +617,11 @@
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getMinutes() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
+    <script>
+        // 每天切换 banner 图.  Switch banner image every day.
+        var bannerUrl = "/medias/banner/" + new Date().getMinutes() + '.jpg';
+        $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    </script>
 
 
     </div>
