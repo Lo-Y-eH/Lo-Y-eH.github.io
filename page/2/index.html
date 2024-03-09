@@ -211,11 +211,11 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/about">
+        <a href="/asteroids">
           
           <i class="fas fa-user-circle" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>关于</span>
+          <span>碎星海</span>
         </a>
       </li>
       
@@ -425,11 +425,11 @@
             <ul  style="background:  ;">
                 
                 <li>
-                    <a href="/about " style="margin-left:75px">
+                    <a href="/asteroids " style="margin-left:75px">
                         
                         <i class="fa fas fa-user-circle" style="position: absolute;left:50px"></i>
                         
-                        <span>关于</span>
+                        <span>碎星海</span>
                     </a>
                 </li>
                 
@@ -641,6 +641,549 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
+                    <a href="/posts/bd93.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">归档页面优化</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="归档页面优化">
+                            
+                            <span class="card-title">归档页面优化</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                归档页面优化优化一效果预览
+修改步骤归档的布局文件是主题目录下的/layout/archive.ejs，原代码如下:
+&lt;!--时间轴区域块-->
+   &lt;div id="cd-timeline" class="container
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-16
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%BD%92%E6%A1%A3/">
+                            <span class="chip bg-color">归档</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/775.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">友链卡片增加悬停旋转效果</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="友链卡片增加悬停旋转效果">
+                            
+                            <span class="card-title">友链卡片增加悬停旋转效果</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                友链卡片增加旋转效果效果预览
+修改步骤matery/layout/friend.ejs原代码
+&lt;%- partial('_partial/bg-cover') %>
+&lt;style>
+    .friends-container 
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-15
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%8F%8B%E9%93%BE/">
+                            <span class="chip bg-color">友链</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/24ab.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">新建文章主动打开typora</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="新建文章主动打开typora">
+                            
+                            <span class="card-title">新建文章主动打开typora</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                新建文章自动打开typora在博客文件根目录新建scripts目录，在目录下新建auto_open.js，添加以下代码：
+var spawn = require('child_process').spawn; 
+hexo.on('new',
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-14
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/">
+                            <span class="chip bg-color">自动化</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/5c6b.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">博客从github迁移到gitee</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="博客从github迁移到gitee">
+                            
+                            <span class="card-title">博客从github迁移到gitee</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                HEXO博客从GITHUB迁移到GITEEgitee感觉做的不错，而且是国内的，速度要比github快不少。所以将博客从github迁移到gitee。
+1.在gitee.com修改个性地址：
+比如这里最后是tommy88。
+2.在gitee
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-14
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/">
+                            <span class="chip bg-color">博客迁移</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/dafc.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">自定义鼠标样式</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="自定义鼠标样式">
+                            
+                            <span class="card-title">自定义鼠标样式</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                自定义鼠标样式在 &#x2F;themes&#x2F;butterfly&#x2F;source&#x2F;css路径下创建一个mouse.css文件，在文件中添加如下代码：
+body &#123;
+  cursor:url(https:/
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-14
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E9%BC%A0%E6%A0%87%E6%A0%B7%E5%BC%8F/">
+                            <span class="chip bg-color">鼠标样式</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/ede0.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">梦幻背景</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="梦幻背景">
+                            
+                            <span class="card-title">梦幻背景</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                预览效果
+博文历程说实话，这篇博客能完成，我深感惊喜，因为之前在这篇博文，见到了一种非常好看的动态背景，无奈因原博文的关键代码图片链接失效了(canvas_moving.js)，所以当时无法在自己的网站上实现，尽管我努力尝试通过网上搜寻该博
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-12
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%83%8C%E6%99%AF/">
+                            <span class="chip bg-color">背景</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/5d3a.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">计算机科学速成课</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="计算机科学速成课">
+                            
+                            <span class="card-title">计算机科学速成课</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-06
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    视频笔记
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">
+                            <span class="chip bg-color">计算机基础</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/2eb3.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">md格式优化</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="md格式优化">
+                            
+                            <span class="card-title">md格式优化</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                md样式修改背景修改原代码
+body &#123;
+    background-color: #eaeaea;
+    margin: 0;
+    color: #34495e;
+    overflow-x: hidden;
+    
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-05
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/markdown/">
+                            <span class="chip bg-color">markdown</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/92dc.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">右键菜单</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="右键菜单">
+                            
+                            <span class="card-title">右键菜单</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                增加右键菜单同主题的小伙伴可能发现了，博客网站的右键菜单实在是功能少的可怜，一个好的右键菜单可以让访客朋友的用户体验提高不少，所以下面我们就来就是实现给我买的博客网站添加一个功能更丰富的右键菜单😋
+实现第一步，定位到主题文件夹下的页面布局
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-04
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/">
+                            <span class="chip bg-color">右键菜单</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/2506.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">页面特效</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="页面特效">
+                            
+                            <span class="card-title">页面特效</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                页面特效动态线条在themes/matery/layout/layout.ejs文件中添加：
+&lt;!--动态线条背景-->
+&lt;script type="text/javascript"
+color="122 103 238" op
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-04
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E7%89%B9%E6%95%88/">
+                            <span class="chip bg-color">特效</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
                     <a href="/posts/9997.html">
                         <div class="card-image">
                             <div class="box-content">
@@ -733,565 +1276,6 @@ TrueType 是一种广泛应用于Windows和Mac操作系统的字体格式。它�
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/8410.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">hexo优化</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="hexo优化">
-                            
-                            <span class="card-title">hexo优化</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                hexo优化cnpm
-本节参考自　淘宝 NPM 镜像
-
-这是一个完整 npmjs.org 镜像，你可以用此代替官方版本（只读），同步频率目前为 10 分钟 一次以保证尽量与官方服务器同步。在 npm 无法同步时提供帮助。
-打开命令行窗口安装
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-04
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/hexo/">
-                            <span class="chip bg-color">hexo</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/1d91.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">Docker常用命令</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Docker常用命令">
-                            
-                            <span class="card-title">Docker常用命令</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Docker常用命令开始入门Docker学习，开始时间的晚了点，只能多花点功夫努力学习了。
-
-
-
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-03
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Docker/" class="post-category">
-                                    Docker
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Docker/">
-                            <span class="chip bg-color">Docker</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/fb80.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">相册设置</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="相册设置">
-                            
-                            <span class="card-title">相册设置</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                添加相册为什么添加相册个人博客中添加相册功能，不仅具备多项实用性与娱乐性优点，而且能够丰富博客的表达形式与内容层次：
-
-保存和展示图片：博主可以将自己拍摄或收集到的各种喜欢的图片上传至相册，如旅行照片、作品集、灵感素材等，为自己的博客创建一
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-02
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%9B%B8%E5%86%8C/">
-                            <span class="chip bg-color">相册</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/e7a5.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">404页面</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="404页面">
-                            
-                            <span class="card-title">404页面</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                404(修改失败)演示效果
-源码我的模版选用的使用404 Andrew Lawendy，模版代码
-HTML&lt;div class="not-found parallax">
-    &lt;div class="sky-bg">&lt;
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-01
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/404/">
-                            <span class="chip bg-color">404</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/8905.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">OpenMP</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="OpenMP">
-                            
-                            <span class="card-title">OpenMP</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                OpenMPOpenMP介绍在C&#x2F;C++中，OpenMP可以通过使用预处理指令来让程序并行化。OpenMP指令使用的格式为:
-#pragma omp 指令 [子句[子句]…]
-
-下面是一个最简单的OpenMP程序，可以运行后观察结
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-31
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/" class="post-category">
-                                    分布式
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
-                            <span class="chip bg-color">分布式</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/ef25.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">Pthreads</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Pthreads">
-                            
-                            <span class="card-title">Pthreads</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Pthreads创建和终止本节展示了两个最基本的线程管理函数——创建与终止线程。
-
-pthread.h头文件的引入
-pthread_create创建线程
-pthread_exit终止线程
-
-欢迎来到Posix Threads的世界。
-为了编
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-31
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/" class="post-category">
-                                    分布式
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
-                            <span class="chip bg-color">分布式</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/e16d.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">MPI</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="MPI">
-                            
-                            <span class="card-title">MPI</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                MPIMPI（Message Passing Interface，消息传递接口）
-数据类型
-MPI_INT：整数类型，对应C语言中的int类型。
-MPI_FLOAT：单精度浮点数类型，对应C语言中的float类型。
-MPI_DOUBLE：双
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-31
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/" class="post-category">
-                                    分布式
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
-                            <span class="chip bg-color">分布式</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/f571.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">live2D看板娘设置</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="live2D看板娘设置">
-                            
-                            <span class="card-title">live2D看板娘设置</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                基础设置1.模型插件在hexo根目录进入git bash，输入以下命令安装模型插件
-# npm install --save hexo-helper-live2d
-
-卸载模型
-# npm uninstall --save hexo-help
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-26
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/live2D/">
-                            <span class="chip bg-color">live2D</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/15bb.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">Hexo博客(一) ——基础搭建</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Hexo博客(一) ——基础搭建">
-                            
-                            <span class="card-title">Hexo博客(一) ——基础搭建</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                环境准备下载git安装git for windows（或者其它git客户端）git下载
-验证git安装命令(cmd窗口或鼠标右键菜单的git bash 窗口)
-git --version
-
-下载node.js在官网下载node.js的安装程
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-25
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/hexo/">
-                            <span class="chip bg-color">hexo</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/4b71.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">页面加载动画</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="页面加载动画">
-                            
-                            <span class="card-title">页面加载动画</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                页面加载动画今天的主题是为博客添加页面加载动画。
-下面是页面加载动画的详细作用：
-
-视觉吸引力: 页面加载动画可以增加页面的吸引力，使用户在等待页面加载时感到更加愉悦和有趣。精美的加载动画可以提升用户体验，增加用户对网站的好感度。
-
-指示器
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-24
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E9%A1%B5%E9%9D%A2%E5%8A%A8%E7%94%BB/">
-                            <span class="chip bg-color">页面动画</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
         </div>
     </article>
 
@@ -1312,7 +1296,7 @@ git --version
             
         </div>
         <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">2 / 3</div>
+            <div class="center-align b-text-gray">2 / 4</div>
         </div>
         <div class="col s6 m4 l4">
             
@@ -1412,7 +1396,7 @@ git --version
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
-                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">107.7k</span>&nbsp;字
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">111.3k</span>&nbsp;字
             
             
             
