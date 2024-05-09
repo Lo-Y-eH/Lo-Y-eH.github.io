@@ -213,7 +213,7 @@
       <li>
         <a href="/asteroids">
           
-          <i class="fas fa-user-circle" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-meteor" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>碎星海</span>
         </a>
@@ -245,11 +245,11 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/books">
+        <a href="/tip">
           
-          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-circle-dollar-to-slot" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>书籍</span>
+          <span>打赏</span>
         </a>
       </li>
       
@@ -427,7 +427,7 @@
                 <li>
                     <a href="/asteroids " style="margin-left:75px">
                         
-                        <i class="fa fas fa-user-circle" style="position: absolute;left:50px"></i>
+                        <i class="fa fas fa-meteor" style="position: absolute;left:50px"></i>
                         
                         <span>碎星海</span>
                     </a>
@@ -458,11 +458,11 @@
             <ul  style="background:  ;">
                 
                 <li>
-                    <a href="/books " style="margin-left:75px">
+                    <a href="/tip " style="margin-left:75px">
                         
-                        <i class="fa fas fa-book" style="position: absolute;left:50px"></i>
+                        <i class="fa fas fa-circle-dollar-to-slot" style="position: absolute;left:50px"></i>
                         
-                        <span>书籍</span>
+                        <span>打赏</span>
                     </a>
                 </li>
                 
@@ -586,13 +586,13 @@
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
-            <div class="title center-align diyFont">
+            <div class="title center-align" style="font-family: 华文行楷; font-size: 7rem;">
                 
                     北冥有鱼
                 
             </div>
 
-            <div class="description center-align diyFont">
+            <div class="description center-align" style="font-family: 华文行楷; font-size: 2rem;">
                 
                     <span id="subtitle"></span>
                     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
@@ -629,6 +629,42 @@
 </div>
 
 
+<!-- 添加小花花背景 -->
+<style>
+    /* 小花花背景图开始 */
+    #dark-mode .swbk,
+    #dark-mode .triangle,
+    #dark-mode .v[data-class=v] .vwrap {
+        background: rgba(34, 34, 34, 0.55) !important;
+    }
+
+    .v[data-class=v] .vwrap {
+        background-color: #fff;
+    }
+
+    .card {
+        background: url(/medias/flowerbg-white.png) top fixed;
+    }
+
+    /* #dark-mode .card */
+    #dark-mode .card {
+        background: url(/medias/flowerbg-black.png) top fixed;
+    }
+
+    /* 小花花背景图结束 */
+    @media only screen and (max-width: 1090px) {
+        .bg-cover {
+            background-position-y: 0;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .about-cover {
+            height: 64vh;
+        }
+    }
+</style>
+
 <main class="content">
 
     
@@ -641,32 +677,30 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/ae7f.html">
+                    <a href="/posts/e8c2.html">
                         <div class="card-image">
                             <div class="box-content">
                                 <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">Gmail分身</span>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">解决ubuntu和windows之间的粘贴</span>
                             </div>
                             
                             
                             
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Gmail分身">
+                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="解决ubuntu和windows之间的粘贴">
                             
-                            <span class="card-title">Gmail分身</span>
+                            <span class="card-title">解决ubuntu和windows之间的粘贴</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                今天要分享的一个方法，前面的邮箱跟原邮箱唯一的区别就是后面多了个+c1。我们只需要在原邮箱后面使用一个 + 号连接一个字符串 c1，后缀不变，你就有了一个新邮箱，使用该方法，你就可以开启分身大法了：
-
-原邮箱：t……&#x64;&#64;&
+                                解决ubuntu和win之间的粘贴在使用ubuntu虚拟机时，有时需要在虚拟机与windows系统之间进行文件或者字符串的复制和粘贴。比如：某个文件在主机上，但是开发时需要在虚拟机中使用，需要把这个文件导入到虚拟机中。其实这个功能通过简单的
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-07
                             </span>
                             <span class="publish-author">
                                 
@@ -678,51 +712,42 @@
                     </div>
 
                     
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Gmail/">
-                            <span class="chip bg-color">Gmail</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/5d4b.html">
+                    <a href="/posts/158f.html">
                         <div class="card-image">
                             <div class="box-content">
                                 <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">123云盘资源</span>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">找回宝塔面板登陆账号和密码</span>
                             </div>
                             
                             
                             
-                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="123云盘资源">
+                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="找回宝塔面板登陆账号和密码">
                             
-                            <span class="card-title">123云盘资源</span>
+                            <span class="card-title">找回宝塔面板登陆账号和密码</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                Adobe全家桶：https://www.123pan.com/s/yS8UVv-NkFed.html 提取码:6666
-AutoCAD：https://www.123pan.com/s/yS8UVv-2kFed.html 提取码:6666
+                                找回宝塔面板登录地址、账号和密码忘记登录名和登录密码应该是大多数人都会遇到的问题，特别是遇到记性不好，而且又没有备份密码的人来说，那就是家常便饭了，站主就个记性不好的还爱设复杂密码又不备份的(可以说是又菜又爱玩了)，这几天忘记了自己的宝塔面
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-29
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E8%B5%84%E6%BA%90/" class="post-category">
-                                    资源
+                                <a href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" class="post-category">
+                                    问题解决
                                 </a>
                                 
                                 
@@ -733,8 +758,8 @@ AutoCAD：https://www.123pan.com/s/yS8UVv-2kFed.html 提取码:6666
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E8%B5%84%E6%BA%90/">
-                            <span class="chip bg-color">资源</span>
+                        <a href="/tags/%E5%AE%9D%E5%A1%94/">
+                            <span class="chip bg-color">宝塔</span>
                         </a>
                         
                     </div>
@@ -744,35 +769,87 @@ AutoCAD：https://www.123pan.com/s/yS8UVv-2kFed.html 提取码:6666
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/ec85.html">
+                    <a href="/posts/2b8.html">
                         <div class="card-image">
                             <div class="box-content">
                                 <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">汇编语言</span>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">我当舅舅了!</span>
                             </div>
                             
                             
                             
-                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="汇编语言">
+                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="我当舅舅了!">
                             
-                            <span class="card-title">汇编语言</span>
+                            <span class="card-title">我当舅舅了!</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
+                                日记之我当舅舅了！
+来看看我可爱的侄女：
+照片
+照片
+视频
+视频
+
+                            
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-28
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E6%B1%87%E7%BC%96/" class="post-category">
-                                    汇编
+                                <a href="/categories/%E7%BA%AA%E5%BF%B5%E5%86%8C/" class="post-category">
+                                    纪念册
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/3dac.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">jupyter notebook找不到新建的虚拟环境</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="jupyter notebook找不到新建的虚拟环境">
+                            
+                            <span class="card-title">jupyter notebook找不到新建的虚拟环境</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Jupyter找不到新建的虚拟环境今天做项目时，需要用到为新建的py37虚拟环境（python 3.7.16），我用的是anaconda3的一个python集成环境，自带jupyter notebook，但在我打开jupyter noteb
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/jupyter/" class="post-category">
+                                    jupyter
                                 </a>
                                 
                                 
@@ -783,8 +860,8 @@ AutoCAD：https://www.123pan.com/s/yS8UVv-2kFed.html 提取码:6666
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E6%B1%87%E7%BC%96/">
-                            <span class="chip bg-color">汇编</span>
+                        <a href="/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
+                            <span class="chip bg-color">问题解决</span>
                         </a>
                         
                     </div>
@@ -794,47 +871,39 @@ AutoCAD：https://www.123pan.com/s/yS8UVv-2kFed.html 提取码:6666
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/essay-demo.html">
+                    <a href="/posts/8c37.html">
                         <div class="card-image">
                             <div class="box-content">
                                 <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px"></span>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">网站备案</span>
                             </div>
                             
                             
                             
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="网站备案">
                             
-                            <span class="card-title"></span>
+                            <span class="card-title">网站备案</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                时来天地皆同力 
-    
-   
-    
-    天不得时，日月无光；
-    地不得时，草木不生；
-    水不得时，风浪不平；
-    人不得时，利运不通。
-    时也，运也，命也。
-    人有冲天之志，非运不可自通。
-    
+                                网站备案参考全网最详细：个人网站如何备案 - 知乎 (zhihu.com)
+网站备案_ICP备案_备案迁移_备案-阿里云 (aliyun.com)
+
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-26
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    随笔
+                                <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
+                                    博客搭建
                                 </a>
                                 
                                 
@@ -845,8 +914,8 @@ AutoCAD：https://www.123pan.com/s/yS8UVv-2kFed.html 提取码:6666
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                            <span class="chip bg-color">随笔</span>
+                        <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                            <span class="chip bg-color">博客搭建</span>
                         </a>
                         
                     </div>
@@ -856,42 +925,37 @@ AutoCAD：https://www.123pan.com/s/yS8UVv-2kFed.html 提取码:6666
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/essay-demo.html">
+                    <a href="/posts/d462.html">
                         <div class="card-image">
                             <div class="box-content">
                                 <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">我曾七次鄙视自己的灵魂</span>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">域名购买</span>
                             </div>
                             
                             
                             
-                            <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="我曾七次鄙视自己的灵魂">
+                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="域名购买">
                             
-                            <span class="card-title">我曾七次鄙视自己的灵魂</span>
+                            <span class="card-title">域名购买</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                随笔板块，后续会更新文章，目前弄好了模板格式~ 
-  节选自《Seven times have I despised my soul》- Kahlil Gibran 
-   
-    
-    我曾七次鄙视自己的灵魂 - 纪伯伦
-    T
+                                域名购买
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-26
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    随笔
+                                <a href="/categories/%E5%9F%9F%E5%90%8D/" class="post-category">
+                                    域名
                                 </a>
                                 
                                 
@@ -902,8 +966,8 @@ AutoCAD：https://www.123pan.com/s/yS8UVv-2kFed.html 提取码:6666
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                            <span class="chip bg-color">随笔</span>
+                        <a href="/tags/%E5%9F%9F%E5%90%8D/">
+                            <span class="chip bg-color">域名</span>
                         </a>
                         
                     </div>
@@ -913,34 +977,157 @@ AutoCAD：https://www.123pan.com/s/yS8UVv-2kFed.html 提取码:6666
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/ec85.html">
+                    <a href="/posts/4c80.html">
                         <div class="card-image">
                             <div class="box-content">
                                 <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">hexo基础命令</span>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">WordPress+宝塔+阿里云+Xshell搭建博客</span>
                             </div>
                             
                             
                             
-                            <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="hexo基础命令">
+                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="WordPress+宝塔+阿里云+Xshell搭建博客">
                             
-                            <span class="card-title">hexo基础命令</span>
+                            <span class="card-title">WordPress+宝塔+阿里云+Xshell搭建博客</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                Hexo 基础命令基础hexo new&quot;postName&quot;      	新建文章 
-
-hexo new page&quot;pageName&quot; 	新建页面 
-
-hexo generate           	
+                                WordPress+宝塔+阿里云+Xshell搭建博客前提条件已经购买了自己的云服务器
+Xshell安装XShell免费版的安装配置教程以及使用教程（超级详细、保姆级）_xshell安装教程-CSDN博客
+连接Xshell连接云服务器
+宝塔
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-25
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/WordPress/" class="post-category">
+                                    WordPress
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/WordPress/">
+                            <span class="chip bg-color">WordPress</span>
+                        </a>
+                        
+                        <a href="/tags/%E5%AE%9D%E5%A1%94/">
+                            <span class="chip bg-color">宝塔</span>
+                        </a>
+                        
+                        <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/">
+                            <span class="chip bg-color">阿里云</span>
+                        </a>
+                        
+                        <a href="/tags/Xshell/">
+                            <span class="chip bg-color">Xshell</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/c6ea.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">解决夸克网盘网页版不能下载过大文件</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="解决夸克网盘网页版不能下载过大文件">
+                            
+                            <span class="card-title">解决夸克网盘网页版不能下载过大文件</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                解决夸克网盘网页不能下载大文件近年来，夸克网盘和阿里盘热度很高，所以导致现在很多资源都是通过他们分享，但是夸克网盘和百度网盘一样，网页版不能下载过大容量的文件，过大容量必须下载软件，对于很多不想下载软件的小伙伴来说，实在是麻烦又无可奈何，而
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-25
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" class="post-category">
+                                    问题解决
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%A4%B8%E5%85%8B%E7%BD%91%E7%9B%98/">
+                            <span class="chip bg-color">夸克网盘</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/f11c.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">hexo升级</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="hexo升级">
+                            
+                            <span class="card-title">hexo升级</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                hexo升级Hexo 的升级相对简单，您可以按照以下步骤进行更新：
+
+首先，确保您已经安装了必要的应用程序：
+
+Git
+Node.js（版本不低于10.13，建议使用12.0及以上版本）
+
+
+如果您的电脑中已经安装了上述必备程序，您可以直接
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-24
                             </span>
                             <span class="publish-author">
                                 
@@ -958,8 +1145,8 @@ hexo generate
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/hexo/">
-                            <span class="chip bg-color">hexo</span>
+                        <a href="/tags/%E5%8D%87%E7%BA%A7/">
+                            <span class="chip bg-color">升级</span>
                         </a>
                         
                     </div>
@@ -969,42 +1156,40 @@ hexo generate
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/ec85.html">
+                    <a href="/posts/3e08.html">
                         <div class="card-image">
                             <div class="box-content">
                                 <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">md语法</span>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">留言页面添加弹幕</span>
                             </div>
                             
                             
                             
-                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="md语法">
+                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="留言页面添加弹幕">
                             
-                            <span class="card-title">md语法</span>
+                            <span class="card-title">留言页面添加弹幕</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                基础语法标题在单词或短语前面添加井号 (#) ：# 的数量代表了标题的级别。如，三个 # 表示三级标题 (&lt;h3&gt;)
-# 一级标题
-## 二级标题
-###### 六级标题
-
-换行在行末添加两个或多个空格，然后按回车键，即可换行(
+                                留言板添加弹幕初步构想，在评论旁边设置弹幕，可以与弹幕进行切换
+contact | SeaYJ’s Blog
+在css下新建barrager.css
+/* build time:Mon Apr 22 2024 22:40:29 GMT+08
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-21
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
+                                <a href="/categories/hexo/" class="post-category">
+                                    hexo
                                 </a>
                                 
                                 
@@ -1015,12 +1200,8 @@ hexo generate
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/markdown/">
-                            <span class="chip bg-color">markdown</span>
-                        </a>
-                        
-                        <a href="/tags/typora/">
-                            <span class="chip bg-color">typora</span>
+                        <a href="/tags/%E5%BC%B9%E5%B9%95/">
+                            <span class="chip bg-color">弹幕</span>
                         </a>
                         
                     </div>
@@ -1030,35 +1211,41 @@ hexo generate
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/3eeb.html">
+                    <a href="/posts/db34.html">
                         <div class="card-image">
                             <div class="box-content">
                                 <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">Hello World</span>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">添加B站番剧列表</span>
                             </div>
                             
                             
                             
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="添加B站番剧列表">
                             
-                            <span class="card-title">Hello World</span>
+                            <span class="card-title">添加B站番剧列表</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                                添加番剧列表暂未实现
+参考Sakura 主题美化系列（五）添加 BiliBili 番剧列表 – Ukenn Blog
+
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-17
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                Lo-Y-eH
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                                
                                 
                             </span>
                         </div>
@@ -1067,8 +1254,65 @@ hexo generate
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/hexo/">
-                            <span class="chip bg-color">hexo</span>
+                        <a href="/tags/%E7%95%AA%E5%89%A7%E5%88%97%E8%A1%A8/">
+                            <span class="chip bg-color">番剧列表</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/f421.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">页脚波浪效果</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="页脚波浪效果">
+                            
+                            <span class="card-title">页脚波浪效果</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                页脚波浪效果合适的页脚动画可以为网站带来更好的用户体验，增加用户的停留时间和互动频率，同时也有助于提升网站的整体吸引力。
+这里推荐一个提供众多页脚动画的网址
+这里我选择的页脚波浪效果
+效果预览
+实现步骤
+在matery&#x2F;sourc
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-16
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E9%A1%B5%E8%84%9A/">
+                            <span class="chip bg-color">页脚</span>
                         </a>
                         
                     </div>
@@ -1080,8 +1324,6 @@ hexo generate
     </article>
 
     <!-- 添加分页 -->
-    
-
 </main>
 
 
@@ -1096,11 +1338,12 @@ hexo generate
             
         </div>
         <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">4 / 4</div>
+            <div class="center-align b-text-gray">4 / 7</div>
         </div>
         <div class="col s6 m4 l4">
             
-            <a class="right btn-floating btn-large disabled">
+            <a href="/page/5/"
+               class="right btn-floating btn-large waves-effect waves-light bg-color">
                 <i class="fas fa-angle-right"></i>
             </a>
             
@@ -1195,7 +1438,7 @@ hexo generate
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
-                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">111.3k</span>&nbsp;字
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">130.5k</span>&nbsp;字
             
             
             
@@ -1483,6 +1726,7 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
+    <script src="/js/cursor.js"></script>
 
     <!-- Baidu Analytics -->
 
@@ -1622,7 +1866,8 @@ $(function () {
             height: fit-content;
             top: 10%;
             left: 10%;
-            background-color: rgba(255, 255, 255, .85);
+            /* background-color: rgba(255, 255, 255, .85); */
+            background-color: (239 239 239 / 85%);
             -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             border-radius: 12px;
@@ -1660,7 +1905,8 @@ $(function () {
             border-radius: 8px;
             transition: .3s;
             cursor: pointer;
-            color: #525f7f;
+            /* color: #525f7f; */
+            color: #5a7f52;
         }
 
         /* 右键菜单行内项样式 */

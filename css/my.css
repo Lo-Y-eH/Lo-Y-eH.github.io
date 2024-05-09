@@ -4,7 +4,7 @@
     /* 设置全局字体 */
 @font-face {
     font-family: 'greenBird';
-    src: url('/font/greenBird.ttf');
+    src: url('../font/greenBird.ttf');
 }
 
 /*
@@ -101,4 +101,41 @@
     28% {
         transform: translate(0, 0.5px) rotate(1.5deg);
     }
+}
+
+/* 鼠标样式 */
+#cursor {
+    position: fixed;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background: rgb(57, 197, 187);
+    opacity: 0.25;
+    z-index: 10086;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+    transition-property: background, opacity, transform;
+    transform: scale(2.0);
+}
+
+#cursor.hidden {
+    opacity: 0;
+}
+
+#cursor.hover {
+    opacity: 0.1;
+    transform: scale(2.5);
+    -webkit-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+}
+
+#cursor.active {
+    opacity: 0.5;
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
 }

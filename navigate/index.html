@@ -213,7 +213,7 @@
       <li>
         <a href="/asteroids">
           
-          <i class="fas fa-user-circle" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-meteor" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>碎星海</span>
         </a>
@@ -245,11 +245,11 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/books">
+        <a href="/tip">
           
-          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-circle-dollar-to-slot" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>书籍</span>
+          <span>打赏</span>
         </a>
       </li>
       
@@ -427,7 +427,7 @@
                 <li>
                     <a href="/asteroids " style="margin-left:75px">
                         
-                        <i class="fa fas fa-user-circle" style="position: absolute;left:50px"></i>
+                        <i class="fa fas fa-meteor" style="position: absolute;left:50px"></i>
                         
                         <span>碎星海</span>
                     </a>
@@ -458,11 +458,11 @@
             <ul  style="background:  ;">
                 
                 <li>
-                    <a href="/books " style="margin-left:75px">
+                    <a href="/tip " style="margin-left:75px">
                         
-                        <i class="fa fas fa-book" style="position: absolute;left:50px"></i>
+                        <i class="fa fas fa-circle-dollar-to-slot" style="position: absolute;left:50px"></i>
                         
-                        <span>书籍</span>
+                        <span>打赏</span>
                     </a>
                 </li>
                 
@@ -838,7 +838,7 @@
 
             setTimeout(function () {
                 // 获取 [0~Object.keys(theme.background.url).length)的随机数, 根据数组下标获取快捷导航页面的背景图url
-                $("body").css("background-image", "url(https://cdn.jsdelivr.net/gh/small-rose/small-rose.github.io@master/medias/banner/0.jpg");
+                $("body").css("background-image", "url(https://cdn.jsdelivr.net/gh/small-rose/small-rose.github.io@master/medias/banner/6.jpg");
             }, 3000);
 
         </script>
@@ -1277,7 +1277,7 @@
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
-                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">111.3k</span>&nbsp;字
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">130.5k</span>&nbsp;字
             
             
             
@@ -1565,6 +1565,7 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
+    <script src="/js/cursor.js"></script>
 
     <!-- Baidu Analytics -->
 
@@ -1704,7 +1705,8 @@ $(function () {
             height: fit-content;
             top: 10%;
             left: 10%;
-            background-color: rgba(255, 255, 255, .85);
+            /* background-color: rgba(255, 255, 255, .85); */
+            background-color: (239 239 239 / 85%);
             -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             border-radius: 12px;
@@ -1742,7 +1744,8 @@ $(function () {
             border-radius: 8px;
             transition: .3s;
             cursor: pointer;
-            color: #525f7f;
+            /* color: #525f7f; */
+            color: #5a7f52;
         }
 
         /* 右键菜单行内项样式 */

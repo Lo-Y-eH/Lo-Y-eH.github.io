@@ -1,4 +1,13 @@
 $(function () {
+    // 2024/4/28升级aos.js
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     AOS.init({
+    //         easing: 'ease-in-out-sine',
+    //         duration: 700,
+    //         delay: 100
+    //     });
+    // });
+
     /**
      * 添加文章卡片hover效果.
      */

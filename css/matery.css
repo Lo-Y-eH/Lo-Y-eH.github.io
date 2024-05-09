@@ -134,8 +134,9 @@ h2::after {
 
 /* 段落样式 */
 p {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: 华文行楷;
 }
 
 /* 分割线样式 */
@@ -218,9 +219,8 @@ pre {
     top: 0;
     left: 12px;
     margin-top: 12px;
-    /* 添加阴影效果 */
-    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
-    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    /* 调整阴影效果 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 行内代码样式优化 */
@@ -1343,6 +1343,12 @@ article .article-tags .chip {
     border-radius: 10px;
 }
 
+#dark-mode article .article-tags .chip:hover{
+    color: #000;
+    background-color: rgba(255, 255, 255, .7);
+    border: 1px solid #000;
+}
+
 .prev-next {
     margin-left: -0.75rem;
 }
@@ -1593,8 +1599,9 @@ article .article-tags .chip {
 
 #articleContent p {
     margin: 2px 2px 10px;
-    font-size: 1.05rem;
-    line-height: 1.85rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-family: 楷体;
 }
 
 #articleContent blockquote p {
@@ -1615,8 +1622,8 @@ article .article-tags .chip {
     /* 设置下划线的位置 */
     text-underline-position: under right;    
     /* 添加过渡效果 */
-    -webkit-transition: all .2s;
-    transition: all .2s;
+    -webkit-transition: all .3s;
+    transition: all .3s;
 }
 /* 添加seaYj样式 */
 #articleContent a:hover {
@@ -1646,10 +1653,8 @@ article .article-tags .chip {
 #articleContent ol,
 #articleContent ul {
     display: block;
-    padding-left: 2em !important;
+    padding-left: 0 !important;
     word-spacing: 0.05rem;
-    /* 列表边距 */
-    margin-left: -0.5rem;
 }
 
 #articleContent ol li,
@@ -1675,14 +1680,14 @@ article .article-tags .chip {
 }
 #articleContent ol li::marker,
 #articleContent ul li::marker {
-    line-height: 2rem;
+    line-height: 1.3rem;
     font-size: 1.3rem;
     color: #33495e;
 }
-#articleContent ul li::marker {
+/* #articleContent ul li::marker {
     content: "●";
     font-size: 1.3rem
-}
+} */
 #articleContent ul ul li::marker {
     /* 方形："■"，菱形："◆"，四叶草："☘"，星形："✵" */
     /* 图标网站:https: //www.fuhaoku.net/xingxingfuhao/ */
@@ -1691,6 +1696,72 @@ article .article-tags .chip {
 }
 #articleContent ol li::marker {
     font-weight: 700
+}
+
+/* 美化ol标签（neko） */
+ol {
+    list-style: none;
+    /* 隐藏原来的 1. 2. 等序号样式 */
+    counter-reset: ol-li;
+}
+ol li:before {
+    display: block;
+    float: left;
+    width: 19px;
+    /* 宽度和高度需要根据自己的字体大小进行修正 */
+    height: 19px;
+    line-height: 19px;
+    margin: 4px 12px 0 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #49b1f5;
+    border-radius: 50%;
+    text-align: center;
+    content: counter(ol-li);
+    counter-increment: ol-li;
+    transition: all 1s;
+}
+ol li:hover::before {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+}
+
+/* neko */
+#articleContent ul li {
+    list-style-type: none;
+}
+
+#articleContent ul li::before {
+    float: left;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: .2rem solid #49b1f5;
+    border-radius: 50%;
+    background: #222;
+    content: "";
+    line-height: 19px;
+    margin-top: .5rem;
+    margin-right: .7rem;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+body.dark #articleContent ul li::before {
+    border: .2rem solid #2d668c;
+    background: #999;
+}
+
+#articleContent ul ul li {
+    list-style-type: circle;
 }
 
 /* 尝试添加butterfly的列表样式 */
@@ -1834,16 +1905,12 @@ tr {
 
 /* 修改选中文章标签时的样式 */
 .chip-container .chip:hover {
-    /* 原样式 */
-    color: #fff;
-    background: linear-gradient(to right, #4cbf30, #0f9d58);
-}
-/* 
-.chip-container .chip:hover {
-    新样式
-    color: #2ea451;
+    color: #fff; /* 字体颜色，原色：#2ea451 */
+    /* 原样式：标签绿色渐变 */
+    /* background: linear-gradient(to right, #4cbf30, #0f9d58); */  
+    background: linear-gradient(to bottom right, #FF9999 0%, #ff6666 100%);/* 改为neko红色渐变 */
     opacity: .8;
-} */
+}
 
 .chip .tag-length {
     margin-left: 5px;
@@ -2904,6 +2971,7 @@ body.dark #searchModal {
 #dark-mode .v[data-class="v"] .vcount,
 #dark-mode #rewardModal .modal-content,
 #dark-mode .modal,
+#dark-mode .archive-container,
 #dark-mode header .side-nav,
 #dark-mode header .side-nav .menu-list .m-nav-show {
     background-color: #12121c;
@@ -2984,6 +3052,14 @@ body.DarkMode ::-ms-input-placeholder {     /* Microsoft Edge */
     color: rgba(223, 223, 223, 0.3);
 }
 
+/* value评论区背景图片切换 */
+#dark-mode #vcomments textarea {
+    background: url(/medias/comment_bg.png) no-repeat;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(255, 255, 255, 0);
+    resize: vertical;
+}
 
 /* 解决主题代码块没有行号的问题 */
 .line-numbers-rows {
@@ -3026,14 +3102,14 @@ body.DarkMode ::-ms-input-placeholder {     /* Microsoft Edge */
 /* 修改选中 */
 ::selection {
     /* 设置选中文本的背景色 */
-    background-color: #97e262;
+    background-color: #81ea37;
     /* 设置选中文本的文本颜色 */
     color: #ffffff;
     border-radius: 5px;
     /* 设置背景色填充仅限于文本内容 */
-    /* background-clip: text; */
+    background-clip: text;
     /* 设置选中文本的行高与行高一致 */
-    /* line-height: inherit; */
+    line-height: inherit;
 }
 
 /* 设置消息框的边框为圆角效果 */
@@ -3075,7 +3151,9 @@ body.DarkMode ::-ms-input-placeholder {     /* Microsoft Edge */
     box-shadow: 2px 5px 10px #0083b0 !important;
     /* 贝塞尔曲线 让运动曲线有无限可能 可以到官网自行探索 https: //cubic-bezier.com/ */
     transition: all 0.4s cubic-bezier(0.31, -0.1, 0.43, 1.59);
+    transform: rotateY(180deg);
 }
+
 /* 定义按钮在获得焦点（focus）状态时的样式 */
 .btn-floating:focus,
 .btn-large:focus,
@@ -3589,4 +3667,84 @@ a.toc-link {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none
+}
+
+/* 增加留言板每日一言样式 */
+/* 增加每日一言模块 */
+.poem-wrap {
+    position: relative;
+    width: 730px;
+    max-width: 80%;
+    border: 2px solid #797979;
+    border-top: 0;
+    text-align: center;
+    margin: 80px auto;
+}
+
+.poem-left {
+    left: 0;
+}
+
+.poem-border {
+    position: absolute;
+    height: 2px;
+    width: 27%;
+    background-color: #797979;
+}
+
+.poem-right {
+    right: 0;
+}
+
+.poem-wrap h1 {
+    position: relative;
+    margin-top: -20px;
+    display: inline-block;
+    letter-spacing: 4px;
+    color: #797979;
+}
+
+.poem-wrap p:nth-of-type(1) {
+    font-size: 25px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.poem-wrap p {
+    width: 70%;
+    margin: auto;
+    line-height: 30px;
+    color: #797979;
+    font-family: "Linux Biolinum", "Noto Serif SC", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+}
+
+.poem-wrap p:nth-of-type(2) {
+    font-size: 18px;
+    margin: 15px auto;
+}
+
+.bozhushuo {
+    text-align: center;
+    font-size: 19px !important;
+    margin: 0 0 12px !important;
+    line-height: 1.9rem;
+    font-family: "Linux Biolinum", "Noto Serif SC", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+}
+
+.notice {
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px dashed #e6e6e6;
+    color: #969696;
+    position: relative;
+    display: inline-block;
+    width: 95%;
+    background: #fbfbfb50;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.notice-content {
+    display: initial;
+    vertical-align: middle;
 }

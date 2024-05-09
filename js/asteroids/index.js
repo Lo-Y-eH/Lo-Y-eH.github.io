@@ -9,9 +9,9 @@ container.appendChild(renderer.domElement);
 var scene = new THREE.Scene();
 
 var camera = new THREE.PerspectiveCamera(50, aspect, 0.1, 1000);
-camera.position.z = 500;
+camera.position.z = 500
 
-var system = new THREE.Group(); // planetary system
+system = new THREE.Group(); // planetary system
 
 scene.add(
   new THREE.AmbientLight(0xFFFFFF, 0.2)
@@ -47,12 +47,12 @@ for (var p = 0; p < Math.PI * 2; p = p + Math.random() * 0.15) {
   );
 
   var size = Math.random() * 0.5;
-  for (var j = 0; j < asteroid.geometry.vertices.length; j++)
-    asteroid.geometry.vertices[j].multiplyScalar(
+  for (var i = 0; i < asteroid.geometry.vertices.length; i++)
+    asteroid.geometry.vertices[i].multiplyScalar(
       Math.random() * 0.5 + size
     );
 
-  var rand = Math.random() * 60 - 30;
+  rand = Math.random() * 60 - 30;
   asteroid.position.set(200 * Math.sin(p) + rand, rand, 200 * Math.cos(p) + rand);
 
   asteroid.geometry.computeFlatVertexNormals();
@@ -62,19 +62,19 @@ for (var p = 0; p < Math.PI * 2; p = p + Math.random() * 0.15) {
 system.add(asteroids);
 
 system.rotation.x = 0.1;
-system.rotation.y = -0.3;
+system.rotation.y = -.3;
 system.rotation.z = -0.4;
 
 scene.add(system);
 
-for (var i = 0; i < 10; i++) {
-  var particles = new THREE.Points(
+for (i = 0; i < 10; i++) {
+  particles = new THREE.Points(
     new THREE.Geometry(),
     new THREE.PointsMaterial({
       size: Math.random() * 5
     })
   );
-  for (var j = 0; j < 20; j++) {
+  for (j = 0; j < 20; j++) {
     var vertex = new THREE.Vector3();
     vertex.x = Math.random() * width * 1.1 - width * 1.1 / 2;
     vertex.y = Math.random() * height * 1.1 - height * 1.1 / 2;

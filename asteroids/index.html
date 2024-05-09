@@ -213,7 +213,7 @@
       <li>
         <a href="/asteroids">
           
-          <i class="fas fa-user-circle" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-meteor" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>碎星海</span>
         </a>
@@ -245,11 +245,11 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/books">
+        <a href="/tip">
           
-          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-circle-dollar-to-slot" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>书籍</span>
+          <span>打赏</span>
         </a>
       </li>
       
@@ -427,7 +427,7 @@
                 <li>
                     <a href="/asteroids " style="margin-left:75px">
                         
-                        <i class="fa fas fa-user-circle" style="position: absolute;left:50px"></i>
+                        <i class="fa fas fa-meteor" style="position: absolute;left:50px"></i>
                         
                         <span>碎星海</span>
                     </a>
@@ -458,11 +458,11 @@
             <ul  style="background:  ;">
                 
                 <li>
-                    <a href="/books " style="margin-left:75px">
+                    <a href="/tip " style="margin-left:75px">
                         
-                        <i class="fa fas fa-book" style="position: absolute;left:50px"></i>
+                        <i class="fa fas fa-circle-dollar-to-slot" style="position: absolute;left:50px"></i>
                         
-                        <span>书籍</span>
+                        <span>打赏</span>
                     </a>
                 </li>
                 
@@ -589,17 +589,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/asteroids.css">
 </head>
-
 <body>
     <div id="container"></div>
-    <script src='../../js/asteroids/three.min.js'></script>
-    <script src='../../js/asteroids/CopyShader.js'></script>
-    <script src='../../js/asteroids/EffectComposer.js'></script>
-    <script src='../../js/asteroids/FilmPass.js'></script>
-    <script src='../../js/asteroids/FilmShader.js'></script>
-    <script src='../../js/asteroids/ShaderPass.js'></script>
-    <script src='../../js/asteroids/RenderPass.js'></script>
-    <script src="../../js/asteroids/index.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const path = "../../js/asteroids/";
+            const scripts = [
+                'three.min.js',
+                'CopyShader.js',
+                'EffectComposer.js',
+                'FilmPass.js',
+                'FilmShader.js',
+                'ShaderPass.js',
+                'RenderPass.js',
+                'index.js'
+            ];
+
+            scripts.forEach(script => {
+                const scriptTag = document.createElement('script');
+                scriptTag.src = path + script;
+                scriptTag.defer = true;
+                document.body.appendChild(scriptTag);
+            });
+        });
+    </script>
 </body>
 
 </html>
@@ -688,7 +701,7 @@
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
-                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">111.3k</span>&nbsp;字
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">130.5k</span>&nbsp;字
             
             
             
@@ -976,6 +989,7 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
+    <script src="/js/cursor.js"></script>
 
     <!-- Baidu Analytics -->
 
@@ -1115,7 +1129,8 @@ $(function () {
             height: fit-content;
             top: 10%;
             left: 10%;
-            background-color: rgba(255, 255, 255, .85);
+            /* background-color: rgba(255, 255, 255, .85); */
+            background-color: (239 239 239 / 85%);
             -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             border-radius: 12px;
@@ -1153,7 +1168,8 @@ $(function () {
             border-radius: 8px;
             transition: .3s;
             cursor: pointer;
-            color: #525f7f;
+            /* color: #525f7f; */
+            color: #5a7f52;
         }
 
         /* 右键菜单行内项样式 */

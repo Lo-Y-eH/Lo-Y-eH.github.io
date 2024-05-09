@@ -213,7 +213,7 @@
       <li>
         <a href="/asteroids">
           
-          <i class="fas fa-user-circle" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-meteor" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>碎星海</span>
         </a>
@@ -245,11 +245,11 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/books">
+        <a href="/tip">
           
-          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-circle-dollar-to-slot" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>书籍</span>
+          <span>打赏</span>
         </a>
       </li>
       
@@ -427,7 +427,7 @@
                 <li>
                     <a href="/asteroids " style="margin-left:75px">
                         
-                        <i class="fa fas fa-user-circle" style="position: absolute;left:50px"></i>
+                        <i class="fa fas fa-meteor" style="position: absolute;left:50px"></i>
                         
                         <span>碎星海</span>
                     </a>
@@ -458,11 +458,11 @@
             <ul  style="background:  ;">
                 
                 <li>
-                    <a href="/books " style="margin-left:75px">
+                    <a href="/tip " style="margin-left:75px">
                         
-                        <i class="fa fas fa-book" style="position: absolute;left:50px"></i>
+                        <i class="fa fas fa-circle-dollar-to-slot" style="position: absolute;left:50px"></i>
                         
-                        <span>书籍</span>
+                        <span>打赏</span>
                     </a>
                 </li>
                 
@@ -586,13 +586,13 @@
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
-            <div class="title center-align diyFont">
+            <div class="title center-align" style="font-family: 华文行楷; font-size: 7rem;">
                 
                     北冥有鱼
                 
             </div>
 
-            <div class="description center-align diyFont">
+            <div class="description center-align" style="font-family: 华文行楷; font-size: 2rem;">
                 
                     <span id="subtitle"></span>
                     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
@@ -629,6 +629,42 @@
 </div>
 
 
+<!-- 添加小花花背景 -->
+<style>
+    /* 小花花背景图开始 */
+    #dark-mode .swbk,
+    #dark-mode .triangle,
+    #dark-mode .v[data-class=v] .vwrap {
+        background: rgba(34, 34, 34, 0.55) !important;
+    }
+
+    .v[data-class=v] .vwrap {
+        background-color: #fff;
+    }
+
+    .card {
+        background: url(/medias/flowerbg-white.png) top fixed;
+    }
+
+    /* #dark-mode .card */
+    #dark-mode .card {
+        background: url(/medias/flowerbg-black.png) top fixed;
+    }
+
+    /* 小花花背景图结束 */
+    @media only screen and (max-width: 1090px) {
+        .bg-cover {
+            background-position-y: 0;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .about-cover {
+            height: 64vh;
+        }
+    }
+</style>
+
 <main class="content">
 
     
@@ -641,41 +677,41 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/8410.html">
+                    <a href="/posts/8617.html">
                         <div class="card-image">
                             <div class="box-content">
                                 <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">hexo优化</span>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">凯利公式</span>
                             </div>
                             
                             
                             
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="hexo优化">
+                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="凯利公式">
                             
-                            <span class="card-title">hexo优化</span>
+                            <span class="card-title">凯利公式</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                hexo优化cnpm
-本节参考自　淘宝 NPM 镜像
+                                凯利公式
+凯利，是谁？
 
-这是一个完整 npmjs.org 镜像，你可以用此代替官方版本（只读），同步频率目前为 10 分钟 一次以保证尽量与官方服务器同步。在 npm 无法同步时提供帮助。
-打开命令行窗口安装
+约翰·拉里·凯利（John larry  Kelly 1923-1965）1923 年出生于美国德克萨斯州，在第二次世界大战中加入美国海军当了一名飞行员。
+退役后，进入得克萨斯州奥斯汀分校念物理学。1953年获得物
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-29
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/hexo/" class="post-category">
-                                    hexo
+                                <a href="/categories/%E4%BB%8A%E6%97%A5%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    今日学习
                                 </a>
                                 
                                 
@@ -686,8 +722,8 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/hexo/">
-                            <span class="chip bg-color">hexo</span>
+                        <a href="/tags/%E5%87%AF%E5%88%A9%E5%85%AC%E5%BC%8F/">
+                            <span class="chip bg-color">凯利公式</span>
                         </a>
                         
                     </div>
@@ -697,598 +733,49 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/1d91.html">
+                    <a href="/posts/7f1d.html">
                         <div class="card-image">
                             <div class="box-content">
                                 <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">Docker常用命令</span>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">留言板更新</span>
                             </div>
                             
                             
                             
-                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Docker常用命令">
+                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="留言板更新">
                             
-                            <span class="card-title">Docker常用命令</span>
+                            <span class="card-title">留言板更新</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                Docker常用命令开始入门Docker学习，开始时间的晚了点，只能多花点功夫努力学习了。
+                                留言板更新原来的留言板实属一些简陋，于是决定更新一下，这里记录一下更新的过程。
+效果显示原样式
 
 
+新样式
 
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-03
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Docker/" class="post-category">
-                                    Docker
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Docker/">
-                            <span class="chip bg-color">Docker</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/fb80.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">相册设置</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="相册设置">
-                            
-                            <span class="card-title">相册设置</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                添加相册为什么添加相册个人博客中添加相册功能，不仅具备多项实用性与娱乐性优点，而且能够丰富博客的表达形式与内容层次：
-
-保存和展示图片：博主可以将自己拍摄或收集到的各种喜欢的图片上传至相册，如旅行照片、作品集、灵感素材等，为自己的博客创建一
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-02
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%9B%B8%E5%86%8C/">
-                            <span class="chip bg-color">相册</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/e7a5.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">404页面</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="404页面">
-                            
-                            <span class="card-title">404页面</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                404(修改失败)演示效果
-源码我的模版选用的使用404 Andrew Lawendy，模版代码
-HTML&lt;div class="not-found parallax">
-    &lt;div class="sky-bg">&lt;
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-01
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/404/">
-                            <span class="chip bg-color">404</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/8905.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">OpenMP</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="OpenMP">
-                            
-                            <span class="card-title">OpenMP</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                OpenMPOpenMP介绍在C&#x2F;C++中，OpenMP可以通过使用预处理指令来让程序并行化。OpenMP指令使用的格式为:
-#pragma omp 指令 [子句[子句]…]
-
-下面是一个最简单的OpenMP程序，可以运行后观察结
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-31
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/" class="post-category">
-                                    分布式
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
-                            <span class="chip bg-color">分布式</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/ef25.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">Pthreads</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Pthreads">
-                            
-                            <span class="card-title">Pthreads</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Pthreads创建和终止本节展示了两个最基本的线程管理函数——创建与终止线程。
-
-pthread.h头文件的引入
-pthread_create创建线程
-pthread_exit终止线程
-
-欢迎来到Posix Threads的世界。
-为了编
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-31
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/" class="post-category">
-                                    分布式
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
-                            <span class="chip bg-color">分布式</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/e16d.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">MPI</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="MPI">
-                            
-                            <span class="card-title">MPI</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                MPIMPI（Message Passing Interface，消息传递接口）
-数据类型
-MPI_INT：整数类型，对应C语言中的int类型。
-MPI_FLOAT：单精度浮点数类型，对应C语言中的float类型。
-MPI_DOUBLE：双
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-31
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/" class="post-category">
-                                    分布式
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
-                            <span class="chip bg-color">分布式</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/f571.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">live2D看板娘</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="live2D看板娘">
-                            
-                            <span class="card-title">live2D看板娘</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                基础设置1.模型插件在hexo根目录进入git bash，输入以下命令安装模型插件
-# npm install --save hexo-helper-live2d
-
-卸载模型
-# npm uninstall --save hexo-help
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-26
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/live2D/">
-                            <span class="chip bg-color">live2D</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/15bb.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">Hexo博客(一) ——基础搭建</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Hexo博客(一) ——基础搭建">
-                            
-                            <span class="card-title">Hexo博客(一) ——基础搭建</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                环境准备下载git安装git for windows（或者其它git客户端）git下载
-验证git安装命令(cmd窗口或鼠标右键菜单的git bash 窗口)
-git --version
-
-下载node.js在官网下载node.js的安装程
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-25
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/hexo/">
-                            <span class="chip bg-color">hexo</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/4b71.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">页面加载动画</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="页面加载动画">
-                            
-                            <span class="card-title">页面加载动画</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                页面加载动画今天的主题是为博客添加页面加载动画。
-下面是页面加载动画的详细作用：
-
-视觉吸引力: 页面加载动画可以增加页面的吸引力，使用户在等待页面加载时感到更加愉悦和有趣。精美的加载动画可以提升用户体验，增加用户对网站的好感度。
-
-指示器
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-24
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E9%A1%B5%E9%9D%A2%E5%8A%A8%E7%94%BB/">
-                            <span class="chip bg-color">页面动画</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/c7d8.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">cuda 入门</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="cuda 入门">
-                            
-                            <span class="card-title">cuda 入门</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                CUDA入门前言06年，NVIDIA公司发布了CUDA，它是建立在NVIDIA的GPU上的一个通用并行计算平台和编程模型。CUDA编程使得可以更高效地利用GPU的并行计算引擎来解决复杂的计算问题。近年来，GPU在深度学习领域取得了巨大成功，
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-23
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/cuda/" class="post-category">
-                                    cuda
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/cuda/">
-                            <span class="chip bg-color">cuda</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/f97.html">
-                        <div class="card-image">
-                            <div class="box-content">
-                                <p class="title">阅读全文</p>
-                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">今日诗句-祝福前程</span>
-                            </div>
-                            
-                            
-                            
-                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="今日诗句-祝福前程">
-                            
-                            <span class="card-title">今日诗句-祝福前程</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                祝福前程 
-  祝福前程 
-    
+留言板
+修改修改valine.ejs
+原代码：
+&lt;style>
+    .valine-card &#123;
      
-        明年此日青云去，却笑人间举子忙 ——辛弃疾《鹧鸪天·送廓之秋试》
-        莫愁前路无知己，天下谁人不识君 ——高适《别董大》
-        天下谁非健者，我辈终为奇
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-27
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E8%AF%97%E8%AF%8D/" class="post-category">
-                                    诗词
+                                <a href="/categories/hexo/" class="post-category">
+                                    hexo
                                 </a>
                                 
                                 
@@ -1299,8 +786,551 @@ git --version
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E8%AF%97%E8%AF%8D/">
-                            <span class="chip bg-color">诗词</span>
+                        <a href="/tags/%E7%95%99%E8%A8%80%E6%9D%BF/">
+                            <span class="chip bg-color">留言板</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/d197.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">Sakuriro美化</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Sakuriro美化">
+                            
+                            <span class="card-title">Sakuriro美化</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Sakuriro美化
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-25
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/wordpress/" class="post-category">
+                                    wordpress
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Sakuriro/">
+                            <span class="chip bg-color">Sakuriro</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/3026.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">杂谈</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="杂谈">
+                            
+                            <span class="card-title">杂谈</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                min.css 和.css两者仅仅是文件大小、有无注释、格式美化（可读性）上的区别，使用上（作用效果）并没有什么区别。压缩和未压缩的区别，.min 是压缩版的（去掉多余的注释、空格等）文件较小，易于加载，另外的就是未压缩的了文件稍大，保留完
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-25
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/wordpress/" class="post-category">
+                                    wordpress
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/wordpress/">
+                            <span class="chip bg-color">wordpress</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/8e30.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">设置页面模版</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="设置页面模版">
+                            
+                            <span class="card-title">设置页面模版</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                说说
+仪表盘左侧菜单栏里选择页面，然后新建一个页面 “说说”
+点击快速编辑
+选择页面模板为 “说说”
+
+
+留言板同上，新建一个页面 “留言板”，在快速编辑中将其页面模板设为 “留言板”，并开启这个页面的评论功能，即可让这个页面成为留言板。
+
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-24
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/wordpress/" class="post-category">
+                                    wordpress
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/wordpress/">
+                            <span class="chip bg-color">wordpress</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/c149.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">看板娘合并音乐播放器</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="看板娘合并音乐播放器">
+                            
+                            <span class="card-title">看板娘合并音乐播放器</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                看板娘合并音乐播放器相信不少小伙伴的博客都集成了音乐播放器和 Live2D 看板娘，但是会出现一个问题，看板娘和音乐播放器都在左下角，相互遮盖且很占地方，一点也不美观。所以如果可以把音乐播放器集成到看板娘里，既美观又增加了看板娘的功能。
+然
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-24
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/wordpress/" class="post-category">
+                                    wordpress
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E7%9C%8B%E6%9D%BF%E5%A8%98/">
+                            <span class="chip bg-color">看板娘</span>
+                        </a>
+                        
+                        <a href="/tags/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/">
+                            <span class="chip bg-color">音乐播放器</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/c42.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">博览众长</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="博览众长">
+                            
+                            <span class="card-title">博览众长</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                博览众长为了折腾我的hexo博客，我访问过诸多大佬的博客小站，博览众长，希望集他山之玉，打造出心仪的博客网站。然没有最好，只有更好，只能罗列众多大佬博客中我比较喜欢的部分，希望给大家一些参考和帮助。
+他山之玉HaoQi
+相册，fancybo
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-24
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E4%BB%96%E5%B1%B1%E4%B9%8B%E7%9F%B3/">
+                            <span class="chip bg-color">他山之石</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/9e7d.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">hexo博客部署到阿里云服务器</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="hexo博客部署到阿里云服务器">
+                            
+                            <span class="card-title">hexo博客部署到阿里云服务器</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                hexo博客部署到阿里云大部分人使用Hexo搭建个人博客都会部署到一些免费的代码托管平台上，但这些免费的平台总是差强人意，比如国外的GitHub平台虽然完全免费，但在国内访问加载速度非常慢，又或者是国内的码云平台免费版有许多功能被阉割掉了，
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-23
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/">
+                            <span class="chip bg-color">阿里云</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/ab13.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">mobaXterm免费升级到专业版</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="mobaXterm免费升级到专业版">
+                            
+                            <span class="card-title">mobaXterm免费升级到专业版</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Xterm升级至专业版
+首先去官网下载自己需要的版本，点击跳转
+打开MobaXterm Keygen (inused.github.io)
+填写用户名和版本号，用户名可以随意，版本号和自己下载的Xterm版本号一致
+
+
+
+
+将生成的Cust
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-23
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%BD%AF%E4%BB%B6/" class="post-category">
+                                    软件
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Xterm/">
+                            <span class="chip bg-color">Xterm</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/5362.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">修复右键没有管理选项</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="修复右键没有管理选项">
+                            
+                            <span class="card-title">修复右键没有管理选项</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                修复右键没有管理选项
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-19
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/win%E4%BD%BF%E7%94%A8/" class="post-category">
+                                    win使用
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/0.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px"></span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            
+                            <span class="card-title"></span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                添加番剧列表具体效果请看：番剧列表
+下载开源项目项目地址
+解压完后，请将bilibili-master文件夹里面的bilibili文件夹和page-bilibili.php文件放到主题根目录下
+打开bilibili文件夹重命名里面文件后缀为
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-17
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/wordpress/" class="post-category">
+                                    wordpress
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E7%95%AA%E5%89%A7/">
+                            <span class="chip bg-color">番剧</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/84b5.html">
+                        <div class="card-image">
+                            <div class="box-content">
+                                <p class="title">阅读全文</p>
+                                <span class="post" style="width:180px; color: rgb(98, 169, 232); font-size: 22px; margin-top: 10px">vim使用</span>
+                            </div>
+                            
+                            
+                            
+                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="vim使用">
+                            
+                            <span class="card-title">vim使用</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                vim使用Linux基础知识及Vim编辑器扩展：
+
+文件系统基础：
+
+/ 根目录是文件系统的顶层，. 表示当前目录，.. 表示上一级目录。
+pwd 命令用于显示当前工作目录，ls 命令列出目录内容。
+ls -l 显示详细信息，包括权限、链接
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-07
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/linux/" class="post-category">
+                                    linux
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/vim/">
+                            <span class="chip bg-color">vim</span>
                         </a>
                         
                     </div>
@@ -1312,8 +1342,6 @@ git --version
     </article>
 
     <!-- 添加分页 -->
-    
-
 </main>
 
 
@@ -1328,7 +1356,7 @@ git --version
             
         </div>
         <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">3 / 4</div>
+            <div class="center-align b-text-gray">3 / 7</div>
         </div>
         <div class="col s6 m4 l4">
             
@@ -1428,7 +1456,7 @@ git --version
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
-                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">111.3k</span>&nbsp;字
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">130.5k</span>&nbsp;字
             
             
             
@@ -1716,6 +1744,7 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
+    <script src="/js/cursor.js"></script>
 
     <!-- Baidu Analytics -->
 
@@ -1855,7 +1884,8 @@ $(function () {
             height: fit-content;
             top: 10%;
             left: 10%;
-            background-color: rgba(255, 255, 255, .85);
+            /* background-color: rgba(255, 255, 255, .85); */
+            background-color: (239 239 239 / 85%);
             -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             border-radius: 12px;
@@ -1893,7 +1923,8 @@ $(function () {
             border-radius: 8px;
             transition: .3s;
             cursor: pointer;
-            color: #525f7f;
+            /* color: #525f7f; */
+            color: #5a7f52;
         }
 
         /* 右键菜单行内项样式 */

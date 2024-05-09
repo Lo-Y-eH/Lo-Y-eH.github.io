@@ -53,9 +53,6 @@ THREE.FilmPass.prototype = Object.assign( Object.create( THREE.Pass.prototype ),
 		} else {
 
 			renderer.render( this.scene, this.camera, writeBuffer, this.clear );
-
 		}
-
 	}
-
 } );

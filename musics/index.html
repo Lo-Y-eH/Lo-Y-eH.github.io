@@ -213,7 +213,7 @@
       <li>
         <a href="/asteroids">
           
-          <i class="fas fa-user-circle" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-meteor" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>碎星海</span>
         </a>
@@ -245,11 +245,11 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/books">
+        <a href="/tip">
           
-          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-circle-dollar-to-slot" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>书籍</span>
+          <span>打赏</span>
         </a>
       </li>
       
@@ -427,7 +427,7 @@
                 <li>
                     <a href="/asteroids " style="margin-left:75px">
                         
-                        <i class="fa fas fa-user-circle" style="position: absolute;left:50px"></i>
+                        <i class="fa fas fa-meteor" style="position: absolute;left:50px"></i>
                         
                         <span>碎星海</span>
                     </a>
@@ -458,11 +458,11 @@
             <ul  style="background:  ;">
                 
                 <li>
-                    <a href="/books " style="margin-left:75px">
+                    <a href="/tip " style="margin-left:75px">
                         
-                        <i class="fa fas fa-book" style="position: absolute;left:50px"></i>
+                        <i class="fa fas fa-circle-dollar-to-slot" style="position: absolute;left:50px"></i>
                         
-                        <span>书籍</span>
+                        <span>打赏</span>
                     </a>
                 </li>
                 
@@ -585,13 +585,13 @@
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
-            <div class="title center-align diyFont">
+            <div class="title center-align" style="font-family: 华文行楷; font-size: 7rem;">
                 
                     北冥有鱼
                 
             </div>
 
-            <div class="description center-align diyFont">
+            <div class="description center-align" style="font-family: 华文行楷; font-size: 2rem;">
                 
                     <span id="subtitle"></span>
                     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
@@ -626,245 +626,270 @@
 
     </div>
 </div>
-<style>
-    /* .bg-cover {
+    <style>
+        /* 小花花背景图开始 */
+        .card {
+            background: url(/medias/flowerbg-white.png) top fixed;
+        }
+
+        #dark-mode .card {
+            background: url(/medias/flowerbg-black.png) top fixed;
+        }
+
+        /* .bg-cover {
         background-image: url("/medias/banner/musicsbg.jpg")!important;
     } */
-    .bg-cover::before {
-        background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/grid.png);
-    }
-    .musis > div {
-        margin-bottom: 60px;
-    }
-    .aplayer {
-        border-radius: 8px!important;
-    }
-    .comment-scroll {
-        bottom: 93px;
-    }
-    .v[data-class=v] .vcards {
-        display: none;
-    }
-    .musis div p {
-        font-family: 'Architects Daughter', cursive;
-        font-size: 18px;
-    }
-    
-    .musictitle {
-        font-family: 'Architects Daughter', cursive;
-        font-size: 20px;
-        margin-bottom: 0px!important;
-    }
-    body.dark .musictitle {
-        color: rgba(255, 255, 255, 0.6);
-    }
-    .musiclink {
-        margin-bottom: 0px!important;
-    }
-    .musiclink a {
-        margin-bottom: 15px;
-        display: inline-block;
-        color: rgba(0,0,0,0.87);
-    }
-    /* 修改小屏幕下logo文字样式. */
-    @media only screen and (max-width: 600px) {
-        .about-cover {
-            height: 64vh;
-        }   
-    }
-</style>
-<style>
-    @media only screen and (max-width: 800px) {
-        .swbk {
-            padding: 26px 2px!important;
-            margin: 14px 0px!important;
+        .bg-cover::before {
+            background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/grid.png);
         }
-    }
-    #switchspring {
-        bottom: 243px;
-    }
-    @media only screen and (max-width: 601px) {
+
+        .musis>div {
+            margin-bottom: 60px;
+        }
+
+        .aplayer {
+            border-radius: 8px !important;
+        }
+
+        .comment-scroll {
+            bottom: 93px;
+        }
+
+        .v[data-class=v] .vcards {
+            display: none;
+        }
+
+        .musis div p {
+            font-family: 'Architects Daughter', cursive;
+            font-size: 18px;
+        }
+
+        .musictitle {
+            font-family: 'Architects Daughter', cursive;
+            font-size: 20px;
+            margin-bottom: 0px !important;
+        }
+
+        body.dark .musictitle {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .musiclink {
+            margin-bottom: 0px !important;
+        }
+
+        .musiclink a {
+            margin-bottom: 15px;
+            display: inline-block;
+            color: rgba(0, 0, 0, 0.87);
+        }
+
+        /* 修改小屏幕下logo文字样式. */
+        @media only screen and (max-width: 600px) {
+            .about-cover {
+                height: 64vh;
+            }
+        }
+    </style>
+    <style>
+        @media only screen and (max-width: 800px) {
+            .swbk {
+                padding: 26px 2px !important;
+                margin: 14px 0px !important;
+            }
+        }
+
         #switchspring {
-            bottom: 178px!important;
+            bottom: 243px;
         }
-    }
-    .swbk {
-        position: relative;
-        padding: 26px 20px;
-        font-style: italic;
-        margin: 10px 0px;
-        border-radius: 8px;
-        -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        -webkit-transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-    }
-    .swbk:hover {
-        -webkit-transform: translateY(-4px);
-        transform: translateY(-4px);
-        -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.14), 0 3px 8px rgba(0,0,0,.12);
-        box-shadow: 0 14px 38px rgba(0,0,0,.14), 0 3px 8px rgba(0,0,0,.12);
-    }
-    .swbk:before {
-        content: " “ ";
-        top: 56px;
-        /* left: -14px; */
-    }
-    .swbk:after {
-        content: " ” ";
-        bottom: 8px;
-        right: 5px;
-    }
-    .swbk:after, .swbk:before {
-        position: absolute;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 42px;
-        text-decoration: inherit;
-    }
-    .ziwojieshao .swbk:after, .ziwojieshao .swbk:before {
-        display: none;
-    }
-    body.dark .swbk:after, body.dark .swbk:before {
-        color: #d2c9c9;
-    }
-    .swbk p {
-        font-size: 19px!important;
-        line-height: 1.3rem;
-        text-indent: 2rem;
-        font-style: italic;
-        font-family: 'Architects Daughter', cursive!important;
-    }
-    .swbk .label {
-        display: inline-block;
-        position: relative;
-        margin-bottom: 10px;
-        padding: 0 14px 0 32px;
-        height: 32px;
-        line-height: 32px;
-        border-radius: 0 3px 3px 0;
-        background-color: currentColor;
-    }
-    .swbk .label span {
-        color: #fff;
-    }
-    .swbk .label:after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 0;
-        height: 0;
-        background-color: transparent;
-        border-style: solid;
-        border-width: 0 16px 16px 0;
-        border-color: transparent;
-        border-right-color: currentColor;
-        -webkit-filter: brightness(120%);
-        filter: brightness(120%);
-    }
-    @media screen and (min-width: 768px) {
-        .swbk .label {
-            left: -37px;
+
+        @media only screen and (max-width: 601px) {
+            #switchspring {
+                bottom: 178px !important;
+            }
         }
-    }
-    @media screen and (max-width: 767px) {
-        .swbk .label {
-            left: -18px;
+
+        .swbk {
+            position: relative;
+            padding: 26px 20px;
+            font-style: italic;
+            margin: 10px 0px;
+            border-radius: 8px;
+            -webkit-box-shadow: 0 14px 38px rgba(0, 0, 0, .08), 0 3px 8px rgba(0, 0, 0, .06);
+            box-shadow: 0 14px 38px rgba(0, 0, 0, .08), 0 3px 8px rgba(0, 0, 0, .06);
+            -webkit-transition: all .3s ease 0s, -webkit-transform .6s cubic-bezier(.6, .2, .1, 1) 0s;
+            transition: all .3s ease 0s, -webkit-transform .6s cubic-bezier(.6, .2, .1, 1) 0s;
+            transition: all .3s ease 0s, transform .6s cubic-bezier(.6, .2, .1, 1) 0s;
+            transition: all .3s ease 0s, transform .6s cubic-bezier(.6, .2, .1, 1) 0s, -webkit-transform .6s cubic-bezier(.6, .2, .1, 1) 0s;
         }
+
+        .swbk:hover {
+            -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+            -webkit-box-shadow: 0 14px 38px rgba(0, 0, 0, .14), 0 3px 8px rgba(0, 0, 0, .12);
+            box-shadow: 0 14px 38px rgba(0, 0, 0, .14), 0 3px 8px rgba(0, 0, 0, .12);
+        }
+
+        .swbk:before {
+            content: " “ ";
+            top: 56px;
+            /* left: -14px; */
+        }
+
+        .swbk:after {
+            content: " ” ";
+            bottom: 8px;
+            right: 5px;
+        }
+
+        .swbk:after,
+        .swbk:before {
+            position: absolute;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 42px;
+            text-decoration: inherit;
+        }
+
+        .ziwojieshao .swbk:after,
+        .ziwojieshao .swbk:before {
+            display: none;
+        }
+
+        body.dark .swbk:after,
+        body.dark .swbk:before {
+            color: #d2c9c9;
+        }
+
         .swbk p {
-            line-height: 2.02rem;
-            padding: 2px 8px;
+            font-size: 19px !important;
+            line-height: 1.3rem;
+            text-indent: 2rem;
+            font-style: italic;
+            font-family: 'Architects Daughter', cursive !important;
         }
-    }
-</style>
 
-<main class="content">
-    <div class="container">
-        <div class="card musis">
-        
-        <div class="musictitle center-align">
-            这里是博主的歌单
-        </div>
-        <hr>
+        .swbk .label {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 10px;
+            padding: 0 14px 0 32px;
+            height: 32px;
+            line-height: 32px;
+            border-radius: 0 3px 3px 0;
+            background-color: currentColor;
+        }
 
-            <!-- 添加网易云我喜欢的歌曲模块 -->
-            <div class="wyya">
-                <p><i style="border-bottom: 1px solid #ad7a86;">网易云音乐</i></p>
-                <div class="swbk">
-                    <div class="label" style="color: rgb(178, 143, 206);">
-                        <span>网抑云</span></div>
-                    <p>其实真正的送别没有长亭古道，没有劝君更尽一杯酒，就是在一个和平时一样的清晨，有的人留在昨天了</p>
-                </div>   
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-                <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-                <!-- require MetingJS -->
-                <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-                <meting-js style="margin-top: 1.5rem;width: auto;height: auto;"
-                    server="netease"
-                    type="playlist"
-                    id="3155294100"
-                    order= "random"
-                    theme="#ad7a86"
-                    loop="all"
-                    autoplay="false"
-                    storageName="aplayer-setting"
-                    hideLrc= "false"
-                    >
-                </meting-js>
-                <style>
-                        .aplayer{
+        .swbk .label span {
+            color: #fff;
+        }
+
+        .swbk .label:after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0;
+            height: 0;
+            background-color: transparent;
+            border-style: solid;
+            border-width: 0 16px 16px 0;
+            border-color: transparent;
+            border-right-color: currentColor;
+            -webkit-filter: brightness(120%);
+            filter: brightness(120%);
+        }
+
+        @media screen and (min-width: 768px) {
+            .swbk .label {
+                left: -37px;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            .swbk .label {
+                left: -18px;
+            }
+
+            .swbk p {
+                line-height: 2.02rem;
+                padding: 2px 8px;
+            }
+        }
+    </style>
+
+    <main class="content">
+        <div class="container">
+            <div class="card musis">
+
+                <div class="musictitle center-align">
+                    这里是博主的歌单
+                </div>
+                <hr>
+
+                <!-- 添加网易云我喜欢的歌曲模块 -->
+                <div class="wyya">
+                    <p><i style="border-bottom: 1px solid #ad7a86;">网易云音乐</i></p>
+                    <div class="swbk">
+                        <div class="label" style="color: rgb(178, 143, 206);">
+                            <span>网抑云</span>
+                        </div>
+                        <p>其实真正的送别没有长亭古道，没有劝君更尽一杯酒，就是在一个和平时一样的清晨，有的人留在昨天了</p>
+                    </div>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+                    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+                    <!-- require MetingJS -->
+                    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+                    <meting-js style="margin-top: 1.5rem;width: auto;height: auto;" server="netease" type="playlist"
+                        id="9426518532" order="random" theme="#ad7a86" loop="all" autoplay="false"
+                        storageName="aplayer-setting" hideLrc="false">
+                    </meting-js>
+                    <style>
+                        .aplayer {
                             margin: 1.5rem 0;
                         }
+
                         ol li:before {
                             display: none;
                         }
-                        
-                </style>
+                    </style>
+                </div>
+
+                <!-- 添加qq音乐我喜欢的歌曲模块 -->
+                <div class="baozang">
+                    <p><i style="border-bottom: 1px solid #ad7a86;">QQ音乐</i></p>
+                    <div class="swbk">
+                        <div class="label" style="color: rgb(188, 159, 119);">
+                            <span>QQ音乐</span>
+                        </div>
+                        <p>我会捧着鲜花去见你，在花谢的时节</p>
+                    </div>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+                    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+                    <!-- require MetingJS -->
+                    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+                    <meting-js style="margin-top: 1.5rem;width: auto;height: auto;" server="tencent" type="playlist"
+                        id="9221032537" order="list" theme="#ad7a86" loop="all" autoplay="false"
+                        storageName="aplayer-setting" hideLrc="false">
+                    </meting-js>
+                    <style>
+                        .aplayer {
+                            margin: 1.5rem 0;
+                        }
+
+                        ol li:before {
+                            display: none;
+                        }
+
+                        .card {
+                            padding: 24px;
+                        }
+                    </style>
+                </div>
             </div>
 
-            <!-- 添加qq音乐我喜欢的歌曲模块 --> 
-            <div class="baozang">
-              <p><i style="border-bottom: 1px solid #ad7a86;">QQ音乐</i></p>
-              <div class="swbk">       
-                  <div class="label" style="color: rgb(188, 159, 119);"> 
-                      <span>QQ音乐</span></div>
-                  <p>我会捧着鲜花去见你，在花谢的时节</p>
-              </div>
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-              <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-              <!-- require MetingJS -->
-              <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-              <meting-js style="margin-top: 1.5rem;width: auto;height: auto;"
-                        server="tencent"
-                        type="playlist"
-                        id="7743877378"
-                        order= "list"
-                        theme="#ad7a86"
-                        loop="all"
-                        autoplay="false"
-                        storageName="aplayer-setting"
-                        hideLrc= "false"                      
-                        >
-              </meting-js>
-              <style>
-                  .aplayer{
-                      margin: 1.5rem 0;
-                  }
-                  ol li:before {
-                      display: none;
-                  }
-                  .card {
-                      padding: 24px;
-                  }
-              </style>
-            </div>
         </div>
-
-    </div>
-</main>
+    </main>
     <footer class="page-footer bg-color">
     
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
@@ -950,7 +975,7 @@
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
-                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">111.3k</span>&nbsp;字
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">130.5k</span>&nbsp;字
             
             
             
@@ -1238,6 +1263,7 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
+    <script src="/js/cursor.js"></script>
 
     <!-- Baidu Analytics -->
 
@@ -1377,7 +1403,8 @@ $(function () {
             height: fit-content;
             top: 10%;
             left: 10%;
-            background-color: rgba(255, 255, 255, .85);
+            /* background-color: rgba(255, 255, 255, .85); */
+            background-color: (239 239 239 / 85%);
             -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             border-radius: 12px;
@@ -1415,7 +1442,8 @@ $(function () {
             border-radius: 8px;
             transition: .3s;
             cursor: pointer;
-            color: #525f7f;
+            /* color: #525f7f; */
+            color: #5a7f52;
         }
 
         /* 右键菜单行内项样式 */

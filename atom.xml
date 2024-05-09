@@ -6,7 +6,7 @@
   <link href="http://lo-y-eh.github.io/atom.xml" rel="self"/>
   
   <link href="http://lo-y-eh.github.io/"/>
-  <updated>2024-03-09T14:42:34.008Z</updated>
+  <updated>2024-05-07T12:43:13.840Z</updated>
   <id>http://lo-y-eh.github.io/</id>
   
   <author>
@@ -17,12 +17,73 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>vim使用</title>
-    <link href="http://lo-y-eh.github.io/posts/84b5.html"/>
-    <id>http://lo-y-eh.github.io/posts/84b5.html</id>
-    <published>2024-03-07T10:40:44.000Z</published>
-    <updated>2024-03-09T14:42:34.008Z</updated>
+    <title>个人简介页面更新</title>
+    <link href="http://lo-y-eh.github.io/posts/9617.html"/>
+    <id>http://lo-y-eh.github.io/posts/9617.html</id>
+    <published>2024-05-07T11:52:48.000Z</published>
+    <updated>2024-05-07T12:43:13.840Z</updated>
     
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;个人简介页面更新&quot;&gt;&lt;a href=&quot;#个人简介页面更新&quot; class=&quot;headerlink&quot; title=&quot;个人简介页面更新&quot;&gt;&lt;/a&gt;个人简介页面更新&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://blog.dyfa.top/about/&quot;&gt;关于 |</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
+    
+    
+    <category term="about" scheme="http://lo-y-eh.github.io/tags/about/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>虚拟机设置共享文件夹</title>
+    <link href="http://lo-y-eh.github.io/posts/ebbb.html"/>
+    <id>http://lo-y-eh.github.io/posts/ebbb.html</id>
+    <published>2024-05-06T04:25:41.000Z</published>
+    <updated>2024-05-06T04:39:30.209Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;虚拟机与win10文件共享&quot;&gt;&lt;a href=&quot;#虚拟机与win10文件共享&quot; class=&quot;headerlink&quot; title=&quot;虚拟机与win10文件共享&quot;&gt;&lt;/a&gt;虚拟机与win10文件共享&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="http://lo-y-eh.github.io/categories/Linux/"/>
+    
+    
+    <category term="虚拟机" scheme="http://lo-y-eh.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>互联网下载指南：BT、磁力、种子、直链与PT详解</title>
+    <link href="http://lo-y-eh.github.io/posts/1e4.html"/>
+    <id>http://lo-y-eh.github.io/posts/1e4.html</id>
+    <published>2024-05-03T16:37:54.000Z</published>
+    <updated>2024-05-03T16:40:43.805Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;互联网下载指南：BT、磁力、种子、直链与PT详解&lt;/p&gt;
+&lt;p&gt;BT、磁力、种子、直链、PT在互联网下载领域中各有其特定含义：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;BT</summary>
+        
+      
     
     
     
@@ -30,475 +91,403 @@
   </entry>
   
   <entry>
-    <title>解决ubuntu和windows之间的粘贴</title>
-    <link href="http://lo-y-eh.github.io/posts/e8c2.html"/>
-    <id>http://lo-y-eh.github.io/posts/e8c2.html</id>
-    <published>2024-03-07T10:37:19.000Z</published>
-    <updated>2024-03-09T14:42:34.008Z</updated>
+    <title>PCDN</title>
+    <link href="http://lo-y-eh.github.io/posts/e053.html"/>
+    <id>http://lo-y-eh.github.io/posts/e053.html</id>
+    <published>2024-04-27T14:28:58.000Z</published>
+    <updated>2024-04-27T14:37:03.859Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;解决ubuntu和win之间的粘贴&quot;&gt;&lt;a href=&quot;#解决ubuntu和win之间的粘贴&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;PSDN&quot;&gt;&lt;a href=&quot;#PSDN&quot; class=&quot;headerlink&quot; title=&quot;PSDN&quot;&gt;&lt;/a&gt;PSDN&lt;/h1&gt;&lt;p&gt;运营商发文严格排查 PCDN</summary>
         
       
     
     
     
+    
+    <category term="PCDN" scheme="http://lo-y-eh.github.io/tags/PCDN/"/>
     
   </entry>
   
   <entry>
-    <title>找回宝塔面板登陆账号和密码</title>
-    <link href="http://lo-y-eh.github.io/posts/158f.html"/>
-    <id>http://lo-y-eh.github.io/posts/158f.html</id>
-    <published>2024-02-29T13:53:20.000Z</published>
-    <updated>2024-02-29T14:16:54.235Z</updated>
+    <title>申请免费永久域名</title>
+    <link href="http://lo-y-eh.github.io/posts/45c5.html"/>
+    <id>http://lo-y-eh.github.io/posts/45c5.html</id>
+    <published>2024-04-25T07:56:02.000Z</published>
+    <updated>2024-04-29T11:45:53.498Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;找回宝塔面板登录地址、账号和密码&quot;&gt;&lt;a href=&quot;#找回宝塔面板登录地址、账号和密码&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;申请免费永久域名&quot;&gt;&lt;a href=&quot;#申请免费永久域名&quot; class=&quot;headerlink&quot; title=&quot;申请免费永久域名&quot;&gt;&lt;/a&gt;申请免费永久域名&lt;/h1&gt;&lt;h2 id=&quot;freenom&quot;&gt;&lt;a href=&quot;#freenom&quot;</summary>
         
       
     
     
     
-    <category term="问题解决" scheme="http://lo-y-eh.github.io/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
     
-    
-    <category term="宝塔" scheme="http://lo-y-eh.github.io/tags/%E5%AE%9D%E5%A1%94/"/>
+    <category term="euorg" scheme="http://lo-y-eh.github.io/tags/euorg/"/>
     
   </entry>
   
   <entry>
-    <title>我当舅舅了!</title>
-    <link href="http://lo-y-eh.github.io/posts/2b8.html"/>
-    <id>http://lo-y-eh.github.io/posts/2b8.html</id>
-    <published>2024-02-28T15:57:28.000Z</published>
-    <updated>2024-02-28T15:59:34.983Z</updated>
+    <title>sublime配置</title>
+    <link href="http://lo-y-eh.github.io/posts/cd41.html"/>
+    <id>http://lo-y-eh.github.io/posts/cd41.html</id>
+    <published>2024-04-24T16:18:46.000Z</published>
+    <updated>2024-04-25T07:53:16.473Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;日记之我当舅舅了！&lt;/p&gt;
-&lt;p&gt;来看看我可爱的侄女：&lt;/p&gt;
-&lt;p&gt;照片&lt;/p&gt;
-&lt;p&gt;照片&lt;/p&gt;
-&lt;p&gt;视频&lt;/p&gt;
-&lt;p&gt;视频&lt;/p&gt;
+    <summary type="html">&lt;h1 id=&quot;sublime配置&quot;&gt;&lt;a href=&quot;#sublime配置&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="sublime" scheme="http://lo-y-eh.github.io/tags/sublime/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WireShark抓包微信视频</title>
+    <link href="http://lo-y-eh.github.io/posts/d70a.html"/>
+    <id>http://lo-y-eh.github.io/posts/d70a.html</id>
+    <published>2024-04-22T02:29:01.000Z</published>
+    <updated>2024-04-24T10:40:10.774Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;WireShark抓包微信视频&quot;&gt;&lt;a href=&quot;#WireShark抓包微信视频&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="抓包" scheme="http://lo-y-eh.github.io/categories/%E6%8A%93%E5%8C%85/"/>
+    
+    
+    <category term="微信视频下载" scheme="http://lo-y-eh.github.io/tags/%E5%BE%AE%E4%BF%A1%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>重温灌篮</title>
+    <link href="http://lo-y-eh.github.io/posts/d827.html"/>
+    <id>http://lo-y-eh.github.io/posts/d827.html</id>
+    <published>2024-04-18T15:21:07.000Z</published>
+    <updated>2024-04-24T10:40:10.778Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天重温了童年经典——灌篮高手，终于等来了最后的时刻：称霸全国！&lt;/p&gt;
 </summary>
         
       
     
     
     
-    <category term="纪念册" scheme="http://lo-y-eh.github.io/categories/%E7%BA%AA%E5%BF%B5%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>npm损坏修复</title>
+    <link href="http://lo-y-eh.github.io/posts/88ea.html"/>
+    <id>http://lo-y-eh.github.io/posts/88ea.html</id>
+    <published>2024-04-16T15:16:45.000Z</published>
+    <updated>2024-04-16T16:30:40.542Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;npm损坏修复&quot;&gt;&lt;a href=&quot;#npm损坏修复&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
     
     
   </entry>
   
   <entry>
-    <title>jupyter notebook找不到新建的虚拟环境</title>
-    <link href="http://lo-y-eh.github.io/posts/3dac.html"/>
-    <id>http://lo-y-eh.github.io/posts/3dac.html</id>
-    <published>2024-02-28T14:37:18.000Z</published>
-    <updated>2024-02-28T15:59:34.981Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Jupyter找不到新建的虚拟环境&quot;&gt;&lt;a href=&quot;#Jupyter找不到新建的虚拟环境&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <title>配置欧路词典</title>
+    <link href="http://lo-y-eh.github.io/posts/159f.html"/>
+    <id>http://lo-y-eh.github.io/posts/159f.html</id>
+    <published>2024-04-14T15:31:48.000Z</published>
+    <updated>2024-04-16T15:26:09.378Z</updated>
     
     
     
-    <category term="jupyter" scheme="http://lo-y-eh.github.io/categories/jupyter/"/>
     
-    
-    <category term="问题解决" scheme="http://lo-y-eh.github.io/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
     
   </entry>
   
   <entry>
-    <title>网站备案</title>
-    <link href="http://lo-y-eh.github.io/posts/8c37.html"/>
-    <id>http://lo-y-eh.github.io/posts/8c37.html</id>
-    <published>2024-02-26T09:35:35.000Z</published>
-    <updated>2024-02-26T13:17:30.308Z</updated>
+    <title>解决自定义模板不能生成abbrlink</title>
+    <link href="http://lo-y-eh.github.io/posts/50a6.html"/>
+    <id>http://lo-y-eh.github.io/posts/50a6.html</id>
+    <published>2024-04-14T15:28:57.000Z</published>
+    <updated>2024-04-16T16:24:52.549Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;网站备案&quot;&gt;&lt;a href=&quot;#网站备案&quot; class=&quot;headerlink&quot; title=&quot;网站备案&quot;&gt;&lt;/a&gt;网站备案&lt;/h1&gt;&lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;解决自定义模板不能生成abbrlink&quot;&gt;&lt;a href=&quot;#解决自定义模板不能生成abbrlink&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="博客搭建" scheme="http://lo-y-eh.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    
-    <category term="博客搭建" scheme="http://lo-y-eh.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
   <entry>
-    <title>域名购买</title>
-    <link href="http://lo-y-eh.github.io/posts/d462.html"/>
-    <id>http://lo-y-eh.github.io/posts/d462.html</id>
-    <published>2024-02-26T09:34:23.000Z</published>
-    <updated>2024-02-26T13:17:30.309Z</updated>
+    <title>时来天地皆同力</title>
+    <link href="http://lo-y-eh.github.io/posts/sltdjtl.html"/>
+    <id>http://lo-y-eh.github.io/posts/sltdjtl.html</id>
+    <published>2024-04-14T10:32:09.000Z</published>
+    <updated>2024-05-01T11:45:42.710Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;域名购买&quot;&gt;&lt;a href=&quot;#域名购买&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;时来天地皆同力&quot;&gt;&lt;a href=&quot;#时来天地皆同力&quot; class=&quot;headerlink&quot; title=&quot;时来天地皆同力&quot;&gt;&lt;/a&gt;时来天地皆同力&lt;/h1&gt;&lt;div class=&quot;ipage&quot;&gt; 
+  &lt;div class=&quot;ititle&quot;&gt; &lt;/div&gt; 
+</summary>
         
       
     
     
     
-    <category term="域名" scheme="http://lo-y-eh.github.io/categories/%E5%9F%9F%E5%90%8D/"/>
+    <category term="随笔" scheme="http://lo-y-eh.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="域名" scheme="http://lo-y-eh.github.io/tags/%E5%9F%9F%E5%90%8D/"/>
+    <category term="随笔" scheme="http://lo-y-eh.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
-    <title>WordPress+宝塔+阿里云+Xshell搭建博客</title>
-    <link href="http://lo-y-eh.github.io/posts/4c80.html"/>
-    <id>http://lo-y-eh.github.io/posts/4c80.html</id>
-    <published>2024-02-25T09:18:51.000Z</published>
-    <updated>2024-02-25T15:31:32.813Z</updated>
+    <title>Alist挂载</title>
+    <link href="http://lo-y-eh.github.io/posts/6c3d.html"/>
+    <id>http://lo-y-eh.github.io/posts/6c3d.html</id>
+    <published>2024-04-12T13:57:02.000Z</published>
+    <updated>2024-04-16T15:26:09.358Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;WordPress-宝塔-阿里云-Xshell搭建博客&quot;&gt;&lt;a href=&quot;#WordPress-宝塔-阿里云-Xshell搭建博客&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;Alist挂载网盘&quot;&gt;&lt;a href=&quot;#Alist挂载网盘&quot; class=&quot;headerlink&quot; title=&quot;Alist挂载网盘&quot;&gt;&lt;/a&gt;Alist挂载网盘&lt;/h1&gt;&lt;p&gt;[&lt;a</summary>
         
       
     
     
     
-    <category term="WordPress" scheme="http://lo-y-eh.github.io/categories/WordPress/"/>
+    <category term="软件" scheme="http://lo-y-eh.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
     
     
-    <category term="WordPress" scheme="http://lo-y-eh.github.io/tags/WordPress/"/>
-    
-    <category term="宝塔" scheme="http://lo-y-eh.github.io/tags/%E5%AE%9D%E5%A1%94/"/>
-    
-    <category term="阿里云" scheme="http://lo-y-eh.github.io/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
-    
-    <category term="Xshell" scheme="http://lo-y-eh.github.io/tags/Xshell/"/>
+    <category term="Alist" scheme="http://lo-y-eh.github.io/tags/Alist/"/>
     
   </entry>
   
   <entry>
-    <title>解决夸克网盘网页版不能下载过大文件</title>
-    <link href="http://lo-y-eh.github.io/posts/c6ea.html"/>
-    <id>http://lo-y-eh.github.io/posts/c6ea.html</id>
-    <published>2024-02-25T05:48:44.000Z</published>
-    <updated>2024-02-29T14:16:19.720Z</updated>
+    <title>阿里云域名购买及解析</title>
+    <link href="http://lo-y-eh.github.io/posts/52cd.html"/>
+    <id>http://lo-y-eh.github.io/posts/52cd.html</id>
+    <published>2024-04-12T12:45:28.000Z</published>
+    <updated>2024-04-29T11:42:35.915Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;解决夸克网盘网页不能下载大文件&quot;&gt;&lt;a href=&quot;#解决夸克网盘网页不能下载大文件&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;p&gt; 市面上有很多域名提供商可供选择，价格不尽相同，续费服务也不同…… 由于我的服务器是在阿里云购买的，为了方便管理，所以我选择了阿里云购买域名。服务器买了这么久了，终于开始配置域名了(p≧w≦q)&lt;/p&gt;
+&lt;h2 id=&quot;域名购买&quot;&gt;&lt;a href=&quot;#域名购买&quot;</summary>
         
       
     
     
     
-    <category term="问题解决" scheme="http://lo-y-eh.github.io/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    <category term="阿里云" scheme="http://lo-y-eh.github.io/categories/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
     
     
-    <category term="夸克网盘" scheme="http://lo-y-eh.github.io/tags/%E5%A4%B8%E5%85%8B%E7%BD%91%E7%9B%98/"/>
+    <category term="域名解析" scheme="http://lo-y-eh.github.io/tags/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/"/>
     
   </entry>
   
   <entry>
-    <title>hexo升级</title>
-    <link href="http://lo-y-eh.github.io/posts/f11c.html"/>
-    <id>http://lo-y-eh.github.io/posts/f11c.html</id>
-    <published>2024-02-24T07:49:51.000Z</published>
-    <updated>2024-02-24T08:11:15.327Z</updated>
+    <title>跨平台互联工具</title>
+    <link href="http://lo-y-eh.github.io/posts/3296.html"/>
+    <id>http://lo-y-eh.github.io/posts/3296.html</id>
+    <published>2024-04-12T12:23:14.000Z</published>
+    <updated>2024-04-16T15:26:09.374Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;hexo升级&quot;&gt;&lt;a href=&quot;#hexo升级&quot; class=&quot;headerlink&quot; title=&quot;hexo升级&quot;&gt;&lt;/a&gt;hexo升级&lt;/h2&gt;&lt;p&gt;Hexo</summary>
+    <summary type="html">&lt;h1 id=&quot;跨平台互联工具&quot;&gt;&lt;a href=&quot;#跨平台互联工具&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
+    <category term="软件" scheme="http://lo-y-eh.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
     
     
-    <category term="升级" scheme="http://lo-y-eh.github.io/tags/%E5%8D%87%E7%BA%A7/"/>
+    <category term="KDE Connect" scheme="http://lo-y-eh.github.io/tags/KDE-Connect/"/>
     
   </entry>
   
   <entry>
-    <title>留言页面添加弹幕</title>
-    <link href="http://lo-y-eh.github.io/posts/3e08.html"/>
-    <id>http://lo-y-eh.github.io/posts/3e08.html</id>
-    <published>2024-02-21T08:02:51.000Z</published>
-    <updated>2024-02-21T08:12:35.937Z</updated>
+    <title>词缀pan-</title>
+    <link href="http://lo-y-eh.github.io/posts/fdde.html"/>
+    <id>http://lo-y-eh.github.io/posts/fdde.html</id>
+    <published>2024-04-10T04:31:27.000Z</published>
+    <updated>2024-04-16T15:26:09.373Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;留言页面添加弹幕&quot;&gt;&lt;a href=&quot;#留言页面添加弹幕&quot; class=&quot;headerlink&quot; title=&quot;留言页面添加弹幕&quot;&gt;&lt;/a&gt;留言页面添加弹幕&lt;/h1&gt;&lt;p&gt; </summary>
+    <summary type="html">&lt;p&gt; 今日单词学习之panorama(全景)，pan（全部）-orama（看见）→全部看见→全景&lt;/p&gt;
+&lt;h2 id=&quot;pan&quot;&gt;&lt;a href=&quot;#pan&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
+    <category term="英语" scheme="http://lo-y-eh.github.io/categories/%E8%8B%B1%E8%AF%AD/"/>
     
     
-    <category term="弹幕" scheme="http://lo-y-eh.github.io/tags/%E5%BC%B9%E5%B9%95/"/>
+    <category term="词缀" scheme="http://lo-y-eh.github.io/tags/%E8%AF%8D%E7%BC%80/"/>
     
   </entry>
   
   <entry>
-    <title>页脚波浪效果</title>
-    <link href="http://lo-y-eh.github.io/posts/f421.html"/>
-    <id>http://lo-y-eh.github.io/posts/f421.html</id>
-    <published>2024-02-16T06:36:30.000Z</published>
-    <updated>2024-02-21T13:20:57.586Z</updated>
+    <title>站长必会</title>
+    <link href="http://lo-y-eh.github.io/posts/3338.html"/>
+    <id>http://lo-y-eh.github.io/posts/3338.html</id>
+    <published>2024-04-06T16:26:26.000Z</published>
+    <updated>2024-04-16T15:26:09.364Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;页脚波浪效果&quot;&gt;&lt;a href=&quot;#页脚波浪效果&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;站长必会&quot;&gt;&lt;a href=&quot;#站长必会&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
+    <category term="站长必会" scheme="http://lo-y-eh.github.io/categories/%E7%AB%99%E9%95%BF%E5%BF%85%E4%BC%9A/"/>
     
     
-    <category term="页脚" scheme="http://lo-y-eh.github.io/tags/%E9%A1%B5%E8%84%9A/"/>
+    <category term="站长必会" scheme="http://lo-y-eh.github.io/tags/%E7%AB%99%E9%95%BF%E5%BF%85%E4%BC%9A/"/>
     
   </entry>
   
   <entry>
-    <title>归档页面优化</title>
-    <link href="http://lo-y-eh.github.io/posts/bd93.html"/>
-    <id>http://lo-y-eh.github.io/posts/bd93.html</id>
-    <published>2024-02-16T03:25:14.000Z</published>
-    <updated>2024-02-18T12:48:49.582Z</updated>
+    <title>网站安全</title>
+    <link href="http://lo-y-eh.github.io/posts/bd47.html"/>
+    <id>http://lo-y-eh.github.io/posts/bd47.html</id>
+    <published>2024-04-06T16:22:43.000Z</published>
+    <updated>2024-04-16T15:26:09.369Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;归档页面优化&quot;&gt;&lt;a href=&quot;#归档页面优化&quot; class=&quot;headerlink&quot; title=&quot;归档页面优化&quot;&gt;&lt;/a&gt;归档页面优化&lt;/h1&gt;&lt;h2 id=&quot;优化一&quot;&gt;&lt;a href=&quot;#优化一&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;网站安全&quot;&gt;&lt;a href=&quot;#网站安全&quot; class=&quot;headerlink&quot; title=&quot;网站安全&quot;&gt;&lt;/a&gt;网站安全&lt;/h1&gt;&lt;p&gt;DDoS 防护，CC 防护，网站安全防护，SQL 注入防护，XSS 攻击防护等&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
         
       
     
     
     
-    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
+    <category term="站长必会" scheme="http://lo-y-eh.github.io/categories/%E7%AB%99%E9%95%BF%E5%BF%85%E4%BC%9A/"/>
     
     
-    <category term="归档" scheme="http://lo-y-eh.github.io/tags/%E5%BD%92%E6%A1%A3/"/>
+    <category term="网站安全" scheme="http://lo-y-eh.github.io/tags/%E7%BD%91%E7%AB%99%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
   <entry>
-    <title>友链卡片增加悬停旋转效果</title>
-    <link href="http://lo-y-eh.github.io/posts/775.html"/>
-    <id>http://lo-y-eh.github.io/posts/775.html</id>
-    <published>2024-02-15T06:12:21.000Z</published>
-    <updated>2024-02-15T12:49:08.540Z</updated>
+    <title>对象存储</title>
+    <link href="http://lo-y-eh.github.io/posts/ce5b.html"/>
+    <id>http://lo-y-eh.github.io/posts/ce5b.html</id>
+    <published>2024-04-06T16:16:53.000Z</published>
+    <updated>2024-04-16T15:26:09.364Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;友链卡片增加旋转效果&quot;&gt;&lt;a href=&quot;#友链卡片增加旋转效果&quot; class=&quot;headerlink&quot; title=&quot;友链卡片增加旋转效果&quot;&gt;&lt;/a&gt;友链卡片增加旋转效果&lt;/h1&gt;&lt;h2 id=&quot;效果预览&quot;&gt;&lt;a href=&quot;#效果预览&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;对象存储&quot;&gt;&lt;a href=&quot;#对象存储&quot; class=&quot;headerlink&quot; title=&quot;对象存储&quot;&gt;&lt;/a&gt;对象存储&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
         
       
     
     
     
-    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
+    <category term="站长必会" scheme="http://lo-y-eh.github.io/categories/%E7%AB%99%E9%95%BF%E5%BF%85%E4%BC%9A/"/>
     
     
-    <category term="友链" scheme="http://lo-y-eh.github.io/tags/%E5%8F%8B%E9%93%BE/"/>
+    <category term="对象存储" scheme="http://lo-y-eh.github.io/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
     
   </entry>
   
   <entry>
-    <title>新建文章主动打开typora</title>
-    <link href="http://lo-y-eh.github.io/posts/24ab.html"/>
-    <id>http://lo-y-eh.github.io/posts/24ab.html</id>
-    <published>2024-02-14T07:52:21.000Z</published>
-    <updated>2024-02-14T08:26:46.871Z</updated>
+    <title>SEO</title>
+    <link href="http://lo-y-eh.github.io/posts/7583.html"/>
+    <id>http://lo-y-eh.github.io/posts/7583.html</id>
+    <published>2024-04-06T16:11:33.000Z</published>
+    <updated>2024-04-16T15:26:09.358Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;新建文章自动打开typora&quot;&gt;&lt;a href=&quot;#新建文章自动打开typora&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;站长必会之SEO&quot;&gt;&lt;a href=&quot;#站长必会之SEO&quot; class=&quot;headerlink&quot; title=&quot;站长必会之SEO&quot;&gt;&lt;/a&gt;站长必会之SEO&lt;/h1&gt;&lt;h2 id=&quot;什么是SEO&quot;&gt;&lt;a href=&quot;#什么是SEO&quot;</summary>
         
       
     
     
     
-    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
+    <category term="站长必会" scheme="http://lo-y-eh.github.io/categories/%E7%AB%99%E9%95%BF%E5%BF%85%E4%BC%9A/"/>
     
     
-    <category term="自动化" scheme="http://lo-y-eh.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客从github迁移到gitee</title>
-    <link href="http://lo-y-eh.github.io/posts/5c6b.html"/>
-    <id>http://lo-y-eh.github.io/posts/5c6b.html</id>
-    <published>2024-02-14T07:18:22.000Z</published>
-    <updated>2024-02-14T08:26:46.869Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;HEXO博客从GITHUB迁移到GITEE&quot;&gt;&lt;a href=&quot;#HEXO博客从GITHUB迁移到GITEE&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
-    
-    
-    <category term="博客迁移" scheme="http://lo-y-eh.github.io/tags/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>自定义鼠标样式</title>
-    <link href="http://lo-y-eh.github.io/posts/dafc.html"/>
-    <id>http://lo-y-eh.github.io/posts/dafc.html</id>
-    <published>2024-02-14T06:30:46.000Z</published>
-    <updated>2024-02-14T13:29:21.644Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;自定义鼠标样式&quot;&gt;&lt;a href=&quot;#自定义鼠标样式&quot; class=&quot;headerlink&quot; title=&quot;自定义鼠标样式&quot;&gt;&lt;/a&gt;自定义鼠标样式&lt;/h1&gt;&lt;p&gt;在</summary>
-        
-      
-    
-    
-    
-    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
-    
-    
-    <category term="鼠标样式" scheme="http://lo-y-eh.github.io/tags/%E9%BC%A0%E6%A0%87%E6%A0%B7%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>梦幻背景</title>
-    <link href="http://lo-y-eh.github.io/posts/ede0.html"/>
-    <id>http://lo-y-eh.github.io/posts/ede0.html</id>
-    <published>2024-02-12T10:22:42.000Z</published>
-    <updated>2024-02-13T14:00:27.524Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;预览效果&quot;&gt;&lt;a href=&quot;#预览效果&quot; class=&quot;headerlink&quot; title=&quot;预览效果&quot;&gt;&lt;/a&gt;预览效果&lt;/h2&gt;&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
-    
-    
-    <category term="背景" scheme="http://lo-y-eh.github.io/tags/%E8%83%8C%E6%99%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机科学速成课</title>
-    <link href="http://lo-y-eh.github.io/posts/5d3a.html"/>
-    <id>http://lo-y-eh.github.io/posts/5d3a.html</id>
-    <published>2024-02-06T13:57:22.000Z</published>
-    <updated>2024-02-11T07:53:34.180Z</updated>
-    
-    
-    
-    
-    <category term="视频笔记" scheme="http://lo-y-eh.github.io/categories/%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="计算机基础" scheme="http://lo-y-eh.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>md格式优化</title>
-    <link href="http://lo-y-eh.github.io/posts/2eb3.html"/>
-    <id>http://lo-y-eh.github.io/posts/2eb3.html</id>
-    <published>2024-02-05T10:00:55.000Z</published>
-    <updated>2024-02-06T09:45:55.690Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;md样式修改&quot;&gt;&lt;a href=&quot;#md样式修改&quot; class=&quot;headerlink&quot; title=&quot;md样式修改&quot;&gt;&lt;/a&gt;md样式修改&lt;/h1&gt;&lt;h2 id=&quot;背景修改&quot;&gt;&lt;a href=&quot;#背景修改&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
-    
-    
-    <category term="markdown" scheme="http://lo-y-eh.github.io/tags/markdown/"/>
+    <category term="SEO" scheme="http://lo-y-eh.github.io/tags/SEO/"/>
     
   </entry>
   
