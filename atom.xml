@@ -6,22 +6,144 @@
   <link href="http://lo-y-eh.github.io/atom.xml" rel="self"/>
   
   <link href="http://lo-y-eh.github.io/"/>
-  <updated>2024-05-07T12:43:13.840Z</updated>
+  <updated>2024-05-22T16:23:38.268Z</updated>
   <id>http://lo-y-eh.github.io/</id>
   
   <author>
-    <name>Lo-Y-eH</name>
+    <name>loyeh</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>十大排序算法</title>
+    <link href="http://lo-y-eh.github.io/posts/564c.html"/>
+    <id>http://lo-y-eh.github.io/posts/564c.html</id>
+    <published>2024-05-22T08:58:48.000Z</published>
+    <updated>2024-05-22T16:23:38.268Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、冒泡排序（Bubble-Sort）&quot;&gt;&lt;a href=&quot;#一、冒泡排序（Bubble-Sort）&quot; class=&quot;headerlink&quot; title=&quot;一、冒泡排序（Bubble Sort）&quot;&gt;&lt;/a&gt;一、冒泡排序（Bubble</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CORS跨域问题</title>
+    <link href="http://lo-y-eh.github.io/posts/887a.html"/>
+    <id>http://lo-y-eh.github.io/posts/887a.html</id>
+    <published>2024-05-21T02:31:23.000Z</published>
+    <updated>2024-05-21T02:56:38.609Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; 这几天在调试网站的弹幕功能的过程中遇到了下面的问题，不太懂前端的鼠鼠看的一脸懵&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/Lo-Y-eH/image@main/image/CORS.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="http://lo-y-eh.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="CORS" scheme="http://lo-y-eh.github.io/tags/CORS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>valine评论失效解决</title>
+    <link href="http://lo-y-eh.github.io/posts/2292.html"/>
+    <id>http://lo-y-eh.github.io/posts/2292.html</id>
+    <published>2024-05-20T14:37:02.000Z</published>
+    <updated>2024-05-22T10:54:47.657Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;valine评论失效解决&quot;&gt;&lt;a href=&quot;#valine评论失效解决&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
+    
+    
+    <category term="valine" scheme="http://lo-y-eh.github.io/tags/valine/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客自动发布</title>
+    <link href="http://lo-y-eh.github.io/posts/79d9.html"/>
+    <id>http://lo-y-eh.github.io/posts/79d9.html</id>
+    <published>2024-05-19T16:27:51.000Z</published>
+    <updated>2024-05-20T02:32:21.044Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;博客自动发布&quot;&gt;&lt;a href=&quot;#博客自动发布&quot; class=&quot;headerlink&quot; title=&quot;博客自动发布&quot;&gt;&lt;/a&gt;博客自动发布&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
+    
+    
+    <category term="自动" scheme="http://lo-y-eh.github.io/tags/%E8%87%AA%E5%8A%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用说说功能</title>
+    <link href="http://lo-y-eh.github.io/posts/4d8d.html"/>
+    <id>http://lo-y-eh.github.io/posts/4d8d.html</id>
+    <published>2024-05-19T16:20:15.000Z</published>
+    <updated>2024-05-21T16:15:26.075Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;使用说说功能&quot;&gt;&lt;a href=&quot;#使用说说功能&quot; class=&quot;headerlink&quot; title=&quot;使用说说功能&quot;&gt;&lt;/a&gt;使用说说功能&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="http://lo-y-eh.github.io/categories/hexo/"/>
+    
+    
+    <category term="说说" scheme="http://lo-y-eh.github.io/tags/%E8%AF%B4%E8%AF%B4/"/>
+    
+  </entry>
+  
+  <entry>
     <title>个人简介页面更新</title>
     <link href="http://lo-y-eh.github.io/posts/9617.html"/>
     <id>http://lo-y-eh.github.io/posts/9617.html</id>
     <published>2024-05-07T11:52:48.000Z</published>
-    <updated>2024-05-07T12:43:13.840Z</updated>
+    <updated>2024-05-08T15:28:05.080Z</updated>
     
     
       
@@ -71,7 +193,7 @@
     <link href="http://lo-y-eh.github.io/posts/1e4.html"/>
     <id>http://lo-y-eh.github.io/posts/1e4.html</id>
     <published>2024-05-03T16:37:54.000Z</published>
-    <updated>2024-05-03T16:40:43.805Z</updated>
+    <updated>2024-05-15T10:40:28.449Z</updated>
     
     
       
@@ -361,133 +483,6 @@
     
     
     <category term="KDE Connect" scheme="http://lo-y-eh.github.io/tags/KDE-Connect/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>词缀pan-</title>
-    <link href="http://lo-y-eh.github.io/posts/fdde.html"/>
-    <id>http://lo-y-eh.github.io/posts/fdde.html</id>
-    <published>2024-04-10T04:31:27.000Z</published>
-    <updated>2024-04-16T15:26:09.373Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt; 今日单词学习之panorama(全景)，pan（全部）-orama（看见）→全部看见→全景&lt;/p&gt;
-&lt;h2 id=&quot;pan&quot;&gt;&lt;a href=&quot;#pan&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="英语" scheme="http://lo-y-eh.github.io/categories/%E8%8B%B1%E8%AF%AD/"/>
-    
-    
-    <category term="词缀" scheme="http://lo-y-eh.github.io/tags/%E8%AF%8D%E7%BC%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>站长必会</title>
-    <link href="http://lo-y-eh.github.io/posts/3338.html"/>
-    <id>http://lo-y-eh.github.io/posts/3338.html</id>
-    <published>2024-04-06T16:26:26.000Z</published>
-    <updated>2024-04-16T15:26:09.364Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;站长必会&quot;&gt;&lt;a href=&quot;#站长必会&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="站长必会" scheme="http://lo-y-eh.github.io/categories/%E7%AB%99%E9%95%BF%E5%BF%85%E4%BC%9A/"/>
-    
-    
-    <category term="站长必会" scheme="http://lo-y-eh.github.io/tags/%E7%AB%99%E9%95%BF%E5%BF%85%E4%BC%9A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网站安全</title>
-    <link href="http://lo-y-eh.github.io/posts/bd47.html"/>
-    <id>http://lo-y-eh.github.io/posts/bd47.html</id>
-    <published>2024-04-06T16:22:43.000Z</published>
-    <updated>2024-04-16T15:26:09.369Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;网站安全&quot;&gt;&lt;a href=&quot;#网站安全&quot; class=&quot;headerlink&quot; title=&quot;网站安全&quot;&gt;&lt;/a&gt;网站安全&lt;/h1&gt;&lt;p&gt;DDoS 防护，CC 防护，网站安全防护，SQL 注入防护，XSS 攻击防护等&lt;/p&gt;
-&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="站长必会" scheme="http://lo-y-eh.github.io/categories/%E7%AB%99%E9%95%BF%E5%BF%85%E4%BC%9A/"/>
-    
-    
-    <category term="网站安全" scheme="http://lo-y-eh.github.io/tags/%E7%BD%91%E7%AB%99%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对象存储</title>
-    <link href="http://lo-y-eh.github.io/posts/ce5b.html"/>
-    <id>http://lo-y-eh.github.io/posts/ce5b.html</id>
-    <published>2024-04-06T16:16:53.000Z</published>
-    <updated>2024-04-16T15:26:09.364Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;对象存储&quot;&gt;&lt;a href=&quot;#对象存储&quot; class=&quot;headerlink&quot; title=&quot;对象存储&quot;&gt;&lt;/a&gt;对象存储&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="站长必会" scheme="http://lo-y-eh.github.io/categories/%E7%AB%99%E9%95%BF%E5%BF%85%E4%BC%9A/"/>
-    
-    
-    <category term="对象存储" scheme="http://lo-y-eh.github.io/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SEO</title>
-    <link href="http://lo-y-eh.github.io/posts/7583.html"/>
-    <id>http://lo-y-eh.github.io/posts/7583.html</id>
-    <published>2024-04-06T16:11:33.000Z</published>
-    <updated>2024-04-16T15:26:09.358Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;站长必会之SEO&quot;&gt;&lt;a href=&quot;#站长必会之SEO&quot; class=&quot;headerlink&quot; title=&quot;站长必会之SEO&quot;&gt;&lt;/a&gt;站长必会之SEO&lt;/h1&gt;&lt;h2 id=&quot;什么是SEO&quot;&gt;&lt;a href=&quot;#什么是SEO&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="站长必会" scheme="http://lo-y-eh.github.io/categories/%E7%AB%99%E9%95%BF%E5%BF%85%E4%BC%9A/"/>
-    
-    
-    <category term="SEO" scheme="http://lo-y-eh.github.io/tags/SEO/"/>
     
   </entry>
   

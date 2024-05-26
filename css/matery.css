@@ -17,7 +17,7 @@
 @media only screen and (min-width: 993px) {
     .container {
         width: 90%;
-        max-width: 1125px;
+        max-width: 1166px;
     }
 
     .head-container {
@@ -33,13 +33,6 @@
     }
 }
 
-/* body {
-    background-color: #eaeaea;
-    margin: 0;
-    color: #34495e;
-    overflow-x: hidden;
-    overflow-y: auto;
-} */
 /* 设置整体页面样式 */
 body {
     background-color: #eaeaea;/* 背景颜色 */
@@ -58,12 +51,10 @@ body {
 /* 标题1样式 */
 h1 {
     margin: 48px 0 22px -5px;       /* 上、下、左边距 */
-    /*font-size: 2.0rem;*/              /* 字体大小 */
     font-size: 2.2rem;
-    font-weight: bold;              /* 字体粗细 */
-    /*line-height: 2.0rem;*/            /* 行高 */
+    font-weight: bold; 
+    font-family: 华文行楷;             
     line-height: 2.2rem;
-    /* color: #42b983 !important; */
     color: #7fbaf1 !important;
     text-align: center;             /* 新增居中样式 */
 }
@@ -77,37 +68,30 @@ h2 {
     color: #42b983 !important;
 }
 
-/* 标题3样式 */
 h3 {
     margin: 38px 0 15px -4px;
     font-size: 1.5rem;
     font-weight: bold;
     line-height: 1.5rem;
-    /* color: #42b983 !important; */
     color: #9b59b6 !important;
 }
 
-/* 标题4样式 */
 h4 {
     margin: 32px 0 12px -4px;
     font-size: 1.4rem;
     font-weight: bold;
     line-height: 1.4rem;
-    /* color: #42b983 !important; */
     color: #ff5733 !important;
 }
 
-/* 标题5样式 */
 h5 {
     margin: 28px 0 8px -4px;
     font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.2rem;
-    /* color: #42b983 !important; */
     color: #9b59b6 !important;
 }
 
-/* 标题6样式 */
 h6 {
     margin: 22px 0 4px -4px;
     font-size: 1.1rem;
@@ -132,6 +116,10 @@ h2::after {
     margin-top: 8px;    /* 调整分割线与标题之间的垂直间距 */
 }
 
+h2,h3,h4,h5,h6 {
+    font-family: MV Boli;
+}
+
 /* 段落样式 */
 p {
     font-size: 1.5rem;
@@ -139,13 +127,7 @@ p {
     font-family: 华文行楷;
 }
 
-/* 分割线样式 */
-/* hr {
-    margin: 20px 0;
-    border: 0;
-    border-top: 1px solid #ccc;
-} */
-/* butterfly样式 */
+/* 分割线butterfly样式 */
 hr {
     position: relative;
     margin: 2rem auto;
@@ -189,7 +171,13 @@ hr:hover:before {
     left: calc(95% - 20px);
 }
 
-
+/* 选中文本 */
+::selection,
+::-moz-selection {
+    border-radius: 5px;
+    background: #0db8e3;
+    color: #f7f7f7;
+}
 
 /* 引用块样式 */
 blockquote {
@@ -198,6 +186,20 @@ blockquote {
     color: #666;
     background-color: rgba(66, 185, 131, .1);
     border-radius: 5px 10px 10px 5px;   /*添加圆角*/
+}
+
+/* 解决主题代码块没有行号的问题 */
+.line-numbers-rows {
+    border-right-width: 0px !important;
+}
+
+.line-numbers {
+    padding: 1.5rem 1.5rem 1.5rem 3.5rem !important;
+    margin: 1rem 0 !important;
+    background: #272822;
+    overflow: auto;
+    border-radius: 0.35rem;
+    tab-size: 4;
 }
 
 /* 代码块样式优化 */
@@ -219,8 +221,9 @@ pre {
     top: 0;
     left: 12px;
     margin-top: 12px;
-    /* 调整阴影效果 */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* 添加阴影效果 */
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
 }
 
 /* 行内代码样式优化 */
@@ -277,7 +280,6 @@ code {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none
-
 }
 
 /* 代码展开/折叠按钮样式优化 */
@@ -337,6 +339,17 @@ pre code {
     background-color: #272822;
 }
 
+pre[class*="language-"] {
+    padding: 1.2em;
+    margin: .5em 0;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: #e8eaf6;
+    white-space: pre-wrap !important;
+}
+
 /* 键盘 kbd 标签样式 */
 kbd {
     margin: 0 3px;
@@ -375,11 +388,6 @@ mark {
     padding: .2em;
 }
 
-/* 卡片透明化 */
-/* .card{
-    background: url(https://7.dusays.com/2021/01/15/468a1f5ef9a69.png) top!important;
-}
- */
 .card {
     /* background: url('https://cdn.jsdelivr.net/gh/Lo-Y-eH/image@main/image/202310012159507.webp') top!important;
     background-size: cover; */
@@ -410,7 +418,6 @@ body.dark .card {
 .bg-color {
     /* 整体背景颜色，包括导航栏、移动端的导航栏、页尾、标签页等的背景颜色. */
     /* 原值(绿色标签栏)：background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%); */
-    /* 新值（蓝紫色渐变标签栏）background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%); */
 
     /* 为了适应页脚波浪的颜色，将这个值更改为蓝色 */
     background-image: linear-gradient(to right, #177CB0, #177CB0);
@@ -1610,7 +1617,7 @@ article .article-tags .chip {
 
 #articleContent a {
     /* 设置左右内边距 */
-    padding: 0 2px;
+    padding: 2px 2px;
     /* 使用 CSS 变量定义颜色 */
     color: #42b983;
     /* 设置字体粗细 */
@@ -2239,7 +2246,6 @@ tr {
     font-size: 0.9rem;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .21), 0 2px 3px rgba(0, 0, 0, .1);
-    
     transition: all .4s cubic-bezier(.31, -.1, .43, 1.59)
 }
 
@@ -2269,6 +2275,7 @@ tr {
     font-size: 1.8rem;
     font-weight: 500;
     color: #3C4858;
+    font-family: MV Boli;
 }
 
 .profile .author .career {
@@ -2276,6 +2283,7 @@ tr {
     font-size: 0.9rem;
     font-weight: 400;
     color: #777;
+    font-family: MV Boli;
 }
 
 #aboutme .profile .social-link {
@@ -2286,6 +2294,7 @@ tr {
     margin: 1.5rem auto 3rem;
     max-width: 600px;
     color: #999;
+    font-family: MV Boli;
 }
 
 .post-charts,
@@ -3061,36 +3070,8 @@ body.DarkMode ::-ms-input-placeholder {     /* Microsoft Edge */
     resize: vertical;
 }
 
-/* 解决主题代码块没有行号的问题 */
-.line-numbers-rows {
-    border-right-width: 0px !important;
-}
 
-.line-numbers {
-    padding: 1.5rem 1.5rem 1.5rem 3.5rem !important;
-    margin: 1rem 0 !important;
-    background: #272822;
-    overflow: auto;
-    border-radius: 0.35rem;
-    tab-size: 4;
-}
 
-/* 滚动条设置 */
-::-webkit-scrollbar-thumb {
-    background-color: #7f52f1;
-    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent);
-    border-radius: 2em;
-}
-
-::-webkit-scrollbar-track {
-    background-color: rgba(73, 177, 245, .3);;
-    border-radius: 2em;
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
 
 /* 解决浏览量和访问人数不显示的问题 */
 #busuanzi_container_site_pv,
@@ -3099,18 +3080,7 @@ body.DarkMode ::-ms-input-placeholder {     /* Microsoft Edge */
     display: inline !important;
 }
 
-/* 修改选中 */
-::selection {
-    /* 设置选中文本的背景色 */
-    background-color: #81ea37;
-    /* 设置选中文本的文本颜色 */
-    color: #ffffff;
-    border-radius: 5px;
-    /* 设置背景色填充仅限于文本内容 */
-    background-clip: text;
-    /* 设置选中文本的行高与行高一致 */
-    line-height: inherit;
-}
+
 
 /* 设置消息框的边框为圆角效果 */
 #toast-container .toast {
@@ -3150,7 +3120,7 @@ body.DarkMode ::-ms-input-placeholder {     /* Microsoft Edge */
     -webkit-box-shadow: 2px 5px 10px #0083b0 !important;
     box-shadow: 2px 5px 10px #0083b0 !important;
     /* 贝塞尔曲线 让运动曲线有无限可能 可以到官网自行探索 https: //cubic-bezier.com/ */
-    transition: all 0.4s cubic-bezier(0.31, -0.1, 0.43, 1.59);
+    transition: all 0.66s cubic-bezier(0.31, -0.1, 0.43, 1.59);
     transform: rotateY(180deg);
 }
 
@@ -3442,6 +3412,25 @@ body.DarkMode ::-ms-input-placeholder {     /* Microsoft Edge */
     }
 } */
 
+/* 滚动条设置（蓝色滚动按钮，但是影响valine评论的滚动条） */
+
+/* ::-webkit-scrollbar-thumb {
+    background-color: #7f52f1;
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(73, 177, 245, .3);
+    ;
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+} */
+
 /* 滚动条样式 */
 #articleContent pre::-webkit-scrollbar {
     height: .4em;
@@ -3670,7 +3659,6 @@ a.toc-link {
 }
 
 /* 增加留言板每日一言样式 */
-/* 增加每日一言模块 */
 .poem-wrap {
     position: relative;
     width: 730px;
