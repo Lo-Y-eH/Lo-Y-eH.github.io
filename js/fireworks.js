@@ -1,214 +1,238 @@
 "use strict";
 
-function updateCoords(e) {
-    pointerX = (e.clientX || e.touches[0].clientX) - canvasEl.getBoundingClientRect().left, pointerY = e.clientY || e.touches[
-        0].clientY - canvasEl.getBoundingClientRect().top
-}
+/**
+ * 烟花效果脚本 - 适配 anime.js 4.0.2
+ * 优化版本 - 提高性能和可读性
+ */
 
-function setParticuleDirection(e) {
-    var t = anime.random(0, 360) * Math.PI / 180,
-        a = anime.random(50, 180),
-        n = [-1, 1][anime.random(0, 1)] * a;
-    return {
-        x: e.x + n * Math.cos(t),
-        y: e.y + n * Math.sin(t)
+class FireworksEffect {
+    constructor() {
+        this.canvas = document.querySelector(".fireworks");
+        if (!this.canvas) return;
+
+        this.ctx = this.canvas.getContext("2d");
+        this.numberOfParticles = 30;
+        this.pointerX = 0;
+        this.pointerY = 0;
+        this.colors = ["#FF1461", "#18FF92", "#5A87FF", "#FBF38C"];
+
+        this.init();
     }
-}
 
-function createParticule(e, t) {
-    var a = {};
-    return a.x = e, a.y = t, a.color = colors[anime.random(0, colors.length - 1)], a.radius = anime.random(16, 32), a.endPos =
-        setParticuleDirection(a), a.draw = function () {
-            ctx.beginPath(), ctx.arc(a.x, a.y, a.radius, 0, 2 * Math.PI, !0), ctx.fillStyle = a.color, ctx.fill()
-        }, a
-}
+    init() {
+        // 设置canvas样式
+        this.canvas.style.zIndex = "1";
 
-function createCircle(e, t) {
-    var a = {};
-    return a.x = e, a.y = t, a.color = "#F00", a.radius = 0.1, a.alpha = 0.5, a.lineWidth = 6, a.draw = function () {
-        ctx.globalAlpha = a.alpha, ctx.beginPath(), ctx.arc(a.x, a.y, a.radius, 0, 2 * Math.PI, !0), ctx.lineWidth =
-            a.lineWidth, ctx.strokeStyle = a.color, ctx.stroke(), ctx.globalAlpha = 1
-    }, a
-}
-
-function renderParticule(e) {
-    for (var t = 0; t < e.animatables.length; t++) {
-        e.animatables[t].target.draw()
-    }
-}
-
-function animateParticules(e, t) {
-    for (var a = createCircle(e, t), n = [], i = 0; i < numberOfParticules; i++) {
-        n.push(createParticule(e, t))
-    }
-    anime.timeline().add({
-        targets: n,
-        x: function (e) {
-            return e.endPos.x
-        },
-        y: function (e) {
-            return e.endPos.y
-        },
-        radius: 0.1,
-        duration: anime.random(1200, 1800),
-        easing: "easeOutExpo",
-        update: renderParticule
-    }).add({
-        targets: a,
-        radius: anime.random(80, 160),
-        lineWidth: 0,
-        alpha: {
-            value: 0,
-            easing: "linear",
-            duration: anime.random(600, 800)
-        },
-        duration: anime.random(1200, 1800),
-        easing: "easeOutExpo",
-        update: renderParticule,
-        offset: 0
-    })
-}
-
-function debounce(e, t) {
-    var a;
-    return function () {
-        var n = this,
-            i = arguments;
-        clearTimeout(a), a = setTimeout(function () {
-            e.apply(n, i)
-        }, t)
-    }
-}
-var canvasEl = document.querySelector(".fireworks");
-if (canvasEl) {
-    var ctx = canvasEl.getContext("2d"),
-        numberOfParticules = 30,
-        pointerX = 0,
-        pointerY = 0,
-        tap = "mousedown",
-        colors = ["#FF1461", "#18FF92", "#5A87FF", "#FBF38C"],
-        setCanvasSize = debounce(function () {
-            canvasEl.width = 2 * window.innerWidth, canvasEl.height = 2 * window.innerHeight, canvasEl.style.width =
-                window.innerWidth + "px", canvasEl.style.height = window.innerHeight + "px", canvasEl.getContext(
-                    "2d").scale(2, 2)
-        }, 500),
-        render = anime({
-            duration: 1 / 0,
-            update: function () {
-                ctx.clearRect(0, 0, canvasEl.width, canvasEl.height)
+        // 初始化渲染器 - 适配 anime.js 4.0.2
+        this.render = anime({
+            duration: Infinity,
+            update: () => {
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
             }
         });
-    
-    // 将 .fireworks 元素的 z-index 设置为 1
-    canvasEl.style.zIndex = 1;
 
-    document.addEventListener(tap, function (e) {
-        "sidebar" !== e.target.id && "toggle-sidebar" !== e.target.id && "A" !== e.target.nodeName && "IMG" !==
-            e.target.nodeName && (render.play(), updateCoords(e), animateParticules(pointerX, pointerY))
-    }, !1), setCanvasSize(), window.addEventListener("resize", setCanvasSize, !1)
-}
-"use strict";
+        // 绑定事件
+        this.bindEvents();
 
-function updateCoords(e) {
-    pointerX = (e.clientX || e.touches[0].clientX) - canvasEl.getBoundingClientRect().left, pointerY = e.clientY || e.touches[
-        0].clientY - canvasEl.getBoundingClientRect().top
-}
-
-function setParticuleDirection(e) {
-    var t = anime.random(0, 360) * Math.PI / 180,
-        a = anime.random(50, 180),
-        n = [-1, 1][anime.random(0, 1)] * a;
-    return {
-        x: e.x + n * Math.cos(t),
-        y: e.y + n * Math.sin(t)
+        // 设置初始canvas大小
+        this.setCanvasSize();
     }
-}
 
-function createParticule(e, t) {
-    var a = {};
-    return a.x = e, a.y = t, a.color = colors[anime.random(0, colors.length - 1)], a.radius = anime.random(16, 32), a.endPos =
-        setParticuleDirection(a), a.draw = function () {
-            ctx.beginPath(), ctx.arc(a.x, a.y, a.radius, 0, 2 * Math.PI, !0), ctx.fillStyle = a.color, ctx.fill()
-        }, a
-}
+    bindEvents() {
+        // 防抖的窗口大小调整事件
+        const debouncedResize = this.debounce(() => this.setCanvasSize(), 500);
+        window.addEventListener("resize", debouncedResize, false);
 
-function createCircle(e, t) {
-    var a = {};
-    return a.x = e, a.y = t, a.color = "#F00", a.radius = 0.1, a.alpha = 0.5, a.lineWidth = 6, a.draw = function () {
-        ctx.globalAlpha = a.alpha, ctx.beginPath(), ctx.arc(a.x, a.y, a.radius, 0, 2 * Math.PI, !0), ctx.lineWidth =
-            a.lineWidth, ctx.strokeStyle = a.color, ctx.stroke(), ctx.globalAlpha = 1
-    }, a
-}
+        // 点击事件
+        document.addEventListener("mousedown", (e) => this.handleClick(e), false);
 
-function renderParticule(e) {
-    for (var t = 0; t < e.animatables.length; t++) {
-        e.animatables[t].target.draw()
+        // 触摸事件支持
+        document.addEventListener("touchstart", (e) => this.handleClick(e), false);
     }
-}
 
-function animateParticules(e, t) {
-    for (var a = createCircle(e, t), n = [], i = 0; i < numberOfParticules; i++) {
-        n.push(createParticule(e, t))
-    }
-    anime.timeline().add({
-        targets: n,
-        x: function (e) {
-            return e.endPos.x
-        },
-        y: function (e) {
-            return e.endPos.y
-        },
-        radius: 0.1,
-        duration: anime.random(1200, 1800),
-        easing: "easeOutExpo",
-        update: renderParticule
-    }).add({
-        targets: a,
-        radius: anime.random(80, 160),
-        lineWidth: 0,
-        alpha: {
-            value: 0,
-            easing: "linear",
-            duration: anime.random(600, 800)
-        },
-        duration: anime.random(1200, 1800),
-        easing: "easeOutExpo",
-        update: renderParticule,
-        offset: 0
-    })
-}
+    handleClick(e) {
+        const target = e.target;
 
-function debounce(e, t) {
-    var a;
-    return function () {
-        var n = this,
-            i = arguments;
-        clearTimeout(a), a = setTimeout(function () {
-            e.apply(n, i)
-        }, t)
+        // 排除特定元素
+        if (this.shouldIgnoreTarget(target)) {
+            return;
+        }
+
+        this.render.play();
+        this.updateCoords(e);
+        this.animateParticles(this.pointerX, this.pointerY);
     }
-}
-var canvasEl = document.querySelector(".fireworks");
-if (canvasEl) {
-    var ctx = canvasEl.getContext("2d"),
-        numberOfParticules = 30,
-        pointerX = 0,
-        pointerY = 0,
-        tap = "mousedown",
-        colors = ["#FF1461", "#18FF92", "#5A87FF", "#FBF38C"],
-        setCanvasSize = debounce(function () {
-            canvasEl.width = 2 * window.innerWidth, canvasEl.height = 2 * window.innerHeight, canvasEl.style.width =
-                window.innerWidth + "px", canvasEl.style.height = window.innerHeight + "px", canvasEl.getContext(
-                    "2d").scale(2, 2)
-        }, 500),
-        render = anime({
-            duration: 1 / 0,
-            update: function () {
-                ctx.clearRect(0, 0, canvasEl.width, canvasEl.height)
+
+    shouldIgnoreTarget(target) {
+        return target.id === "sidebar" ||
+               target.id === "toggle-sidebar" ||
+               target.nodeName === "A" ||
+               target.nodeName === "IMG";
+    }
+
+    updateCoords(e) {
+        const rect = this.canvas.getBoundingClientRect();
+        const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+        const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+
+        this.pointerX = clientX - rect.left;
+        this.pointerY = clientY - rect.top;
+    }
+
+    setCanvasSize() {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        this.canvas.width = width * 2;
+        this.canvas.height = height * 2;
+        this.canvas.style.width = width + "px";
+        this.canvas.style.height = height + "px";
+
+        // 设置高DPI支持
+        this.ctx.scale(2, 2);
+    }
+
+    // 使用简单的随机数生成函数替代 anime.random
+    random(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    getParticleDirection(particle) {
+        const angle = this.random(0, 360) * Math.PI / 180;
+        const distance = this.random(50, 180);
+        const direction = [-1, 1][this.random(0, 1)] * distance;
+
+        return {
+            x: particle.x + direction * Math.cos(angle),
+            y: particle.y + direction * Math.sin(angle)
+        };
+    }
+
+    createParticle(x, y) {
+        const particle = {
+            x: x,
+            y: y,
+            color: this.colors[this.random(0, this.colors.length - 1)],
+            radius: this.random(16, 32)
+        };
+
+        particle.endPos = this.getParticleDirection(particle);
+        particle.draw = () => {
+            this.ctx.beginPath();
+            this.ctx.arc(particle.x, particle.y, particle.radius, 0, 2 * Math.PI, true);
+            this.ctx.fillStyle = particle.color;
+            this.ctx.fill();
+        };
+
+        return particle;
+    }
+
+    createCircle(x, y) {
+        const circle = {
+            x: x,
+            y: y,
+            color: "#F00",
+            radius: 0.1,
+            alpha: 0.5,
+            lineWidth: 6
+        };
+
+        circle.draw = () => {
+            this.ctx.globalAlpha = circle.alpha;
+            this.ctx.beginPath();
+            this.ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI, true);
+            this.ctx.lineWidth = circle.lineWidth;
+            this.ctx.strokeStyle = circle.color;
+            this.ctx.stroke();
+            this.ctx.globalAlpha = 1;
+        };
+
+        return circle;
+    }
+
+    renderParticle(animation) {
+        // 适配 anime.js 4.0.2 的新 API
+        if (animation.animations) {
+            animation.animations.forEach(anim => {
+                if (anim.animatable && anim.animatable.target && anim.animatable.target.draw) {
+                    anim.animatable.target.draw();
+                }
+            });
+        }
+    }
+
+    animateParticles(x, y) {
+        const circle = this.createCircle(x, y);
+        const particles = [];
+
+        // 创建粒子
+        for (let i = 0; i < this.numberOfParticles; i++) {
+            particles.push(this.createParticle(x, y));
+        }
+
+        // 粒子动画 - 适配 anime.js 4.0.2
+        particles.forEach(particle => {
+            anime({
+                targets: particle,
+                x: particle.endPos.x,
+                y: particle.endPos.y,
+                radius: 0.1,
+                duration: this.random(1200, 1800),
+                easing: 'easeOutExpo',
+                update: () => {
+                    particle.draw();
+                }
+            });
+        });
+
+        // 圆圈动画 - 适配 anime.js 4.0.2
+        anime({
+            targets: circle,
+            radius: this.random(80, 160),
+            lineWidth: 0,
+            alpha: 0,
+            duration: this.random(1200, 1800),
+            easing: 'easeOutExpo',
+            update: () => {
+                circle.draw();
             }
         });
-    document.addEventListener(tap, function (e) {
-        "sidebar" !== e.target.id && "toggle-sidebar" !== e.target.id && "A" !== e.target.nodeName && "IMG" !==
-            e.target.nodeName && (render.play(), updateCoords(e), animateParticules(pointerX, pointerY))
-    }, !1), setCanvasSize(), window.addEventListener("resize", setCanvasSize, !1)
-};
+    }
+
+    debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func.apply(this, args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+}
+
+// 等待 anime.js 加载完成后再初始化烟花效果
+function initFireworks() {
+    // 检查 anime 是否已定义
+    if (typeof anime !== 'undefined') {
+        new FireworksEffect();
+    } else {
+        // 如果 anime 还未加载，延迟重试
+        setTimeout(initFireworks, 100);
+    }
+}
+
+// 初始化烟花效果 - 确保 anime.js 已加载
+document.addEventListener('DOMContentLoaded', () => {
+    initFireworks();
+});
+
+// 如果DOM已经加载完成，直接初始化
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        initFireworks();
+    });
+} else {
+    initFireworks();
+}

@@ -1,20 +1,18 @@
 /* 这是你的自定义 CSS 样式 */
 
 
-    /* 设置全局字体 */
+/* 设置全局字体 */
 @font-face {
     font-family: 'greenBird';
     src: url('../font/greenBird.ttf');
 }
 
-/*
-    // 使用自定义字体的 CSS类
+
+/*使用自定义字体的 CSS类*/
 .diyFont {
-    font-family: 'QingNiaoHuaGuangJianXingKai-2';
+    font-family: '华文行楷', 'STXingkai', cursive;
 }
- body {
-    font-family: 'QingNiaoHuaGuangJianXingKai-2';
-} */
+
 
 
 /* 修改首页轮播的标题大小 */
@@ -103,7 +101,7 @@
     }
 }
 
-/* 鼠标样式 */
+/* 同心圆鼠标光晕与动作 */
 #cursor {
     position: fixed;
     width: 16px;

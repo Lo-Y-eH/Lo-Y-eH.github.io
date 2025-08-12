@@ -9,6 +9,7 @@ body {
     overflow: hidden;
     margin: -1vh -20vw;
     height: 110vh;
+    background-image: radial-gradient(circle at 50% 47%, #357a7d, #1c405f);
 }
 
 .not-found [class*=wave] {
@@ -24,34 +25,42 @@ body {
 
 .not-found div.wave-1 {
     background: url(../medias/wave-1.svg);
+    height: 35%;
 }
 
 .not-found div.wave-2 {
     background: url(../medias/wave-2.svg);
+    height: 25%;
 }
 
 .not-found div.wave-3 {
     background: url(../medias/wave-3.svg);
+    height: 30%;
 }
 
 .not-found div.wave-4 {
     background: url(../medias/wave-4.svg);
+    height: 14%;
 }
 
 .not-found div.wave-5 {
     background: url(../medias/wave-5.svg);
+    height: 40%;
 }
 
 .not-found div.wave-6 {
     background: url(../medias/wave-6.svg);
+    height: 35%;
 }
 
 .not-found div.wave-7 {
     background: url(../medias/wave-7.svg);
+    height: 40%;
 }
 
 .not-found div.sky-bg {
-    background: url(../medias/bg.svg);
+    /* background: url(../medias/bg.svg); */
+    background: url(../medias/bg-stars.png);
     height: 100%;
 }
 
@@ -80,7 +89,7 @@ body {
     top: 20%;
     left: 50%;
     color: #fff;
-    font-size: 20rem;
+    font-size: 16rem;
     animation: surf 2s;
 }
 
@@ -117,6 +126,7 @@ body {
     left: 20%;
     padding: 10px;
     width: 170px;
+    animation: float 5s ease-in-out infinite;
 }
 
 .not-found .wave-message {
@@ -126,7 +136,7 @@ body {
     padding-right: 50%;
     height: auto !important;
     color: #fff;
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: left;
     animation: wave-message 1s;
 }

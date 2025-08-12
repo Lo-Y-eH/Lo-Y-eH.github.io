@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>代码块设置 | loyeh の Blog</title>
+    <title>代码块设置 | loyeh の Oasis</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -27,7 +27,7 @@
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
-    <script src="/libs/jquery/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
     <!--看板娘-->
@@ -40,7 +40,7 @@
     
         <link rel="stylesheet" type="text/css" href="/css/loading.css">
     
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="loyeh の Blog" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="loyeh の Oasis" type="application/atom+xml">
 </head>
 
 
@@ -94,7 +94,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">loyeh の Blog</span>
+                    <span class="logo-span">loyeh の Oasis</span>
                 </a>
             </div>
             
@@ -308,7 +308,7 @@
         
             <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">loyeh の Blog</div>
+        <div class="logo-name">loyeh の Oasis</div>
         <div class="logo-desc">
             
                 人生注定是一条没有归途的旅行
@@ -744,21 +744,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-05-22
+                    2024-06-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    387
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -781,17 +781,82 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="代码块设置"><a href="#代码块设置" class="headerlink" title="代码块设置"></a>代码块设置</h1><p>以下是对代码块的有些设置</p>
-<h2 id="添加折叠功能"><a href="#添加折叠功能" class="headerlink" title="添加折叠功能#"></a>添加折叠功能<a target="_blank" rel="noopener" href="https://www.cnblogs.com/chendeqiang/p/12861726.html#540873996">#</a></h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chendeqiang/p/12861726.html">博客-hexo-matery主题改造笔记 - 多弗朗强哥 - 博客园 (cnblogs.com)</a></p>
-<p>安装插件</p>
+                <h1 id="代码块设置"><a href="#代码块设置" class="headerlink" title="代码块设置"></a>代码块设置</h1><h2 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h2><h3 id="替换主题文件"><a href="#替换主题文件" class="headerlink" title="替换主题文件"></a>替换主题文件</h3><p>Hexo5.0开始自带<code>prismjs</code> 代码语法高亮的支持。如果你的博客中曾经安装过 <code>hexo-prism-plugin</code> 的插件，那么执行 <code>npm uninstall hexo-prism-plugin</code> 卸载掉它，否则生成的代码中会有 <code>&#123;</code> 和 <code>&#125;</code> 的转义字符。</p>
+<p>然后，修改 Hexo 根目录下 <code>_config.yml</code> 文件中 <code>highlight.enable</code> 的值为 <code>false</code>，并将 <code>prismjs.enable</code> 的值设置为 <code>true</code>，主要配置如下：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">highlight</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">auto_detect</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">tab_replace</span><span class="token punctuation">:</span> <span class="token string">''</span>
+  <span class="token key atrule">wrap</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">hljs</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token key atrule">prismjs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">preprocess</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">tab_replace</span><span class="token punctuation">:</span> <span class="token string">''</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>matery默认的<code>prismjs</code>主题是 <code>Tomorrow Night</code>，如果想定制自己的主题，可前往 <a target="_blank" rel="noopener" href="https://prismjs.com/download.html">prismjs 下载页面</a> 下载自己喜欢的主题 <code>css</code> 文件，然后将此 css 主题文件取名为 <code>prism.css</code>，替换掉 <code>hexo-theme-matery</code> 主题文件夹中的 <code>source/libs/prism/prism.css</code> 文件即可。</p>
+<h3 id="修改原主题"><a href="#修改原主题" class="headerlink" title="修改原主题"></a>修改原主题</h3><p>当然也可以在原有的高亮主题的上就行修改，在根目录下找到<code>node_modules\prismjs\themes</code>，还可以对代码主题进行其他的修改，比如行号，关键词的高亮，语言的显示等等，可自行研究修改。</p>
+<p><img src="https://s2.loli.net/2024/06/17/OEJ8svSgGb4MlHq.png" alt="themes"></p>
+<h2 id="添加折叠功能"><a href="#添加折叠功能" class="headerlink" title="添加折叠功能"></a>添加折叠功能</h2><p>代码块有时会有大段代码放上去，但又不想占据大量的位置，这时候就需要对代码块进行折叠。</p>
+<p>有两种方式实现：</p>
+<ul>
+<li>第一种：使用<code>hexo-sliding-spoiler</code>插件零修改代码实现折叠功能</li>
+<li>第二种：修改代码实现折叠效果</li>
+</ul>
+<h3 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h3><p>安装插件</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css">npm install hexo-sliding-spoiler --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>然后进行配置，根目录配置文件<code>_config.yml</code>中添加</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">plugin:
+- hexo-sliding-spoiler<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>最后进行美化，修改<a href="mailto:&#110;&#x6f;&#100;&#x65;&#x5f;&#x6d;&#111;&#x64;&#x75;&#x6c;&#x65;&#115;&#95;&#104;&#101;&#x78;&#x6f;&#x2d;&#x73;&#108;&#x69;&#x64;&#105;&#110;&#103;&#x2d;&#x73;&#x70;&#111;&#x69;&#108;&#x65;&#114;&#64;&#49;&#46;&#x32;&#46;&#49;">&#110;&#x6f;&#100;&#x65;&#x5f;&#x6d;&#111;&#x64;&#x75;&#x6c;&#x65;&#115;&#95;&#104;&#101;&#x78;&#x6f;&#x2d;&#x73;&#108;&#x69;&#x64;&#105;&#110;&#103;&#x2d;&#x73;&#x70;&#111;&#x69;&#108;&#x65;&#114;&#64;&#49;&#46;&#x32;&#46;&#49;</a>@hexo-sliding-spoiler\assets\spoiler.css</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.spoiler</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 20px 0<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #E5E5E5<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> #E5E5E5<span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+    <span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span>all .6s
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.spoiler .spoiler-title</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0 -15px<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 5px 15px<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #353535<span class="token punctuation">;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 18px<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+    <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.spoiler.collapsed .spoiler-title:before</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">"▶"</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.spoiler.expanded .spoiler-title:before</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">"▲"</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>用法：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token punctuation">&#123;</span>% spoiler code %<span class="token punctuation">&#125;</span>
 <span class="token selector">content</span>
 <span class="token punctuation">&#123;</span>% endspoiler %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_34015566/article/details/89939438">https://blog.csdn.net/weixin_34015566/article/details/89939438</a></p>
+<p>示例</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">&#123;</span>% spoiler 点击显/隐内容 %<span class="token punctuation">&#125;</span>
+内容测试
+<span class="token punctuation">&#123;</span>% endspoiler %<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h3><p>参考</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_34015566/article/details/89939438">Hexo next博客添加折叠块功能添加折叠代码块-CSDN博客</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/woshimrf/p/hexo-fold-block.html">Hexo next博客添加折叠块功能添加折叠代码块</a></li>
+</ul>
 <h2 id="解决代码块复制不能换行"><a href="#解决代码块复制不能换行" class="headerlink" title="解决代码块复制不能换行"></a>解决代码块复制不能换行</h2><p>发现在代码块中复制的内容粘贴后总是挤成一团，而原来的代码格式失效，又试了几次后发现都是如此，然后上网查了一下，发现使用Matery主题的博客上复制内容都存在这个问题。幸运的是已经有大佬发现问题所在，并给出解决方案。</p>
 <p>问题在于开启复制版权copyright，添加复制版权信息后，就会导致代码块复制内容换行失效。</p>
 <p>大佬判断出问题出在添加复制版权信息的文件<code>themes\matery\layout\_partial\post-detail.ejs</code>中，具体问题在判断复制内容换行的判断语句</p>
@@ -804,6 +869,72 @@ if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') &#123;
 <p>所以是由于<code>if</code>判断的条件错误才导致复制内容不会换行，解决办法就是将其判断条件值改为<code>CODE</code>（大概在220行左右）。</p>
 <p>修改完后重新部署博客，发现可以正常粘贴复制的内容了。</p>
 <p>这里是<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43571641/article/details/116034591">大佬的原文</a></p>
+<h2 id="代码块全屏显示"><a href="#代码块全屏显示" class="headerlink" title="代码块全屏显示"></a>代码块全屏显示</h2><p>添加css</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.code-area.code-block-fullscreen pre</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+  <span class="token property">max-height</span><span class="token punctuation">:</span> unset<span class="token punctuation">;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">min-width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+
+<span class="token comment">/* code-block-fullscreen */</span>
+<span class="token selector">.code-block-fullscreen</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span>fixed<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span>-0.4em<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span>100%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span>100%<span class="token punctuation">;</span>
+  <span class="token property">min-width</span><span class="token punctuation">:</span>100%<span class="token punctuation">;</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span> 999999<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span>
+  <span class="token property">animation</span><span class="token punctuation">:</span> elastic 1s<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.code-block-fullscreen code</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">--widthA</span><span class="token punctuation">:</span>100%<span class="token punctuation">;</span>
+  <span class="token property">--widthB</span><span class="token punctuation">:</span><span class="token function">calc</span><span class="token punctuation">(</span><span class="token function">var</span><span class="token punctuation">(</span>--widthA<span class="token punctuation">)</span> - 30px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span><span class="token function">var</span><span class="token punctuation">(</span>--widthB<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">min-height</span><span class="token punctuation">:</span>99%<span class="token punctuation">;</span>
+  <span class="token property">overflow-y</span><span class="token punctuation">:</span>hidden<span class="token punctuation">;</span>
+  <span class="token property">overflow-x</span><span class="token punctuation">:</span>auto<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span>auto<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.code-block-fullscreen-html-scroll</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.code-area.code-block-fullscreen i.code-expand,
+.code-area.code-block-fullscreen .scroll-down-bar</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.code-show-expand</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 4px<span class="token punctuation">;</span>
+  <span class="token property">right</span><span class="token punctuation">:</span> 53px<span class="token punctuation">;</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+  <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">invert</span><span class="token punctuation">(</span>50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 7px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>添加js</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">if</span> <span class="token punctuation">(</span>enableShowexpand<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">var</span> $code_show_expand <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'&lt;i class="fas fa-expand code-show-expand"  title="全屏显示" aria-hidden="true">&lt;/i>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  $pre<span class="token punctuation">.</span><span class="token function">before</span><span class="token punctuation">(</span>$code_show_expand<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.code-area .code-show-expand'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>target <span class="token operator">!==</span> <span class="token keyword">this</span><span class="token punctuation">)</span> <span class="token keyword">return</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hasClass</span><span class="token punctuation">(</span><span class="token string">'code-closed'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">siblings</span><span class="token punctuation">(</span><span class="token string">'pre'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">'code'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeClass</span><span class="token punctuation">(</span><span class="token string">'code-closed'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toggleClass</span><span class="token punctuation">(</span><span class="token string">'code-block-fullscreen'</span><span class="token punctuation">)</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'html'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toggleClass</span><span class="token punctuation">(</span><span class="token string">'code-block-fullscreen-html-scroll'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chendeqiang/p/12861726.html#540873996">代码块折叠</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chendeqiang/p/12861726.html">博客-hexo-matery主题改造笔记 - 多弗朗强哥 - 博客园 (cnblogs.com)</a></p>
 
                 
             </div>
@@ -1050,10 +1181,6 @@ if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') &#123;
 
     #vcomments .vemoji:hover {
         transform: scale(1.3);
-    }
-
-    #dark-mode .v[data-class=v] .vwrap .vemojis i {
-        background: #312f2f;
     }
 
     .v[data-class=v] .vwrap .vemojis i {
@@ -1417,7 +1544,7 @@ if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') &#123;
         boolean: true,
         appId: '8vJn0QBplqLADcXEGwf82jV4-MdYXbMMI',
         appKey: 'PO85hRys16bV881Pq4fjnmbK',
-        notify: 'true' === 'true',
+        notify: 'false' === 'true',
         verify: 'false' === 'true',
         visitor: 'true' === 'true',
         // avatar: 'monsterid',
@@ -1893,7 +2020,7 @@ if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') &#123;
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + '来源: loyeh の Blog<br />'
+            + '来源: loyeh の Oasis<br />'
             + '文章作者: loyeh<br />'
             + '文章链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
@@ -1920,6 +2047,11 @@ if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') &#123;
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块展开 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeExpand.js"></script>
 
 
 <!-- 对页面进行仿信纸样式修饰 -->
@@ -2229,14 +2361,14 @@ if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') &#123;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2023-2024</span>
+                <span id="year">2023-2025</span>
             
             <a href="/about" target="_blank">loyeh</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
-                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">134.8k</span>&nbsp;字
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">180.1k</span>&nbsp;字
             
             
             
@@ -2337,108 +2469,44 @@ if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') &#123;
 <div class="progress-bar"></div>
 
     <!-- 搜索遮罩框 -->
+<style>
+#searchInput::-webkit-input-placeholder { /* WebKit browsers */ 
+    font-size:16px;
+} 
+#searchInput:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+    font-size:16px;
+} 
+#searchInput::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+    font-size:16px;
+} 
+#searchInput:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+    font-size:16px;
+} 
+#searchInput {
+    margin-top: 6px;
+    margin-bottom: 12px;
+    text-indent: 4px;
+    font-size: 14px;
+}
+</style>
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;站内搜索</span>
             <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
-                   class="search-input">
+                   class="search-input" autofocus="autofocus" /> <!-- 点击搜索按钮后input框自动获取焦点 -->
         </div>
         <div id="searchResult"></div>
     </div>
 </div>
 
+<script src="/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
-    var searchFunc = function (path, search_id, content_id) {
-        'use strict';
-        $.ajax({
-            url: path,
-            dataType: "xml",
-            success: function (xmlResponse) {
-                // get the contents from search data
-                var datas = $("entry", xmlResponse).map(function () {
-                    return {
-                        title: $("title", this).text(),
-                        content: $("content", this).text(),
-                        url: $("url", this).text()
-                    };
-                }).get();
-                var $input = document.getElementById(search_id);
-                var $resultContent = document.getElementById(content_id);
-                $input.addEventListener('input', function () {
-                    var str = '<ul class=\"search-result-list\">';
-                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                    $resultContent.innerHTML = "";
-                    if (this.value.trim().length <= 0) {
-                        return;
-                    }
-                    // perform local searching
-                    datas.forEach(function (data) {
-                        var isMatch = true;
-                        var data_title = data.title.trim().toLowerCase();
-                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
-                        var data_url = data.url;
-                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
-                        var index_title = -1;
-                        var index_content = -1;
-                        var first_occur = -1;
-                        // only match artiles with not empty titles and contents
-                        if (data_title !== '' && data_content !== '') {
-                            keywords.forEach(function (keyword, i) {
-                                index_title = data_title.indexOf(keyword);
-                                index_content = data_content.indexOf(keyword);
-                                if (index_title < 0 && index_content < 0) {
-                                    isMatch = false;
-                                } else {
-                                    if (index_content < 0) {
-                                        index_content = 0;
-                                    }
-                                    if (i === 0) {
-                                        first_occur = index_content;
-                                    }
-                                }
-                            });
-                        }
-                        // show search results
-                        if (isMatch) {
-                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
-                            var content = data.content.trim().replace(/<[^>]+>/g, "");
-                            if (first_occur >= 0) {
-                                // cut out 100 characters
-                                var start = first_occur - 20;
-                                var end = first_occur + 80;
-                                if (start < 0) {
-                                    start = 0;
-                                }
-                                if (start === 0) {
-                                    end = 100;
-                                }
-                                if (end > content.length) {
-                                    end = content.length;
-                                }
-                                var match_content = content.substr(start, end);
-                                // highlight all keywords
-                                keywords.forEach(function (keyword) {
-                                    var regS = new RegExp(keyword, "gi");
-                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
-                                });
-
-                                str += "<p class=\"search-result\">" + match_content + "...</p>"
-                            }
-                            str += "</li>";
-                        }
-                    });
-                    str += "</ul>";
-                    $resultContent.innerHTML = str;
-                });
-            }
-        });
-    };
-
-    searchFunc('/search.xml', 'searchInput', 'searchResult');
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
 });
 </script>
+
 
     <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
@@ -2561,6 +2629,13 @@ $(function () {
     <!--背景canvas-nest-->
     
 
+    <!--动态线条背景-->
+    <!-- color: (R,G,B)，默认:（0,0,0）opacity: 透明度（0~1），默认：0.5
+    count: 线条总数，默认：150    zIndex：表示图层所在的位置，默认：-1 -->
+    <!-- <script type="text/javascript" color="122 103 238" opacity='0.7' zIndex="-1" count="100"src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script> -->
+    
+
     <!--背景静止彩带-->
     
 
@@ -2569,9 +2644,9 @@ $(function () {
     <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
-    <!--网页预加载-->
+    <!--网页预加载，删除本地theme.libs.js.instantpage文件，改为使用CDN文件自动更新-->
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
     
     
     <!-- 实现动态标题 -->
@@ -2582,20 +2657,11 @@ $(function () {
         })
     </script>
 
-    <!--动态线条背景-->
-    <!-- color: (R,G,B)，默认:（0,0,0）opacity: 透明度（0~1），默认：0.5
-    count: 线条总数，默认：150    zIndex：表示图层所在的位置，默认：-1 -->
-    <!-- <script type="text/javascript" color="122 103 238" opacity='0.7' zIndex="-1" count="100"src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script> -->
-    
-
     <!-- 添加鼠标点击烟花爆炸效果 -->
-    <!-- <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
-    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
-    <script type="text/javascript" src="/js/fireworks.js"></script> -->
     
-        <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
-        <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+        <canvas class="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;"></canvas>
+        <script src="https://cdn.jsdelivr.net/npm/animejs@4.0.2/lib/anime.min.js"></script>
+
         <script type="text/javascript" src="/js/fireworks.js"></script>
     
 
@@ -2616,7 +2682,8 @@ $(function () {
 
     <!-- 添加轮播图冒泡效果 -->
     
-    <script type="text/javascript" src="/libs/others/bubble.js"></script>
+        <script src="/js/bubble.js"></script>
+    
     
 
     <!-- 添加鼠标彩虹星星掉落跟随效果 -->
@@ -2628,14 +2695,7 @@ $(function () {
     
 
     <!-- 添加打字爆炸特效 -->
-    <!-- <script src="/js/activate-power-mode.js"></script>
-    <script>
-        POWERMODE.colorful = true; // make power mode colorful
-        POWERMODE.shake = false; // turn off shake
-        document.body.addEventListener('input', POWERMODE);
-    </script> -->
     
-        <!-- 添加打字爆炸特效 -->
         <script src="/js/activate-power-mode.js"></script>
         <script>
             POWERMODE.colorful = true; // make power mode colorful
@@ -2645,202 +2705,163 @@ $(function () {
     
     
     <!-- 星空背景 -->
-    <!-- <div id="Dreamland">
-        <canvas></canvas>
-        <canvas></canvas>
-        <canvas></canvas>
-    </div>
-    <script src="/js/canvas_moving.js"></script> -->
     
 
-    <!-- 右键菜单样式 -->
-    <style>
-        /* 右键菜单容器样式 */
-        #rightMenu {
-            display: none;
-            position: fixed;
-            padding: 0 .25rem;
-            width: 10rem;
-            height: fit-content;
-            top: 10%;
-            left: 10%;
-            /* background-color: rgba(255, 255, 255, .85); */
-            background-color: (239 239 239 / 85%);
-            -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
-            border-radius: 12px;
-            z-index: 99994;
-            border: 1px solid #e3e8f7;
-            user-select: none;
-            box-shadow: 0 0 12px 4px rgba(0, 0, 0, .05);
-        }
-
-        /* 右键菜单悬停样式 */
-        #rightMenu:hover {
-            border: 1px solid #177cb0;
-            box-shadow: 0 8px 12px -3px #4259ef23;
-        }
-
-        /* 右键菜单组样式 */
-        #rightMenu .rightMenu-group {
-            padding: .35rem .3rem;
-            transition: .3s;
-        }
-
-        /* 右键菜单分割线样式 */
-        #rightMenu .rightMenu-line {
-            border-top: 1px dashed #4259ef23;
-        }
-
-        /* 右键菜单小组件样式 */
-        #rightMenu .rightMenu-group.rightMenu-small {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        /* 右键菜单项样式 */
-        #rightMenu .rightMenu-group .rightMenu-item {
-            border-radius: 8px;
-            transition: .3s;
-            cursor: pointer;
-            /* color: #525f7f; */
-            color: #5a7f52;
-        }
-
-        /* 右键菜单行内项样式 */
-        #rightMenu .rightMenu-line .rightMenu-item {
-            margin: .25rem 0;
-            padding: .25rem 0;
-        }
-
-        /* 右键菜单行内组样式 */
-        #rightMenu .rightMenu-group.rightMenu-line .rightMenu-item {
-            display: flex;
-        }
-
-        /* 右键菜单项悬停样式 */
-        #rightMenu .rightMenu-group .rightMenu-item:hover {
-            background-color: #177cb0;
-            color: #fff;
-            box-shadow: 0 8px 12px -3px #4259ef23;
-        }
-
-        /* 右键菜单项按下样式 */
-        #rightMenu .rightMenu-group .rightMenu-item:active {
-            transform: scale(.97);
-        }
-
-        /* 右键菜单图标样式 */
-        #rightMenu .rightMenu-group .rightMenu-item i {
-            display: inline-block;
-            text-align: center;
-            line-height: 1.5rem;
-            width: 2rem;
-            padding: 0 .25rem;
-        }
-
-        /* 右键菜单行内图标样式 */
-        #rightMenu .rightMenu-line .rightMenu-item i {
-            margin: 0 .25rem;
-        }
-
-        /* 右键菜单文字样式 */
-        #rightMenu .rightMenu-group .rightMenu-item span {
-            line-height: 1.5rem;
-        }
-
-        /* 右键菜单小型项样式 */
-        .rightMenu-small .rightMenu-item {
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
-        }
-
-        /* 右键菜单遮罩层样式 */
-        #rightmenu-mask {
-            position: fixed;
-            width: 100vw;
-            height: 100vh;
-            background: 0 0;
-            top: 0;
-            left: 0;
-            display: none;
-            z-index: 101;
-            margin: 0 !important;
-            z-index: 99993;
-        }
-    </style>
 
     <!-- 添加右键菜单 -->
     
         <div id="rightMenu" style="top: 0px; left: 0px; display: none;">
+            <!-- 基本操作组 -->
             <div class="rightMenu-group rightMenu-small">
-                <div class="rightMenu-item" id="menu-backward" title="返回"><i class="fas fa-arrow-left"></i></div>
-                <div class="rightMenu-item" id="menu-forward" title="前进"><i class="fas fa-arrow-right"></i></div>
-                <div class="rightMenu-item" id="menu-refresh" title="刷新"><i class="fas fa-bolt"></i></div>
-                <div class="rightMenu-item" id="menu-top" title="返回顶部"><i class="fas fa-arrow-up"></i></div>
+                
+                    <div class="rightMenu-item" id="menu-backward" title="返回">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                
+                    <div class="rightMenu-item" id="menu-forward" title="前进">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                
+                    <div class="rightMenu-item" id="menu-refresh" title="刷新">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                
+                    <div class="rightMenu-item" id="menu-top" title="返回顶部">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                
             </div>
+
+            <!-- 插件操作组 -->
             <div class="rightMenu-group rightMenu-line rightMenuPlugin" style="display:none">
-                <div class="rightMenu-item" id="menu-copytext" style="display:none"><i
-                        class="fas fa-copy"></i><span>复制选中</span></div>
-                <div class="rightMenu-item" id="menu-copylink" style="display:none"><i class="fas fa-link"></i>
-                    <span>复制链接</span>
-                </div>
-                <div class="rightMenu-item" id="menu-pastetext" style="display:none"><i class="fas fa-paste"></i>
-                    <span>粘贴文本</span>
-                </div><a class="rightMenu-item" id="menu-commenttext" style="display:none"><i
-                        class="fas fa-comment-medical"></i> <span>引用到评论</span></a>
-                <div class="rightMenu-item" id="menu-newwindow" style="display:none"><i class="fas fa-window-restore"></i>
-                    <span>新窗口打开</span>
-                </div>
-                <div class="rightMenu-item" id="menu-copyimg" style="display:none"><i class="fas fa-images"></i>
-                    <span>复制此图片</span>
-                </div>
-                <div class="rightMenu-item" id="menu-downloadimg" style="display:none"><i class="fas fa-download"></i>
-                    <span>下载此图片</span>
-                </div>
-                <div class="rightMenu-item" id="menu-search" style="display:none"><i class="fas fa-magnifying-glass"></i>
-                    <span>站内搜索</span></div>
-                <div class="rightMenu-item" id="menu-searchBing" style="display:none"><i
-                        class="fas fa-magnifying-glass"></i> <span>必应搜索</span></div>
-                <div class="rightMenu-item" id="menu-music-toggle" style="display:none"><i class="fas fa-play"></i>
-                    <span>播放音乐</span>
-                </div>
-                <div class="rightMenu-item" id="menu-music-back" style="display:none"><i class="fas fa-backward"></i>
-                    <span>切换到上一首</span>
-                </div>
-                <div class="rightMenu-item" id="menu-music-forward" style="display:none"><i class="fas fa-forward"></i>
-                    <span>切换到下一首</span>
-                </div>
-                <div class="rightMenu-item" id="menu-music-playlist"
-                    onclick="window.open(&quot;https://music.163.com/#/playlist?app_version=8.8.36&amp;id=5197802668&quot;,&quot;_blank&quot;)"
-                    style="display:none"><i class="fas fa-radio"></i> <span>查看所有歌曲</span></div>
-                <div class="rightMenu-item" id="menu-music-copyMusicName" style="display:none"><i class="fas fa-copy"></i>
-                    <span>复制歌名</span>
-                </div>
+                
+                    <div class="rightMenu-item" id="menu-copytext" style="display:none">
+                        <i class="fas fa-copy"></i>
+                        <span>复制选中</span>
+                    </div>
+                
+                    <div class="rightMenu-item" id="menu-copylink" style="display:none">
+                        <i class="fas fa-link"></i>
+                        <span>复制链接</span>
+                    </div>
+                
+                    <div class="rightMenu-item" id="menu-pastetext" style="display:none">
+                        <i class="fas fa-paste"></i>
+                        <span>粘贴文本</span>
+                    </div>
+                
+                    <div class="rightMenu-item" id="menu-commenttext" style="display:none">
+                        <i class="fas fa-comment-medical"></i>
+                        <span>引用到评论</span>
+                    </div>
+                
+                    <div class="rightMenu-item" id="menu-newwindow" style="display:none">
+                        <i class="fas fa-window-restore"></i>
+                        <span>新窗口打开</span>
+                    </div>
+                
+                    <div class="rightMenu-item" id="menu-copyimg" style="display:none">
+                        <i class="fas fa-images"></i>
+                        <span>复制此图片</span>
+                    </div>
+                
+                    <div class="rightMenu-item" id="menu-downloadimg" style="display:none">
+                        <i class="fas fa-download"></i>
+                        <span>下载此图片</span>
+                    </div>
+                
+                    <div class="rightMenu-item" id="menu-search" style="display:none">
+                        <i class="fas fa-magnifying-glass"></i>
+                        <span>站内搜索</span>
+                    </div>
+                
+                    <div class="rightMenu-item" id="menu-searchBing" style="display:none">
+                        <i class="fas fa-magnifying-glass"></i>
+                        <span>必应搜索</span>
+                    </div>
+                
+                    <div class="rightMenu-item" id="menu-music-toggle" style="display:none">
+                        <i class="fas fa-play"></i>
+                        <span>播放音乐</span>
+                    </div>
+                
+                    <div class="rightMenu-item" id="menu-music-back" style="display:none">
+                        <i class="fas fa-backward"></i>
+                        <span>切换到上一首</span>
+                    </div>
+                
+                    <div class="rightMenu-item" id="menu-music-forward" style="display:none">
+                        <i class="fas fa-forward"></i>
+                        <span>切换到下一首</span>
+                    </div>
+                
+                    <div class="rightMenu-item" id="menu-music-playlist" style="display:none">
+                        <i class="fas fa-radio"></i>
+                        <span>查看所有歌曲</span>
+                    </div>
+                
+                    <div class="rightMenu-item" id="menu-music-copyMusicName" style="display:none">
+                        <i class="fas fa-copy"></i>
+                        <span>复制歌名</span>
+                    </div>
+                
             </div>
-            <div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link"
-                    id="menu-randomWebsite" target="_blank" rel="noopener" href="https://travel.moe/go.html"><i
-                        class="fas fa-paper-plane"></i> <span>次元跃迁</span> </a><a class="rightMenu-item menu-link"
-                    id="menu-randomPost"><i class="fas fa-shoe-prints"></i> <span>随便逛逛</span> </a><a
-                    class="rightMenu-item menu-link" href="/categories/"><i class="fas fa-cube"></i> <span>博客分类</span>
-                </a><a class="rightMenu-item menu-link" href="/tags/"><i class="fas fa-tags"></i> <span>文章标签</span></a>
-            </div>
-            <div class="rightMenu-group rightMenu-line"><a class="rightMenu-item menu-link" href="/privacy/"><i
-                        class="fas fa-hands"></i> <span>隐私协议</span> </a><a class="rightMenu-item menu-link" href="/cc/"><i
-                        class="fas fa-closed-captioning"></i> <span>版权协议</span> </a><a class="rightMenu-item menu-link"
-                    href="/SEAEPOCH-WRITING-STANDARDS/"><i class="fas fa-feather"></i>
-                    <span>行文规范</span></a></div>
+
+            <!-- 其他操作组 -->
             <div class="rightMenu-group rightMenu-line rightMenuOther">
-                <div class="rightMenu-item" id="menu-copy"><i class="fas fa-copy"></i> <span>复制地址</span></div>
-                <div class="rightMenu-item" id="menu-darkmode"><i class="fas fa-moon"></i> <span
-                        class="menu-darkmode-text">深色模式</span></div>
+                
+                    <a class="rightMenu-item menu-link" href="https://travel.moe/go.html" id="menu-randomWebsite" target="_blank" rel="noopener">
+                        <i class="fas fa-paper-plane"></i>
+                        <span class="">次元跃迁</span>
+                    </a>
+                
+                    <a class="rightMenu-item menu-link" href="#" id="menu-randomPost" target="_self" rel="noopener">
+                        <i class="fas fa-shoe-prints"></i>
+                        <span class="">随便逛逛</span>
+                    </a>
+                
+                    <a class="rightMenu-item menu-link" href="/categories/" id="menu-categories" target="_blank" rel="noopener">
+                        <i class="fas fa-cube"></i>
+                        <span class="">博客分类</span>
+                    </a>
+                
+                    <a class="rightMenu-item menu-link" href="/tags/" id="menu-tags" target="_blank" rel="noopener">
+                        <i class="fas fa-tags"></i>
+                        <span class="">文章标签</span>
+                    </a>
+                
+                    <a class="rightMenu-item menu-link" href="/privacy/" id="menu-privacy" target="_blank" rel="noopener">
+                        <i class="fas fa-hands"></i>
+                        <span class="">隐私协议</span>
+                    </a>
+                
+                    <a class="rightMenu-item menu-link" href="/cc/" id="menu-cc" target="_blank" rel="noopener">
+                        <i class="fas fa-closed-captioning"></i>
+                        <span class="">版权协议</span>
+                    </a>
+                
+                    <a class="rightMenu-item menu-link" href="/SEAEPOCH-WRITING-STANDARDS/" id="menu-writing" target="_blank" rel="noopener">
+                        <i class="fas fa-feather"></i>
+                        <span class="">行文规范</span>
+                    </a>
+                
+                    <a class="rightMenu-item menu-link" href="#" id="menu-copy" target="_self" rel="noopener">
+                        <i class="fas fa-copy"></i>
+                        <span class="">复制地址</span>
+                    </a>
+                
+                    <a class="rightMenu-item menu-link" href="#" id="menu-darkmode" target="_self" rel="noopener">
+                        <i class="fas fa-moon"></i>
+                        <span class="menu-darkmode-text">深色模式</span>
+                    </a>
+                
             </div>
         </div>
         <div id="rightmenu-mask" style="display: none"></div>
-        
-        <script src="/js/rightMenu.js"></script>
+
+        <script type="text/javascript" src="/js/rightMenu.js"></script>
         <script>addRightMenuClickEvent()</script>
+    
     
 
 

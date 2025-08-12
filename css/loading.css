@@ -216,15 +216,15 @@ body {
 /* 小屏幕下(手机类)的样式 */
 @media only screen and (max-width: 601px) {
     .loader {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
         margin-left: -50px;
         margin-top: -50px;
     }
 
     .loader img {
-        width: 45%;
-        height: 45%;
+        width: 66%;
+        height: 66%;
     }
 
     .loader-text {
@@ -242,15 +242,15 @@ body {
 /* 中等屏幕下(平板类)的样式 */
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .loader {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
         margin-left: -60px;
         margin-top: -60px;
     }
 
     .loader img {
-        width: 50%;
-        height: 50%;
+        width: 66%;
+        height: 66%;
     }
 
     .loader-text {
@@ -268,15 +268,15 @@ body {
 /* 大屏幕下(桌面类)的样式 */
 @media only screen and (min-width: 993px) {
     .loader {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
         margin-left: -90px;
         margin-top: -90px;
     }
 
     .loader img {
-        width: 60%;
-        height: 60%;
+        width: 66%;
+        height: 66%;
     }
 
     .loader-text {

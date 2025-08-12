@@ -81,4 +81,249 @@
     text-decoration: none
 }
 
-/* rebuild by neat */
+
+/* ------------加入弹幕留言板样式------------- */
+
+/* 圆形悬浮按钮样式 */
+.barrage-float-btn {
+    position: fixed;
+    right: 15px;
+    bottom: 95px; /* 在其他悬浮按钮上方 */
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    outline: none;
+}
+
+.barrage-float-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+.barrage-float-btn i {
+    color: white;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.barrage-float-btn:hover i {
+    transform: scale(1.1);
+}
+
+/* 弹幕模态框样式 */
+.barrage-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+.barrage-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.barrage-modal-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.barrage-modal-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.barrage-modal-header .subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.barrage-form-group {
+    margin-bottom: 20px;
+}
+
+.barrage-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.barrage-form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: #fafbfc;
+    box-sizing: border-box;
+}
+
+.barrage-form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.barrage-modal-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.barrage-btn {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.barrage-btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.barrage-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.barrage-btn-secondary {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.barrage-btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+}
+
+.barrage-btn-cancel {
+    background: #6c757d;
+    color: white;
+}
+
+.barrage-btn-cancel:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+/* 动画效果 */
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.barrage-modal.show {
+    display: block;
+}
+
+/* 深色模式适配 */
+#dark-mode .barrage-modal-content {
+    background: #2d3748;
+    color: #e2e8f0;
+}
+
+#dark-mode .barrage-modal-header h3 {
+    color: #e2e8f0;
+}
+
+#dark-mode .barrage-modal-header .subtitle {
+    color: #a0aec0;
+}
+
+#dark-mode .barrage-form-group label {
+    color: #e2e8f0;
+}
+
+#dark-mode .barrage-form-group input {
+    background: #4a5568;
+    border-color: #718096;
+    color: #e2e8f0;
+}
+
+#dark-mode .barrage-form-group input:focus {
+    background: #2d3748;
+    border-color: #667eea;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .barrage-modal-content {
+        width: 95%;
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .barrage-float-btn {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+        bottom: 120px;
+    }
+
+    .barrage-float-btn i {
+        font-size: 20px;
+    }
+
+    .barrage-modal-buttons {
+        flex-direction: column;
+    }
+}
+
+/* 原有弹幕表单隐藏 */
+#custom {
+    display: none;
+}
+
