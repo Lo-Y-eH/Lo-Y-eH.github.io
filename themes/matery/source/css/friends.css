@@ -65,7 +65,7 @@
 
 /* 小花花背景图 */
 .card {
-    background: url('/medias/flowerbg-white.png') top fixed;
+    background: url('../medias/flowerbg-white.png') top fixed;
     margin: 3rem 0 1rem 0 !important;
     overflow: visible !important;
     border-radius: 12px;
@@ -76,7 +76,7 @@
 }
 
 #dark-mode .card {
-    background: url('/medias/flowerbg-black.png') top fixed;
+    background: url('../medias/flowerbg-black.png') top fixed;
 }
 
 /* 友链统计信息样式 */
