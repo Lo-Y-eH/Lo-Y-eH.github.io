@@ -65,7 +65,7 @@
 
 /* 小花花背景图 */
 .card {
-    background: url(/medias/flowerbg-white.png) top fixed;
+    background: url('/medias/flowerbg-white.png') top fixed;
     margin: 3rem 0 1rem 0 !important;
     overflow: visible !important;
     border-radius: 12px;
@@ -76,7 +76,7 @@
 }
 
 #dark-mode .card {
-    background: url(/medias/flowerbg-black.png) top fixed;
+    background: url('/medias/flowerbg-black.png') top fixed;
 }
 
 /* 友链统计信息样式 */
@@ -97,7 +97,7 @@
 }
 
 .friends-stats:before {
-    content: """;
+    content: '"';
     position: absolute;
     top: 15px;
     left: 15px;
@@ -107,7 +107,7 @@
 }
 
 .friends-stats:after {
-    content: """;
+    content: '"';
     position: absolute;
     bottom: 15px;
     right: 20px;
@@ -175,7 +175,7 @@
     position: relative;
     overflow: hidden;
     line-height: 17px;
-    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     height: 100px;
     padding: 10px;
     width: calc(20% - 0.5rem);
@@ -183,10 +183,6 @@
     border-radius: 12px;
     border: var(--style-border);
     background-color: var(--anzhiyu-card-bg);
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 2px 8px var(--shadow-color);
 }
@@ -290,9 +286,19 @@
     color: #fff;
     font-size: 24px;
     border-radius: 50%;
-    margin: 8px 0 8px 0;
+    /* 移除通用margin设置 */
     margin-right: 10px;
     flex-shrink: 0;
+}
+
+/* 传统风格下的fallback样式 */
+.butterfly-flink-list .avatar-fallback {
+    margin: 0;
+}
+
+/* 封面风格下的fallback样式 */
+.flexcard-flink-list .avatar-fallback {
+    margin: 8px 0 8px 0;
 }
 
 /* 封面风格友链卡片样式 - 修复悬停问题 */
