@@ -1,0 +1,31 @@
+<% if (theme.loadingPages.enable) { %>
+    <div id="loader-box">
+        <!-- 你的 HTML 代码将放在这里  -->
+        <div class="loader-wrapper">
+            <div class="loader">
+                <img src="/medias/avatar.jpg" alt="">
+            </div>
+            <div class="loader-text">
+                <!-- 10个div -->
+                <div>L</div>
+                <div>O</div>
+                <div>A</div>
+                <div>D</div>
+                <div>I</div>
+                <div>N</div>
+                <div>G</div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <script>
+            var endLoading = function () {
+                document.body.style.overflow = 'auto';
+                document.getElementById('loader-box').remove();
+            }
+            window.addEventListener('load', endLoading);
+        </script>
+    </div>
+    <% } %>
