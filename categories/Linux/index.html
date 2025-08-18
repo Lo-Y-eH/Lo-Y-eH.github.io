@@ -19,10 +19,10 @@
     <title>分类: Linux | loyeh の Oasis</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
@@ -85,6 +85,9 @@
     
 
 
+<!--暂时不使用Font Awesome Kit-->
+<!--<script src="https://kit.fontawesome.com/xxx.js" crossorigin="anonymous"></script>-->
+
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -106,7 +109,7 @@
     
     <a href="/" class="waves-effect waves-light">
       
-      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      <i class="fa-solid fa-house" style="zoom: 0.6;"></i>
       
       <span>首页</span>
     </a>
@@ -322,7 +325,7 @@
                 
                     <a href="/" class="waves-effect waves-light">
                         
-                            <i class="fa-fw fas fa-home"></i>
+                            <i class="fa-fw fa-solid fa-house"></i>
                         
                         首页
                     </a>
@@ -1295,7 +1298,7 @@ vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的�
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
 <style>
     .aplayer .aplayer-lrc p {
         font-size: 12px;
@@ -1340,7 +1343,7 @@ vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的�
             </div>
 </div>
 
-<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
     
 
@@ -1596,7 +1599,7 @@ $(function () {
     <div id="stars3"></div>
 </div> -->
     
-    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="/libs/masonry/masonry.pkgd.min.js"></script>
     <script src="/libs/aos/aos.js"></script>
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
@@ -1656,7 +1659,8 @@ $(function () {
 
     <!--网页预加载，删除本地theme.libs.js.instantpage文件，改为使用CDN文件自动更新-->
     
-    <script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+        <script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.js" type="module"></script>
+        <!--<script src="https://instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>-->
     
     
     <!-- 实现动态标题 -->
@@ -1670,7 +1674,11 @@ $(function () {
     <!-- 添加鼠标点击烟花爆炸效果 -->
     
         <canvas class="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;"></canvas>
-        <script src="https://cdn.jsdelivr.net/npm/animejs@4.0.2/lib/anime.min.js"></script>
+        <!--最新版本需使用 ES6 模块语法，因此需要使用 <script type="module"> 标签。-->
+        <script type="module" src="https://cdn.jsdelivr.net/npm/animejs@4.1.3/+esm"></script>
+
+
+
 
         <script type="text/javascript" src="/js/fireworks.js"></script>
     
@@ -1720,7 +1728,7 @@ $(function () {
 
     <!-- 添加右键菜单 -->
     
-        <div id="rightMenu" style="top: 0px; left: 0px; display: none;">
+        <div id="rightMenu" style="top: 0; left: 0; display: none;">
             <!-- 基本操作组 -->
             <div class="rightMenu-group rightMenu-small">
                 
@@ -1869,7 +1877,7 @@ $(function () {
         </div>
         <div id="rightmenu-mask" style="display: none"></div>
 
-        <script type="text/javascript" src="/js/rightMenu.js"></script>
+        <script type="text/javascript" src="../source/js/rightMenu.js"></script>
         <script>addRightMenuClickEvent()</script>
     
     

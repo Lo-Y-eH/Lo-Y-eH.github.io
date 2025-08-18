@@ -52,9 +52,8 @@
     height: 25px;
     margin-left: 20px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, .1);
     margin-top: 8px;
-    background-image: url(/medias/barrager/close.png)
+    background: rgba(255, 255, 255, .1) url(../medias/barrager/close.png);
 }
 
 .barrage_box:hover .close {

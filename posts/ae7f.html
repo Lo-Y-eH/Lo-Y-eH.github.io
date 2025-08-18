@@ -19,10 +19,10 @@
     <title>Gmail分身 | loyeh の Oasis</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
@@ -85,6 +85,9 @@
     
 
 
+<!--暂时不使用Font Awesome Kit-->
+<!--<script src="https://kit.fontawesome.com/xxx.js" crossorigin="anonymous"></script>-->
+
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -106,7 +109,7 @@
     
     <a href="/" class="waves-effect waves-light">
       
-      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      <i class="fa-solid fa-house" style="zoom: 0.6;"></i>
       
       <span>首页</span>
     </a>
@@ -322,7 +325,7 @@
                 
                     <a href="/" class="waves-effect waves-light">
                         
-                            <i class="fa-fw fas fa-home"></i>
+                            <i class="fa-fw fa-solid fa-house"></i>
                         
                         首页
                     </a>
@@ -774,7 +777,7 @@
             <div id="articleContent">
                 <p>今天要分享的一个方法，前面的邮箱跟原邮箱唯一的区别就是后面多了个<code>+c1</code>。我们只需要在原邮箱后面使用一个 <code>+</code> 号连接一个字符串 <code>c1</code>，后缀不变，你就有了一个新邮箱，使用该方法，你就可以开启分身大法了：</p>
 <blockquote>
-<p>原邮箱：t……<a href="mailto:&#x64;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#x64;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;</a><br>新邮箱一：t……<a href="mailto:&#x64;&#43;&#x63;&#x31;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#x64;&#43;&#x63;&#x31;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#109;</a><br>新邮箱二：t……<a href="mailto:&#x64;&#x2b;&#99;&#x32;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;">&#x64;&#x2b;&#99;&#x32;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;</a></p>
+<p>原邮箱：t……<a href="mailto:&#100;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;">&#100;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;</a><br>新邮箱一：t……<a href="mailto:&#x64;&#x2b;&#x63;&#49;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#109;">&#x64;&#x2b;&#x63;&#49;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#109;</a><br>新邮箱二：t……<a href="mailto:&#100;&#x2b;&#99;&#x32;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#109;">&#100;&#x2b;&#99;&#x32;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#109;</a></p>
 </blockquote>
 <p>原理是因为在 Gmail 的邮件地址里，<code>+</code> 号是一个特殊符号，地址中的 <code>+</code> 以及加号后面的部分，会被过滤掉。其实还有一个特殊符号 <code>.</code> 也是一样的，但是不太好用实用价值不大，这里就不详细介绍了。利用这个原理，我们需要注册某个平台的多个几账号时就可以非常方便的完成(例如某 GPT)。这比市面上很多所谓的临时邮箱或者邮箱分身用起来可安全可靠太多了，并且非常方便，在一个邮箱里面就能收到所有的邮件。</p>
 
@@ -2127,7 +2130,7 @@
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
 <style>
     .aplayer .aplayer-lrc p {
         font-size: 12px;
@@ -2172,7 +2175,7 @@
             </div>
 </div>
 
-<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
     
 
@@ -2428,7 +2431,7 @@ $(function () {
     <div id="stars3"></div>
 </div> -->
     
-    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="/libs/masonry/masonry.pkgd.min.js"></script>
     <script src="/libs/aos/aos.js"></script>
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
@@ -2488,7 +2491,8 @@ $(function () {
 
     <!--网页预加载，删除本地theme.libs.js.instantpage文件，改为使用CDN文件自动更新-->
     
-    <script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+        <script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.js" type="module"></script>
+        <!--<script src="https://instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>-->
     
     
     <!-- 实现动态标题 -->
@@ -2502,7 +2506,11 @@ $(function () {
     <!-- 添加鼠标点击烟花爆炸效果 -->
     
         <canvas class="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;"></canvas>
-        <script src="https://cdn.jsdelivr.net/npm/animejs@4.0.2/lib/anime.min.js"></script>
+        <!--最新版本需使用 ES6 模块语法，因此需要使用 <script type="module"> 标签。-->
+        <script type="module" src="https://cdn.jsdelivr.net/npm/animejs@4.1.3/+esm"></script>
+
+
+
 
         <script type="text/javascript" src="/js/fireworks.js"></script>
     
@@ -2552,7 +2560,7 @@ $(function () {
 
     <!-- 添加右键菜单 -->
     
-        <div id="rightMenu" style="top: 0px; left: 0px; display: none;">
+        <div id="rightMenu" style="top: 0; left: 0; display: none;">
             <!-- 基本操作组 -->
             <div class="rightMenu-group rightMenu-small">
                 
@@ -2701,7 +2709,7 @@ $(function () {
         </div>
         <div id="rightmenu-mask" style="display: none"></div>
 
-        <script type="text/javascript" src="/js/rightMenu.js"></script>
+        <script type="text/javascript" src="../source/js/rightMenu.js"></script>
         <script>addRightMenuClickEvent()</script>
     
     

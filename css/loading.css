@@ -127,15 +127,28 @@ body {
     position: absolute;
     bottom: -40px;
     left: 50%;
-    margin-left: -5px;
+    transform: translateX(-50%); /* 关键修复：精确水平居中 */
 }
 
 .loader-text div:nth-child(8)::after,
 .loader-text div:nth-child(9)::after,
 .loader-text div:nth-child(10)::after {
-    left: 0;
-    margin-left: 0;
+    left: 50%; /* 保持统一对齐 */
+    transform: translateX(-50%);
 }
+
+/* ----------增加垂直位置调整--------------- */
+.loader-text div::after {
+    bottom: -30px; /* 根据实际效果微调 */
+    opacity: 0.8; /* 适当降低透明度 */
+    animation: pulse 1.5s ease-in-out infinite; /* 添加呼吸效果 */
+}
+
+@keyframes pulse {
+    0%, 100% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.2); }
+}
+/*-------------------------------------------*/
 
 .loader-text div:nth-child(2) {
     animation-delay: 0.2s;
