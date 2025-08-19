@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #fff;
     /* 使用变量定义主要颜色 */
+    --primary-color: #fff;
 }
 
 * {
@@ -76,7 +76,6 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    /* animation: spin 1.7s linear infinite reverse; */
 }
 
 .loader-text {
@@ -84,7 +83,7 @@ body {
     height: 36px;
     position: absolute;
     top: 72%;
-    left: 55%;                  /* 把下方文字动画，从50%调整到55%，稍微向右移动 */
+    left: 55%;        /* 把下方文字动画，从50%调整到55%，稍微向右移动 */
     transform: translateX(-50%);
     z-index: 3;
     user-select: none;
