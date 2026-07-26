@@ -1,0 +1,414 @@
+:root {
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+    background: #1c405f;
+    font-family: "Open Sans", "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+}
+
+.scene-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 1;
+}
+
+.scene-loader.is-leaving {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 500ms ease-out 500ms;
+}
+
+.scene-loader__dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6rem;
+    height: 6rem;
+    margin: -3rem 0 0 -3rem;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.6;
+    animation: double-bounce 2s ease-in-out infinite;
+}
+
+.scene-loader__dot:nth-child(2) {
+    animation-delay: -1s;
+}
+
+.not-found {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(circle at 50% 47%, #357a7d, #1c405f);
+}
+
+.not-found::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    background-image: url(../medias/bg-stars.png);
+    background-repeat: repeat;
+    background-size: 100%;
+    content: "";
+}
+
+.not-found [class*="wave"],
+.not-found div {
+    position: absolute;
+}
+
+.not-found div {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.not-found div.wave-1 {
+    height: 35%;
+    background-image: url(../medias/wave-1.svg);
+}
+
+.not-found div.wave-2 {
+    height: 25%;
+    background-image: url(../medias/wave-2.svg);
+}
+
+.not-found div.wave-3 {
+    height: 30%;
+    background-image: url(../medias/wave-3.svg);
+}
+
+.not-found div.wave-4 {
+    height: 14%;
+    background-image: url(../medias/wave-4.svg);
+}
+
+.not-found div.wave-5 {
+    height: 40%;
+    background-image: url(../medias/wave-5.svg);
+}
+
+.not-found div.wave-6 {
+    height: 35%;
+    background-image: url(../medias/wave-6.svg);
+}
+
+.not-found div.wave-7 {
+    height: 40%;
+    background-image: url(../medias/wave-7.svg);
+}
+
+.not-found div.sky-bg {
+    height: 100%;
+}
+
+.not-found .wave-boat {
+    height: 45%;
+}
+
+.not-found .boat {
+    position: absolute;
+    top: 0;
+    right: 15%;
+    z-index: 14;
+    display: block;
+    width: 15rem;
+    animation: boat 15s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+}
+
+.not-found .wave-lost {
+    bottom: 20%;
+    left: 50%;
+    color: #fff;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Open Sans", sans-serif;
+    font-size: 20rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.5;
+    white-space: nowrap;
+    transform: rotate(15deg) translate3d(0, 800px, 0);
+    transform-origin: right;
+}
+
+.not-found.is-ready .wave-lost {
+    animation: surf 2s ease both;
+}
+
+.not-found .wave-lost span {
+    float: left;
+    animation: float 3s ease-in infinite;
+}
+
+.not-found .wave-lost span:nth-child(2) {
+    animation-delay: 2.5s;
+}
+
+.not-found .wave-lost span:nth-child(3) {
+    animation-delay: 4.5s;
+}
+
+.not-found .wave-island {
+    display: block;
+    bottom: 35%;
+    left: 20%;
+    z-index: 11;
+    width: 20rem;
+    padding: 1rem;
+    animation: moving-y 2s ease-out infinite alternate;
+}
+
+.not-found .wave-island img {
+    vertical-align: middle;
+}
+
+.not-found .wave-island:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 0.5rem;
+}
+
+.not-found .wave-message {
+    bottom: 7%;
+    left: 50%;
+    z-index: 15;
+    height: auto;
+    padding-right: 50%;
+    color: #fff;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Open Sans", sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.5;
+    text-align: left;
+    transform: translate3d(0, 120%, 0);
+}
+
+.not-found.is-ready .wave-message {
+    animation: wave-message 1s ease both;
+}
+
+.not-found .wave-message h1,
+.not-found .wave-message p {
+    margin: 0 0 1rem;
+    font: inherit;
+    white-space: nowrap;
+}
+
+.not-found .highlight {
+    font-family: "Open Sans", "Segoe UI", Arial, sans-serif;
+    font-weight: 600;
+}
+
+.not-found div.wave-1,
+.not-found div.wave-2,
+.not-found div.wave-3 {
+    z-index: 15;
+}
+
+.not-found div.wave-1,
+.not-found div.wave-2,
+.not-found div.wave-3,
+.not-found div.wave-4,
+.not-found div.wave-5,
+.not-found div.wave-6,
+.not-found div.wave-7 {
+    animation: moving 2s ease-out infinite alternate;
+}
+
+.not-found div.wave-4,
+.not-found div.wave-5,
+.not-found div.wave-6 {
+    animation-name: moving-y;
+    animation-delay: 0.7s;
+}
+
+@media (max-width: 768px) {
+    .not-found .wave-lost {
+        bottom: 24%;
+        left: 50%;
+        font-size: 13rem;
+        translate: -50% 0;
+    }
+
+    .not-found .wave-island {
+        bottom: 40%;
+        left: 50%;
+        width: 18rem;
+        translate: -50% 0;
+    }
+
+    .not-found .wave-island img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .not-found .wave-message {
+        right: 0;
+        bottom: 6%;
+        left: 0;
+        width: 100%;
+        padding: 0 2rem;
+        font-size: 2.4rem;
+        text-align: center;
+    }
+
+    .not-found .wave-message h1,
+    .not-found .wave-message p {
+        margin-bottom: 1.5rem;
+        white-space: normal;
+    }
+
+    .not-found .boat {
+        width: 11rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .not-found .wave-lost {
+        font-size: 10rem;
+    }
+
+    .not-found .wave-message {
+        font-size: 2rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .not-found *,
+    .not-found *::before,
+    .not-found *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+
+    .not-found .wave-lost,
+    .not-found .wave-message {
+        opacity: 1;
+        transform: none !important;
+    }
+
+    .scene-loader {
+        display: none;
+    }
+}
+
+@keyframes double-bounce {
+    0%,
+    100% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+@keyframes boat {
+    0% {
+        transform-origin: left;
+        transform: rotate(-15deg) translate3d(400px, 0, 0);
+    }
+
+    20% {
+        transform-origin: left;
+        transform: rotate(15deg) translate3d(-20vw, 0, 0);
+    }
+
+    25% {
+        transform-origin: left;
+        transform: rotate(-7deg) translate3d(-25vw, 0, 0);
+    }
+
+    50% {
+        transform-origin: left;
+        transform: rotate(5deg) translate3d(-50vw, 0, 0);
+    }
+
+    60% {
+        transform-origin: left;
+        transform: rotate(-1deg) translate3d(-60vw, 0, 0);
+    }
+
+    100% {
+        transform-origin: left;
+        transform: rotate(2deg) translate3d(-100vw, 0, 0);
+    }
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: rotate(3deg) translate3d(0, -10px, 0);
+    }
+
+    50% {
+        transform: rotate(-3deg) translate3d(0, 10px, 0);
+    }
+}
+
+@keyframes moving {
+    from {
+        transform: translateX(-0.5rem);
+    }
+
+    to {
+        transform: translateX(0.5rem);
+    }
+}
+
+@keyframes moving-y {
+    from {
+        transform: translateY(-0.5rem);
+    }
+
+    to {
+        transform: translateY(0.5rem);
+    }
+}
+
+@keyframes surf {
+    0% {
+        transform-origin: right;
+        transform: rotate(15deg) translate3d(0, 800px, 0);
+    }
+
+    30% {
+        transform-origin: right;
+        transform: rotate(15deg) translate3d(0, 500px, 0);
+    }
+
+    100% {
+        transform-origin: right;
+        transform: rotate(0) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes wave-message {
+    from {
+        transform: translate3d(0, 120%, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
